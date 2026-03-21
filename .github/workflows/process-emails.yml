@@ -35,7 +35,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          claude -p "/process-emails" --dangerously-skip-permissions
+          claude -p "/process-emails" --model claude-haiku-4-5-20251001 --dangerously-skip-permissions
 
       - name: Save state back to repo
         run: |
