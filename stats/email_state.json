@@ -1788,6 +1788,120 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d118248655e735": {
+      "thread_id": "19d118248655e735",
+      "from": "Jose Alberto Duque <duquejose@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Jose",
+      "date": "Sat, 21 Mar 2026 11:47:11 -0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5136557610492379665",
+      "draft_message_id": "19d11a24001e8ddb",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:22:21.141787+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d117255d041cd0": {
+      "thread_id": "19d0d478e19f25dd",
+      "from": "ivan segura <ivansegura.michel@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Jorge Ivan",
+      "date": "Sat, 21 Mar 2026 11:29:46 -0600",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S20",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4542200180811771107",
+      "draft_message_id": "19d11a248ab5bfc0",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:22:23.187148+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d112608d6af76b": {
+      "thread_id": "19d112608d6af76b",
+      "from": "Fatjona Mina <fatjona.mina@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Fatjona",
+      "date": "Sat, 21 Mar 2026 17:06:25 +0100",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S20",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5160584369930762296",
+      "draft_message_id": "19d11a251a541878",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:22:25.206006+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1189c024e5ff3": {
+      "thread_id": "19d1189c024e5ff3",
+      "from": "MAYURAKSHEE DAS <mayuraksheedas1301@gmail.com>",
+      "subject": "Regarding Job Application \u2013 Request for Company Details",
+      "date": "Sat, 21 Mar 2026 23:25:20 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3382640892139004966",
+      "draft_message_id": "19d11a37e4bc56f9",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:23:42.286234+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d115b77ec597c1": {
+      "thread_id": "19d115b77ec597c1",
+      "from": "Nh\u01b0 H\u1ea3i Nguy\u1ec5n <nnhaigl@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Hai",
+      "date": "Sun, 22 Mar 2026 00:04:19 +0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7171755102093238331",
+      "draft_message_id": "19d11a38554f7c5d",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:23:44.133177+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1184ba215e672": {
+      "thread_id": "19c842e325da1480",
+      "from": "Francis Kalumba <kalumbavalentino@gmail.com>",
+      "subject": "Re: l urgent of flowmingo",
+      "date": "Sat, 21 Mar 2026 19:49:51 +0200",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S10",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4192710765215295924",
+      "draft_message_id": "19d11a38c2dfb205",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-21T18:23:46.462647+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
