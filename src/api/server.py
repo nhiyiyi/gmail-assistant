@@ -322,7 +322,7 @@ async def list_tools() -> list[types.Tool]:
                 "properties": {
                     "max_results": {
                         "type": "integer",
-                        "description": "Max emails to fetch from Gmail before filtering (default 50, max 100)",
+                        "description": "Max emails to fetch from Gmail before filtering (default 500, max 500 — fetches all unread)",
                     }
                 },
                 "required": [],
@@ -698,7 +698,7 @@ def _handle_get_email_batch(args: dict) -> list[types.TextContent]:
     import state
     import hashlib
 
-    max_results = min(args.get("max_results", 50), 100)
+    max_results = min(args.get("max_results", 500), 500)
 
     # 1. Single metadata-only list call
     emails = gmail_client.list_emails(max_results=max_results, query="is:unread in:inbox")
