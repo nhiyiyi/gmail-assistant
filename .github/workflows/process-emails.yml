@@ -1,0 +1,46 @@
+name: Process Emails
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'   # Every 3 hours
+  workflow_dispatch:          # Manual trigger from GitHub UI
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write         # Needed to commit state files back
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write Google credentials
+        run: |
+          mkdir -p credentials
+          echo '${{ secrets.GOOGLE_CREDENTIALS }}' > credentials/credentials.json
+          echo '${{ secrets.GOOGLE_TOKEN }}' > credentials/token.json
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Process emails
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          claude -p "/process-emails" --dangerously-skip-permissions
+
+      - name: Save state back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add stats/email_state.json stats/email_stats.json
+          git diff --staged --quiet || git commit -m "chore: update email state [skip ci]"
+          git push
