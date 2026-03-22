@@ -1978,6 +1978,44 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d1429adf5cfdb8": {
+      "thread_id": "19d1429adf5cfdb8",
+      "from": "connect2pprateek@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Prateek",
+      "date": "Sun, 22 Mar 2026 11:39:14 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4172531163695647707",
+      "draft_message_id": "19d1443681d02f72",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T06:37:35.795829+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d13fc5f96342e2": {
+      "thread_id": "19d13fc5f96342e2",
+      "from": "mesohinibhowmik@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Sohini",
+      "date": "Sun, 22 Mar 2026 10:49:45 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1714490845939207505",
+      "draft_message_id": "19d14436a38ab1af",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T06:37:36.549610+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
