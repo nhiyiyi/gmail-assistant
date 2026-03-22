@@ -1940,6 +1940,44 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d12932eb23b736": {
+      "thread_id": "19d12932eb23b736",
+      "from": "maisha.fahmida123@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Maisha",
+      "date": "Sun, 22 Mar 2026 04:45:16 +0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7661702922628013523",
+      "draft_message_id": "19d1317673e20740",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T01:09:54.747136+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19cf22a1cd2fa63d": {
+      "thread_id": "19cf22a1cd2fa63d",
+      "from": "facundorivadero.pr@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Facundo",
+      "date": "Sun, 15 Mar 2026 16:42:36 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8978194418257227479",
+      "draft_message_id": "19d13176a77c8418",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T01:09:55.891551+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
