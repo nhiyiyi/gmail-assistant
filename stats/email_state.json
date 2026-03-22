@@ -2187,6 +2187,158 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d16a390728c52b": {
+      "thread_id": "19d16a390728c52b",
+      "from": "anton.todorov.yordanov@gmail.com",
+      "subject": "Re: You're in \u2014 here's your Flowmingo Partner Starter Kit",
+      "date": "Sun, 22 Mar 2026 19:41:38 +0200",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4360401046599343033",
+      "draft_message_id": "19d16c959a6da433",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:23:08.014974+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d16917b2a2def0": {
+      "thread_id": "19d16917b2a2def0",
+      "from": "candidate@applyforcareer.in",
+      "subject": "Application for Accountant Position | Hamna",
+      "date": "Sun, 22 Mar 2026 17:21:57 +0000",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4675850889877077689",
+      "draft_message_id": "19d16c95bd88e699",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:23:08.806966+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d16901ef419f3b": {
+      "thread_id": "19d16901ef419f3b",
+      "from": "alvarezjaviering@outlook.com",
+      "subject": "Re: New job opportunites at Flowmingo for Javier",
+      "date": "Sun, 22 Mar 2026 17:20:06 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7079847064632102450",
+      "draft_message_id": "19d16c95f958b742",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:23:09.573286+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d166d25203d2e4": {
+      "thread_id": "19d166d25203d2e4",
+      "from": "isucvincent@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Chidiogor",
+      "date": "Sun, 22 Mar 2026 17:42:10 +0100",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7005919923227632698",
+      "draft_message_id": "19d16c961722fa69",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:23:10.335756+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d166c71dc397b7": {
+      "thread_id": "19c4d709d5d67531",
+      "from": "benicoluckyleon23@gmail.com",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Sun, 22 Mar 2026 19:41:27 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S26",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3907482340960661496",
+      "draft_message_id": "19d16c9651f2dd10",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:23:11.149495+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d166182908f637": {
+      "thread_id": "19d0c3626e8a968d",
+      "from": "sbuenosa1995@gmail.com",
+      "subject": "Re: Video Interview - Sergio Bueno",
+      "date": "Sun, 22 Mar 2026 17:29:31 +0100",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S20",
+      "urgency": "urgent",
+      "review_status": "review",
+      "draft_id": "r582776824553357322",
+      "draft_message_id": "19d16ca49821a30d",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:24:09.693138+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d163a431ad12d4": {
+      "thread_id": "19d163a431ad12d4",
+      "from": "moussafiraya2253@gmail.com",
+      "subject": "Re: Problem with website",
+      "date": "Sun, 22 Mar 2026 16:46:37 +0100",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2150793267908961471",
+      "draft_message_id": "19d16ca4d8b7c898",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:24:10.442845+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1620ab6768e47": {
+      "thread_id": "19d1620ab6768e47",
+      "from": "omondizackayo@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Zakayo",
+      "date": "Sun, 22 Mar 2026 15:18:39 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1376437804981270113",
+      "draft_message_id": "19d16ca4f4878a65",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T18:24:11.240495+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
