@@ -2016,6 +2016,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d14a19905ff832": {
+      "thread_id": "19d14a19905ff832",
+      "from": "shen.nive04@gmail.com",
+      "subject": "Re: Request to Withdraw Consent and Delete Data",
+      "date": "Sun, 22 Mar 2026 13:50:14 +0530",
+      "sender_type": "B",
+      "topic": "compliance",
+      "scenario": "S29",
+      "urgency": "critical",
+      "review_status": "review",
+      "draft_id": "r-2956055743554788824",
+      "draft_message_id": "19d14dac9f129862",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T09:22:56.750029+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d145f8a596b8a9": {
+      "thread_id": "19d145f8a596b8a9",
+      "from": "robiatul16adawiyah@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Robi'atul Adawiyah",
+      "date": "Sun, 22 Mar 2026 14:08:05 +0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7865336352830272416",
+      "draft_message_id": "19d14dacc721be3b",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T09:22:57.786623+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d144436562e019": {
+      "thread_id": "19d144436562e019",
+      "from": "duhabkl9@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for 052_Rizki Fajar Hutajulu",
+      "date": "Sun, 22 Mar 2026 13:38:10 +0700",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3111903807282548475",
+      "draft_message_id": "19d14dad0e6ce11a",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T09:22:58.858657+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
