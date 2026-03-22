@@ -2339,6 +2339,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d174e109d4556a": {
+      "thread_id": "19d06bb6ee8c6b2a",
+      "from": "charlesabouo985@gmail.com",
+      "subject": "Re: Demande d'aide",
+      "date": "Sun, 22 Mar 2026 20:47:53 +0000",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2185542681125219653",
+      "draft_message_id": "19d17698349be38d",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T21:18:04.542140+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d16e8249bb333a": {
+      "thread_id": "19d16e8249bb333a",
+      "from": "mehak.goel03@gmail.com",
+      "subject": "Re: Unable to Access Interview \u2013 Error 400",
+      "date": "Mon, 23 Mar 2026 00:26:30 +0530",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3286222818768838155",
+      "draft_message_id": "19d1769857a4b70f",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T21:18:05.443974+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d16e7ca4568895": {
+      "thread_id": "19c842e325da1480",
+      "from": "kalumbavalentino@gmail.com",
+      "subject": "Re: l urgent of flowmingo",
+      "date": "Sun, 22 Mar 2026 20:54:06 +0200",
+      "sender_type": "C",
+      "topic": "billing",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-320356838373264482",
+      "draft_message_id": "19d1769887e26a27",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T21:18:06.431195+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
