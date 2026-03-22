@@ -2073,6 +2073,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d15369605e5345": {
+      "thread_id": "19d026bf9718cf3e",
+      "from": "kkamelyyy@yahoo.com",
+      "subject": "Re: Flowmingo Offer Letter for Yasmine",
+      "date": "Sun, 22 Mar 2026 11:30:39 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "R3",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8761400538553905176",
+      "draft_message_id": "19d158296f1ce69d",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T12:26:13.817737+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d14f4601a1f5dd": {
+      "thread_id": "19d14f4601a1f5dd",
+      "from": "jewelgeorge1212@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Jewel",
+      "date": "Sun, 22 Mar 2026 13:50:37 +0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "R3",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3722417140185638133",
+      "draft_message_id": "19d1582e220f5aed",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-22T12:26:33.400697+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
