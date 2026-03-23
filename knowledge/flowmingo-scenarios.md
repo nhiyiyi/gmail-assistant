@@ -170,12 +170,15 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 
 ### **S15 – Positive Feedback**
 
-- Thank them warmly.
-- If appropriate, invite them to leave a review on TRUSTPILOT_URL.
+- Thank them warmly. If they praise a specific feature or experience, acknowledge it specifically before moving on.
+- Always invite them to share their experience on TRUSTPILOT_URL. Do not hedge — a positive signal is the right moment to ask.
+- Do not add anything beyond the warm thank-you and the Trustpilot invite.
 
 ### **S16 – Withdraw from a Process**
 
-- Acknowledge their decision politely, confirm you respect their choice, and wish them well.
+- Acknowledge their decision warmly. Confirm you fully respect their choice and thank them for their time and engagement with Flowmingo.
+- Leave the door open: let them know they are always welcome to explore future opportunities and direct them to JOBS_URL.
+- Keep the reply brief — do not over-explain or make them feel they need to justify their decision.
 
 ### **S17 – Job Inquiry / CV to Join Flowmingo**
 
@@ -303,3 +306,18 @@ Reply directly with the following text exactly:
 
 - Do not add extra context or explanation.
 - Do not promise a follow-up confirmation once deletion is complete.
+
+### **S34 – Acceptance / Confirmation**
+
+Applies when: sender confirms they accept an offer, are joining a program, have completed a required step, or are ready to proceed — with no question attached.
+
+This is a brand moment. Reply warmly and confirm what happens next based on sender type:
+
+- **Type A (Flowmingo program candidate):** Acknowledge their confirmation, thank them for completing the step, and let them know results and next steps are typically within 1–2 weeks (apply the S18 exception if the shortlist-only context applies).
+- **Type B (external candidate):** Acknowledge warmly and remind them that the hiring company will be in touch with next steps — Flowmingo does not manage the hiring timeline.
+- **Type C (Business Partner / Talent Acquisition Partner):** Welcome them warmly to the partnership. Share TRAINING_DECK_URL and QUICKSTART_GUIDE_URL to help them get started, and direct them to WHATSAPP_SUPPORT_HOTLINE for any further questions.
+- **Type D (Recruiter / Company user):** Acknowledge warmly and invite them to schedule a brief onboarding call via RECRUITER_CALENDAR_URL if they have not already done so.
+- **Type E / unclear:** Acknowledge warmly and let them know the relevant team will be in touch with next steps.
+
+Do NOT fabricate next steps. Only confirm what the SOP authorises for that sender type.
+Keep the reply brief — this is a closing moment, not a new thread opener.

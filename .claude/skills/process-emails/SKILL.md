@@ -63,7 +63,8 @@ For each email in the group, evaluate these six dimensions before assigning a cl
 
 **D1 — Sender intent:** What is the person actually asking or doing?
 - Question/request: They need something done or answered. A reply is expected.
-- Statement/opinion: They are sharing a view, expressing a feeling, or informing without asking. No reply is needed.
+- Statement — brand moment: They are concluding an interaction, sharing a positive outcome, expressing satisfaction, confirming acceptance, announcing a withdrawal, or reporting a completion milestone. No question is asked, but a warm reply closes the loop and is the right move. Route through scenario matching (S15, S16, S18, S34).
+- Statement — disengaged: They are sharing a view or opinion with no relational signal and no interaction milestone. No reply needed. Examples: "I don't find suitable roles right now." / "I already have a job." / "I'm not interested."
 - Technical report: They are describing a malfunction of the Flowmingo platform — something the system did wrong, not just user confusion.
 - Legal/sensitive demand: They are asserting rights, making threats, or demanding actions with legal, compliance, or reputational implications.
 
@@ -97,9 +98,11 @@ For each email in the group, evaluate these six dimensions before assigning a cl
 
 **FM/no-reply** — No draft. Add to no_reply batch.
 
-Apply when D6 = Yes (thread already has a support reply), OR when D1 = Statement/opinion. The test is not whether the email is negative or positive, but whether the person is asking for anything. An email that only expresses a view, disinterest, or general commentary — even a long, detailed one — is FM/no-reply if there is no embedded question or actionable request.
+Apply when D6 = Yes (thread already has a support reply), OR when D1 = Statement — disengaged. A disengaged statement expresses a view or opinion with no relational signal and no interaction milestone — no question, no milestone, no outcome being shared.
 
-Examples that ARE FM/no-reply: "I don't find any suitable role at the moment." / "I'm not interested in this opportunity." / "I already have a job." — no question, no request. Examples that are NOT FM/no-reply: "I don't find any suitable role. Could you keep me in mind?" — has a request; "I'm not interested. Please remove me from your list." — has a demand, goes to FM/review R1.
+Examples that ARE FM/no-reply: "I don't find any suitable role at the moment." / "I'm not interested in this opportunity." / "I already have a job." — disengaged, nothing to close.
+
+Examples that are NOT FM/no-reply: "I don't find any suitable role. Could you keep me in mind?" — has a request (FM/ready S17); "I'm not interested. Please remove me from your list." — has a demand (FM/review R1); "I loved the experience, thank you!" — brand moment (FM/ready S15); "I accept the offer." — brand moment (FM/ready S34); "I've completed my interview." — milestone (FM/ready S18); "I'm withdrawing my application, thanks." — brand moment (FM/ready S16).
 
 Also applies to: newsletters, marketing emails, automated notifications, vendor pitches with no question.
 
@@ -156,7 +159,7 @@ Reason: `[REVIEW NEEDED: <Specific reason — what information is missing or amb
 
 **FM/ready** — Draft with no review flag.
 
-Apply ONLY when ALL of the following are true: D1 = Question or request (there is something to answer or do); D2 = Full context (everything needed is in the visible email and thread); D3 = Fully covered (a clear SOP scenario covers this situation, and the reply requires no fabrication); D5 = Normal (no elevated or critical flags — not compensation, not future pricing, not legal); D6 = No (support has not already replied in this thread); and you are confident the reply is correct. If any single dimension fails, escalate to FM/review with the specific reason from R1–R7.
+Apply ONLY when ALL of the following are true: D1 = Question/request OR Statement — brand moment (there is something to answer, do, or warmly close); D2 = Full context (everything needed is in the visible email and thread); D3 = Fully covered (a clear SOP scenario covers this situation, and the reply requires no fabrication); D5 = Normal (no elevated or critical flags — not compensation, not future pricing, not legal); D6 = No (support has not already replied in this thread); and you are confident the reply is correct. If any single dimension fails, escalate to FM/review with the specific reason from R1–R7.
 
 ---
 
@@ -164,9 +167,14 @@ Apply ONLY when ALL of the following are true: D1 = Question or request (there i
 
 | Situation | Classification |
 |-----------|---------------|
-| "I don't find any suitable role" | FM/no-reply — statement, no request |
+| "I don't find any suitable role" | FM/no-reply — disengaged, no request |
+| "I'm not interested" / "I already have a job" | FM/no-reply — disengaged, no request |
 | "I don't find any suitable role. Keep me in mind." | FM/ready (S17) — has a request |
 | "Remove me from your list" | FM/review R1 — critical, DNC demand |
+| "I loved the experience, thank you!" | FM/ready (S15) — brand moment, Trustpilot invite |
+| "I accept the offer / I'm ready to proceed" | FM/ready (S34) — brand moment, warm acceptance close |
+| "I've submitted / completed my interview" | FM/ready (S18) — milestone, timeline acknowledgment |
+| "I'm withdrawing my application, thanks" | FM/ready (S16) — brand moment, warm close + JOBS_URL |
 | Portal shows "already submitted", candidate has not finished | FM/bug (clear) |
 | "I couldn't do the interview" with no detail | FM/review vague bug |
 | Clear issue described + screenshots attached | FM/bug, confidence: No |
