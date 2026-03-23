@@ -2966,6 +2966,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d1967eba389cd2": {
+      "thread_id": "19d1967eba389cd2",
+      "from": "agboe00001@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Emmanuel",
+      "date": "Mon, 23 Mar 2026 07:35:19 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "R3",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5807698728428805297",
+      "draft_message_id": "19d197bf6428304a",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:57:28.248991+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d19506c9a9784a": {
+      "thread_id": "19d19506c9a9784a",
+      "from": "amaan.j.inamdar@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Amaan",
+      "date": "Mon, 23 Mar 2026 11:39:41 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2136240613095948529",
+      "draft_message_id": "19d197cb58f30572",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:16.925432+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1947de5bd8ff0": {
+      "thread_id": "19d1947de5bd8ff0",
+      "from": "johnglenledesma111111@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for John Glen",
+      "date": "Mon, 23 Mar 2026 14:00:19 +0800",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r920442054623641677",
+      "draft_message_id": "19d197cb6b743dbd",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:17.629011+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d192d1f567a8c2": {
+      "thread_id": "19d192d1f567a8c2",
+      "from": "leconghieu096@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Hieu",
+      "date": "Mon, 23 Mar 2026 12:31:06 +0700",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S20",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r9086831485704656453",
+      "draft_message_id": "19d197cbb28b4fed",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:18.483061+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d191f7672d029d": {
+      "thread_id": "19d191f7672d029d",
+      "from": "ratumegamp@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Ratu",
+      "date": "Mon, 23 Mar 2026 12:16:12 +0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7037347067176668041",
+      "draft_message_id": "19d197cbd6ae20c9",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:19.204489+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d191a50b51830d": {
+      "thread_id": "19d191a50b51830d",
+      "from": "agbor.daniel81@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Agbor Tanyi Daniel",
+      "date": "Mon, 23 Mar 2026 06:10:34 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4347473444543916968",
+      "draft_message_id": "19d197cc0d5be0e0",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:19.952730+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1917a4d4713ad": {
+      "thread_id": "19d1917a4d4713ad",
+      "from": "olayiwolataiwo10@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Taiwo",
+      "date": "Mon, 23 Mar 2026 06:07:39 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4023996354465310983",
+      "draft_message_id": "19d197cc28089c2e",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T06:58:20.680679+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
