@@ -4011,6 +4011,101 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d1c7c208518956": {
+      "thread_id": "19d1c7c208518956",
+      "from": "luisfriasgomez7@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Luis Alberto",
+      "date": "Mon, 23 Mar 2026 16:55:53 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2334712968277504266",
+      "draft_message_id": "19d1c98a8d9438f4",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T21:27:40.880327+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1c55a6273611d": {
+      "thread_id": "19d1c55a6273611d",
+      "from": "meetzadafiya00@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for meet",
+      "date": "Mon, 23 Mar 2026 16:14:14 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8710479935149623491",
+      "draft_message_id": "19d1c98af85e9f00",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T21:27:42.561756+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1c50532022e67": {
+      "thread_id": "19d1c50532022e67",
+      "from": "gracyjacob4@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Gracy",
+      "date": "Tue, 24 Mar 2026 01:38:25 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6273185873514623388",
+      "draft_message_id": "19d1c98b261654f7",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T21:27:43.666685+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1c43fb763eee3": {
+      "thread_id": "19d1c43fb763eee3",
+      "from": "scastroc19@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Sandra",
+      "date": "Mon, 23 Mar 2026 14:54:56 -0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9017651924246831376",
+      "draft_message_id": "19d1c98b8450acd0",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T21:27:44.775183+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1c233013a3872": {
+      "thread_id": "19cf75989ce873c8",
+      "from": "kolabdul00@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Abdul-Samad",
+      "date": "Mon, 23 Mar 2026 20:19:07 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1771251993404640468",
+      "draft_message_id": "19d1c98bdbbd6144",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T21:27:45.860444+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
