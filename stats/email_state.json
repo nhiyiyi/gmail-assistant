@@ -2529,6 +2529,63 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d18ff097c3fbfb": {
+      "thread_id": "19d18ff097c3fbfb",
+      "from": "pinkandspicyyy@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Faiza",
+      "date": "Mon, 23 Mar 2026 10:40:44 +0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4186144607378841523",
+      "draft_message_id": "19d190e9defe9140",
+      "kb_version": "0afabf6aba57",
+      "processed_at": "2026-03-23T04:58:02.024164+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d18fec925521f1": {
+      "thread_id": "19d18fec925521f1",
+      "from": "faizatasnim14@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Faiza",
+      "date": "Mon, 23 Mar 2026 10:40:29 +0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8949944671300648362",
+      "draft_message_id": "19d190ea094aedb0",
+      "kb_version": "0afabf6aba57",
+      "processed_at": "2026-03-23T04:58:03.015156+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d18eea7b1f6f04": {
+      "thread_id": "19d18eea7b1f6f04",
+      "from": "avnoorhr@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Avnoor",
+      "date": "Mon, 23 Mar 2026 09:52:42 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8506519430451324885",
+      "draft_message_id": "19d190ea5755d21f",
+      "kb_version": "0afabf6aba57",
+      "processed_at": "2026-03-23T04:58:04.023409+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
