@@ -168,11 +168,11 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 - Explain we do not offer 1:1 calls or demos for candidates/partners.
 - Support is provided via email or the platform; partners can use training sessions where applicable.
 
-### **S15 – Positive Feedback**
+### **S15 – Positive Feedback / Product Suggestions**
 
-- Thank them warmly. If they praise a specific feature or experience, acknowledge it specifically before moving on.
-- Always invite them to share their experience on TRUSTPILOT_URL. Do not hedge — a positive signal is the right moment to ask.
-- Do not add anything beyond the warm thank-you and the Trustpilot invite.
+- Apply the universal writing standard: show you read their email, reflect their specific points.
+- Always invite them to share their experience on TRUSTPILOT_URL. Do not hedge.
+- Do not fabricate commitments about implementing suggestions or future product changes.
 
 ### **S16 – Withdraw from a Process**
 
