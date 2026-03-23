@@ -3859,6 +3859,158 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d1bf6f628c339c": {
+      "thread_id": "19d1bf6f628c339c",
+      "from": "jnthurima@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Joseph",
+      "date": "Mon, 23 Mar 2026 21:30:47 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2425828347347174730",
+      "draft_message_id": "19d1bff528733cab",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:40:11.716390+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1be93299b9c41": {
+      "thread_id": "19d1be93299b9c41",
+      "from": "ivanljuba94@gmail.com",
+      "subject": "Re: [Flowmingo] Insider Preview: What's Coming Next",
+      "date": "Mon, 23 Mar 2026 19:15:46 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r938467303284355220",
+      "draft_message_id": "19d1bff566fa6bcd",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:40:12.653747+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1be73ed24ef1a": {
+      "thread_id": "19d1be73ed24ef1a",
+      "from": "kenken2000ke@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Kennedy",
+      "date": "Mon, 23 Mar 2026 21:13:38 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5273457947642471018",
+      "draft_message_id": "19d1bff5a86f68be",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:40:13.668381+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1be707e5a108d": {
+      "thread_id": "19d1be707e5a108d",
+      "from": "paulebosetale0@gmail.com",
+      "subject": "Following up: Global Management Trainee Application -Ebosetale Paul Ikheloa",
+      "date": "Mon, 23 Mar 2026 19:03:47 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6766260844183221827",
+      "draft_message_id": "19d1bff5e454f21e",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:40:14.614441+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1bb5b866c01a6": {
+      "thread_id": "19d1bb5b866c01a6",
+      "from": "fridahomwando1998@gmail.com",
+      "subject": "Re: ASSISTANCE ON TECHNICAL ERROR",
+      "date": "Mon, 23 Mar 2026 20:19:30 +0300",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r559184067755847949",
+      "draft_message_id": "19d1bff6384bf454",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:40:15.586154+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1bad315c05ab0": {
+      "thread_id": "19d1bad315c05ab0",
+      "from": "alannamasisr@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Alanna",
+      "date": "Mon, 23 Mar 2026 10:10:13 -0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2698638514846453798",
+      "draft_message_id": "19d1c0082beda526",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:41:29.466274+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1b8e5a27e5775": {
+      "thread_id": "19d1b8e5a27e5775",
+      "from": "sabapasha29@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Zainab",
+      "date": "Mon, 23 Mar 2026 21:36:33 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6811026068898395068",
+      "draft_message_id": "19d1c0087a1ac610",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:41:30.444392+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1b864e3956d8b": {
+      "thread_id": "19d1b864e3956d8b",
+      "from": "r.changmai@icloud.com",
+      "subject": "Re: New job opportunites at Flowmingo for Risha",
+      "date": "Mon, 23 Mar 2026 21:57:32 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-604171435500861409",
+      "draft_message_id": "19d1c008ea2a34ec",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-23T18:41:32.509786+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
