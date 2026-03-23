@@ -2396,6 +2396,139 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d18361e7741c64": {
+      "thread_id": "19d18361e7741c64",
+      "from": "danielhocaoglu123@outlook.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Dan",
+      "date": "Mon, 23 Mar 2026 01:01:28 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8091639527519677644",
+      "draft_message_id": "19d183f2551efd01",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:25.373546+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1815a29a266a8": {
+      "thread_id": "19d1815a29a266a8",
+      "from": "pgviceiro.digital@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Patricia",
+      "date": "Sun, 22 Mar 2026 21:25:46 -0300",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7491160032848280806",
+      "draft_message_id": "19d183f29ea92605",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:26.181584+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d17ec151f05042": {
+      "thread_id": "19d17ec151f05042",
+      "from": "pestanasjc19@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Joseph Clydel",
+      "date": "Mon, 23 Mar 2026 07:40:26 +0800",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2194110349652013913",
+      "draft_message_id": "19d183f2bc51fece",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:26.961185+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d17db3d2ac1095": {
+      "thread_id": "19d17db3d2ac1095",
+      "from": "contact@flowmingo.ai",
+      "subject": "Re: Follow-up on Hidden Talents Recruiters Solutions Feature for Flowmingo",
+      "date": "Sun, 22 Mar 2026 16:21:59 -0700",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7434141624027094395",
+      "draft_message_id": "19d183f2f5f8bf2d",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:27.742842+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1780583a81e1b": {
+      "thread_id": "19d1780583a81e1b",
+      "from": "dkotieno1@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Derrick",
+      "date": "Mon, 23 Mar 2026 00:42:45 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9187643620519246128",
+      "draft_message_id": "19d183f306e84e07",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:28.539020+00:00",
+      "labels_applied": [
+        "FM/no-reply"
+      ],
+      "ticket_id": null
+    },
+    "19d177cc7c8db335": {
+      "thread_id": "19d177cc7c8db335",
+      "from": "erickabira@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Eric",
+      "date": "Mon, 23 Mar 2026 00:38:52 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6660914323977002505",
+      "draft_message_id": "19d183f356b9d0fb",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:29.311817+00:00",
+      "labels_applied": [
+        "FM/no-reply"
+      ],
+      "ticket_id": null
+    },
+    "19d1768d4798f95a": {
+      "thread_id": "19d1768d4798f95a",
+      "from": "jasswathandra@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Swathandra",
+      "date": "Sun, 22 Mar 2026 22:17:04 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1006130982512606492",
+      "draft_message_id": "19d183f37046ece4",
+      "kb_version": "02397578c38d",
+      "processed_at": "2026-03-23T01:11:30.070986+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
