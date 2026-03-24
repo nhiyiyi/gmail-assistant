@@ -78,10 +78,9 @@ For each email in the group, evaluate these six dimensions before assigning a cl
 - Not covered: No scenario in the SOP applies at all.
 - Fabrication risk: The topic exists broadly in the KB (e.g. pricing, timeline, platform capabilities) but the specific claim the customer is asking about is NOT stated in the KB. For example, asking about role salary, or whether Flowmingo will charge in the future — these sound answerable but would require inventing facts not present in the KB.
 
-**D4 — Technical defect type:** Is this a bug report, and how complete is it?
-- Clear bug: The person describes a specific, observable platform behavior that is wrong — the system showed an error, logged them out, showed "already submitted" when they did not finish, froze up, or refused to do something it should do.
-- Vague bug: Something clearly went wrong but they do not describe what specifically happened — only that they "couldn't do" something or that "it didn't work". Not enough information to create a bug ticket.
-- Not a bug: The issue is a how-to question, user confusion, or a request for an extension/retake.
+**D4 — Technical defect type:** Is there any signal that the platform didn't work as expected?
+- Bug signal: The person says the platform did something wrong OR they tried to do something on the platform and it failed — whether they can quote an exact error or not. This includes specific error messages ("Status failed 400"), vague complaints ("I couldn't access my interview", "it didn't work", "I had a problem completing it"), and any report of unexpected behavior during a session. If the person is saying "I tried and it failed" rather than "I don't know how to do this", D4 = Bug signal.
+- Not a bug: Clear user-side confusion (how-to question, doesn't know how to use a feature), extension/retake requests, or a link-access issue where the person has not yet tried basic troubleshooting and no error message is reported (e.g., "my link is expired", "my link shows 404" with nothing further).
 
 **D5 — Sensitivity level:** Does this email require extra caution?
 - Normal: Standard support interaction. No legal, ethical, or reputational risk.
@@ -108,26 +107,15 @@ Also applies to: newsletters, marketing emails, automated notifications, vendor 
 
 ---
 
-**FM/bug (clear)** — Set aside for Step 6 (create_bug_ticket). Do not draft a reply here.
+**FM/bug** — Set aside for Step 6 (create_bug_ticket). Do not draft a reply here.
 
-Apply when D4 = Clear bug AND D1 = Technical report. The person describes a specific, observable, wrong behavior of the Flowmingo platform. These behaviors are definitively FM/bug when clearly described:
-- The portal shows the interview as "already submitted" but the candidate has not completed or submitted it (including: network error interrupted the session, browser was refreshed, or the system shows completed when the person knows they did not finish).
-- The platform website is completely frozen or static — pages load but nothing is clickable, interactive elements do not respond.
-- The platform randomly logs the user out mid-interview session without any action from the user, across one or multiple devices.
-- The interview or video interview link fails to load or shows an error consistently, even after trying on multiple devices and browsers.
-- Camera/microphone permissions are granted but the platform still cannot access them, showing an error even after following standard troubleshooting steps.
+Apply when D4 = Bug signal. This takes priority over all SOP scenarios (S6–S9, S20, etc.) — a scenario being "Fully covered" in D3 does NOT override FM/bug when D4 = Bug signal.
 
-**Screenshots attached but not visible:** If the person describes a clear bug AND mentions attaching screenshots, classify as FM/bug and create the ticket. Note `confidence: No` to flag unseen screenshots, but do NOT downgrade to FM/review. The test is whether the issue itself is clearly described — not whether the screenshots are visible.
+Two tiers — both go to create_bug_ticket:
+- **Detailed**: Specific error message or clear platform behavior described (e.g., "Status failed 400", "Failed to load the interview set", "already submitted" when not finished, platform frozen, random logout, camera error after granting permissions). Full ticket details available.
+- **Vague**: General failure report with no specific error described ("I couldn't access my interview", "it didn't work", "I had a problem completing it"). Create the ticket with what's available — the acknowledgment email will ask the customer for more details.
 
----
-
-**FM/review (vague bug)** — Draft asking for details. Do NOT create a bug ticket yet.
-
-Apply when D4 = Vague bug. If you cannot answer "what specific thing did the platform do wrong?" from the email, it is a vague bug. Indicators: "I couldn't do the interview", "it didn't work", "I had a problem", "I applied but couldn't complete it" — with no description of what the platform showed or did.
-
-Draft a reply that asks for: the device type (laptop, desktop, mobile) and operating system; the browser name and version; the exact step they were on when the issue occurred; what they saw on the screen (any error message, loading state, or unexpected behavior); and the interview or application link they were trying to use.
-
-Reason: `[REVIEW NEEDED: Bug suspected but insufficient detail to create a ticket — draft asks the customer for device/browser/error specifics before escalating]`
+**Screenshots attached but not visible:** Classify as FM/bug and create the ticket. Note `confidence: No` to flag unseen screenshots, but do NOT downgrade. The test is whether a technical issue is being reported — not the level of detail.
 
 ---
 
@@ -159,7 +147,7 @@ Reason: `[REVIEW NEEDED: <Specific reason — what information is missing or amb
 
 **FM/ready** — Draft with no review flag.
 
-Apply ONLY when ALL of the following are true: D1 = Question/request OR Statement — brand moment (there is something to answer, do, or warmly close); D2 = Full context (everything needed is in the visible email and thread); D3 = Fully covered (a clear SOP scenario covers this situation, and the reply requires no fabrication); D5 = Normal (no elevated or critical flags — not compensation, not future pricing, not legal); D6 = No (support has not already replied in this thread); and you are confident the reply is correct. If any single dimension fails, escalate to FM/review with the specific reason from R1–R7.
+Apply ONLY when ALL of the following are true: D1 = Question/request OR Statement — brand moment (there is something to answer, do, or warmly close); D2 = Full context (everything needed is in the visible email and thread); D3 = Fully covered (a clear SOP scenario covers this situation, and the reply requires no fabrication); D4 = Not a bug (if D4 = Bug signal — even vague — the email must go to FM/bug, not FM/ready; no SOP scenario overrides this); D5 = Normal (no elevated or critical flags — not compensation, not future pricing, not legal); D6 = No (support has not already replied in this thread); and you are confident the reply is correct. If any single dimension fails, escalate to FM/review with the specific reason from R1–R7.
 
 ---
 
@@ -176,8 +164,14 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I've submitted / completed my interview" | FM/ready (S18) — milestone, timeline acknowledgment |
 | "I'm withdrawing my application, thanks" | FM/ready (S16) — brand moment, warm close + JOBS_URL |
 | Portal shows "already submitted", candidate has not finished | FM/bug (clear) |
-| "I couldn't do the interview" with no detail | FM/review vague bug |
-| Clear issue described + screenshots attached | FM/bug, confidence: No |
+| Platform returns specific error message (e.g., "Status failed 400", "Failed to load the interview set") | FM/bug (detailed) — error message is sufficient, S8 does NOT apply |
+| Specific 4xx/5xx error code from the platform during interview | FM/bug (detailed) |
+| Interview link fails to load after person already tried multiple browsers / incognito | FM/bug (detailed) |
+| "My link doesn't work" with no error message, hasn't tried troubleshooting yet | FM/ready (S8) — no failure reported, user-side issue |
+| "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/bug (vague) — ticket created with what's available |
+| "I couldn't access my interview" with no error | FM/bug (vague) — ticket created, ack email asks for details |
+| Clear issue described + screenshots attached | FM/bug (detailed), confidence: No |
+| Prospective or current BP asking about commission, payout, tracking, employment type, or formal agreement | FM/ready (S11) — answer from Section 10 + PAYOUT_SCHEME_DOC; company ops/partner experience questions → WHATSAPP |
 | "As we discussed on WhatsApp, can I still interview?" | FM/review R2 |
 | "What is the salary for this role?" | FM/review R4/R5 — compensation not in KB |
 | "Will Flowmingo remain free in the future?" | FM/review R4/R5 — future pricing not authorized |
@@ -243,9 +237,9 @@ Then continue to the next group of 8 (Step 4 again).
 
 ## Step 6 — Bug tickets (after all groups are done)
 
-**Do NOT call `create_bug_ticket` for vague reports.** If the email hints at a bug but lacks device, browser, error message, or a clear description of what failed — it was already classified FM/review in Step 4. Skip it here.
+Call `create_bug_ticket` for ALL FM/bug emails — both detailed and vague.
 
-For each FM/bug email set aside in Step 4 (confirmed sufficient detail):
+For **detailed** bugs (specific error message or clear platform behavior described):
 
 Call `create_bug_ticket` with:
 - email_id, thread_id
@@ -253,12 +247,22 @@ Call `create_bug_ticket` with:
 - from_addr: sender's email
 - subject: original subject
 - issue_summary: 1–3 sentences describing the bug (in English)
-- issue_summary_vi: Vietnamese translation of issue_summary (translate accurately — this is for the Vietnamese tech team)
+- issue_summary_vi: Vietnamese translation of issue_summary (full, 1-3 sentences — for the tech team col E)
+- main_issue_vi: Single Vietnamese sentence, **strictly under 10 words**, naming the core problem. Start with the affected subject (Trang / Hệ thống / Nút / Câu hỏi / Màn hình…). No filler, no "người dùng báo cáo". Examples: "Câu hỏi bị lặp lại nhiều lần trong lúc phỏng vấn." · "Trang hiển thị màn hình tải vô thời hạn sau phỏng vấn." · "Hệ thống báo lỗi 400 khi gửi kết quả phỏng vấn."
 - issue_type: e.g. "Login Issue", "Feature Not Working", "Performance"
 - troubleshooting_steps: 2–3 quick things to try (under 12 words each), tailored by sender type:
   - **Candidate (Type A/B):** Clear browser cache and cookies. | Try incognito/private mode. | Try a different browser (Chrome, Safari, or Edge). | Try a different device if possible.
   - **Company/Recruiter (Type D):** Try logging out and back into your Flowmingo dashboard. | Clear browser cache and try in an incognito window. | Check if the issue affects all campaigns or just one. | If candidates are affected: ask them for their interview link, device type, and browser.
 - original_message: customer's message body, trimmed to ~300 chars
+
+For **vague** bugs (no specific error described — "it didn't work", "I couldn't access", etc.):
+
+Call `create_bug_ticket` with the same fields, but:
+- issue_summary: "Customer reports [describe what they tried to do] but was unable to complete it — no specific error message provided. Details needed to reproduce." (1–2 sentences max)
+- issue_summary_vi: Vietnamese translation of the above (full sentence)
+- main_issue_vi: Single Vietnamese sentence <10 words. Example: "Người dùng không thể hoàn thành phỏng vấn, không rõ lỗi."
+- issue_type: "Feature Not Working"
+- troubleshooting_steps: ["Ask customer for device type and operating system.", "Ask customer for browser name and version.", "Ask customer for exact error message or what they saw on screen."]
 
 Then call `mark_as_read` with the message_id.
 

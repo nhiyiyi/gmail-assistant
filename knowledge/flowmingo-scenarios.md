@@ -27,6 +27,8 @@ This section applies only when the email clearly relates to the AI development/d
 
 ## **10. BUSINESS PARTNER PROGRAM**
 
+> **Routing note:** Questions about BP program terms — commission, payout, referral tracking, employment type, formal agreement — can be answered directly from this section. No separate scenario is required. This applies equally to prospective partners who received an offer but have not yet accepted, and to current partners.
+
 ### **10.1 Role**
 
 - Fully remote, freelance, 100% commission-based partnership for HR professionals, recruiters, and content creators.
@@ -128,6 +130,10 @@ Trigger: Customer mentions integrations, ATS/CRM, automation, job portals, or AP
 
 ### **S8 – Interview Link Not Working/Expired/404**
 
+Applies to user-side access problems only: expired link, 404 not-found, link opened in an in-app browser, or copy-paste URL issues — where the person has not yet tried basic troubleshooting and no specific platform error message is reported.
+
+Does NOT apply when the platform returns a specific error message (e.g., "Status failed 400", "Failed to load the interview set", any named system error or error code). Those are platform defects and must be classified as FM/bug, not S8.
+
 - Ask them to open the link in Chrome/Safari/Edge (not an in-app browser).
 - Ask them to copy/paste the full URL into the browser address bar.
 - If unresolved: ask for details and apply T2.
@@ -144,14 +150,20 @@ Trigger: Customer mentions integrations, ATS/CRM, automation, job portals, or AP
 - Explain the dashboard updates after the first valid referral sign-up is tracked.
 - Reassure them data will appear once a company signs up through their link.
 
-### **S11 – Partner Onboarding & Training**
+### **S11 – Partner Onboarding, Training & Program Questions**
 
-Applies to any partner, recruiter, or collaborator asking for materials, guides, or a proposal about how Flowmingo works.
+Applies to any partner, recruiter, or collaborator asking for materials, guides, or a proposal about how Flowmingo works. Also applies when a prospective or current partner asks about BP program mechanics: commission rate, payout schedule, referral tracking, employment classification, or formal agreement terms.
 
+**For onboarding materials and how-to questions:**
 - Share TRAINING_DECK_URL and QUICKSTART_GUIDE_URL.
 - Share YOUTUBE_URL for video guides and platform walkthroughs.
 - Let them know additional materials are available in the Partner Hub (accessible after onboarding).
 - For further questions or specific needs, direct them to WHATSAPP_SUPPORT_HOTLINE.
+
+**For program mechanics questions (commission, payout, tracking, employment type, formal agreement):**
+- Answer directly from Section 10. Key facts: 50% revenue share on paid transactions only (free sign-ups earn nothing); commission window is first 180 days after company signs up via referral link; payout monthly between 1st–5th; partners are contacted 1:1 on 27th–29th when commissions are due; role is fully freelance/independent, not employment.
+- Share PAYOUT_SCHEME_DOC once for full terms and tracking details.
+- For questions about company operations or existing partner experiences (not in KB): direct to WHATSAPP_SUPPORT_HOTLINE. Do not fabricate.
 
 ### **S12 – Partner Requests for Templates/Content**
 
@@ -186,8 +198,11 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 
 ### **S18 – Timeline Expectations (Flowmingo Program Candidates – Type A)**
 
-- If they completed the interview: thank them and explain results and next steps are typically within 1–2 weeks.
+**Only use this guidance when the sender is clearly identified as Type A (Flowmingo program candidate). If sender type is unclear, do not give a timeline — use Type E handling instead.**
+
+- If they completed the interview: thank them and explain results and next steps are typically within 1–2 weeks. Use language like: "Results and next steps are typically shared within 1–2 weeks."
 - If they will do the interview: thank them and explain that after completion, results and next steps are typically within 1–2 weeks.
+- Do NOT mention "onboarding details" — this is not authorised language for candidate replies.
 - **Exception — shortlist-only context:** If the email thread or the original program communication already states "only shortlisted candidates will be contacted" (or similar), do NOT give a 1–2 week timeline. Simply acknowledge their completion and wish them well. Giving a timeline contradicts what the hiring side already communicated and is inconsistent.
 
 ### **S19 – WhatsApp Link Wrong/Full/Error**
@@ -233,9 +248,9 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 - Apply Section 9 rules strictly based on the triggers (Trigger A or Trigger B).
 - Use only the defined program links and do not add extra information beyond what the sender asked.
 
-### **S27 – Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, etc.)**
+### **S27 – Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, etc.)**
 
-Use this only when someone is pitching services to Flowmingo (not a recruiter wanting to hire using Flowmingo).
+Use this when someone is pitching any service or commercial offer to Flowmingo — including but not limited to: lead generation, prospecting tools, infrastructure, software, media/PR features, paid magazine profiles, award/recognition programs (e.g. "Top X in APAC"), sponsored content, and directory listings. It does NOT apply to recruiters wanting to hire using Flowmingo.
 
 - Do not decline their offer in the first sentence; start with a professional acknowledgment.
 - Pivot quickly to the recruitment bottleneck: time lost in first-round screening.
@@ -271,6 +286,9 @@ Applies when: an existing Business Partner, Talent Acquisition Partner, Content 
 
 Applies when: any sender asks whether a Flowmingo role is self-employment, freelance, full-time, part-time, or contract-based.
 
+**Exception — BP offer recipients:** If the sender received a Business Partner or Talent Acquisition Partner offer letter (visible in thread or clearly referenced), the employment type is known: fully remote, freelance, 100% commission-based — not an employment position (Section 10.1). Answer directly from Section 10. Do not route to JOBS_URL.
+
+**General case (no BP offer context):**
 - Explain that employment type depends on the specific role and its job description, as each role belongs to a different department with its own terms.
 - Confirm they are welcome to apply and review the relevant JD for specifics.
 - Direct them to JOBS_URL.
@@ -317,7 +335,8 @@ This is a brand moment. Reply warmly and confirm what happens next based on send
 - **Type B (external candidate):** Acknowledge warmly and remind them that the hiring company will be in touch with next steps — Flowmingo does not manage the hiring timeline.
 - **Type C (Business Partner / Talent Acquisition Partner):** Welcome them warmly to the partnership. Share TRAINING_DECK_URL and QUICKSTART_GUIDE_URL to help them get started, and direct them to WHATSAPP_SUPPORT_HOTLINE for any further questions.
 - **Type D (Recruiter / Company user):** Acknowledge warmly and invite them to schedule a brief onboarding call via RECRUITER_CALENDAR_URL if they have not already done so.
-- **Type E / unclear:** Acknowledge warmly and let them know the relevant team will be in touch with next steps.
+- **Type E / unclear:** Acknowledge warmly and let them know the relevant team will be in touch. Do NOT give a 1–2 week timeline, do NOT mention onboarding details — these are only authorised for specific sender types.
 
 Do NOT fabricate next steps. Only confirm what the SOP authorises for that sender type.
+Do NOT use 1–2 week timelines or mention "onboarding details" unless the sender type is clearly Type A or Type D respectively.
 Keep the reply brief — this is a closing moment, not a new thread opener.

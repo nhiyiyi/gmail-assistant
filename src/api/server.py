@@ -252,9 +252,10 @@ async def list_tools() -> list[types.Tool]:
                         "description": "2-3 quick things the customer can try immediately, specific to this issue type. Keep each step under 12 words.",
                     },
                     "original_message":       {"type": "string", "description": "The customer's original email body (plain text, trimmed to ~300 chars)"},
-                    "issue_summary_vi":       {"type": "string", "description": "Vietnamese translation of issue_summary for the tech team column in the Google Sheet"},
+                    "issue_summary_vi":       {"type": "string", "description": "Vietnamese translation of issue_summary (full, 1-3 sentences) for the tech team"},
+                    "main_issue_vi":          {"type": "string", "description": "Single Vietnamese sentence (<10 words) naming the core problem. Start with the affected subject (Trang / Hệ thống / Nút / Câu hỏi / Màn hình…). Example: 'Câu hỏi bị lặp lại nhiều lần trong lúc phỏng vấn.'"},
                 },
-                "required": ["email_id", "thread_id", "customer_name", "from_addr", "subject", "issue_summary", "issue_summary_vi", "troubleshooting_steps", "original_message"],
+                "required": ["email_id", "thread_id", "customer_name", "from_addr", "subject", "issue_summary", "issue_summary_vi", "main_issue_vi", "troubleshooting_steps", "original_message"],
             },
         ),
         types.Tool(
@@ -557,6 +558,7 @@ def _handle_create_bug_ticket(args: dict) -> list[types.TextContent]:
     subject       = args["subject"]
     issue_summary         = args["issue_summary"]
     issue_summary_vi      = args.get("issue_summary_vi", "")
+    main_issue_vi         = args.get("main_issue_vi", "")
     issue_type            = args.get("issue_type", "Bug Report")
     troubleshooting_steps = args.get("troubleshooting_steps", [])
     original_message      = args.get("original_message", "")
@@ -603,6 +605,7 @@ def _handle_create_bug_ticket(args: dict) -> list[types.TextContent]:
         "subject":         subject,
         "issue_summary":    issue_summary,
         "issue_summary_vi": issue_summary_vi,
+        "main_issue_vi":    main_issue_vi,
         "issue_type":       issue_type,
         "draft_id":         draft_id,
         "thread_id":        thread_id,

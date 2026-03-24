@@ -40,19 +40,20 @@ const COL = {
   DATE:        1,   // A
   TICKET_ID:   2,   // B
   STATUS:      3,   // C
-  PRIORITY:    4,   // D
-  SUMMARY_VI:  5,   // E
-  GMAIL_LINK:  6,   // F
-  EMAIL:       7,   // G
-  NOTES:       8,   // H
-  SUMMARY_EN:  9,   // I
-  CUSTOMER:   10,   // J
-  SUBJECT:    11,   // K
-  ISSUE_TYPE: 12,   // L
-  SLACK_MSG:  13,   // M
-  DRAFT_ID:   14,   // N
-  THREAD_ID:  15,   // O
-  SENT_AT:    16,   // P
+  MAIN_ISSUE:  4,   // D — 1-sentence VI summary (auto, <10 words)
+  PRIORITY:    5,   // E
+  SUMMARY_VI:  6,   // F
+  GMAIL_LINK:  7,   // G
+  EMAIL:       8,   // H
+  NOTES:       9,   // I
+  SUMMARY_EN: 10,   // J
+  CUSTOMER:   11,   // K
+  SUBJECT:    12,   // L
+  ISSUE_TYPE: 13,   // M
+  SLACK_MSG:  14,   // N
+  DRAFT_ID:   15,   // O
+  THREAD_ID:  16,   // P
+  SENT_AT:    17,   // Q
 };
 
 
@@ -68,7 +69,7 @@ function onStatusChange(e) {
   if (!DRAFT_STATUSES.includes(newStatus)) return;
 
   // Read the full row
-  const row = sheet.getRange(range.getRow(), 1, 1, 16).getValues()[0];
+  const row = sheet.getRange(range.getRow(), 1, 1, 17).getValues()[0];
   const ticketId     = row[COL.TICKET_ID  - 1];
   const customerName = row[COL.CUSTOMER   - 1];
   const subject      = row[COL.SUBJECT    - 1];

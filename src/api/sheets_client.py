@@ -26,37 +26,39 @@ SCOPES = [
 COL_DATE          = 1   # A — auto (Claude)
 COL_TICKET_ID     = 2   # B — auto (Claude)
 COL_STATUS        = 3   # C — tech team dropdown
-COL_PRIORITY      = 4   # D — tech team dropdown
-COL_SUMMARY_VI    = 5   # E — tech team editable (Vietnamese)
-COL_GMAIL_LINK    = 6   # F — auto (Claude) — click to open thread + attachments
-COL_EMAIL         = 7   # G — auto (Claude)
-COL_NOTES         = 8   # H — tech team editable (internal notes)
-COL_SUMMARY_EN    = 9   # I — auto (Claude)
-COL_CUSTOMER      = 10  # J — auto (Claude)
-COL_SUBJECT       = 11  # K — auto (Claude)
-COL_ISSUE_TYPE    = 12  # L — auto (Claude)
-COL_SLACK_MESSAGE = 13  # M — auto (Claude) — copy-paste to Slack
-COL_DRAFT_ID      = 14  # N — auto (Claude)
-COL_THREAD_ID     = 15  # O — auto (Claude)
-COL_SENT_AT       = 16  # P — manual (fill when customer notified)
+COL_MAIN_ISSUE    = 4   # D — auto (Claude) — 1-sentence VI summary, <10 words
+COL_PRIORITY      = 5   # E — tech team dropdown
+COL_SUMMARY_VI    = 6   # F — tech team editable (Vietnamese full summary)
+COL_GMAIL_LINK    = 7   # G — auto (Claude) — click to open thread + attachments
+COL_EMAIL         = 8   # H — auto (Claude)
+COL_NOTES         = 9   # I — tech team editable (internal notes)
+COL_SUMMARY_EN    = 10  # J — auto (Claude)
+COL_CUSTOMER      = 11  # K — auto (Claude)
+COL_SUBJECT       = 12  # L — auto (Claude)
+COL_ISSUE_TYPE    = 13  # M — auto (Claude)
+COL_SLACK_MESSAGE = 14  # N — auto (Claude) — copy-paste to Slack
+COL_DRAFT_ID      = 15  # O — auto (Claude)
+COL_THREAD_ID     = 16  # P — auto (Claude)
+COL_SENT_AT       = 17  # Q — manual (fill when customer notified)
 
 HEADERS = [
     "Date Created",        # A
     "Ticket ID",           # B
     "Status",              # C
-    "Priority",            # D
-    "Issue Summary (VI)",  # E
-    "Gmail Link",          # F
-    "Email Address",       # G
-    "Notes",               # H
-    "Issue Summary (EN)",  # I
-    "Customer Name",       # J
-    "Subject",             # K
-    "Issue Type",          # L
-    "Slack Message",       # M
-    "Draft ID",            # N
-    "Thread ID",           # O
-    "Sent At",             # P
+    "Main Issue (VI)",     # D
+    "Priority",            # E
+    "Issue Summary (VI)",  # F
+    "Gmail Link",          # G
+    "Email Address",       # H
+    "Notes",               # I
+    "Issue Summary (EN)",  # J
+    "Customer Name",       # K
+    "Subject",             # L
+    "Issue Type",          # M
+    "Slack Message",       # N
+    "Draft ID",            # O
+    "Thread ID",           # P
+    "Sent At",             # Q
 ]
 
 BUG_TAB    = "Bug Tickets"
@@ -145,26 +147,27 @@ def append_ticket_row(ticket_data: dict) -> dict:
         ticket_data.get("date_created", datetime.now().strftime("%Y-%m-%d %H:%M")),  # A
         ticket_data.get("ticket_id", ""),          # B
         "Reported",                                # C — initial status
-        ticket_data.get("priority", "Normal"),     # D
-        ticket_data.get("issue_summary_vi", ""),   # E — Issue Summary (VI): auto-filled by Claude
-        gmail_link,                                # F
-        ticket_data.get("email", ""),              # G
-        "",                                        # H — Notes: tech team fills
-        ticket_data.get("issue_summary", ""),      # I — Issue Summary (EN)
-        ticket_data.get("customer_name", ""),      # J
-        ticket_data.get("subject", ""),            # K
-        ticket_data.get("issue_type", ""),         # L
-        slack_message,                             # M
-        ticket_data.get("draft_id", ""),           # N
-        thread_id,                                 # O
-        "",                                        # P — Sent At: manual
+        ticket_data.get("main_issue_vi", ""),      # D — Main Issue (VI): 1-sentence, <10 words
+        ticket_data.get("priority", "Normal"),     # E
+        ticket_data.get("issue_summary_vi", ""),   # F — Issue Summary (VI): full Vietnamese
+        gmail_link,                                # G
+        ticket_data.get("email", ""),              # H
+        "",                                        # I — Notes: tech team fills
+        ticket_data.get("issue_summary", ""),      # J — Issue Summary (EN)
+        ticket_data.get("customer_name", ""),      # K
+        ticket_data.get("subject", ""),            # L
+        ticket_data.get("issue_type", ""),         # M
+        slack_message,                             # N
+        ticket_data.get("draft_id", ""),           # O
+        thread_id,                                 # P
+        "",                                        # Q — Sent At: manual
     ]
 
     try:
         service = get_service()
         service.spreadsheets().values().append(
             spreadsheetId=spreadsheet_id,
-            range=f"{BUG_TAB}!A:P",
+            range=f"{BUG_TAB}!A:Q",
             valueInputOption="USER_ENTERED",
             body={"values": [row]},
         ).execute()
@@ -224,7 +227,7 @@ def get_tickets(status_filter: str = None) -> list:
         service = get_service()
         result = service.spreadsheets().values().get(
             spreadsheetId=spreadsheet_id,
-            range=f"{BUG_TAB}!A:P",
+            range=f"{BUG_TAB}!A:Q",
         ).execute()
         rows = result.get("values", [])
         if not rows or len(rows) < 2:
@@ -232,24 +235,25 @@ def get_tickets(status_filter: str = None) -> list:
 
         tickets = []
         for row in rows[1:]:  # skip header
-            row = row + [""] * (16 - len(row))  # pad to 16
+            row = row + [""] * (17 - len(row))  # pad to 17
             ticket = {
-                "date_created":  row[0],
-                "ticket_id":     row[1],
-                "status":        row[2],
-                "priority":      row[3],
-                "issue_summary_vi": row[4],
-                "gmail_link":    row[5],
-                "email":         row[6],
-                "notes":         row[7],
-                "issue_summary": row[8],   # EN
-                "customer_name": row[9],
-                "subject":       row[10],
-                "issue_type":    row[11],
-                "slack_message": row[12],
-                "draft_id":      row[13],
-                "thread_id":     row[14],
-                "sent_at":       row[15],
+                "date_created":     row[0],
+                "ticket_id":        row[1],
+                "status":           row[2],
+                "main_issue_vi":    row[3],
+                "priority":         row[4],
+                "issue_summary_vi": row[5],
+                "gmail_link":       row[6],
+                "email":            row[7],
+                "notes":            row[8],
+                "issue_summary":    row[9],    # EN
+                "customer_name":    row[10],
+                "subject":          row[11],
+                "issue_type":       row[12],
+                "slack_message":    row[13],
+                "draft_id":         row[14],
+                "thread_id":        row[15],
+                "sent_at":          row[16],
             }
             if status_filter is None or ticket["status"].lower() == status_filter.lower():
                 tickets.append(ticket)
