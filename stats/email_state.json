@@ -4106,6 +4106,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d1d2e267389174": {
+      "thread_id": "19d1d2e267389174",
+      "from": "aidacecilia94@gmail.com",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Mon, 23 Mar 2026 18:10:42 -0600",
+      "sender_type": "B",
+      "topic": "billing",
+      "scenario": "S2",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-630099091083334041",
+      "draft_message_id": "19d1d5ea7f533177",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-24T01:03:56.605274+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1cbf97b1e2e83": {
+      "thread_id": "19d1cbf97b1e2e83",
+      "from": "nedimaksu4@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Nedim",
+      "date": "Tue, 24 Mar 2026 01:09:55 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1869435525242579309",
+      "draft_message_id": "19d1d5eab5f0ab0d",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-24T01:03:57.763255+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d1cbcc42b8860f": {
+      "thread_id": "19d0a7d3db71243c",
+      "from": "farwarizvi323@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Syeda Farwa Rizvi",
+      "date": "Tue, 24 Mar 2026 03:06:52 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1496019751730402456",
+      "draft_message_id": "19d1d5eb02e59e80",
+      "kb_version": "b5edd00e0318",
+      "processed_at": "2026-03-24T01:03:58.923634+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
