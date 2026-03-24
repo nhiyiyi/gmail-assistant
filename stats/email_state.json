@@ -5075,6 +5075,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d21471517bea71": {
+      "thread_id": "19d1a1dce178b300",
+      "from": "anton.todorov.yordanov@gmail.com",
+      "subject": "Re: Unique code and link",
+      "date": "Tue, 24 Mar 2026 21:16:26 +0200",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3234038211302292667",
+      "draft_message_id": "19d21c0304995751",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T21:28:57.830871+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
