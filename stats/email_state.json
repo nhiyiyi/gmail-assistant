@@ -4923,6 +4923,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d2074b167825de": {
+      "thread_id": "19d2074b167825de",
+      "from": "jnakamura16@aol.com",
+      "subject": "Re: Homely: Interview invitation for Business Development Representative - Jaybee Jed Nakamura",
+      "date": "Tue, 24 Mar 2026 15:26:43 +0000",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6412958964207267753",
+      "draft_message_id": "19d2090bed270c90",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:57:30.709846+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d206b2ec99dd49": {
+      "thread_id": "19d206b2ec99dd49",
+      "from": "priya.connect2018@gmail.com",
+      "subject": "Re: Resume for HR",
+      "date": "Tue, 24 Mar 2026 19:15:59 +0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7080816926216799323",
+      "draft_message_id": "19d2090c10309199",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:57:31.617349+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d205e317974210": {
+      "thread_id": "19d205e317974210",
+      "from": "knfathima.mac@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Fathima K N",
+      "date": "Tue, 24 Mar 2026 19:01:59 +0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-572030803577489922",
+      "draft_message_id": "19d209189f9f3fc6",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:58:22.865571+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d205b74de8f379": {
+      "thread_id": "19d205b74de8f379",
+      "from": "orebanjooluwaseyi@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Oluwaseyi",
+      "date": "Tue, 24 Mar 2026 15:59:02 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6853251490312338062",
+      "draft_message_id": "19d20918cffddefb",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:58:23.667145+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d200a8846dd0c0": {
+      "thread_id": "19d200a8846dd0c0",
+      "from": "mayuraksheedas1301@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - MAYURAKSHEE DAS",
+      "date": "Tue, 24 Mar 2026 19:00:38 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r144714372405650762",
+      "draft_message_id": "19d209214d9ef41c",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:58:58.602184+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d1fde9cb4b55c1": {
+      "thread_id": "19d1fde9cb4b55c1",
+      "from": "shahanafathims98672@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Shahana",
+      "date": "Tue, 24 Mar 2026 18:12:40 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "R3",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r9108995662743942086",
+      "draft_message_id": "19d20921872b7bd4",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-24T15:58:59.426888+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
