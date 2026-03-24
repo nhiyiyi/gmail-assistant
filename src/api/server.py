@@ -673,6 +673,7 @@ def _compact_thread_summary(thread_data: dict, email_meta: dict) -> dict:
 
     latest = messages[-1]
     latest_body = (latest.get("body") or latest.get("snippet", ""))[:1000]
+    attachments = latest.get("attachments", [])
 
     prior_context = ""
     if len(messages) > 1:
@@ -693,6 +694,7 @@ def _compact_thread_summary(thread_data: dict, email_meta: dict) -> dict:
         "message_count": len(messages),
         "has_support_reply": has_support_reply,
         "latest_message": latest_body,
+        "attachments": attachments,
         "thread_context": prior_context,
     }
 

@@ -115,7 +115,7 @@ Two tiers — both go to create_bug_ticket:
 - **Detailed**: Specific error message or clear platform behavior described (e.g., "Status failed 400", "Failed to load the interview set", "already submitted" when not finished, platform frozen, random logout, camera error after granting permissions). Full ticket details available.
 - **Vague**: General failure report with no specific error described ("I couldn't access my interview", "it didn't work", "I had a problem completing it"). Create the ticket with what's available — the acknowledgment email will ask the customer for more details.
 
-**Screenshots attached but not visible:** Classify as FM/bug and create the ticket. Note `confidence: No` to flag unseen screenshots, but do NOT downgrade. The test is whether a technical issue is being reported — not the level of detail.
+**Screenshots or image attachments present:** If the `attachments` field contains any image file (MIME type `image/*`, or filename ending in `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`) — or if the body mentions a screenshot — classify as FM/bug and create the ticket immediately. Do NOT downgrade to FM/review. Do NOT ask for device/browser details first. Note `confidence: No` only if the image content itself would change the ticket classification. The test is whether a technical issue is being reported, not the level of detail visible in the body.
 
 ---
 
@@ -171,6 +171,7 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/bug (vague) — ticket created with what's available |
 | "I couldn't access my interview" with no error | FM/bug (vague) — ticket created, ack email asks for details |
 | Clear issue described + screenshots attached | FM/bug (detailed), confidence: No |
+| Vague issue + image attachment present in `attachments` field | FM/bug (vague) — ticket created immediately, do not ask for details |
 | Prospective or current BP asking about commission, payout, tracking, employment type, or formal agreement | FM/ready (S11) — answer from Section 10 + PAYOUT_SCHEME_DOC; company ops/partner experience questions → WHATSAPP |
 | "As we discussed on WhatsApp, can I still interview?" | FM/review R2 |
 | "What is the salary for this role?" | FM/review R4/R5 — compensation not in KB |

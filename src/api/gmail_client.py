@@ -390,6 +390,7 @@ def _parse_message(msg: dict) -> dict:
     payload = msg.get("payload", {})
     headers = {h["name"]: h["value"] for h in payload.get("headers", [])}
     body = _decode_body(payload)
+    attachments = _extract_attachments(payload)
 
     return {
         "id": msg.get("id", ""),
@@ -402,6 +403,7 @@ def _parse_message(msg: dict) -> dict:
         "labels": msg.get("labelIds", []),
         "snippet": msg.get("snippet", ""),
         "body": body,
+        "attachments": attachments,
     }
 
 
@@ -429,6 +431,19 @@ def _decode_body(payload: dict) -> str:
         return re.sub(r"<[^>]+>", " ", html).strip()
 
     return ""
+
+
+def _extract_attachments(payload: dict) -> list[dict]:
+    """Recursively walk MIME payload and collect attachment filenames and types."""
+    results = []
+    filename = payload.get("filename", "")
+    mime_type = payload.get("mimeType", "")
+    # A part is an attachment if it has a filename and is not inline text/html
+    if filename and mime_type not in ("text/plain", "text/html"):
+        results.append({"filename": filename, "mime_type": mime_type})
+    for part in payload.get("parts", []):
+        results.extend(_extract_attachments(part))
+    return results
 
 
 def _b64decode(data: str) -> str:

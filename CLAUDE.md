@@ -50,6 +50,10 @@ Additional `.md` files added to `knowledge/` are auto-loaded.
 
 After editing, run `/refresh-drafts` to update any pending draft replies.
 
+## Git workflow
+
+After every edit session, ask the user: "Do you want to push to main?"
+
 ## Key rules
 
 - Drafts only. This assistant NEVER sends emails.
