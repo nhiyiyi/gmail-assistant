@@ -5170,6 +5170,82 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d23582157127a0": {
+      "thread_id": "19d23582157127a0",
+      "from": "10kunalsingh00024@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for QA / QC Intern - Kunal Singh",
+      "date": "Wed, 25 Mar 2026 10:24:16 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-625004208904778637",
+      "draft_message_id": "19d23c3fc9458a7d",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T06:52:20.946159+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d237201df86459": {
+      "thread_id": "19d237201df86459",
+      "from": "simran9643k1@gmail.com",
+      "subject": "Re: interview link share plzz",
+      "date": "Wed, 25 Mar 2026 10:52:31 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2422772315944230767",
+      "draft_message_id": "19d23c40189ed58b",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T06:52:22.115202+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d235a1b042ac9b": {
+      "thread_id": "19d235a1b042ac9b",
+      "from": "duhabkl9@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Wed, 25 Mar 2026 11:56:25 +0700",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1271220348346705098",
+      "draft_message_id": "19d23c406833b802",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T06:52:23.273841+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d239eba7a77389": {
+      "thread_id": "19d239eba7a77389",
+      "from": "amgokult@gmail.com",
+      "subject": "Re: TOTCI TECHNOLOGIES: Interview invitation for Full Stack Developer - GOKUL",
+      "date": "Wed, 25 Mar 2026 11:41:24 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6606762136289038105",
+      "draft_message_id": "19d23c4add6139cf",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T06:53:06.272137+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
