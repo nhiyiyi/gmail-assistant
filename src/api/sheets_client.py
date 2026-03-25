@@ -262,6 +262,57 @@ def get_tickets(status_filter: str = None) -> list:
         return [{"error": f"Sheets API error: {e}"}]
 
 
+DAILY_REPORT_TAB = "Daily Report"
+
+DR_HEADERS_V2 = [
+    "Date", "Time", "Source", "Name", "Issue",
+    "Stage", "Category", "Count?", "Notes", "ID", "Company", "Device",
+]
+
+
+def get_daily_report_rows(date_str: str) -> list:
+    """Return all Daily Report rows for date_str as list of dicts (12 fields).
+
+    Keys: date, time, source, name, issue, stage, category, count, notes, id, company, device
+    """
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return [{"error": "Sheet not configured. Run tools/scripts/setup_sheets.py first."}]
+
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DAILY_REPORT_TAB}'!A:L",
+        ).execute()
+        rows = result.get("values", [])
+        if not rows or len(rows) < 2:
+            return []
+
+        # Normalise header: handle both old (22-col) and new (12-col) layouts
+        header = [h.strip() for h in rows[0]]
+        # Map by position for new layout
+        key_map = {
+            "Date": "date", "Time": "time", "Source": "source",
+            "Name": "name", "Issue": "issue", "Stage": "stage",
+            "Category": "category", "Count?": "count", "Notes": "notes",
+            "ID": "id", "Company": "company", "Device": "device",
+        }
+
+        out = []
+        for row in rows[1:]:
+            row = row + [""] * (12 - len(row))  # pad to 12 cols
+            entry = {}
+            for i, h in enumerate(header[:12]):
+                key = key_map.get(h, h.lower())
+                entry[key] = row[i] if i < len(row) else ""
+            if not date_str or entry.get("date", "") == date_str:
+                out.append(entry)
+        return out
+    except Exception as e:
+        return [{"error": f"Sheets API error: {e}"}]
+
+
 def update_ticket(ticket_id: str, status: str = None, notes: str = None) -> dict:
     """Find the row with the given ticket_id and update status and/or notes."""
     spreadsheet_id = get_sheet_id()

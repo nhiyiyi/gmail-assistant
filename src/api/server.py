@@ -307,6 +307,27 @@ async def list_tools() -> list[types.Tool]:
                 "required": ["ticket_id"],
             },
         ),
+        # ── Daily Report sheet ───────────────────────────────────────────────
+        types.Tool(
+            name="get_daily_report_rows",
+            description=(
+                "Read all rows from the 'Daily Report' Google Sheet tab for a given date. "
+                "Returns list of dicts with keys: date, time, source, name, issue, stage, "
+                "category, count, notes, id, company, device. "
+                "Use to check existing IDs (for incremental dedup) or to count Count?=Yes "
+                "rows when generating the Slack daily report."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "description": "Date to filter by, YYYY-MM-DD. Returns all rows for that date.",
+                    },
+                },
+                "required": ["date"],
+            },
+        ),
         # ── Batch processing tools ────────────────────────────────────────────
         types.Tool(
             name="get_email_batch",
@@ -426,6 +447,8 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             return _handle_get_bug_tickets(arguments)
         elif name == "update_bug_ticket":
             return _handle_update_bug_ticket(arguments)
+        elif name == "get_daily_report_rows":
+            return _handle_get_daily_report_rows(arguments)
         elif name == "get_email_batch":
             return _handle_get_email_batch(arguments)
         elif name == "submit_drafts":
@@ -618,6 +641,11 @@ def _handle_create_bug_ticket(args: dict) -> list[types.TextContent]:
         "sheet":     sheet_result,
     }
     return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+
+def _handle_get_daily_report_rows(args: dict) -> list[types.TextContent]:
+    rows = sheets_client.get_daily_report_rows(args.get("date", ""))
+    return [types.TextContent(type="text", text=json.dumps(rows, indent=2))]
 
 
 def _handle_get_bug_tickets(args: dict) -> list[types.TextContent]:
