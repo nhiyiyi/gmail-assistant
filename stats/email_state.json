@@ -5911,6 +5911,25 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d259dd51a3da9a": {
+      "thread_id": "19d1f8cd9b6bed5e",
+      "from": "lebom08@gmail.com",
+      "subject": "Re: Unique code 2280MOBC",
+      "date": "Wed, 25 Mar 2026 14:30:00 +0000",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-297254544271903772",
+      "draft_message_id": "19d25bd6b6cb1d7b",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T16:04:24.907416+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
