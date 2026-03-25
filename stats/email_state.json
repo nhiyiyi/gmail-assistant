@@ -5094,6 +5094,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d2259de58bf4c0": {
+      "thread_id": "19c4d709d5d67531",
+      "from": "benicoluckyleon23@gmail.com",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Wed, 25 Mar 2026 03:16:37 +0300",
+      "sender_type": "A",
+      "topic": "program",
+      "scenario": "S9.2",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4096864375832747092",
+      "draft_message_id": "19d228b10db8fd8c",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T01:10:33.442134+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2225bc4afdd58": {
+      "thread_id": "19d2225bc4afdd58",
+      "from": "wissamw109@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for wissam",
+      "date": "Wed, 25 Mar 2026 02:19:37 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8787592773230984726",
+      "draft_message_id": "19d228b16c5c534a",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T01:10:34.553074+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d21f8d0bb35022": {
+      "thread_id": "19d21f8d0bb35022",
+      "from": "bensnow248@gmail.com",
+      "subject": "Re: complaint",
+      "date": "Tue, 24 Mar 2026 23:30:34 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3519993321950083527",
+      "draft_message_id": "19d228b1b994df2a",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T01:10:35.640356+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
