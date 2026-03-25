@@ -5930,6 +5930,82 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d268e4db1cbc85": {
+      "thread_id": "19d268e4db1cbc85",
+      "from": "harisabdullah884@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Haris Abdullah",
+      "date": "Thu, 26 Mar 2026 00:52:17 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5379575997394868840",
+      "draft_message_id": "19d26e711ba40daa",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T21:29:31.381544+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d25d08b31309e6": {
+      "thread_id": "19d25d00e19678e1",
+      "from": "aditivsics@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Aditi Bajpai",
+      "date": "Wed, 25 Mar 2026 21:54:58 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8455319614120947292",
+      "draft_message_id": "19d26e7d797efcf5",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T21:30:22.112715+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2542fcff2a197": {
+      "thread_id": "19d2542fcff2a197",
+      "from": "firdoshz1206@gmail.com",
+      "subject": "Re: Job Application - HR Operations - Zeeba Firdosh (Immediate Joiner)",
+      "date": "Wed, 25 Mar 2026 19:20:22 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2789161938882309736",
+      "draft_message_id": "19d26e7da103fd08",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T21:30:23.123718+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d24b4230f71029": {
+      "thread_id": "",
+      "from": "karishmakalyani32@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Karishma Kalyani",
+      "date": "2026-03-25",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1561557633662316702",
+      "draft_message_id": "19d26e9b2d25bb68",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T21:32:23.663596+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
