@@ -5151,6 +5151,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d231478a1ebae0": {
+      "thread_id": "19d231478a1ebae0",
+      "from": "osvaldoalexsambo@gmail.com",
+      "subject": "Re: URGENT \u2013 Strategic Partnership: Ministry of Foreign Affairs (MIREX) Expansion \u2013 Request for Corporate Proposal",
+      "date": "Wed, 25 Mar 2026 04:40:13 +0100",
+      "sender_type": "E",
+      "topic": "partnership",
+      "scenario": "R2",
+      "urgency": "urgent",
+      "review_status": "review",
+      "draft_id": "r-8595295284082854242",
+      "draft_message_id": "19d235394f0634c4",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T04:49:34.301925+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
