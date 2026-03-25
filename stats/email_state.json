@@ -5797,6 +5797,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d25010b4761891": {
+      "thread_id": "19d1a1f4f891201e",
+      "from": "fareedch3825@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Ghulam",
+      "date": "Wed, 25 Mar 2026 17:38:26 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "Offer negotiation",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3390826555827500833",
+      "draft_message_id": "19d2503c324c021f",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:41:37.422089+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d24ff7107e04d3": {
+      "thread_id": "19d1eb167c81e189",
+      "from": "tanushree.nabar@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - TANUSHREE NABAR",
+      "date": "Wed, 25 Mar 2026 18:06:38 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6984042744351086079",
+      "draft_message_id": "19d2503c7b4dd403",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:41:38.356072+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d24feda12dc4d3": {
+      "thread_id": "19d24feda12dc4d3",
+      "from": "mariammarimon27@gmail.com",
+      "subject": "Re: Maria Marimon application",
+      "date": "Wed, 25 Mar 2026 13:36:02 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "R2",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5601588649064440231",
+      "draft_message_id": "19d2503cbbda2071",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:41:39.280433+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d24f65c1e77acd": {
+      "thread_id": "19d1ec87fa9e3c7a",
+      "from": "knfathima.mac@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Fathima",
+      "date": "Wed, 25 Mar 2026 18:04:29 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:42:55.377312+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d24f573e5b80b7": {
+      "thread_id": "19d217aa42901634",
+      "from": "osvaldoalexsambo@gmail.com",
+      "subject": "Re: URGENT \u2013 Strategic Partnership: Ministry of Foreign Affairs (MIREX)",
+      "date": "Wed, 25 Mar 2026 17:29:58 +0530",
+      "sender_type": "E",
+      "topic": "business",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:42:56.143270+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d24eef19c53c2d": {
+      "thread_id": "19d24eef19c53c2d",
+      "from": "dhalpratibha548@gmail.com",
+      "subject": "Re: Regarding AI Interview",
+      "date": "Wed, 25 Mar 2026 17:42:11 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T12:43:55.745536+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
