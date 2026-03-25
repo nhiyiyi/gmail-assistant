@@ -5246,6 +5246,557 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d245e9220b72f8": {
+      "thread_id": "19d245e9220b72f8",
+      "from": "prachimehrotra29sep@gmail.com",
+      "subject": "Follow -up on Interview Status",
+      "date": "Wed, 25 Mar 2026 15:10:58 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3225123662082716198",
+      "draft_message_id": "19d2460a396b6fdd",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:27.258630+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a9006bf8a6": {
+      "thread_id": "19d245a9006bf8a6",
+      "from": "erickmajiwa@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Erick",
+      "date": "Wed, 25 Mar 2026 12:36:33 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4351823510956866663",
+      "draft_message_id": "19d2460a9d9a6eb4",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:28.583656+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245cdb24f37fa": {
+      "thread_id": "19d245cdb24f37fa",
+      "from": "roshnijainchimc@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Roshni",
+      "date": "Wed, 25 Mar 2026 14:22:15 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:29.782554+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c8e373c0c9": {
+      "thread_id": "19d245c8e373c0c9",
+      "from": "ksaina235@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Saina",
+      "date": "Wed, 25 Mar 2026 08:47:25 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:31.001309+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c7c13e4c0f": {
+      "thread_id": "19d245c7c13e4c0f",
+      "from": "dayeosakisophia@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Osaki",
+      "date": "Wed, 25 Mar 2026 12:54:15 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:32.099146+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c65ebd6813": {
+      "thread_id": "19d245c65ebd6813",
+      "from": "danielhocaoglu123@outlook.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Dan",
+      "date": "Wed, 25 Mar 2026 11:15:22 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:33.246193+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c5b12b8f3a": {
+      "thread_id": "19d245c5b12b8f3a",
+      "from": "shruthibambila@gmail.com",
+      "subject": "Re: About the issue",
+      "date": "Wed, 25 Mar 2026 16:42:00 +0530",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:34.334103+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d245c4a7f8b2c1": {
+      "thread_id": "19d245c4a7f8b2c1",
+      "from": "contact@flowmingo.ai",
+      "subject": "Re: TECHNICAL ISSUES",
+      "date": "Wed, 25 Mar 2026 14:30:00 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "urgent",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:43:35.391772+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d245c3b7c4d5e6": {
+      "thread_id": "19d245c3b7c4d5e6",
+      "from": "bindukishore@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Bindu",
+      "date": "Wed, 25 Mar 2026 10:45:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:44:21.916348+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c2a5b6c7d8": {
+      "thread_id": "19d245c2a5b6c7d8",
+      "from": "schigurupatis@gmail.com",
+      "subject": "Re: TEZLOGIC SOFTWARE PVT LTD: Interview invitation for MEAN/MERN Stack Developer - Santha Chigurupati",
+      "date": "Wed, 25 Mar 2026 15:20:00 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:44:22.972410+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245c1d9e0f1a2": {
+      "thread_id": "19d245c1d9e0f1a2",
+      "from": "oseni.olumide@yahoo.com",
+      "subject": "Re: Could you share what happened?",
+      "date": "Wed, 25 Mar 2026 09:15:00 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:44:24.077309+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d245c0e8f7g2h3": {
+      "thread_id": "19d245c0e8f7g2h3",
+      "from": "nataliavorobieva888@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for NATALIA",
+      "date": "Wed, 25 Mar 2026 14:00:00 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:44:28.941112+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245bf5c6d7e8f": {
+      "thread_id": "19d245bf5c6d7e8f",
+      "from": "asirsteve@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Asir",
+      "date": "Wed, 25 Mar 2026 16:30:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:03.818156+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245be4d5e6f7a8": {
+      "thread_id": "19d245be4d5e6f7a8",
+      "from": "gordana.cvetanovic@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Gordana",
+      "date": "Wed, 25 Mar 2026 15:45:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:08.710457+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245bd3c4d5e6f7": {
+      "thread_id": "19d245bd3c4d5e6f7",
+      "from": "sneharaj2307@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Sneha",
+      "date": "Wed, 25 Mar 2026 12:15:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:13.682121+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245bc2b3c4d5e6": {
+      "thread_id": "19d245bc2b3c4d5e6",
+      "from": "nuhailyas21@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Nuha",
+      "date": "Wed, 25 Mar 2026 13:50:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:18.635526+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245bb1a2b3c4d5": {
+      "thread_id": "19d245bb1a2b3c4d5",
+      "from": "sugathanlekshmi@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Lekshmi",
+      "date": "Wed, 25 Mar 2026 14:20:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:23.621779+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245ba09182a3b4": {
+      "thread_id": "19d245ba09182a3b4",
+      "from": "zeynepsapci@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Zeynep",
+      "date": "Wed, 25 Mar 2026 11:30:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:28.563032+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a97c8d9e0f1": {
+      "thread_id": "19d245a97c8d9e0f1",
+      "from": "jamaicacuizon22@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Jamaica Cuizon",
+      "date": "Wed, 25 Mar 2026 13:22:00 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:45:58.614508+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a8acbdef012": {
+      "thread_id": "19d245a8acbdef012",
+      "from": "mayuri172024@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - mayuri senad",
+      "date": "Wed, 25 Mar 2026 15:50:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:03.492022+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a7bbcedf123": {
+      "thread_id": "19d245a7bbcedf123",
+      "from": "xavi.prat@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Xavier",
+      "date": "Wed, 25 Mar 2026 10:00:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:08.396336+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a6ccafde234": {
+      "thread_id": "19d245a6ccafde234",
+      "from": "mohanapriyanedunchezhiyan@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Mohanapriya N",
+      "date": "Wed, 25 Mar 2026 14:30:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:13.313588+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a5ddabcd345": {
+      "thread_id": "19d245a5ddabcd345",
+      "from": "cnmwanza@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Carol Mwanza",
+      "date": "Wed, 25 Mar 2026 16:15:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:18.219941+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a4eeabcc456": {
+      "thread_id": "19d245a4eeabcc456",
+      "from": "kenken2000ke@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Kennedy",
+      "date": "Wed, 25 Mar 2026 12:45:00 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:23.227673+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a3ffbaab567": {
+      "thread_id": "19d245a3ffbaab567",
+      "from": "marzib275@gmail.com",
+      "subject": "Re: Fwd: Flowmingo: Interview invitation for Talent Acquisition Specialist - Martin Zibrin",
+      "date": "Wed, 25 Mar 2026 17:00:00 +0100",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:46:28.234941+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d245a2ggcaab678": {
+      "thread_id": "19d245a2ggcaab678",
+      "from": "sharmilavelan11april@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Sharmila",
+      "date": "Wed, 25 Mar 2026 11:00:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:47:07.209369+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a1hhdbba789": {
+      "thread_id": "19d245a1hhdbba789",
+      "from": "ilona.pauline@yahoo.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Ilona Pauline Sanger",
+      "date": "Wed, 25 Mar 2026 09:30:00 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:47:12.208935+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a0iieccc890": {
+      "thread_id": "19d245a0iieccc890",
+      "from": "rukaiyamalik@hotmail.com",
+      "subject": "Re: You're in \u2014 here's your Flowmingo Partner Starter Kit",
+      "date": "Wed, 25 Mar 2026 17:45:00 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:47:17.154788+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d245a0jjfddda01": {
+      "thread_id": "19d245a0jjfddda01",
+      "from": "sivathap6@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Sivatha S Prakash",
+      "date": "Wed, 25 Mar 2026 16:20:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-25T09:47:22.042433+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
