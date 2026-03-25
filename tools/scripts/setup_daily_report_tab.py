@@ -211,18 +211,16 @@ def setup_headers_and_formatting(service, spreadsheet_id, sheet_id):
         cf_rule("?",   (1.000, 0.980, 0.800)),
     ]
 
-    # Also gray out EXCLUDED rows (Stage col = EXCLUDED → light gray entire row)
+    # Also gray out EXCLUDED rows (Stage col F = EXCLUDED → light gray entire row)
     requests.append({
         "addConditionalFormatRule": {
             "rule": {
                 "ranges": [{"sheetId": sheet_id, "startRowIndex": 1, "endRowIndex": 5000,
                             "startColumnIndex": 0, "endColumnIndex": num_cols}],
                 "booleanRule": {
-                    "condition": {"type": "TEXT_EQ", "values": [{"userEnteredValue": "EXCLUDED"}],
-                                  "type": "TEXT_EQ"},
                     "condition": {
                         "type": "CUSTOM_FORMULA",
-                        "values": [{"userEnteredValue": f'=$F2="EXCLUDED"'}]
+                        "values": [{"userEnteredValue": '=$F2="EXCLUDED"'}]
                     },
                     "format": {
                         "textFormat": {"foregroundColor": {"red": 0.6, "green": 0.6, "blue": 0.6}},

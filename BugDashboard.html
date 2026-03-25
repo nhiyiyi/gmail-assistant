@@ -994,6 +994,258 @@
     .counter[data-type="inprogress"] .counter-num { color: #6d28d9; }
     .counter[data-type="Resolved"]   .counter-num { color: #047857; }
     .counter[data-type="closed"]     .counter-num { color: var(--gray-500); }
+
+    /* ══ DAILY REPORT TAB ════════════════════════════════════════════════════ */
+    .dr-header {
+      background: #fff;
+      border-bottom: 1px solid var(--gray-200);
+      padding: 14px 20px 0;
+      flex-shrink: 0;
+    }
+
+    .dr-header-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 12px;
+    }
+
+    .dr-header-top h2 { font-size: 15px; font-weight: 700; color: var(--gray-900); }
+    .dr-header-top .sub { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+    .dr-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding-bottom: 10px;
+      border-top: 1px solid var(--gray-100);
+      padding-top: 10px;
+    }
+
+    /* DR counters */
+    .dr-counters {
+      display: flex;
+      gap: 8px;
+      padding: 10px 20px;
+      flex-shrink: 0;
+    }
+
+    .dr-counter {
+      flex: 1;
+      background: #fff;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: border-color .15s;
+      text-align: center;
+    }
+
+    .dr-counter:hover { border-color: var(--gray-300); }
+    .dr-counter.active { border-color: var(--primary); background: var(--primary-light); }
+    .dr-counter-num { font-size: 20px; font-weight: 800; color: var(--gray-900); line-height: 1; }
+    .dr-counter.active .dr-counter-num { color: var(--primary); }
+    .dr-counter-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); margin-top: 2px; }
+    .dr-counter[data-verdict="Platform Bug"]  .dr-counter-num { color: #065f46; }
+    .dr-counter[data-verdict="User Error"]    .dr-counter-num { color: #78350f; }
+    .dr-counter[data-verdict="Borderline"]    .dr-counter-num { color: #1e3a8a; }
+    .dr-counter.active .dr-counter-num { color: var(--primary) !important; }
+
+    /* DR entry card */
+    .dr-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      display: flex;
+      transition: box-shadow .15s, border-color .15s;
+    }
+
+    .dr-card:hover { box-shadow: var(--shadow); border-color: var(--gray-300); }
+
+    .dr-card-thumb {
+      width: 160px;
+      min-height: 110px;
+      flex-shrink: 0;
+      background: var(--gray-100);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--gray-100);
+      border-radius: var(--radius) 0 0 var(--radius);
+      text-decoration: none;
+    }
+
+    .dr-card-thumb img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    .dr-card-body {
+      flex: 1;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .dr-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dr-card-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--gray-900);
+    }
+
+    .dr-card-email {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    .dr-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .dr-chip-time, .dr-chip.time { background: var(--gray-100); color: var(--gray-600); }
+    .dr-chip-source, .dr-chip.source.sheet { background: var(--primary-light); color: var(--primary); }
+    .dr-chip.source.slack { background: #fef3c7; color: #92400e; }
+    .dr-chip-stage, .dr-chip.stage { background: #ede9fe; color: #5b21b6; }
+    .dr-chip-stage.excluded, .dr-chip.stage.excluded { background: var(--gray-100); color: var(--gray-500); }
+    .dr-chip-cat     { background: var(--gray-100); color: var(--gray-700); }
+    .dr-chip.conf.high   { background: #d1fae5; color: #065f46; }
+    .dr-chip.conf.medium { background: #fef3c7; color: #78350f; }
+    .dr-chip.conf.low    { background: var(--gray-100); color: var(--gray-500); }
+
+    /* name / email inline labels */
+    .dr-name  { font-weight: 700; font-size: 13px; color: var(--gray-900); }
+    .dr-email { font-size: 12px; color: var(--gray-400); }
+    .dr-category { font-size: 11px; color: var(--gray-400); margin-top: 2px; font-style: italic; }
+    .dr-assess-label { font-weight: 600; }
+    .dr-assess-notes { font-weight: 400; opacity: .85; }
+
+    /* Assessment badge */
+    .dr-assess {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .dr-assess.platform-bug  { background: #d1fae5; color: #064e3b; }
+    .dr-assess.likely-platform { background: #ecfdf5; color: #065f46; }
+    .dr-assess.borderline    { background: #dbeafe; color: #1e3a8a; }
+    .dr-assess.likely-user   { background: #fef3c7; color: #78350f; }
+    .dr-assess.user-error    { background: #ffedd5; color: #9a3412; }
+    .dr-assess.unknown       { background: var(--gray-100); color: var(--gray-500); }
+
+    .dr-content {
+      font-size: 13px;
+      color: var(--gray-700);
+      line-height: 1.5;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .dr-content.expanded {
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+      overflow: visible;
+    }
+
+    .dr-content-note {
+      font-size: 11px;
+      color: var(--gray-400);
+      margin-top: 2px;
+    }
+
+    /* Verdict row */
+    .dr-verdict-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 2px;
+    }
+
+    .dr-verdict-group {
+      display: flex;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .dr-vbtn {
+      padding: 5px 12px;
+      border: none;
+      border-right: 1px solid var(--gray-200);
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray-500);
+      transition: background .15s, color .15s;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+
+    .dr-vbtn:last-child { border-right: none; }
+    .dr-vbtn:hover { background: var(--gray-50); color: var(--gray-700); }
+    .dr-vbtn.platform.active { background: #d1fae5; color: #064e3b; font-weight: 700; }
+    .dr-vbtn.user.active     { background: #fef3c7; color: #78350f; font-weight: 700; }
+    .dr-vbtn.border.active   { background: #dbeafe; color: #1e3a8a; font-weight: 700; }
+    .dr-vbtn.exclude.active  { background: var(--gray-100); color: var(--gray-600); font-weight: 700; }
+
+    .dr-notes-input {
+      flex: 1;
+      min-width: 160px;
+      padding: 5px 10px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: inherit;
+      color: var(--gray-700);
+      background: var(--gray-50);
+    }
+
+    .dr-notes-input:focus { outline: none; border-color: var(--primary); background: #fff; }
+    .dr-notes-input::placeholder { color: var(--gray-300); }
+
+    .dr-save-btn {
+      padding: 5px 14px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-600);
+      font-family: inherit;
+      white-space: nowrap;
+      transition: background .15s, border-color .15s;
+    }
+
+    .dr-save-btn:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
+    .dr-save-btn.saved { background: #d1fae5; border-color: #6ee7b7; color: #065f46; }
   </style>
 </head>
 <body>
@@ -1022,6 +1274,11 @@
       <span class="material-icons-round">archive</span>
       Excluded
       <span class="tab-count red" id="tabCountExcluded">0</span>
+    </button>
+    <button class="tab-btn" onclick="switchTab('dailyreport')">
+      <span class="material-icons-round">fact_check</span>
+      Daily Review
+      <span class="tab-count" id="tabCountDR">0</span>
     </button>
   </div>
 
@@ -1195,6 +1452,107 @@
       </div>
     </div>
   </div>
+
+  <!-- ── DAILY REVIEW ──────────────────────────────────────────────────────── -->
+  <div id="viewDailyReport" class="view">
+
+    <!-- Header + filter bar -->
+    <div class="dr-header">
+      <div class="dr-header-top">
+        <div style="flex:1">
+          <h2>Daily Review</h2>
+          <div class="sub" id="drSub">Mark each entry Yes (counts toward report), No (excluded), or ? (decide later).</div>
+        </div>
+        <button class="btn" onclick="loadDailyReport()">
+          <span class="material-icons-round">refresh</span>
+          Refresh
+        </button>
+      </div>
+
+      <div class="dr-filter-bar">
+
+        <!-- Date -->
+        <div class="date-range-group">
+          <button class="date-btn" id="drDateToday"     onclick="drSetDate('today',this)">Today</button>
+          <button class="date-btn active" id="drDateYesterday" onclick="drSetDate('yesterday',this)">Yesterday</button>
+          <button class="date-btn" id="drDateCustom"    onclick="drSetDate('custom',this)">Custom</button>
+        </div>
+        <input type="date" id="drCustomDate" class="hidden"
+               style="padding:6px 10px;border:1px solid var(--gray-200);border-radius:var(--radius-sm);font-size:12px;font-family:inherit;"
+               onchange="drApplyFilters()">
+
+        <div class="filter-sep"></div>
+
+        <!-- Count? filter -->
+        <select class="filter-select" id="drVerdictFilter" onchange="drApplyFilters()">
+          <option value="">All</option>
+          <option value="unreviewed">Unreviewed (?)</option>
+          <option value="Yes">Yes — Count</option>
+          <option value="No">No — Exclude</option>
+        </select>
+
+        <!-- Stage filter -->
+        <select class="filter-select" id="drStageFilter" onchange="drApplyFilters()">
+          <option value="">All stages</option>
+          <option value="Stage 1">Stage 1</option>
+          <option value="Stage 2">Stage 2</option>
+          <option value="Stage 3">Stage 3</option>
+          <option value="Other Company">Other Company</option>
+          <option value="Other Candidate">Other Candidate</option>
+          <option value="EXCLUDED">EXCLUDED</option>
+        </select>
+
+        <!-- Source filter -->
+        <select class="filter-select" id="drSourceFilter" onchange="drApplyFilters()">
+          <option value="">All sources</option>
+          <option value="Sheet">Sheet</option>
+          <option value="Slack">Slack</option>
+        </select>
+
+        <div class="filter-sep"></div>
+
+        <!-- Keyword search -->
+        <div class="search-wrap" style="max-width:280px">
+          <span class="material-icons-round">search</span>
+          <input class="search-input" id="drSearch" type="text"
+                 placeholder="Search name, email, content…"
+                 oninput="drDebounce()" autocomplete="off">
+          <button class="search-clear" id="drSearchClear" onclick="drClearSearch()">✕</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Counters -->
+    <div class="dr-counters" id="drCounters">
+      <div class="dr-counter active" data-count="" onclick="drClickCounter(this,'')">
+        <div class="dr-counter-num" id="drCntTotal">0</div>
+        <div class="dr-counter-label">Total</div>
+      </div>
+      <div class="dr-counter" data-count="?" onclick="drClickCounter(this,'?')">
+        <div class="dr-counter-num" id="drCntPending">0</div>
+        <div class="dr-counter-label">Pending ?</div>
+      </div>
+      <div class="dr-counter" data-count="Yes" onclick="drClickCounter(this,'Yes')">
+        <div class="dr-counter-num" id="drCntYes">0</div>
+        <div class="dr-counter-label">Count ✓</div>
+      </div>
+      <div class="dr-counter" data-count="No" onclick="drClickCounter(this,'No')">
+        <div class="dr-counter-num" id="drCntNo">0</div>
+        <div class="dr-counter-label">Excluded</div>
+      </div>
+    </div>
+
+    <!-- Entry list -->
+    <div class="list-wrap">
+      <div class="list" id="drList"></div>
+      <div class="empty-state hidden" id="drEmpty">
+        <span class="material-icons-round">fact_check</span>
+        <p>No entries match your filters.</p>
+      </div>
+    </div>
+
+  </div><!-- #viewDailyReport -->
 
 </div><!-- .app-body -->
 
@@ -1611,10 +1969,12 @@ function updateTabCounts() {
   const included  = state.bugs.filter(b => b.inReport !== 'No').length;
   const todayBugs = getTodayBugs().length;
   const excluded  = getExcludedBugs().length;
+  const drPending = drState.entries.filter(function(e){ return !e.count || e.count === '?'; }).length;
 
   document.getElementById('tabCountBugs').textContent     = included;
   document.getElementById('tabCountReport').textContent   = todayBugs;
   document.getElementById('tabCountExcluded').textContent = excluded;
+  document.getElementById('tabCountDR').textContent       = drPending || '';
 }
 
   function clickCounter(el, type) {
@@ -1931,10 +2291,13 @@ function copyReport() {
 function switchTab(name) {
   state.currentTab = name;
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-btn')[['bugs','report','excluded'].indexOf(name)].classList.add('active');
-  document.getElementById('viewBugs').classList.toggle('active',     name === 'bugs');
-  document.getElementById('viewReport').classList.toggle('active',   name === 'report');
-  document.getElementById('viewExcluded').classList.toggle('active', name === 'excluded');
+  var tabIdx = ['bugs','report','excluded','dailyreport'].indexOf(name);
+  if (tabIdx !== -1) document.querySelectorAll('.tab-btn')[tabIdx].classList.add('active');
+  document.getElementById('viewBugs').classList.toggle('active',        name === 'bugs');
+  document.getElementById('viewReport').classList.toggle('active',      name === 'report');
+  document.getElementById('viewExcluded').classList.toggle('active',    name === 'excluded');
+  document.getElementById('viewDailyReport').classList.toggle('active', name === 'dailyreport');
+  if (name === 'dailyreport' && drState.entries.length === 0) loadDailyReport();
 }
 
 // ══ MAIN ISSUE GENERATION ═════════════════════════════════════════════════════
@@ -2232,6 +2595,273 @@ function loadInitialData() {
     bug.notes = value;
     if (IS_LIVE) google.script.run.updateBugField(rowNumber, 'notes', value);
   }
+
+// ══ DAILY REPORT ════════════════════════════════════════════════════════════
+
+var drState = {
+  entries:  [],      // all entries returned from sheet for current date
+  filtered: [],      // entries after applying filters
+  date:     '',      // YYYY-MM-DD string
+  loading:  false,
+  searchTimer: null
+};
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+
+function drIsoToday() {
+  var d = new Date();
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function drIsoYesterday() {
+  var d = new Date(); d.setDate(d.getDate()-1);
+  return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+
+// ── Date preset buttons ───────────────────────────────────────────────────────
+function drSetDate(preset, btn) {
+  document.querySelectorAll('.date-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var customInput = document.getElementById('drCustomDate');
+  if (preset === 'custom') {
+    customInput.classList.remove('hidden');
+    if (!customInput.value) customInput.value = drIsoYesterday();
+    drState.date = customInput.value;
+  } else {
+    customInput.classList.add('hidden');
+    drState.date = (preset === 'today') ? drIsoToday() : drIsoYesterday();
+  }
+  loadDailyReport();
+}
+
+// ── Load from sheet ───────────────────────────────────────────────────────────
+function loadDailyReport() {
+  if (!IS_LIVE) { _drLoadMock(); return; }
+  if (drState.loading) return;
+  drState.loading = true;
+  var date = drState.date || drIsoYesterday();
+  drState.date = date;
+  document.getElementById('drSub').textContent = 'Loading ' + date + '…';
+
+  google.script.run
+    .withSuccessHandler(function(result) {
+      drState.loading = false;
+      if (result.error) { toast('Error', result.error, 'error'); return; }
+      drState.entries = result.entries || [];
+      drApplyFilters();
+      document.getElementById('drSub').textContent =
+        date + ' · ' + drState.entries.length + ' entries · ' +
+        result.reviewed + ' reviewed / ' + result.total + ' total';
+      updateTabCounts();
+    })
+    .withFailureHandler(function(err) {
+      drState.loading = false;
+      toast('Error loading', err.message || String(err), 'error');
+    })
+    .getDailyReport(date);
+}
+
+function _drLoadMock() {
+  drState.entries = [];
+  drState.date = drState.date || drIsoYesterday();
+  drApplyFilters();
+  document.getElementById('drSub').textContent = drState.date + ' · Preview mode — no data';
+}
+
+// ── Filtering ────────────────────────────────────────────────────────────────
+function drApplyFilters() {
+  var verdict    = document.getElementById('drVerdictFilter').value;
+  var stage      = document.getElementById('drStageFilter').value;
+  var source     = document.getElementById('drSourceFilter').value;
+  var kw         = (document.getElementById('drSearch').value || '').toLowerCase().trim();
+  var customDate = document.getElementById('drCustomDate').value;
+
+  // Update date if custom picker changed
+  var activeDateBtn = document.querySelector('.date-btn.active');
+  if (activeDateBtn && activeDateBtn.id === 'drDateCustom' && customDate) {
+    drState.date = customDate;
+  }
+
+  drState.filtered = drState.entries.filter(function(e) {
+    if (verdict === 'unreviewed' && e.count && e.count !== '?') return false;
+    if (verdict && verdict !== 'unreviewed' && e.count !== verdict) return false;
+    if (stage  && e.stage  !== stage)  return false;
+    if (source && e.source !== source) return false;
+    if (kw) {
+      var haystack = [e.name, e.company, e.issue, e.notes, e.category, e.device]
+        .join(' ').toLowerCase();
+      if (haystack.indexOf(kw) === -1) return false;
+    }
+    return true;
+  });
+
+  // Update counters
+  var total   = drState.entries.length;
+  var pending = drState.entries.filter(function(e){ return !e.count || e.count === '?'; }).length;
+  var yes     = drState.entries.filter(function(e){ return e.count === 'Yes'; }).length;
+  var no      = drState.entries.filter(function(e){ return e.count === 'No';  }).length;
+
+  document.getElementById('drCntTotal').textContent   = total;
+  document.getElementById('drCntPending').textContent = pending;
+  document.getElementById('drCntYes').textContent     = yes;
+  document.getElementById('drCntNo').textContent      = no;
+
+  // Search clear button
+  document.getElementById('drSearchClear').style.display = kw ? '' : 'none';
+
+  renderDailyReport(drState.filtered);
+}
+
+function drDebounce() {
+  clearTimeout(drState.searchTimer);
+  drState.searchTimer = setTimeout(drApplyFilters, 260);
+}
+
+function drClearSearch() {
+  document.getElementById('drSearch').value = '';
+  document.getElementById('drSearchClear').style.display = 'none';
+  drApplyFilters();
+}
+
+function drClickCounter(el, count) {
+  document.querySelectorAll('.dr-counter').forEach(function(c){ c.classList.remove('active'); });
+  el.classList.add('active');
+  // map counter click to filter: '?' → 'unreviewed', others pass through
+  document.getElementById('drVerdictFilter').value = count === '?' ? 'unreviewed' : count;
+  drApplyFilters();
+}
+
+// ── Render cards ─────────────────────────────────────────────────────────────
+function renderDailyReport(entries) {
+  var list  = document.getElementById('drList');
+  var empty = document.getElementById('drEmpty');
+  if (!entries || entries.length === 0) {
+    list.innerHTML = '';
+    empty.classList.remove('hidden');
+    return;
+  }
+  empty.classList.add('hidden');
+  list.innerHTML = entries.map(drCardHtml).join('');
+}
+
+function drCardHtml(e) {
+  var stageCls = 'dr-chip stage';
+  if (e.stage === 'EXCLUDED') stageCls += ' excluded';
+
+  var countBtns = ['Yes','No','?'].map(function(v) {
+    var cls = 'dr-vbtn';
+    if (v === 'Yes') cls += ' platform';
+    else if (v === 'No') cls += ' user';
+    else cls += ' border';
+    if (e.count === v) cls += ' active';
+    var label = v === 'Yes' ? '✓ Count' : v === 'No' ? '✗ Exclude' : '? Review';
+    return '<button class="' + cls + '" onclick="drToggleCount(' + e.rowNumber + ',\'' + v + '\',this)">' + label + '</button>';
+  }).join('');
+
+  var srcBadge = e.source === 'Slack'
+    ? '<span class="dr-chip source slack">Slack</span>'
+    : '<span class="dr-chip source sheet">Sheet</span>';
+
+  var nameCompany = e.company
+    ? _esc(e.name || '—') + ' <span class="dr-email">@ ' + _esc(e.company) + '</span>'
+    : _esc(e.name || '—');
+
+  var deviceHtml = (e.source === 'Slack' && e.device)
+    ? '<div class="dr-email" style="margin-top:2px;font-size:11px">' + _esc(e.device) + '</div>'
+    : '';
+
+  var content = _esc(e.issue || '');
+
+  return '<div class="dr-card" id="drc-' + e.rowNumber + '">'
+    + '<div class="dr-card-body">'
+    +   '<div class="dr-card-top">'
+    +     '<span class="' + stageCls + '">' + _esc(e.stage || '') + '</span>'
+    +     (e.category ? '<span class="dr-category" style="flex:1;margin-left:6px">' + _esc(e.category) + '</span>' : '<span style="flex:1"></span>')
+    +     '<span class="dr-chip time">' + _esc(e.time || '') + '</span>'
+    +     srcBadge
+    +   '</div>'
+    +   '<div class="dr-card-top" style="margin-top:4px">'
+    +     '<span class="dr-name">' + nameCompany + '</span>'
+    +   '</div>'
+    +   deviceHtml
+    +   '<div class="dr-content" onclick="drExpandContent(this)">' + content + '</div>'
+    +   '<div class="dr-verdict-row">'
+    +     '<div class="dr-verdict-group">' + countBtns + '</div>'
+    +     '<input class="dr-notes-input" id="drn-' + e.rowNumber + '" type="text" '
+    +       'placeholder="Notes (optional)…" value="' + _esc(e.notes || '') + '" '
+    +       'onkeydown="if(event.key===\'Enter\')drSaveCount(' + e.rowNumber + ',null,this.value,null)">'
+    +     '<button class="dr-save-btn" onclick="drSaveCount(' + e.rowNumber + ',null,'
+    +       'document.getElementById(\'drn-' + e.rowNumber + '\').value,this)">'
+    +       '<span class="material-icons-round">save</span>'
+    +     '</button>'
+    +   '</div>'
+    + '</div>'
+    + '</div>';
+}
+
+function _esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function drExpandContent(el) {
+  el.classList.toggle('expanded');
+}
+
+// ── Toggle Count? (button group) ─────────────────────────────────────────────
+function drToggleCount(rowNumber, countVal, btn) {
+  var entry = drState.entries.find(function(e){ return e.rowNumber === rowNumber; });
+  if (!entry) return;
+
+  // If clicking the already-active value, deselect it
+  var newCount = (entry.count === countVal) ? '' : countVal;
+  entry.count = newCount;
+
+  // Update button states in this card
+  var card = document.getElementById('drc-' + rowNumber);
+  if (card) {
+    card.querySelectorAll('.dr-vbtn').forEach(function(b){ b.classList.remove('active'); });
+    if (newCount) {
+      var map = {'Yes':'platform','No':'user','?':'border'};
+      var activeBtn = card.querySelector('.dr-vbtn.' + map[newCount]);
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  }
+
+  var notes = document.getElementById('drn-' + rowNumber);
+  drSaveCount(rowNumber, newCount, notes ? notes.value : '', btn);
+}
+
+// ── Save Count? to sheet ──────────────────────────────────────────────────────
+function drSaveCount(rowNumber, countVal, notes, triggerEl) {
+  var entry = drState.entries.find(function(e){ return e.rowNumber === rowNumber; });
+  if (!entry) return;
+  // If called from save button without explicit count, use current entry count
+  if (countVal === null || countVal === undefined) countVal = entry.count || '';
+
+  entry.count = countVal;
+  entry.notes = notes || '';
+
+  // Visual feedback
+  if (triggerEl) {
+    var orig = triggerEl.innerHTML;
+    triggerEl.innerHTML = '<span class="material-icons-round" style="font-size:14px">check</span>';
+    setTimeout(function(){ triggerEl.innerHTML = orig; }, 1200);
+  }
+
+  // Update counter
+  updateTabCounts();
+  drApplyFilters();
+
+  if (!IS_LIVE) { toast('Preview', 'Not saved in preview mode', 'warn'); return; }
+
+  google.script.run
+    .withSuccessHandler(function() {
+      toast('Saved', (entry.name || 'Entry') + ' → ' + (countVal || 'cleared'), 'success');
+    })
+    .withFailureHandler(function(err) {
+      toast('Save error', err.message || String(err), 'error');
+    })
+    .updateDailyReportCount(rowNumber, countVal, notes || '');
+}
 
 // ══ INIT ════════════════════════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {

@@ -25,6 +25,13 @@
 const BUG_SHEET_NAME = 'Bug Tickets';
 const CONFIG_SHEET   = 'Config';
 
+// ── STATUS-CHANGE DRAFT CONSTANTS ─────────────────────────────────────────────
+const COMPANY_NAME   = 'Flowmingo';
+const AGENT_NAME     = 'Jessica';
+const SUPPORT_EMAIL  = 'support@flowmingo.com';
+// Statuses that trigger a customer draft (Reported is handled by Claude)
+const DRAFT_STATUSES = ['Verified', 'Fix in Progress', 'Resolved'];
+
 /** 1-based column indices (prefixed D_ to avoid collision with bug_ticket_status_trigger.gs). */
 const DCOL = {
   // ── Existing columns (owned by bug_ticket_status_trigger.gs) ────────────
@@ -544,4 +551,448 @@ function getOrCreateFolder_(name) {
   var iter = DriveApp.getFoldersByName(name);
   if (iter.hasNext()) return iter.next();
   return DriveApp.createFolder(name);
+}
+
+// ── STATUS-CHANGE TRIGGER ─────────────────────────────────────────────────────
+// Install this as an installable On Edit trigger pointing to onStatusChange.
+// (Simple onEdit won't work because GmailApp requires authorization.)
+//
+// HOW TO INSTALL THE TRIGGER:
+//   1. Extensions > Apps Script
+//   2. Click the clock icon (Triggers) in the left sidebar
+//   3. Add Trigger:
+//        Function:     onStatusChange
+//        Deployment:   Head
+//        Event source: From spreadsheet
+//        Event type:   On edit
+//   4. Save → approve the permissions popup
+//
+// NOTE: Running this function manually from the editor will throw
+// "Cannot read properties of undefined (reading 'range')" because
+// there is no event object — that is expected behaviour.
+
+function onStatusChange(e) {
+  if (!e || !e.range) {
+    // Called manually from the editor — no event object. This is expected.
+    // To test, edit a Status cell (col C) directly in the sheet.
+    Logger.log('onStatusChange: no event — must be run via installable On Edit trigger.');
+    return;
+  }
+  const range = e.range;
+  const sheet = range.getSheet();
+
+  if (sheet.getName() !== BUG_SHEET_NAME) return;
+  if (range.getColumn() !== DCOL.STATUS) return;
+  if (range.getRow() === 1) return;  // skip header
+
+  const newStatus = range.getValue();
+  if (!DRAFT_STATUSES.includes(newStatus)) return;
+
+  // Read the full row (columns A–Q, the 17 cols owned by the trigger)
+  const row          = sheet.getRange(range.getRow(), 1, 1, 17).getValues()[0];
+  const ticketId     = row[DCOL.TICKET_ID  - 1];
+  const customerName = row[DCOL.CUSTOMER   - 1];
+  const subject      = row[DCOL.SUBJECT    - 1];
+  const issueSummary = row[DCOL.SUMMARY_EN - 1];
+  const threadId     = row[DCOL.THREAD_ID  - 1];
+
+  if (!threadId) {
+    Logger.log(`Row ${range.getRow()}: no thread ID — skipping.`);
+    return;
+  }
+
+  const htmlBody     = buildStatusEmail_(newStatus, ticketId, customerName, issueSummary);
+  const plainBody    = stripHtml_(htmlBody);
+  const replySubject = String(subject).startsWith('Re:') ? subject : 'Re: ' + subject;
+
+  try {
+    const thread      = GmailApp.getThreadById(threadId);
+    const messages    = thread.getMessages();
+    const lastMessage = messages[messages.length - 1];
+    lastMessage.createDraftReply(plainBody, { htmlBody: htmlBody, subject: replySubject });
+    Logger.log(`Draft created for ${ticketId} — status: ${newStatus}`);
+  } catch (err) {
+    Logger.log(`Error creating draft for ${ticketId}: ${err}`);
+    SpreadsheetApp.getUi().alert(`Could not create draft for ${ticketId}:\n${err}`);
+  }
+}
+
+// ── PRIVATE: EMAIL TEMPLATE ───────────────────────────────────────────────────
+
+function buildStatusEmail_(status, ticketCode, customerName, issueSummary) {
+  const cfg = {
+    'Verified': {
+      headline:  'Your issue has been verified',
+      subline:   "We've confirmed the problem and it's in our fix queue.",
+      bodyText:  `We wanted to let you know that we've reviewed your report and successfully reproduced the issue on our end. Your ticket has been marked as verified and added to our engineering fix queue.`,
+      nextSteps: `&bull; Our engineering team will now investigate and implement a fix.<br>
+                  &bull; We'll send you another update once a fix is in progress.<br>
+                  &bull; No action is needed from you at this stage.`,
+      step: 2,
+    },
+    'Fix in Progress': {
+      headline:  'A fix is in progress',
+      subline:   'Our engineering team is actively working on this.',
+      bodyText:  `Good news — our engineering team has started working on a fix for the issue you reported. We're making active progress and will notify you as soon as it's resolved.`,
+      nextSteps: `&bull; Our team is actively developing and testing a fix.<br>
+                  &bull; We'll notify you as soon as the fix is deployed.<br>
+                  &bull; If you have any additional details that might help, feel free to reply.`,
+      step: 3,
+    },
+    'Resolved': {
+      headline:  'Your issue has been resolved',
+      subline:   'The fix has been deployed. Please verify everything is working.',
+      bodyText:  `We're happy to let you know that the issue you reported has been fixed and the update has been deployed. You should no longer experience this problem.`,
+      nextSteps: `&bull; Please try the action that was failing and confirm it now works as expected.<br>
+                  &bull; If you still experience any issues, reply to this email and we'll investigate immediately.<br>
+                  &bull; Thank you for taking the time to report this — your feedback helps us improve the platform.`,
+      step: 4,
+    },
+  }[status];
+
+  return `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Ticket Update</title>
+</head>
+<body style="margin:0; padding:0; background:#f5f7fb; font-family:Arial, Helvetica, sans-serif; color:#1f2937;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f5f7fb; padding:24px 0;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff; border-radius:12px; overflow:hidden;">
+
+          <!-- Header -->
+          <tr>
+            <td style="padding:28px 32px 16px; background:#111827; color:#ffffff;">
+              <div style="font-size:22px; font-weight:bold;">${cfg.headline}</div>
+              <div style="margin-top:8px; font-size:14px; color:#d1d5db;">${cfg.subline}</div>
+            </td>
+          </tr>
+
+          <!-- Ticket code -->
+          <tr>
+            <td style="padding:24px 32px 8px;">
+              <div style="font-size:13px; color:#6b7280; margin-bottom:8px;">Ticket code</div>
+              <div style="display:inline-block; background:#f3f4f6; border:1px solid #e5e7eb; border-radius:8px; padding:12px 16px; font-size:22px; font-weight:bold; letter-spacing:1px; color:#111827;">
+                ${ticketCode}
+              </div>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:8px 32px 8px; font-size:15px; line-height:1.6;">
+              Hi ${customerName},<br><br>
+              ${cfg.bodyText}
+            </td>
+          </tr>
+
+          <!-- Issue summary -->
+          <tr>
+            <td style="padding:8px 32px;">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid #e5e7eb; border-radius:10px;">
+                <tr>
+                  <td style="padding:12px 16px; font-size:14px;"><strong>Issue summary:</strong> ${issueSummary}</td>
+                </tr>
+                <tr>
+                  <td style="padding:12px 16px; font-size:14px; border-top:1px solid #e5e7eb;"><strong>Status:</strong> ${status}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Progress bar -->
+          <tr>
+            <td style="padding:24px 32px 8px;">
+              <div style="font-size:14px; font-weight:bold; margin-bottom:12px;">Current progress</div>
+              ${buildProgressBar_(cfg.step)}
+            </td>
+          </tr>
+
+          <!-- What happens next -->
+          <tr>
+            <td style="padding:20px 32px 8px;">
+              <div style="font-size:14px; font-weight:bold; margin-bottom:8px;">What happens next</div>
+              <div style="font-size:14px; line-height:1.8; color:#374151;">${cfg.nextSteps}</div>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:24px 32px 32px; font-size:14px; line-height:1.7; color:#4b5563;">
+              Let us know if you have any questions,<br>
+              ${AGENT_NAME}<br>
+              ${COMPANY_NAME}<br>
+              ${SUPPORT_EMAIL}
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>`;
+}
+
+// activeStep: 1=Reported  2=Verified  3=Fix in Progress  4=Resolved
+function buildProgressBar_(activeStep) {
+  const steps  = ['Reported', 'Verified', 'Fix in Progress', 'Resolved'];
+  const ACTIVE = '#2563eb';
+  const DONE   = '#1d4ed8';
+  const EMPTY  = '#e5e7eb';
+
+  const labelCells = steps.map((s, i) => {
+    const color  = i + 1 <= activeStep ? '#111827' : '#6b7280';
+    const weight = i + 1 === activeStep ? 'bold' : 'normal';
+    return `<td align="center" style="font-size:12px; color:${color}; font-weight:${weight};">${s}</td>`;
+  }).join('');
+
+  const barCells = steps.map((s, i) => {
+    const bg          = i + 1 < activeStep ? DONE : i + 1 === activeStep ? ACTIVE : EMPTY;
+    const leftRadius  = i === 0                ? 'border-radius:999px 0 0 999px;' : '';
+    const rightRadius = i === steps.length - 1 ? 'border-radius:0 999px 999px 0;' : '';
+    return `<td width="25%" style="height:8px; background:${bg}; ${leftRadius}${rightRadius}"></td>`;
+  }).join('');
+
+  return `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>${labelCells}</tr>
+    <tr>
+      <td colspan="4" style="padding-top:10px;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tr>${barCells}</tr>
+        </table>
+      </td>
+    </tr>
+  </table>`;
+}
+
+function stripHtml_(html) {
+  return html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+// DAILY REPORT — "Daily Report" sheet tab
+// Written by Claude's /daily-report skill each morning (auto-cron at 02:00 UTC).
+// Each row = one candidate submission (included or EXCLUDED) from the previous day.
+// ══════════════════════════════════════════════════════════════════════════════
+
+const DAILY_REPORT_SHEET = 'Daily Report';
+
+/** 1-based column indices for the "Daily Report" sheet tab (12-column schema). */
+const DRC = {
+  DATE:     1,  // A
+  TIME:     2,  // B
+  SOURCE:   3,  // C
+  NAME:     4,  // D
+  ISSUE:    5,  // E
+  STAGE:    6,  // F
+  CATEGORY: 7,  // G
+  COUNT:    8,  // H — "Count?" column: Yes / No / ?
+  NOTES:    9,  // I
+  ID:      10,  // J — ticket_id or submission_id
+  COMPANY: 11,  // K
+  DEVICE:  12,  // L
+  TOTAL_COLS: 12
+};
+
+const DR_HEADERS = ['date','time','source','name','issue','stage','category','count','notes','id','company','device'];
+
+const DR_COUNT_VALUES  = ['Yes', 'No', '?'];
+const DR_STAGE_VALUES  = ['Stage 1','Stage 2','Stage 3','Other Company','Other Candidate','EXCLUDED'];
+const DR_SOURCE_VALUES = ['Sheet','Slack'];
+
+/**
+ * Returns all rows from the "Daily Report" tab for a given date (YYYY-MM-DD).
+ * Includes both included and EXCLUDED entries.
+ *
+ * @param {string} date  YYYY-MM-DD
+ * @returns {{ entries: Object[], total: number, reviewed: number }}
+ */
+function getDailyReport(date) {
+  const sheet = getDailyReportSheet_();
+  const data  = sheet.getDataRange().getValues();
+  if (data.length <= 1) return { entries: [], total: 0, reviewed: 0 };
+
+  const entries = [];
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    if (date && formatDate_(row[DRC.DATE - 1]) !== date) continue;
+    entries.push(drRowToEntry_(row, i + 1));
+  }
+
+  const reviewed = entries.filter(e => e.count === 'Yes' || e.count === 'No').length;
+  return { entries, total: entries.length, reviewed };
+}
+
+/**
+ * Appends daily report rows to the "Daily Report" sheet tab.
+ * Each item in rows[] must have keys matching DR_HEADERS.
+ * Safe to call multiple times — does NOT deduplicate; caller should clear old date rows first
+ * or ensure the same date is not written twice.
+ *
+ * @param {Object[]} rows
+ * @returns {{ ok: true, appended: number } | { error: string }}
+ */
+function saveDailyReport(rows) {
+  if (!rows || !rows.length) return { ok: true, appended: 0 };
+  try {
+    const sheet = getDailyReportSheet_();
+    const values = rows.map(r => DR_HEADERS.map(h => {
+      const key = toCamel_(h);
+      return r[key] !== undefined ? r[key] : (r[h] !== undefined ? r[h] : '');
+    }));
+    sheet.getRange(sheet.getLastRow() + 1, 1, values.length, DRC.TOTAL_COLS).setValues(values);
+    SpreadsheetApp.flush();
+    applyDrFormatting_(sheet);
+    return { ok: true, appended: rows.length };
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+/**
+ * Saves a Count? value and optional notes for one row in the "Daily Report" tab.
+ *
+ * @param {number} rowNumber   1-based sheet row (from getDailyReport entry.rowNumber)
+ * @param {string} countValue  One of DR_COUNT_VALUES: 'Yes', 'No', '?', or ''
+ * @param {string} notes       Optional free text
+ * @returns {{ ok: true } | { error: string }}
+ */
+function updateDailyReportCount(rowNumber, countValue, notes) {
+  try {
+    const sheet = getDailyReportSheet_();
+    sheet.getRange(rowNumber, DRC.COUNT).setValue(countValue || '');
+    sheet.getRange(rowNumber, DRC.NOTES).setValue(notes || '');
+    SpreadsheetApp.flush();
+    return { ok: true };
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+// ── PRIVATE: Daily Report sheet setup ────────────────────────────────────────
+
+/**
+ * Returns (or creates) the "Daily Report" sheet tab with headers, frozen row,
+ * data validation dropdowns, and conditional formatting.
+ */
+function getDailyReportSheet_() {
+  const id = PropertiesService.getScriptProperties().getProperty('BUG_SHEET_ID');
+  if (!id) throw new Error('BUG_SHEET_ID is not set in Script Properties.');
+  const ss    = SpreadsheetApp.openById(id);
+  let   sheet = ss.getSheetByName(DAILY_REPORT_SHEET);
+
+  if (!sheet) {
+    sheet = ss.insertSheet(DAILY_REPORT_SHEET);
+    setupDrSheet_(sheet);
+  }
+  return sheet;
+}
+
+function setupDrSheet_(sheet) {
+  // Header row
+  sheet.getRange(1, 1, 1, DRC.TOTAL_COLS).setValues([DR_HEADERS]);
+  sheet.getRange(1, 1, 1, DRC.TOTAL_COLS)
+    .setFontWeight('bold')
+    .setBackground('#1f2937')
+    .setFontColor('#ffffff');
+  sheet.setFrozenRows(1);
+
+  // Column widths
+  const widths = {
+    [DRC.DATE]:     100,
+    [DRC.TIME]:      65,
+    [DRC.SOURCE]:    80,
+    [DRC.NAME]:     140,
+    [DRC.ISSUE]:    340,
+    [DRC.STAGE]:    110,
+    [DRC.CATEGORY]: 220,
+    [DRC.COUNT]:     80,
+    [DRC.NOTES]:    220,
+    [DRC.ID]:       260,
+    [DRC.COMPANY]:  150,
+    [DRC.DEVICE]:   200
+  };
+  for (const [col, w] of Object.entries(widths)) {
+    sheet.setColumnWidth(Number(col), w);
+  }
+
+  applyDrValidation_(sheet);
+  applyDrFormatting_(sheet);
+}
+
+function applyDrValidation_(sheet) {
+  const lastRow = Math.max(sheet.getMaxRows(), 2);
+
+  function setDropdown(col, values) {
+    const rule = SpreadsheetApp.newDataValidation()
+      .requireValueInList(values, true)
+      .setAllowInvalid(true)
+      .build();
+    sheet.getRange(2, col, lastRow - 1, 1).setDataValidation(rule);
+  }
+
+  setDropdown(DRC.COUNT,  DR_COUNT_VALUES);
+  setDropdown(DRC.STAGE,  DR_STAGE_VALUES);
+  setDropdown(DRC.SOURCE, DR_SOURCE_VALUES);
+}
+
+function applyDrFormatting_(sheet) {
+  const lastRow  = Math.max(sheet.getLastRow(), 2);
+  const countCol = sheet.getRange(2, DRC.COUNT,   lastRow - 1, 1);
+  const allCols  = sheet.getRange(2, 1,           lastRow - 1, DRC.TOTAL_COLS);
+
+  // Remove existing rules first
+  sheet.clearConditionalFormatRules();
+
+  // Count? column (col H) colors
+  const countRules = [
+    { value: 'Yes', bg: '#d1fae5', text: '#064e3b' },
+    { value: 'No',  bg: '#f3f4f6', text: '#374151' },
+    { value: '?',   bg: '#fef3c7', text: '#78350f' }
+  ].map(({ value, bg, text }) =>
+    SpreadsheetApp.newConditionalFormatRule()
+      .whenTextEqualTo(value)
+      .setBackground(bg)
+      .setFontColor(text)
+      .setRanges([countCol])
+      .build()
+  );
+
+  // EXCLUDED rows — gray out entire row via custom formula on Stage col (F)
+  const excludedRule = SpreadsheetApp.newConditionalFormatRule()
+    .whenFormulaSatisfied('=$F2="EXCLUDED"')
+    .setBackground('#f5f5f5')
+    .setFontColor('#9ca3af')
+    .setRanges([allCols])
+    .build();
+
+  sheet.setConditionalFormatRules([...countRules, excludedRule]);
+}
+
+// ── PRIVATE: row mapper ───────────────────────────────────────────────────────
+
+function drRowToEntry_(row, rowNumber) {
+  return {
+    rowNumber,
+    date:     String(row[DRC.DATE     - 1] || ''),
+    time:     String(row[DRC.TIME     - 1] || ''),
+    source:   String(row[DRC.SOURCE   - 1] || ''),
+    name:     String(row[DRC.NAME     - 1] || ''),
+    issue:    String(row[DRC.ISSUE    - 1] || ''),
+    stage:    String(row[DRC.STAGE    - 1] || ''),
+    category: String(row[DRC.CATEGORY - 1] || ''),
+    count:    String(row[DRC.COUNT    - 1] || ''),
+    notes:    String(row[DRC.NOTES    - 1] || ''),
+    id:       String(row[DRC.ID       - 1] || ''),
+    company:  String(row[DRC.COMPANY  - 1] || ''),
+    device:   String(row[DRC.DEVICE   - 1] || '')
+  };
+}
+
+/** Converts snake_case header key to camelCase for object lookup. */
+function toCamel_(s) {
+  return s.replace(/_([a-z])/g, (_, c) => c.toUpperCase());
 }
