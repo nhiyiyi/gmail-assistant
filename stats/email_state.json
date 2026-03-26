@@ -6538,6 +6538,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d2a356d57f520a": {
+      "thread_id": "19d2a356d57f520a",
+      "from": "usmanbukola1080@gmail.com",
+      "subject": "Re: [Flowmingo] Our Sincere Apologies for Upcoming Meeting",
+      "date": "2026-03-26",
+      "sender_type": "D",
+      "topic": "recruiter",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7987465320808135130",
+      "draft_message_id": "19d2ae3a559749f6",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:04:15.925471+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2a2ebb972a15d": {
+      "thread_id": "19d245a216aa184a",
+      "from": "roshnijainchimc@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Roshni",
+      "date": "2026-03-26",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-853028120316768888",
+      "draft_message_id": "19d2ae3a8a9b6801",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:04:17.085460+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2a30c369a9085": {
+      "thread_id": "19d2a30c369a9085",
+      "from": "rl@parachute16.com",
+      "subject": "Re: Exploring Collaboration Opportunities - p16 x Flowmingo AI",
+      "date": "2026-03-26",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4891042002756673517",
+      "draft_message_id": "19d2ae3ad68e2215",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:04:18.262368+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2aa53269ccd0c": {
+      "thread_id": "19d2aa53269ccd0c",
+      "from": "teamcapterra@e.capterra.com",
+      "subject": "Re: Your ideal software match is waiting",
+      "date": "2026-03-26",
+      "sender_type": "E",
+      "topic": "vendor",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8798768546322684469",
+      "draft_message_id": "19d2ae3b3cad7765",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:04:19.465276+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2ac381bf7d573": {
+      "thread_id": "19d2ac381bf7d573",
+      "from": "rukaiyamalik@hotmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "2026-03-26",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r459868083399460381",
+      "draft_message_id": "19d2ae57eb029586",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:06:17.209427+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2ab9176de9741": {
+      "thread_id": "19c26cfbb217c8cc",
+      "from": "violetotienoh@gmail.com",
+      "subject": "Re: Follow-Up on Reward Update.",
+      "date": "2026-03-26",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S10",
+      "urgency": "urgent",
+      "review_status": "review",
+      "draft_id": "r7001308592327527757",
+      "draft_message_id": "19d2ae58292069f2",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:06:18.390539+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2ad0f3a4642cb": {
+      "thread_id": "19d24feda12dc4d3",
+      "from": "mariammarimon27@gmail.com",
+      "subject": "Re: Maria Marimon application",
+      "date": "2026-03-26",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5082469883867363919",
+      "draft_message_id": "19d2ae58745bc371",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T16:06:19.574417+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
