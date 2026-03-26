@@ -780,28 +780,73 @@ function stripHtml_(html) {
 
 const DAILY_REPORT_SHEET = 'Daily Report';
 
-/** 1-based column indices for the "Daily Report" sheet tab (12-column schema). */
+/**
+ * 1-based column indices for the "Daily Report" sheet tab (29 columns).
+ *
+ * Group A — Identity (cols 1-6, dark grey header)
+ * Group B — Raw Content (cols 7-19, blue header)
+ * Group C — Claude Judgment (cols 20-22, gold header)
+ * Group D — Human Review (cols 23-26, green header)
+ * Group E — Approval (cols 27-29, purple header)
+ */
 const DRC = {
-  DATE:     1,  // A
-  TIME:     2,  // B
-  SOURCE:   3,  // C
-  NAME:     4,  // D
-  ISSUE:    5,  // E
-  STAGE:    6,  // F
-  CATEGORY: 7,  // G
-  COUNT:    8,  // H — "Count?" column: Yes / No / ?
-  NOTES:    9,  // I
-  ID:      10,  // J — ticket_id or submission_id
-  COMPANY: 11,  // K
-  DEVICE:  12,  // L
-  TOTAL_COLS: 12
+  // Group A — Identity
+  SOURCE_ID:        1,   // A
+  DATE:             2,   // B
+  TIME_GMT7:        3,   // C
+  SOURCE:           4,   // D
+  TICKET_ID:        5,   // E
+  SOURCE_LINK:      6,   // F
+
+  // Group B — Raw Content
+  SCREENSHOT_URL:   7,   // G
+  ORIGINAL_CONTENT: 8,   // H
+  EMAIL:            9,   // I
+  CANDIDATE_NAME:  10,   // J
+  TOPIC_RAW:       11,   // K
+  STAGE:           12,   // L
+  CATEGORY:        13,   // M
+  INTERVIEW_POS:   14,   // N
+  INTERVIEW_CO:    15,   // O
+  SUBMISSION_ID:   16,   // P
+  BROWSER:         17,   // Q
+  OS:              18,   // R
+  DEVICE:          19,   // S
+
+  // Group C — Claude Judgment
+  ASSESSMENT:      20,   // T
+  CONFIDENCE:      21,   // U
+  ASSESSMENT_NOTES:22,   // V
+
+  // Group D — Human Review
+  HUMAN_VERDICT:   23,   // W
+  HUMAN_NOTES:     24,   // X
+  INCLUDE_IN_REPORT:25,  // Y
+  REPORT_BUCKET:   26,   // Z
+
+  // Group E — Approval
+  APPROVAL_STATUS: 27,   // AA
+  REVIEWED_BY:     28,   // AB
+  REVIEWED_AT:     29,   // AC
+
+  TOTAL_COLS:      29,
 };
 
-const DR_HEADERS = ['date','time','source','name','issue','stage','category','count','notes','id','company','device'];
+const DR_HEADERS = [
+  'source_id','date','time_gmt7','source','ticket_id','source_link',
+  'screenshot_url','original_content','email','candidate_name',
+  'topic_raw','stage','category','interview_position','interview_company',
+  'submission_id','browser','os','device',
+  'assessment','confidence','assessment_notes',
+  'human_verdict','human_notes','include_in_report','report_bucket',
+  'approval_status','reviewed_by','reviewed_at',
+];
 
-const DR_COUNT_VALUES  = ['Yes', 'No', '?'];
-const DR_STAGE_VALUES  = ['Stage 1','Stage 2','Stage 3','Other Company','Other Candidate','EXCLUDED'];
-const DR_SOURCE_VALUES = ['Sheet','Slack'];
+const DR_ASSESSMENT_VALUES  = ['Platform Bug','Likely Platform Bug','Borderline','Likely User Error','Unknown','N/A'];
+const DR_CONFIDENCE_VALUES  = ['High','Medium','Low'];
+const DR_VERDICT_VALUES     = ['Platform Bug','User Error','Borderline','Exclude',''];
+const DR_STAGE_VALUES       = ['Stage 1','Stage 2','Stage 3','Other Company','Other Candidate','EXCLUDED'];
+const DR_SOURCE_VALUES      = ['Google Sheet','Slack'];
 
 /**
  * Returns all rows from the "Daily Report" tab for a given date (YYYY-MM-DD).
@@ -822,54 +867,275 @@ function getDailyReport(date) {
     entries.push(drRowToEntry_(row, i + 1));
   }
 
-  const reviewed = entries.filter(e => e.count === 'Yes' || e.count === 'No').length;
+  const reviewed = entries.filter(e => e.humanVerdict).length;
   return { entries, total: entries.length, reviewed };
 }
 
 /**
- * Appends daily report rows to the "Daily Report" sheet tab.
- * Each item in rows[] must have keys matching DR_HEADERS.
- * Safe to call multiple times — does NOT deduplicate; caller should clear old date rows first
- * or ensure the same date is not written twice.
+ * Safe idempotent upsert for Daily Report rows.
+ * - Approved rows (approval_status='approved') are NEVER deleted or overwritten.
+ * - Non-approved rows for the affected dates are deleted first, then fresh rows appended.
+ * - Rows whose source_id already exists as approved are skipped.
  *
- * @param {Object[]} rows
- * @returns {{ ok: true, appended: number } | { error: string }}
+ * @param {Object[]} rows  Each object must have keys matching DR_HEADERS.
+ * @returns {{ ok: true, appended: number, skipped: number } | { error: string }}
  */
 function saveDailyReport(rows) {
-  if (!rows || !rows.length) return { ok: true, appended: 0 };
+  if (!rows || !rows.length) return { ok: true, appended: 0, skipped: 0 };
   try {
     const sheet = getDailyReportSheet_();
-    const values = rows.map(r => DR_HEADERS.map(h => {
+    const data  = sheet.getDataRange().getValues();
+
+    // Collect dates being pushed
+    const datesInPush = new Set(rows.map(r => {
+      const d = r['date'] || r[toCamel_('date')] || '';
+      return String(d);
+    }).filter(Boolean));
+
+    // Build source_id → { rowIdx (1-based), approvalStatus } for existing rows
+    const existingMap = {};
+    for (let i = 1; i < data.length; i++) {
+      const sid    = String(data[i][DRC.SOURCE_ID - 1] || '');
+      const status = String(data[i][DRC.APPROVAL_STATUS - 1] || '');
+      if (sid) existingMap[sid] = { rowIdx: i + 1, approvalStatus: status };
+    }
+
+    // Find non-approved rows for affected dates to delete
+    const rowsToDelete = [];
+    for (let i = 1; i < data.length; i++) {
+      const rowDate  = String(data[i][DRC.DATE - 1] || '');
+      const sid      = String(data[i][DRC.SOURCE_ID - 1] || '');
+      const status   = String(data[i][DRC.APPROVAL_STATUS - 1] || '');
+      if (datesInPush.has(rowDate) && status !== 'approved') {
+        rowsToDelete.push(i + 1); // 1-based
+      }
+    }
+
+    // Delete in reverse order so indices stay valid
+    for (let i = rowsToDelete.length - 1; i >= 0; i--) {
+      sheet.deleteRow(rowsToDelete[i]);
+    }
+
+    // Build locked set (approved source_ids that were not deleted)
+    const lockedIds = new Set(
+      Object.entries(existingMap)
+        .filter(([, v]) => v.approvalStatus === 'approved')
+        .map(([sid]) => sid)
+    );
+
+    // Filter new rows — skip locked
+    const freshRows = rows.filter(r => {
+      const sid = r['source_id'] || r[toCamel_('source_id')] || '';
+      return !lockedIds.has(String(sid));
+    });
+    const skipped = rows.length - freshRows.length;
+
+    if (!freshRows.length) {
+      SpreadsheetApp.flush();
+      return { ok: true, appended: 0, skipped };
+    }
+
+    const values = freshRows.map(r => DR_HEADERS.map(h => {
       const key = toCamel_(h);
       return r[key] !== undefined ? r[key] : (r[h] !== undefined ? r[h] : '');
     }));
+
     sheet.getRange(sheet.getLastRow() + 1, 1, values.length, DRC.TOTAL_COLS).setValues(values);
     SpreadsheetApp.flush();
     applyDrFormatting_(sheet);
-    return { ok: true, appended: rows.length };
+    return { ok: true, appended: freshRows.length, skipped };
   } catch (e) {
     return { error: e.message };
   }
 }
 
 /**
- * Saves a Count? value and optional notes for one row in the "Daily Report" tab.
+ * Saves a human verdict and optional notes for one row in the "Daily Report" tab.
  *
- * @param {number} rowNumber   1-based sheet row (from getDailyReport entry.rowNumber)
- * @param {string} countValue  One of DR_COUNT_VALUES: 'Yes', 'No', '?', or ''
- * @param {string} notes       Optional free text
+ * @param {number} rowNumber  1-based sheet row
+ * @param {string} verdict    One of DR_VERDICT_VALUES
+ * @param {string} notes      Optional free text
  * @returns {{ ok: true } | { error: string }}
  */
-function updateDailyReportCount(rowNumber, countValue, notes) {
+function updateDailyReportVerdict(rowNumber, verdict, notes) {
   try {
     const sheet = getDailyReportSheet_();
-    sheet.getRange(rowNumber, DRC.COUNT).setValue(countValue || '');
-    sheet.getRange(rowNumber, DRC.NOTES).setValue(notes || '');
+    sheet.getRange(rowNumber, DRC.HUMAN_VERDICT).setValue(verdict || '');
+    sheet.getRange(rowNumber, DRC.HUMAN_NOTES).setValue(notes || '');
     SpreadsheetApp.flush();
     return { ok: true };
   } catch (e) {
     return { error: e.message };
   }
+}
+
+/**
+ * Updates any allow-listed field for one row.
+ * Allowed: humanVerdict, humanNotes, includeInReport, reportBucket, approvalStatus
+ *
+ * @param {number} rowNumber
+ * @param {string} field  camelCase field name
+ * @param {string} value
+ * @returns {{ ok: true } | { error: string }}
+ */
+function updateDailyReportField(rowNumber, field, value) {
+  const allowed = {
+    humanVerdict:    DRC.HUMAN_VERDICT,
+    humanNotes:      DRC.HUMAN_NOTES,
+    includeInReport: DRC.INCLUDE_IN_REPORT,
+    reportBucket:    DRC.REPORT_BUCKET,
+    approvalStatus:  DRC.APPROVAL_STATUS,
+  };
+  if (!(field in allowed)) return { error: 'Unknown field: ' + field };
+  try {
+    const sheet = getDailyReportSheet_();
+    sheet.getRange(rowNumber, allowed[field]).setValue(value || '');
+    SpreadsheetApp.flush();
+    return { ok: true };
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+/**
+ * Sets approval_status, reviewed_by, and reviewed_at for one row.
+ *
+ * @param {number} rowNumber
+ * @param {string} approvalStatus  new / reviewed / approved / excluded
+ * @param {string} reviewedBy      Reviewer name
+ * @returns {{ ok: true } | { error: string }}
+ */
+function updateDailyReportApproval(rowNumber, approvalStatus, reviewedBy) {
+  try {
+    const sheet    = getDailyReportSheet_();
+    const now      = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'");
+    sheet.getRange(rowNumber, DRC.APPROVAL_STATUS).setValue(approvalStatus || 'reviewed');
+    sheet.getRange(rowNumber, DRC.REVIEWED_BY).setValue(reviewedBy || '');
+    sheet.getRange(rowNumber, DRC.REVIEWED_AT).setValue(now);
+    SpreadsheetApp.flush();
+    return { ok: true, reviewedAt: now };
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+/**
+ * Check whether all Daily Report rows for a date have been approved.
+ *
+ * @param {string} date  YYYY-MM-DD
+ * @returns {{ total, pending, approved, complete }}
+ */
+function checkDailyReportComplete(date) {
+  const sheet = getDailyReportSheet_();
+  const data  = sheet.getDataRange().getValues();
+
+  let total = 0, pending = 0, approved = 0;
+
+  for (let i = 1; i < data.length; i++) {
+    const rowDate = formatDate_(data[i][DRC.DATE - 1]);
+    if (date && rowDate !== date) continue;
+    const status = String(data[i][DRC.APPROVAL_STATUS - 1] || 'new');
+    total++;
+    if (status === 'approved') approved++;
+    else                       pending++;
+  }
+
+  return { date, total, pending, approved, complete: total > 0 && pending === 0 };
+}
+
+/**
+ * Set all non-approved rows for a date to approval_status = 'approved'.
+ *
+ * @param {string} date  YYYY-MM-DD
+ * @returns {{ ok: true, approved: number }}
+ */
+function markAllApproved(date) {
+  const sheet = getDailyReportSheet_();
+  const data  = sheet.getDataRange().getValues();
+  const now   = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd'T'HH:mm:ss'Z'");
+  let approved = 0;
+  for (let i = 1; i < data.length; i++) {
+    const rowDate = formatDate_(data[i][DRC.DATE - 1]);
+    if (date && rowDate !== date) continue;
+    if (String(data[i][DRC.APPROVAL_STATUS - 1] || 'new') === 'approved') continue;
+    sheet.getRange(i + 1, DRC.APPROVAL_STATUS).setValue('approved');
+    sheet.getRange(i + 1, DRC.REVIEWED_AT).setValue(now);
+    approved++;
+  }
+  SpreadsheetApp.flush();
+  return { ok: true, approved };
+}
+
+/**
+ * Update stage, category, and human_notes for one row.
+ *
+ * @param {number} rowNumber
+ * @param {string} stage
+ * @param {string} category
+ * @param {string} notes
+ * @returns {{ ok: true } | { error: string }}
+ */
+function updateDailyReportRow(rowNumber, stage, category, notes) {
+  try {
+    const sheet = getDailyReportSheet_();
+    if (stage    != null) sheet.getRange(rowNumber, DRC.STAGE).setValue(stage || '');
+    if (category != null) sheet.getRange(rowNumber, DRC.CATEGORY).setValue(category || '');
+    if (notes    != null) sheet.getRange(rowNumber, DRC.HUMAN_NOTES).setValue(notes || '');
+    SpreadsheetApp.flush();
+    return { ok: true };
+  } catch (e) {
+    return { error: e.message };
+  }
+}
+
+/**
+ * Get aggregated counts from approved+included rows for a date (for the boss DM).
+ *
+ * @param {string} date  YYYY-MM-DD
+ * @returns {{ date, stage1, stage2, stage3, other_company, other_candidate,
+ *             total_platform_bug, total_user_error, total_borderline,
+ *             total_included, total_excluded, total_slack, total_email_bugs }}
+ */
+function getDailyReportSummary(date) {
+  const sheet = getDailyReportSheet_();
+  const data  = sheet.getDataRange().getValues();
+
+  const totals = {
+    stage1: 0, stage2: 0, stage3: 0, other_company: 0, other_candidate: 0,
+    total_platform_bug: 0, total_user_error: 0, total_borderline: 0,
+    total_included: 0, total_excluded: 0, total_slack: 0, total_email_bugs: 0,
+  };
+
+  for (let i = 1; i < data.length; i++) {
+    if (formatDate_(data[i][DRC.DATE - 1]) !== date) continue;
+
+    const source  = String(data[i][DRC.SOURCE - 1] || '');
+    const status  = String(data[i][DRC.APPROVAL_STATUS - 1] || 'new');
+    const stage   = String(data[i][DRC.STAGE - 1] || '');
+    const verdict = String(data[i][DRC.ASSESSMENT - 1] || '');
+
+    if (source === 'Slack') totals.total_slack++;
+    else totals.total_email_bugs++;
+
+    if (stage === 'EXCLUDED' || status !== 'approved') {
+      totals.total_excluded++;
+      continue;
+    }
+
+    totals.total_included++;
+    if      (stage.startsWith('Stage 1'))         totals.stage1++;
+    else if (stage.startsWith('Stage 2'))         totals.stage2++;
+    else if (stage.startsWith('Stage 3'))         totals.stage3++;
+    else if (stage === 'Other (Company)')          totals.other_company++;
+    else if (stage === 'Other (Candidate)')        totals.other_candidate++;
+
+    const vLow = verdict.toLowerCase();
+    if      (vLow.includes('platform bug')) totals.total_platform_bug++;
+    else if (vLow.includes('user error'))   totals.total_user_error++;
+    else if (vLow.includes('borderline'))   totals.total_borderline++;
+  }
+
+  return { date, ...totals };
 }
 
 // ── PRIVATE: Daily Report sheet setup ────────────────────────────────────────
@@ -892,28 +1158,35 @@ function getDailyReportSheet_() {
 }
 
 function setupDrSheet_(sheet) {
-  // Header row
+  // Header row with colour zone backgrounds
   sheet.getRange(1, 1, 1, DRC.TOTAL_COLS).setValues([DR_HEADERS]);
-  sheet.getRange(1, 1, 1, DRC.TOTAL_COLS)
-    .setFontWeight('bold')
-    .setBackground('#1f2937')
-    .setFontColor('#ffffff');
   sheet.setFrozenRows(1);
 
-  // Column widths
+  // Group header colours: A(1-6) dark grey, B(7-19) blue, C(20-22) gold, D(23-26) green, E(27-29) purple
+  const zones = [
+    { start: 1,  end: 6,  bg: '#4d4d59', fg: '#ffffff' },
+    { start: 7,  end: 19, bg: '#2e64b2', fg: '#ffffff' },
+    { start: 20, end: 22, bg: '#997a19', fg: '#ffffff' },
+    { start: 23, end: 26, bg: '#20804d', fg: '#ffffff' },
+    { start: 27, end: 29, bg: '#663399', fg: '#ffffff' },
+  ];
+  for (const z of zones) {
+    sheet.getRange(1, z.start, 1, z.end - z.start + 1)
+      .setBackground(z.bg).setFontColor(z.fg).setFontWeight('bold');
+  }
+
+  // Column widths (1-based col → px)
   const widths = {
-    [DRC.DATE]:     100,
-    [DRC.TIME]:      65,
-    [DRC.SOURCE]:    80,
-    [DRC.NAME]:     140,
-    [DRC.ISSUE]:    340,
-    [DRC.STAGE]:    110,
-    [DRC.CATEGORY]: 220,
-    [DRC.COUNT]:     80,
-    [DRC.NOTES]:    220,
-    [DRC.ID]:       260,
-    [DRC.COMPANY]:  150,
-    [DRC.DEVICE]:   200
+    [DRC.SOURCE_ID]:        160, [DRC.DATE]:             100, [DRC.TIME_GMT7]:       90,
+    [DRC.SOURCE]:           110, [DRC.TICKET_ID]:        150, [DRC.SOURCE_LINK]:     220,
+    [DRC.SCREENSHOT_URL]:   220, [DRC.ORIGINAL_CONTENT]: 360, [DRC.EMAIL]:           180,
+    [DRC.CANDIDATE_NAME]:   160, [DRC.TOPIC_RAW]:        160, [DRC.STAGE]:           100,
+    [DRC.CATEGORY]:         200, [DRC.INTERVIEW_POS]:    200, [DRC.INTERVIEW_CO]:    160,
+    [DRC.SUBMISSION_ID]:    260, [DRC.BROWSER]:          110, [DRC.OS]:              100,
+    [DRC.DEVICE]:           130, [DRC.ASSESSMENT]:       155, [DRC.CONFIDENCE]:      100,
+    [DRC.ASSESSMENT_NOTES]: 320, [DRC.HUMAN_VERDICT]:    140, [DRC.HUMAN_NOTES]:     220,
+    [DRC.INCLUDE_IN_REPORT]:110, [DRC.REPORT_BUCKET]:    180, [DRC.APPROVAL_STATUS]: 130,
+    [DRC.REVIEWED_BY]:      140, [DRC.REVIEWED_AT]:      160,
   };
   for (const [col, w] of Object.entries(widths)) {
     sheet.setColumnWidth(Number(col), w);
@@ -934,42 +1207,56 @@ function applyDrValidation_(sheet) {
     sheet.getRange(2, col, lastRow - 1, 1).setDataValidation(rule);
   }
 
-  setDropdown(DRC.COUNT,  DR_COUNT_VALUES);
-  setDropdown(DRC.STAGE,  DR_STAGE_VALUES);
-  setDropdown(DRC.SOURCE, DR_SOURCE_VALUES);
+  setDropdown(DRC.ASSESSMENT,       DR_ASSESSMENT_VALUES);
+  setDropdown(DRC.CONFIDENCE,       DR_CONFIDENCE_VALUES);
+  setDropdown(DRC.HUMAN_VERDICT,    DR_VERDICT_VALUES);
+  setDropdown(DRC.STAGE,            DR_STAGE_VALUES);
+  setDropdown(DRC.SOURCE,           DR_SOURCE_VALUES);
+  setDropdown(DRC.INCLUDE_IN_REPORT, ['Yes', 'No', '?']);
+  setDropdown(DRC.REPORT_BUCKET,    ['stage1', 'stage2', 'stage3', 'other_company', 'other_candidate', 'excluded']);
+  setDropdown(DRC.APPROVAL_STATUS,  ['new', 'reviewed', 'approved', 'excluded']);
 }
 
 function applyDrFormatting_(sheet) {
-  const lastRow  = Math.max(sheet.getLastRow(), 2);
-  const countCol = sheet.getRange(2, DRC.COUNT,   lastRow - 1, 1);
-  const allCols  = sheet.getRange(2, 1,           lastRow - 1, DRC.TOTAL_COLS);
+  const lastRow = Math.max(sheet.getLastRow(), 2);
 
   // Remove existing rules first
   sheet.clearConditionalFormatRules();
 
-  // Count? column (col H) colors
-  const countRules = [
-    { value: 'Yes', bg: '#d1fae5', text: '#064e3b' },
-    { value: 'No',  bg: '#f3f4f6', text: '#374151' },
-    { value: '?',   bg: '#fef3c7', text: '#78350f' }
-  ].map(({ value, bg, text }) =>
-    SpreadsheetApp.newConditionalFormatRule()
-      .whenTextEqualTo(value)
-      .setBackground(bg)
-      .setFontColor(text)
-      .setRanges([countCol])
-      .build()
-  );
+  function cfRules(colIndex, colorMap) {
+    const range = sheet.getRange(2, colIndex, lastRow - 1, 1);
+    return colorMap.map(({ value, bg, text }) =>
+      SpreadsheetApp.newConditionalFormatRule()
+        .whenTextEqualTo(value)
+        .setBackground(bg)
+        .setFontColor(text)
+        .setRanges([range])
+        .build()
+    );
+  }
 
-  // EXCLUDED rows — gray out entire row via custom formula on Stage col (F)
-  const excludedRule = SpreadsheetApp.newConditionalFormatRule()
-    .whenFormulaSatisfied('=$F2="EXCLUDED"')
-    .setBackground('#f5f5f5')
-    .setFontColor('#9ca3af')
-    .setRanges([allCols])
-    .build();
+  const verdictRules = cfRules(DRC.HUMAN_VERDICT, [
+    { value: 'Platform Bug', bg: '#d1fae5', text: '#064e3b' },
+    { value: 'User Error',   bg: '#fef3c7', text: '#78350f' },
+    { value: 'Borderline',   bg: '#dbeafe', text: '#1e3a8a' },
+    { value: 'Exclude',      bg: '#f3f4f6', text: '#374151' },
+  ]);
 
-  sheet.setConditionalFormatRules([...countRules, excludedRule]);
+  const assessmentRules = cfRules(DRC.ASSESSMENT, [
+    { value: 'Platform Bug',        bg: '#ecfdf5', text: '#065f46' },
+    { value: 'Likely Platform Bug', bg: '#f0fdf4', text: '#166534' },
+    { value: 'Likely User Error',   bg: '#fffbeb', text: '#92400e' },
+    { value: 'Borderline',          bg: '#eff6ff', text: '#1e40af' },
+  ]);
+
+  const approvalRules = cfRules(DRC.APPROVAL_STATUS, [
+    { value: 'approved', bg: '#d1fae5', text: '#064e3b' },
+    { value: 'excluded', bg: '#f3f4f6', text: '#374151' },
+    { value: 'reviewed', bg: '#dbeafe', text: '#1e3a8a' },
+    { value: 'new',      bg: '#fef3c7', text: '#78350f' },
+  ]);
+
+  sheet.setConditionalFormatRules([...verdictRules, ...assessmentRules, ...approvalRules]);
 }
 
 // ── PRIVATE: row mapper ───────────────────────────────────────────────────────
@@ -977,19 +1264,148 @@ function applyDrFormatting_(sheet) {
 function drRowToEntry_(row, rowNumber) {
   return {
     rowNumber,
-    date:     String(row[DRC.DATE     - 1] || ''),
-    time:     String(row[DRC.TIME     - 1] || ''),
-    source:   String(row[DRC.SOURCE   - 1] || ''),
-    name:     String(row[DRC.NAME     - 1] || ''),
-    issue:    String(row[DRC.ISSUE    - 1] || ''),
-    stage:    String(row[DRC.STAGE    - 1] || ''),
-    category: String(row[DRC.CATEGORY - 1] || ''),
-    count:    String(row[DRC.COUNT    - 1] || ''),
-    notes:    String(row[DRC.NOTES    - 1] || ''),
-    id:       String(row[DRC.ID       - 1] || ''),
-    company:  String(row[DRC.COMPANY  - 1] || ''),
-    device:   String(row[DRC.DEVICE   - 1] || '')
+    // Group A — Identity
+    sourceId:        String(row[DRC.SOURCE_ID        - 1] || ''),
+    date:            formatDate_(row[DRC.DATE - 1]),
+    timeGmt7:        String(row[DRC.TIME_GMT7        - 1] || ''),
+    source:          String(row[DRC.SOURCE           - 1] || ''),
+    ticketId:        String(row[DRC.TICKET_ID        - 1] || ''),
+    sourceLink:      String(row[DRC.SOURCE_LINK      - 1] || ''),
+    // Group B — Raw Content
+    screenshotUrl:   String(row[DRC.SCREENSHOT_URL   - 1] || ''),
+    originalContent: String(row[DRC.ORIGINAL_CONTENT - 1] || ''),
+    email:           String(row[DRC.EMAIL            - 1] || ''),
+    candidateName:   String(row[DRC.CANDIDATE_NAME   - 1] || ''),
+    topicRaw:        String(row[DRC.TOPIC_RAW        - 1] || ''),
+    stage:           String(row[DRC.STAGE            - 1] || ''),
+    category:        String(row[DRC.CATEGORY         - 1] || ''),
+    interviewPos:    String(row[DRC.INTERVIEW_POS    - 1] || ''),
+    interviewCo:     String(row[DRC.INTERVIEW_CO     - 1] || ''),
+    submissionId:    String(row[DRC.SUBMISSION_ID    - 1] || ''),
+    browser:         String(row[DRC.BROWSER          - 1] || ''),
+    os:              String(row[DRC.OS               - 1] || ''),
+    device:          String(row[DRC.DEVICE           - 1] || ''),
+    // Group C — Claude Judgment
+    assessment:      String(row[DRC.ASSESSMENT       - 1] || ''),
+    confidence:      String(row[DRC.CONFIDENCE       - 1] || ''),
+    assessmentNotes: String(row[DRC.ASSESSMENT_NOTES - 1] || ''),
+    // Group D — Human Review
+    humanVerdict:    String(row[DRC.HUMAN_VERDICT    - 1] || ''),
+    humanNotes:      String(row[DRC.HUMAN_NOTES      - 1] || ''),
+    includeInReport: String(row[DRC.INCLUDE_IN_REPORT- 1] || '?'),
+    reportBucket:    String(row[DRC.REPORT_BUCKET    - 1] || ''),
+    // Group E — Approval
+    approvalStatus:  String(row[DRC.APPROVAL_STATUS  - 1] || 'new'),
+    reviewedBy:      String(row[DRC.REVIEWED_BY      - 1] || ''),
+    reviewedAt:      String(row[DRC.REVIEWED_AT      - 1] || ''),
   };
+}
+
+// ── Config helpers ─────────────────────────────────────────────────────────
+
+/** Read a single key from the Config sheet. Returns '' if not found. */
+function getConfigValue_(key) {
+  try {
+    const sheet = getSheet_(CONFIG_SHEET);
+    const data  = sheet.getDataRange().getValues();
+    for (const row of data) {
+      if (String(row[0] || '').trim().toLowerCase() === key.toLowerCase()) return String(row[1] || '');
+    }
+    return '';
+  } catch(e) { return ''; }
+}
+
+/** Write (upsert) a single key/value pair into the Config sheet. */
+function setConfigValue_(key, value) {
+  const sheet = getSheet_(CONFIG_SHEET);
+  const data  = sheet.getDataRange().getValues();
+  for (let i = 0; i < data.length; i++) {
+    if (String(data[i][0] || '').trim().toLowerCase() === key.toLowerCase()) {
+      sheet.getRange(i + 1, 2).setValue(value);
+      return;
+    }
+  }
+  // Append new row
+  sheet.appendRow([key, value]);
+}
+
+// ── Send Report DM ─────────────────────────────────────────────────────────
+
+/**
+ * Build the daily report DM text, mark it as sent in Config, and return it.
+ * The caller (BugDashboard.html JS) shows the text for the user to send on Slack.
+ *
+ * Idempotent: returns {already_sent:true} if dm_sent_at:{date} is already set.
+ *
+ * @param {string} date  YYYY-MM-DD
+ * @returns {{ message, already_sent, dm_sent_at, error }}
+ */
+function sendReportDm(date) {
+  if (!date) return { error: 'date is required' };
+
+  // Idempotency check
+  const dmKey     = 'dm_sent_at:' + date;
+  const alreadySentAt = getConfigValue_(dmKey);
+  if (alreadySentAt) return { already_sent: true, dm_sent_at: alreadySentAt };
+
+  // Completion check
+  const completion = checkDailyReportComplete(date);
+  if (!completion.complete) {
+    return { error: 'Report is not complete: ' + completion.pending + ' pending, ' + completion.reviewed + ' reviewed of ' + completion.total + ' total' };
+  }
+
+  // Get summary counts
+  const s = getDailyReportSummary(date);
+
+  // Read percentages from Config if available
+  const totalCompleted = parseInt(getConfigValue_('total_completed:' + date)) || 0;
+  const totalStarted   = parseInt(getConfigValue_('total_started:'   + date)) || 0;
+
+  // Format the date for display (e.g. "Mar 25")
+  const parts  = date.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmtDate = months[parseInt(parts[1]) - 1] + ' ' + parseInt(parts[2]);
+
+  // Build DM text
+  let lines = [
+    ':large_yellow_square: Reporting Period: ' + fmtDate + ' (00:00) – ' + fmtDate + ' (11:59 PM) (1 day) @JunYuan Tan (JY)',
+  ];
+
+  if (totalCompleted) {
+    const pct = (s.total_included / totalCompleted * 100).toFixed(2);
+    lines.push('Total Issues Reported: ' + s.total_included + ' out of ' + totalCompleted +
+      ' ( [Total Completed including Internal ones] (' + pct + '%) )');
+  }
+  if (totalStarted) {
+    const pct = (s.total_included / totalStarted * 100).toFixed(2);
+    lines.push('Total Issues Reported: ' + s.total_included + ' out of ' + totalStarted +
+      ' ( [Total Started by Unique Emails (Include Completed, Not Completed, and Submissions never go to Interview step) including Internal ones] (' + pct + '%) )');
+  }
+  if (!totalCompleted && !totalStarted) {
+    lines.push('Total Issues Reported: ' + s.total_included);
+  }
+
+  const stageLines = (counts, stageLabel) => {
+    if (!counts) return stageLabel + ': 0';
+    return stageLabel + ' (' + counts + ')';
+  };
+
+  lines.push('Stage 1: Before the Interview (' + s.stage1 + ')');
+  lines.push('Stage 2: During the Interview (' + s.stage2 + ')');
+  lines.push('Stage 3: After the Interview (' + s.stage3 + ')');
+  lines.push('Other (Company) (' + s.other_company + ')');
+  lines.push('Other (Candidate) (' + s.other_candidate + ')');
+  lines.push('');
+  lines.push('Platform Bug: ' + s.total_platform_bug + ' | User Error: ' + s.total_user_error + ' | Borderline: ' + s.total_borderline);
+  lines.push('Slack submissions: ' + s.total_slack + ' | Email tickets: ' + s.total_email_bugs);
+
+  const dmText = lines.join('\n');
+
+  // Mark as sent
+  const sentAt = new Date().toISOString();
+  setConfigValue_(dmKey, sentAt);
+
+  return { message: dmText, already_sent: false };
 }
 
 /** Converts snake_case header key to camelCase for object lookup. */

@@ -1246,6 +1246,258 @@
 
     .dr-save-btn:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
     .dr-save-btn.saved { background: #d1fae5; border-color: #6ee7b7; color: #065f46; }
+
+    /* Completion banner */
+    .dr-completion-banner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 20px;
+      border-bottom: 1px solid var(--gray-100);
+      font-size: 13px;
+      background: var(--gray-50);
+      flex-shrink: 0;
+    }
+    .dr-completion-banner.complete { background: #ecfdf5; border-color: #a7f3d0; }
+    .dr-completion-banner .material-icons-round { font-size: 18px; color: var(--gray-400); }
+    .dr-completion-banner.complete .material-icons-round { color: #059669; }
+    .dr-completion-text { color: var(--gray-600); font-size: 13px; }
+    .dr-completion-banner.complete .dr-completion-text { color: #065f46; font-weight: 600; }
+
+    /* Approval select (inline in cards) */
+    .dr-approval-select {
+      padding: 4px 8px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-family: inherit;
+      color: var(--gray-600);
+      background: #fff;
+      cursor: pointer;
+    }
+    .dr-approval-select.st-approved { background: #d1fae5; color: #065f46; border-color: #6ee7b7; font-weight: 700; }
+    .dr-approval-select.st-reviewed  { background: #dbeafe; color: #1e3a8a; border-color: #93c5fd; font-weight: 600; }
+    .dr-approval-select.st-excluded  { background: var(--gray-100); color: var(--gray-500); border-color: var(--gray-300); }
+
+    /* Include / report bucket row */
+    .dr-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .dr-meta-label { font-size: 11px; color: var(--gray-400); font-weight: 500; }
+    .dr-include-btn {
+      padding: 3px 8px;
+      border: 1px solid var(--gray-200);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #fff;
+      color: var(--gray-500);
+      font-family: inherit;
+      transition: background .12s, color .12s;
+    }
+    .dr-include-btn.yes.active { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+    .dr-include-btn.no.active  { background: var(--gray-100); color: var(--gray-600); border-color: var(--gray-300); }
+    .dr-include-btn.q.active   { background: #fef3c7; color: #78350f; border-color: #fcd34d; }
+
+    /* Counter approved color */
+    .dr-counter[data-approval] .dr-counter-num { color: #059669; }
+    .dr-counter[data-approval].active .dr-counter-num { color: var(--primary) !important; }
+
+    /* ── Daily Review stats bar ────────────────────────────────────────────── */
+    .dr-stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 10px 20px;
+      background: #fff;
+      border-bottom: 1px solid var(--gray-200);
+      flex-shrink: 0;
+    }
+    .dr-stat { display: flex; flex-direction: column; align-items: center; gap: 1px; min-width: 56px; }
+    .dr-stat-num { font-size: 22px; font-weight: 800; color: var(--gray-900); line-height: 1; }
+    .dr-stat-label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-400); text-align: center; }
+    .dr-stat.pending .dr-stat-num  { color: #d97706; }
+    .dr-stat.approved .dr-stat-num { color: #059669; }
+    .dr-stat.excluded .dr-stat-num { color: var(--gray-400); }
+    .dr-stat-sep { width: 1px; height: 32px; background: var(--gray-100); }
+
+    /* ── Daily Review cards ────────────────────────────────────────────────── */
+    .dr-section-hdr {
+      padding: 6px 16px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .dr-section-hdr.clickable { cursor: pointer; }
+    .dr-section-hdr.clickable:hover { background: var(--gray-100); }
+    .dr-chevron { font-size: 16px !important; color: var(--gray-400); }
+    .dr-excluded-body { display: none; }
+
+    .dr-card2 {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow .15s, border-color .15s;
+    }
+    .dr-card2:hover { box-shadow: var(--shadow); border-color: var(--gray-300); }
+    .dr-card2.approved { border-color: #a7f3d0; background: #fafffe; }
+    .dr-card2.excluded-card { opacity: .55; }
+
+    .dr-card2-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--gray-100);
+      flex-wrap: wrap;
+    }
+    .dr-time { font-size: 11px; color: var(--gray-400); min-width: 36px; font-variant-numeric: tabular-nums; }
+    .dr-email-col { font-size: 13px; font-weight: 600; color: var(--gray-800); }
+    .dr-name-col  { font-size: 12px; color: var(--gray-400); }
+
+    .dr-chip.approved-chip { background: #d1fae5; color: #065f46; }
+
+    .dr-card2-body {
+      display: flex;
+      gap: 14px;
+      padding: 12px 14px;
+    }
+    .dr-card2-main { flex: 1; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+
+    .dr-stage-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-600);
+    }
+
+    .dr-card2-content {
+      font-size: 13px;
+      color: var(--gray-700);
+      line-height: 1.55;
+      white-space: pre-wrap;
+      max-height: 80px;
+      overflow: hidden;
+      position: relative;
+    }
+    .dr-card2-content.expanded { max-height: none; }
+    .dr-content-toggle {
+      font-size: 11px;
+      color: var(--primary);
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
+      margin-top: 2px;
+    }
+
+    .dr-card2-claude {
+      font-size: 12px;
+      color: var(--gray-600);
+      padding: 5px 10px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+      border-left: 3px solid var(--gray-200);
+      line-height: 1.4;
+    }
+    .dr-card2-claude.platform-bug   { border-left-color: #059669; background: #ecfdf5; color: #065f46; }
+    .dr-card2-claude.likely-platform{ border-left-color: #34d399; background: #f0fdf4; color: #065f46; }
+    .dr-card2-claude.borderline     { border-left-color: #3b82f6; background: #eff6ff; color: #1e3a8a; }
+    .dr-card2-claude.user-error     { border-left-color: #f59e0b; background: #fffbeb; color: #78350f; }
+
+    .dr-card2-screenshot {
+      flex-shrink: 0;
+      width: 180px;
+      align-self: flex-start;
+    }
+    .dr-card2-screenshot img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--gray-200);
+      display: block;
+      cursor: zoom-in;
+      transition: border-color .15s;
+    }
+    .dr-card2-screenshot img:hover { border-color: var(--primary); }
+
+    .dr-card2-edit {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-100);
+      flex-wrap: wrap;
+    }
+    .dr-stage-sel {
+      padding: 5px 8px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--gray-700);
+      min-width: 130px;
+      cursor: pointer;
+    }
+    .dr-cat-sel {
+      padding: 5px 8px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--gray-700);
+      flex: 1;
+      min-width: 180px;
+      cursor: pointer;
+    }
+    .dr-notes-field {
+      padding: 5px 8px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-family: inherit;
+      background: #fff;
+      color: var(--gray-700);
+      width: 140px;
+    }
+    .dr-stage-sel:focus, .dr-cat-sel:focus, .dr-notes-field:focus { outline: none; border-color: var(--primary); }
+
+    /* Approve toggle button */
+    .dr-approve-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--gray-300);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gray-500);
+      cursor: pointer;
+      font-family: inherit;
+      transition: background .12s, border-color .12s, color .12s;
+      white-space: nowrap;
+    }
+    .dr-approve-btn:hover { background: #f0fdf4; border-color: #6ee7b7; color: #059669; }
+    .dr-approve-btn.approved { background: #d1fae5; border-color: #6ee7b7; color: #065f46; }
+    .dr-approve-btn.approved:hover { background: #fee2e2; border-color: #fca5a5; color: #dc2626; }
   </style>
 </head>
 <body>
@@ -1461,7 +1713,7 @@
       <div class="dr-header-top">
         <div style="flex:1">
           <h2>Daily Review</h2>
-          <div class="sub" id="drSub">Mark each entry Yes (counts toward report), No (excluded), or ? (decide later).</div>
+          <div class="sub" id="drSub">Select a date to load entries.</div>
         </div>
         <button class="btn" onclick="loadDailyReport()">
           <span class="material-icons-round">refresh</span>
@@ -1470,8 +1722,6 @@
       </div>
 
       <div class="dr-filter-bar">
-
-        <!-- Date -->
         <div class="date-range-group">
           <button class="date-btn" id="drDateToday"     onclick="drSetDate('today',this)">Today</button>
           <button class="date-btn active" id="drDateYesterday" onclick="drSetDate('yesterday',this)">Yesterday</button>
@@ -1480,67 +1730,43 @@
         <input type="date" id="drCustomDate" class="hidden"
                style="padding:6px 10px;border:1px solid var(--gray-200);border-radius:var(--radius-sm);font-size:12px;font-family:inherit;"
                onchange="drApplyFilters()">
-
         <div class="filter-sep"></div>
-
-        <!-- Count? filter -->
-        <select class="filter-select" id="drVerdictFilter" onchange="drApplyFilters()">
-          <option value="">All</option>
-          <option value="unreviewed">Unreviewed (?)</option>
-          <option value="Yes">Yes — Count</option>
-          <option value="No">No — Exclude</option>
-        </select>
-
-        <!-- Stage filter -->
-        <select class="filter-select" id="drStageFilter" onchange="drApplyFilters()">
-          <option value="">All stages</option>
-          <option value="Stage 1">Stage 1</option>
-          <option value="Stage 2">Stage 2</option>
-          <option value="Stage 3">Stage 3</option>
-          <option value="Other Company">Other Company</option>
-          <option value="Other Candidate">Other Candidate</option>
-          <option value="EXCLUDED">EXCLUDED</option>
-        </select>
-
-        <!-- Source filter -->
-        <select class="filter-select" id="drSourceFilter" onchange="drApplyFilters()">
-          <option value="">All sources</option>
-          <option value="Sheet">Sheet</option>
-          <option value="Slack">Slack</option>
-        </select>
-
-        <div class="filter-sep"></div>
-
-        <!-- Keyword search -->
         <div class="search-wrap" style="max-width:280px">
           <span class="material-icons-round">search</span>
           <input class="search-input" id="drSearch" type="text"
-                 placeholder="Search name, email, content…"
+                 placeholder="Search email, content…"
                  oninput="drDebounce()" autocomplete="off">
           <button class="search-clear" id="drSearchClear" onclick="drClearSearch()">✕</button>
         </div>
-
       </div>
     </div>
 
-    <!-- Counters -->
-    <div class="dr-counters" id="drCounters">
-      <div class="dr-counter active" data-count="" onclick="drClickCounter(this,'')">
-        <div class="dr-counter-num" id="drCntTotal">0</div>
-        <div class="dr-counter-label">Total</div>
+    <!-- Stats + action bar -->
+    <div class="dr-stats-bar" id="drStatsBar" style="display:none">
+      <div class="dr-stat">
+        <span class="dr-stat-num" id="drStatTotal">0</span>
+        <span class="dr-stat-label">Total</span>
       </div>
-      <div class="dr-counter" data-count="?" onclick="drClickCounter(this,'?')">
-        <div class="dr-counter-num" id="drCntPending">0</div>
-        <div class="dr-counter-label">Pending ?</div>
+      <div class="dr-stat-sep"></div>
+      <div class="dr-stat pending">
+        <span class="dr-stat-num" id="drStatPending">0</span>
+        <span class="dr-stat-label">Pending review</span>
       </div>
-      <div class="dr-counter" data-count="Yes" onclick="drClickCounter(this,'Yes')">
-        <div class="dr-counter-num" id="drCntYes">0</div>
-        <div class="dr-counter-label">Count ✓</div>
+      <div class="dr-stat approved">
+        <span class="dr-stat-num" id="drStatApproved">0</span>
+        <span class="dr-stat-label">Approved</span>
       </div>
-      <div class="dr-counter" data-count="No" onclick="drClickCounter(this,'No')">
-        <div class="dr-counter-num" id="drCntNo">0</div>
-        <div class="dr-counter-label">Excluded</div>
+      <div class="dr-stat excluded">
+        <span class="dr-stat-num" id="drStatExcluded">0</span>
+        <span class="dr-stat-label">Excluded</span>
       </div>
+      <div style="flex:1"></div>
+      <button class="btn primary" id="drMarkDoneBtn" onclick="drMarkAllDone()" style="gap:6px">
+        <span class="material-icons-round" style="font-size:16px">check_circle</span> Mark all done
+      </button>
+      <button class="btn" id="drSendDmBtn" onclick="drSendDm()" disabled style="gap:6px">
+        <span class="material-icons-round" style="font-size:16px">send</span> Send DM ↗
+      </button>
     </div>
 
     <!-- Entry list -->
@@ -1796,6 +2022,50 @@ const MOCK_BUGS = [
   }
 ];
 
+// ══ LOCALHOST SHIM ════════════════════════════════════════════════════════════
+// When served by Flask on localhost, inject a google.script.run shim that
+// routes all GAS function calls to POST /api/<functionName> via fetch.
+(function () {
+  var isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  if (!isLocal || (typeof google !== 'undefined' && google.script)) return;
+
+  var _API = window.location.origin + '/api';
+
+  function makeRunner(ok, err) {
+    var base = {
+      withSuccessHandler: function (fn) { return makeRunner(fn, err); },
+      withFailureHandler: function (fn) { return makeRunner(ok, fn); },
+    };
+    return new Proxy(base, {
+      get: function (target, prop) {
+        if (prop in target) return target[prop];
+        // Any other property → returns a function that calls the API
+        return function () {
+          var args = Array.prototype.slice.call(arguments);
+          var okFn = ok, errFn = err;
+          fetch(_API + '/' + prop, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ args: args })
+          })
+            .then(function (r) {
+              if (!r.ok) {
+                return r.json().then(function (e) {
+                  throw new Error(e.error || 'Server error ' + r.status);
+                });
+              }
+              return r.json();
+            })
+            .then(function (data) { if (okFn) okFn(data); })
+            .catch(function (e) { if (errFn) errFn(e); });
+        };
+      }
+    });
+  }
+
+  window.google = { script: { run: makeRunner(null, null) } };
+})();
+
 // ══ LIVE vs PREVIEW detection ═════════════════════════════════════════════════
 // When served by Apps Script, google.script is defined.
 // When opened as a local .html file, we fall back to MOCK_BUGS.
@@ -1838,8 +2108,11 @@ function priorityKey(p) {
 
 function getDriveThumb(url) {
   if (!url) return '';
-  const m = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
-  return m ? 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w160-h110' : url;
+  // Support comma-separated multiple URLs — use the first non-empty one
+  const first = url.split(',')[0].trim();
+  if (!first) return '';
+  const m = first.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+  return m ? 'https://drive.google.com/thumbnail?id=' + m[1] + '&sz=w160-h110' : first;
 }
 
 function esc(s) {
@@ -1969,7 +2242,7 @@ function updateTabCounts() {
   const included  = state.bugs.filter(b => b.inReport !== 'No').length;
   const todayBugs = getTodayBugs().length;
   const excluded  = getExcludedBugs().length;
-  const drPending = drState.entries.filter(function(e){ return !e.count || e.count === '?'; }).length;
+  const drPending = drState.entries.filter(function(e){ return (e.approvalStatus || 'new') !== 'approved'; }).length;
 
   document.getElementById('tabCountBugs').textContent     = included;
   document.getElementById('tabCountReport').textContent   = todayBugs;
@@ -2599,15 +2872,26 @@ function loadInitialData() {
 // ══ DAILY REPORT ════════════════════════════════════════════════════════════
 
 var drState = {
-  entries:  [],      // all entries returned from sheet for current date
-  filtered: [],      // entries after applying filters
-  date:     '',      // YYYY-MM-DD string
-  loading:  false,
+  entries:     [],
+  filtered:    [],
+  date:        '',
+  loading:     false,
   searchTimer: null
 };
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── Stage → Category mapping ──────────────────────────────────────────────────
+var DR_STAGES = ['Stage 1', 'Stage 2', 'Stage 3', 'Other (Company)', 'Other (Candidate)', 'EXCLUDED'];
 
+var DR_CATS = {
+  'Stage 1': ['Unable to upload CV','Stuck at Preparing','Unable to access','Email not received','Link already used / expired','Wrong language displayed','CV not carrying over'],
+  'Stage 2': ['Stuck analyzing','Stuck during','Redirected to the beginning','Camera / microphone not working','Answer not saved / lost','Video upload failed','Question skipped / missing','AI avatar not loading','Cannot submit'],
+  'Stage 3': ['Stuck evaluating','CV evaluation failed','Wrong / missing score','Result email not sent','Retake not working','Transcription missing / blank','Submission not visible to recruiter','Submission goes to wrong stage'],
+  'Other (Company)':   ['Cannot send invitations','Export broken','Quota issues','Webhook failures','Other (Company)'],
+  'Other (Candidate)': ['Other (Candidate)'],
+  'EXCLUDED':          ['Test entry','Duplicate','Feature Request','UX confusion','Other']
+};
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
 function drIsoToday() {
   var d = new Date();
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
@@ -2615,6 +2899,9 @@ function drIsoToday() {
 function drIsoYesterday() {
   var d = new Date(); d.setDate(d.getDate()-1);
   return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+}
+function _esc(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
 // ── Date preset buttons ───────────────────────────────────────────────────────
@@ -2648,10 +2935,7 @@ function loadDailyReport() {
       if (result.error) { toast('Error', result.error, 'error'); return; }
       drState.entries = result.entries || [];
       drApplyFilters();
-      document.getElementById('drSub').textContent =
-        date + ' · ' + drState.entries.length + ' entries · ' +
-        result.reviewed + ' reviewed / ' + result.total + ' total';
-      updateTabCounts();
+      drCheckCompletion(date);
     })
     .withFailureHandler(function(err) {
       drState.loading = false;
@@ -2667,47 +2951,21 @@ function _drLoadMock() {
   document.getElementById('drSub').textContent = drState.date + ' · Preview mode — no data';
 }
 
-// ── Filtering ────────────────────────────────────────────────────────────────
+// ── Filtering ─────────────────────────────────────────────────────────────────
 function drApplyFilters() {
-  var verdict    = document.getElementById('drVerdictFilter').value;
-  var stage      = document.getElementById('drStageFilter').value;
-  var source     = document.getElementById('drSourceFilter').value;
-  var kw         = (document.getElementById('drSearch').value || '').toLowerCase().trim();
-  var customDate = document.getElementById('drCustomDate').value;
-
-  // Update date if custom picker changed
+  var kw = (document.getElementById('drSearch').value || '').toLowerCase().trim();
   var activeDateBtn = document.querySelector('.date-btn.active');
-  if (activeDateBtn && activeDateBtn.id === 'drDateCustom' && customDate) {
-    drState.date = customDate;
-  }
+  var customDate = document.getElementById('drCustomDate').value;
+  if (activeDateBtn && activeDateBtn.id === 'drDateCustom' && customDate) drState.date = customDate;
 
   drState.filtered = drState.entries.filter(function(e) {
-    if (verdict === 'unreviewed' && e.count && e.count !== '?') return false;
-    if (verdict && verdict !== 'unreviewed' && e.count !== verdict) return false;
-    if (stage  && e.stage  !== stage)  return false;
-    if (source && e.source !== source) return false;
-    if (kw) {
-      var haystack = [e.name, e.company, e.issue, e.notes, e.category, e.device]
-        .join(' ').toLowerCase();
-      if (haystack.indexOf(kw) === -1) return false;
-    }
-    return true;
+    if (!kw) return true;
+    return [e.candidateName, e.email, e.originalContent, e.assessmentNotes, e.category]
+      .join(' ').toLowerCase().indexOf(kw) !== -1;
   });
 
-  // Update counters
-  var total   = drState.entries.length;
-  var pending = drState.entries.filter(function(e){ return !e.count || e.count === '?'; }).length;
-  var yes     = drState.entries.filter(function(e){ return e.count === 'Yes'; }).length;
-  var no      = drState.entries.filter(function(e){ return e.count === 'No';  }).length;
-
-  document.getElementById('drCntTotal').textContent   = total;
-  document.getElementById('drCntPending').textContent = pending;
-  document.getElementById('drCntYes').textContent     = yes;
-  document.getElementById('drCntNo').textContent      = no;
-
-  // Search clear button
   document.getElementById('drSearchClear').style.display = kw ? '' : 'none';
-
+  drUpdateStats();
   renderDailyReport(drState.filtered);
 }
 
@@ -2715,22 +2973,32 @@ function drDebounce() {
   clearTimeout(drState.searchTimer);
   drState.searchTimer = setTimeout(drApplyFilters, 260);
 }
-
 function drClearSearch() {
   document.getElementById('drSearch').value = '';
   document.getElementById('drSearchClear').style.display = 'none';
   drApplyFilters();
 }
 
-function drClickCounter(el, count) {
-  document.querySelectorAll('.dr-counter').forEach(function(c){ c.classList.remove('active'); });
-  el.classList.add('active');
-  // map counter click to filter: '?' → 'unreviewed', others pass through
-  document.getElementById('drVerdictFilter').value = count === '?' ? 'unreviewed' : count;
-  drApplyFilters();
+// ── Stats bar ─────────────────────────────────────────────────────────────────
+function drUpdateStats() {
+  var all      = drState.entries;
+  var total    = all.length;
+  var approved = all.filter(function(e){ return e.approvalStatus === 'approved'; }).length;
+  var pending  = all.filter(function(e){ return (e.approvalStatus || 'new') !== 'approved'; }).length;
+  var excl     = all.filter(function(e){ return e.stage === 'EXCLUDED'; }).length;
+
+  document.getElementById('drStatTotal').textContent   = total;
+  document.getElementById('drStatPending').textContent = pending;
+  document.getElementById('drStatApproved').textContent= approved;
+  document.getElementById('drStatExcluded').textContent= excl;
+
+  document.getElementById('drSub').textContent =
+    (drState.date || '') + ' · ' + total + ' entries · ' + approved + ' approved';
+
+  updateTabCounts();
 }
 
-// ── Render cards ─────────────────────────────────────────────────────────────
+// ── Render cards ──────────────────────────────────────────────────────────────
 function renderDailyReport(entries) {
   var list  = document.getElementById('drList');
   var empty = document.getElementById('drEmpty');
@@ -2740,127 +3008,326 @@ function renderDailyReport(entries) {
     return;
   }
   empty.classList.add('hidden');
-  list.innerHTML = entries.map(drCardHtml).join('');
+
+  var included = entries.filter(function(e){ return e.stage !== 'EXCLUDED'; });
+  var excluded = entries.filter(function(e){ return e.stage === 'EXCLUDED'; });
+
+  var html = '';
+  if (included.length > 0) {
+    html += '<div class="dr-section-hdr">INCLUDED (' + included.length + ')</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:8px;padding:10px 16px">'
+          + included.map(drCardHtml).join('') + '</div>';
+  }
+  if (excluded.length > 0) {
+    html += '<div class="dr-section-hdr clickable" onclick="drToggleExcluded(this)">'
+          + '<span class="material-icons-round dr-chevron">chevron_right</span>'
+          + 'EXCLUDED (' + excluded.length + ')'
+          + '</div>';
+    html += '<div class="dr-excluded-body">'
+          + '<div style="display:flex;flex-direction:column;gap:8px;padding:10px 16px">'
+          + excluded.map(drCardHtml).join('')
+          + '</div></div>';
+  }
+  list.innerHTML = html;
 }
 
+function drToggleExcluded(hdr) {
+  var body = hdr.nextElementSibling;
+  var icon = hdr.querySelector('.dr-chevron');
+  var open = body.style.display !== 'none' && body.style.display !== '';
+  body.style.display = open ? 'none' : '';
+  if (icon) icon.textContent = open ? 'chevron_right' : 'expand_more';
+}
+
+// ── Card HTML (always expanded) ───────────────────────────────────────────────
 function drCardHtml(e) {
-  var stageCls = 'dr-chip stage';
-  if (e.stage === 'EXCLUDED') stageCls += ' excluded';
+  var isApproved = e.approvalStatus === 'approved';
+  var isExcluded = e.stage === 'EXCLUDED';
+  var cardCls = 'dr-card2' + (isApproved ? ' approved' : '') + (isExcluded ? ' excluded-card' : '');
 
-  var countBtns = ['Yes','No','?'].map(function(v) {
-    var cls = 'dr-vbtn';
-    if (v === 'Yes') cls += ' platform';
-    else if (v === 'No') cls += ' user';
-    else cls += ' border';
-    if (e.count === v) cls += ' active';
-    var label = v === 'Yes' ? '✓ Count' : v === 'No' ? '✗ Exclude' : '? Review';
-    return '<button class="' + cls + '" onclick="drToggleCount(' + e.rowNumber + ',\'' + v + '\',this)">' + label + '</button>';
-  }).join('');
-
-  var srcBadge = e.source === 'Slack'
-    ? '<span class="dr-chip source slack">Slack</span>'
-    : '<span class="dr-chip source sheet">Sheet</span>';
-
-  var nameCompany = e.company
-    ? _esc(e.name || '—') + ' <span class="dr-email">@ ' + _esc(e.company) + '</span>'
-    : _esc(e.name || '—');
-
-  var deviceHtml = (e.source === 'Slack' && e.device)
-    ? '<div class="dr-email" style="margin-top:2px;font-size:11px">' + _esc(e.device) + '</div>'
+  var srcBadge = e.source === 'Google Sheet'
+    ? '<span class="dr-chip source sheet">GSheet</span>'
+    : '<span class="dr-chip source slack">Slack</span>';
+  var confBadge = e.confidence
+    ? '<span class="dr-chip conf ' + (e.confidence||'').toLowerCase() + '">' + e.confidence + '</span>'
     : '';
 
-  var content = _esc(e.issue || '');
+  // Approve toggle button
+  var appBtn = isApproved
+    ? '<button class="dr-approve-btn approved" id="drapprove-' + e.rowNumber + '" onclick="drToggleApprove(' + e.rowNumber + ')">'
+      + '<span class="material-icons-round" style="font-size:15px">check_circle</span> Approved'
+      + '</button>'
+    : '<button class="dr-approve-btn" id="drapprove-' + e.rowNumber + '" onclick="drToggleApprove(' + e.rowNumber + ')">'
+      + '<span class="material-icons-round" style="font-size:15px">radio_button_unchecked</span> Approve'
+      + '</button>';
 
-  return '<div class="dr-card" id="drc-' + e.rowNumber + '">'
-    + '<div class="dr-card-body">'
-    +   '<div class="dr-card-top">'
-    +     '<span class="' + stageCls + '">' + _esc(e.stage || '') + '</span>'
-    +     (e.category ? '<span class="dr-category" style="flex:1;margin-left:6px">' + _esc(e.category) + '</span>' : '<span style="flex:1"></span>')
-    +     '<span class="dr-chip time">' + _esc(e.time || '') + '</span>'
-    +     srcBadge
+  // Assessment left-border color
+  var a = (e.assessment||'').toLowerCase();
+  var assessCls = 'dr-card2-claude';
+  if (a.indexOf('platform bug') !== -1 && a.indexOf('likely') === -1) assessCls += ' platform-bug';
+  else if (a.indexOf('likely platform') !== -1) assessCls += ' likely-platform';
+  else if (a.indexOf('borderline') !== -1) assessCls += ' borderline';
+  else if (a.indexOf('user') !== -1) assessCls += ' user-error';
+
+  // Screenshot — convert Drive /file/d/... to thumbnail URL
+  var thumbUrl = getDriveThumb(e.screenshotUrl);
+  var screenshotHtml = thumbUrl
+    ? '<div class="dr-card2-screenshot">'
+      + '<a href="' + _esc(e.screenshotUrl) + '" target="_blank">'
+      + '<img src="' + _esc(thumbUrl) + '" alt="screenshot" '
+      + 'onerror="this.parentNode.parentNode.style.display=\'none\'">'
+      + '</a></div>'
+    : '';
+
+  // Stage dropdown
+  var stageOpts = DR_STAGES.map(function(s){
+    return '<option value="' + s + '"' + (e.stage === s ? ' selected' : '') + '>' + s + '</option>';
+  }).join('');
+
+  // Category dropdown — filtered to current stage
+  var cats = DR_CATS[e.stage] || [];
+  var catOpts = '<option value="">— category —</option>';
+  if (e.category && cats.indexOf(e.category) === -1) {
+    catOpts += '<option value="' + _esc(e.category) + '" selected>' + _esc(e.category) + '</option>';
+  }
+  catOpts += cats.map(function(c){
+    return '<option value="' + _esc(c) + '"' + (e.category === c ? ' selected' : '') + '>' + _esc(c) + '</option>';
+  }).join('');
+
+  return '<div class="' + cardCls + '" id="drc-' + e.rowNumber + '">'
+    // ── Header
+    + '<div class="dr-card2-header">'
+    +   '<span class="dr-time">' + _esc(e.timeGmt7 || '') + '</span>'
+    +   srcBadge
+    +   '<span class="dr-email-col">' + _esc(e.email || '—') + '</span>'
+    +   (e.candidateName ? '<span class="dr-name-col">' + _esc(e.candidateName) + '</span>' : '')
+    +   '<span style="flex:1"></span>'
+    +   confBadge
+    +   appBtn
+    + '</div>'
+    // ── Body: content left, screenshot right
+    + '<div class="dr-card2-body">'
+    +   '<div class="dr-card2-main">'
+    +     '<div class="dr-stage-label" id="drlabel-' + e.rowNumber + '">'
+    +       _esc(e.stage||'—') + (e.category ? ' › ' + _esc(e.category) : '')
+    +     '</div>'
+    +     (e.originalContent
+          ? '<div class="dr-card2-content" id="drcontent-' + e.rowNumber + '">' + _esc(e.originalContent) + '</div>'
+          + '<button class="dr-content-toggle" onclick="drToggleContent(' + e.rowNumber + ')">show more ▾</button>'
+          : '')
+    +     ((e.assessment || e.assessmentNotes)
+          ? '<div class="' + assessCls + '">'
+            + (e.assessment ? '<strong>' + _esc(e.assessment) + '</strong>' : '')
+            + (e.assessmentNotes ? '<span style="font-weight:400"> · ' + _esc(e.assessmentNotes) + '</span>' : '')
+            + '</div>'
+          : '')
     +   '</div>'
-    +   '<div class="dr-card-top" style="margin-top:4px">'
-    +     '<span class="dr-name">' + nameCompany + '</span>'
-    +   '</div>'
-    +   deviceHtml
-    +   '<div class="dr-content" onclick="drExpandContent(this)">' + content + '</div>'
-    +   '<div class="dr-verdict-row">'
-    +     '<div class="dr-verdict-group">' + countBtns + '</div>'
-    +     '<input class="dr-notes-input" id="drn-' + e.rowNumber + '" type="text" '
-    +       'placeholder="Notes (optional)…" value="' + _esc(e.notes || '') + '" '
-    +       'onkeydown="if(event.key===\'Enter\')drSaveCount(' + e.rowNumber + ',null,this.value,null)">'
-    +     '<button class="dr-save-btn" onclick="drSaveCount(' + e.rowNumber + ',null,'
-    +       'document.getElementById(\'drn-' + e.rowNumber + '\').value,this)">'
-    +       '<span class="material-icons-round">save</span>'
-    +     '</button>'
-    +   '</div>'
+    +   screenshotHtml
+    + '</div>'
+    // ── Edit bar
+    + '<div class="dr-card2-edit">'
+    +   '<select class="dr-stage-sel" id="drs-' + e.rowNumber + '" onchange="drUpdateCats(' + e.rowNumber + ')">'
+    +     stageOpts
+    +   '</select>'
+    +   '<select class="dr-cat-sel" id="drcat-' + e.rowNumber + '">' + catOpts + '</select>'
+    +   '<input class="dr-notes-field" id="drn-' + e.rowNumber + '" type="text" '
+    +     'value="' + _esc(e.humanNotes || '') + '" placeholder="Notes…">'
+    +   '<button class="btn primary" style="padding:5px 12px;font-size:12px;gap:4px" onclick="drSaveRow(' + e.rowNumber + ')">'
+    +     '<span class="material-icons-round" style="font-size:14px">save</span> Save'
+    +   '</button>'
+    +   '<button class="btn" style="padding:5px 12px;font-size:12px;gap:4px;color:#dc2626;border-color:#fecaca" '
+    +     'onclick="drExclude(' + e.rowNumber + ')">'
+    +     '<span class="material-icons-round" style="font-size:14px">block</span> Exclude'
+    +   '</button>'
     + '</div>'
     + '</div>';
 }
 
-function _esc(s) {
-  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+// ── Toggle content expand ─────────────────────────────────────────────────────
+function drToggleContent(rowNumber) {
+  var el  = document.getElementById('drcontent-' + rowNumber);
+  var btn = el && el.nextElementSibling;
+  if (!el) return;
+  var expanded = el.classList.toggle('expanded');
+  if (btn) btn.textContent = expanded ? 'show less ▴' : 'show more ▾';
 }
 
-function drExpandContent(el) {
-  el.classList.toggle('expanded');
-}
-
-// ── Toggle Count? (button group) ─────────────────────────────────────────────
-function drToggleCount(rowNumber, countVal, btn) {
+// ── Approve / un-approve a single card ───────────────────────────────────────
+function drToggleApprove(rowNumber) {
   var entry = drState.entries.find(function(e){ return e.rowNumber === rowNumber; });
   if (!entry) return;
+  var newStatus = (entry.approvalStatus === 'approved') ? 'new' : 'approved';
+  entry.approvalStatus = newStatus;
 
-  // If clicking the already-active value, deselect it
-  var newCount = (entry.count === countVal) ? '' : countVal;
-  entry.count = newCount;
-
-  // Update button states in this card
+  // Update card class
   var card = document.getElementById('drc-' + rowNumber);
   if (card) {
-    card.querySelectorAll('.dr-vbtn').forEach(function(b){ b.classList.remove('active'); });
-    if (newCount) {
-      var map = {'Yes':'platform','No':'user','?':'border'};
-      var activeBtn = card.querySelector('.dr-vbtn.' + map[newCount]);
-      if (activeBtn) activeBtn.classList.add('active');
+    card.classList.toggle('approved', newStatus === 'approved');
+  }
+  // Update approve button
+  var btn = document.getElementById('drapprove-' + rowNumber);
+  if (btn) {
+    if (newStatus === 'approved') {
+      btn.className = 'dr-approve-btn approved';
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:15px">check_circle</span> Approved';
+    } else {
+      btn.className = 'dr-approve-btn';
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:15px">radio_button_unchecked</span> Approve';
     }
   }
 
-  var notes = document.getElementById('drn-' + rowNumber);
-  drSaveCount(rowNumber, newCount, notes ? notes.value : '', btn);
+  drUpdateStats();
+
+  if (!IS_LIVE) { return; }
+  google.script.run
+    .withFailureHandler(function(err){ toast('Error', err.message, 'error'); })
+    .updateDailyReportApproval(rowNumber, newStatus, '');
 }
 
-// ── Save Count? to sheet ──────────────────────────────────────────────────────
-function drSaveCount(rowNumber, countVal, notes, triggerEl) {
+// ── Exclude a single card ─────────────────────────────────────────────────────
+function drExclude(rowNumber) {
   var entry = drState.entries.find(function(e){ return e.rowNumber === rowNumber; });
   if (!entry) return;
-  // If called from save button without explicit count, use current entry count
-  if (countVal === null || countVal === undefined) countVal = entry.count || '';
+  entry.stage = 'EXCLUDED';
 
-  entry.count = countVal;
-  entry.notes = notes || '';
+  // Update label display
+  var lbl = document.getElementById('drlabel-' + rowNumber);
+  if (lbl) lbl.textContent = 'EXCLUDED';
 
-  // Visual feedback
-  if (triggerEl) {
-    var orig = triggerEl.innerHTML;
-    triggerEl.innerHTML = '<span class="material-icons-round" style="font-size:14px">check</span>';
-    setTimeout(function(){ triggerEl.innerHTML = orig; }, 1200);
-  }
+  // Update stage select
+  var stageEl = document.getElementById('drs-' + rowNumber);
+  if (stageEl) { stageEl.value = 'EXCLUDED'; drUpdateCats(rowNumber); }
 
-  // Update counter
-  updateTabCounts();
-  drApplyFilters();
+  // Update card styling
+  var card = document.getElementById('drc-' + rowNumber);
+  if (card) card.classList.add('excluded-card');
+
+  drUpdateStats();
 
   if (!IS_LIVE) { toast('Preview', 'Not saved in preview mode', 'warn'); return; }
+  google.script.run
+    .withSuccessHandler(function() { toast('Excluded', (entry.email || 'Entry') + ' moved to EXCLUDED', 'warn'); })
+    .withFailureHandler(function(err) { toast('Error', err.message, 'error'); })
+    .updateDailyReportRow(rowNumber, 'EXCLUDED', entry.category, entry.humanNotes);
+}
+
+// ── Update category dropdown when stage changes ───────────────────────────────
+function drUpdateCats(rowNumber) {
+  var stageEl = document.getElementById('drs-'   + rowNumber);
+  var catEl   = document.getElementById('drcat-' + rowNumber);
+  if (!stageEl || !catEl) return;
+  var stage = stageEl.value;
+  var cats  = DR_CATS[stage] || [];
+  catEl.innerHTML = '<option value="">— select category —</option>'
+    + cats.map(function(c){ return '<option value="' + _esc(c) + '">' + _esc(c) + '</option>'; }).join('');
+}
+
+// ── Save row edits ────────────────────────────────────────────────────────────
+function drSaveRow(rowNumber) {
+  var entry = drState.entries.find(function(e){ return e.rowNumber === rowNumber; });
+  if (!entry) return;
+
+  var stage    = (document.getElementById('drs-'   + rowNumber) || {}).value || entry.stage;
+  var category = (document.getElementById('drcat-' + rowNumber) || {}).value || entry.category;
+  var notes    = (document.getElementById('drn-'   + rowNumber) || {}).value || '';
+
+  entry.stage      = stage;
+  entry.category   = category;
+  entry.humanNotes = notes;
+
+  // Update card display inline without full re-render
+  var card = document.getElementById('drc-' + rowNumber);
+  if (card) {
+    var lbl = card.querySelector('.dr-stage-label');
+    if (lbl) lbl.textContent = stage + (category ? ' › ' + category : '');
+  }
+
+  if (!IS_LIVE) { toast('Preview', 'Not saved in preview mode', 'warn'); return; }
+  google.script.run
+    .withSuccessHandler(function() { toast('Saved', (entry.email || 'Entry') + ' updated', 'success'); })
+    .withFailureHandler(function(err) { toast('Save error', err.message || String(err), 'error'); })
+    .updateDailyReportRow(rowNumber, stage, category, notes);
+}
+
+// ── Mark all done ─────────────────────────────────────────────────────────────
+function drMarkAllDone() {
+  if (!IS_LIVE) { toast('Preview', 'Not available in preview mode', 'warn'); return; }
+  var btn = document.getElementById('drMarkDoneBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="material-icons-round" style="font-size:16px;animation:spin 1s linear infinite">refresh</span> Saving…';
 
   google.script.run
-    .withSuccessHandler(function() {
-      toast('Saved', (entry.name || 'Entry') + ' → ' + (countVal || 'cleared'), 'success');
+    .withSuccessHandler(function(result) {
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:16px">check_circle</span> Mark all done';
+      if (result.error) { btn.disabled = false; toast('Error', result.error, 'error'); return; }
+      drState.entries.forEach(function(e){ e.approvalStatus = 'approved'; });
+      drApplyFilters();
+      drCheckCompletion(drState.date);
+      toast('Done', result.approved + ' entries approved', 'success');
     })
     .withFailureHandler(function(err) {
-      toast('Save error', err.message || String(err), 'error');
+      btn.disabled = false;
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:16px">check_circle</span> Mark all done';
+      toast('Error', err.message || String(err), 'error');
     })
-    .updateDailyReportCount(rowNumber, countVal, notes || '');
+    .markAllApproved(drState.date);
+}
+
+// ── Check completion ──────────────────────────────────────────────────────────
+function drCheckCompletion(date) {
+  if (!date) return;
+  document.getElementById('drStatsBar').style.display = 'flex';
+
+  if (!IS_LIVE) {
+    var total    = drState.entries.length;
+    var approved = drState.entries.filter(function(e){ return e.approvalStatus === 'approved'; }).length;
+    drUpdateStats();
+    var sendBtn = document.getElementById('drSendDmBtn');
+    var doneBtn = document.getElementById('drMarkDoneBtn');
+    var complete = total > 0 && approved === total;
+    if (sendBtn) sendBtn.disabled = !complete;
+    if (doneBtn) doneBtn.disabled = complete;
+    return;
+  }
+
+  google.script.run
+    .withSuccessHandler(function(status) {
+      if (!status || status.error) return;
+      drUpdateStats();
+      var sendBtn = document.getElementById('drSendDmBtn');
+      var doneBtn = document.getElementById('drMarkDoneBtn');
+      if (sendBtn) sendBtn.disabled = !status.complete;
+      if (doneBtn) doneBtn.disabled = status.complete;
+    })
+    .withFailureHandler(function(err) { console.warn('checkDailyReportComplete:', err.message); })
+    .checkDailyReportComplete(date);
+}
+
+// ── Send DM ───────────────────────────────────────────────────────────────────
+function drSendDm() {
+  if (!IS_LIVE) { toast('Preview', 'Not available in preview mode', 'warn'); return; }
+  var btn = document.getElementById('drSendDmBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="material-icons-round" style="font-size:16px;animation:spin 1s linear infinite">refresh</span> Sending…';
+
+  google.script.run
+    .withSuccessHandler(function(result) {
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:16px">send</span> Send DM ↗';
+      if (result.error) { btn.disabled = false; toast('Error', result.error, 'error'); return; }
+      if (result.already_sent) {
+        btn.disabled = false;
+        toast('Already sent', 'DM sent at ' + result.dm_sent_at, 'warn');
+        return;
+      }
+      window.prompt('Copy this DM text and send to Slack:', result.message || '');
+      toast('DM ready', 'Copy the text from the dialog and paste into Slack', 'success');
+    })
+    .withFailureHandler(function(err) {
+      btn.disabled = false;
+      btn.innerHTML = '<span class="material-icons-round" style="font-size:16px">send</span> Send DM ↗';
+      toast('Error', err.message || String(err), 'error');
+    })
+    .sendReportDm(drState.date);
 }
 
 // ══ INIT ════════════════════════════════════════════════════════════════════

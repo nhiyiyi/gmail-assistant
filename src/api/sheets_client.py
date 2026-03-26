@@ -61,8 +61,32 @@ HEADERS = [
     "Sent At",             # Q
 ]
 
-BUG_TAB    = "Bug Tickets"
-ACTION_TAB = "Actions Required"
+BUG_TAB         = "Bug Tickets"
+ACTION_TAB      = "Actions Required"
+DAILY_REPORT_TAB  = "Daily Report"
+DR_SUMMARY_TAB    = "Daily_Report_Summary"
+CONFIG_TAB        = "Config"
+
+# 29-column Daily Report header order
+DR_HEADERS = [
+    "source_id", "date", "time_gmt7", "source", "ticket_id", "source_link",
+    "screenshot_url", "original_content", "email", "candidate_name",
+    "topic_raw", "stage", "category", "interview_position", "interview_company",
+    "submission_id", "browser", "os", "device",
+    "assessment", "confidence", "assessment_notes",
+    "human_verdict", "human_notes", "include_in_report", "report_bucket",
+    "approval_status", "reviewed_by", "reviewed_at",
+]
+# 0-based column index helpers
+DR_COL = {h: i for i, h in enumerate(DR_HEADERS)}
+
+DR_SUMMARY_HEADERS = [
+    "date", "total_slack", "total_email_bugs", "total_included", "total_excluded",
+    "total_borderline", "total_user_error", "total_platform_bug",
+    "stage1", "stage2", "stage3", "other_company", "other_candidate",
+    "total_completed", "total_started", "pct_completed", "pct_started",
+    "completion_status", "dm_sent_at",
+]
 
 
 def get_service():
@@ -227,7 +251,7 @@ def get_tickets(status_filter: str = None) -> list:
         service = get_service()
         result = service.spreadsheets().values().get(
             spreadsheetId=spreadsheet_id,
-            range=f"{BUG_TAB}!A:Q",
+            range=f"{BUG_TAB}!A:U",
         ).execute()
         rows = result.get("values", [])
         if not rows or len(rows) < 2:
@@ -235,7 +259,7 @@ def get_tickets(status_filter: str = None) -> list:
 
         tickets = []
         for row in rows[1:]:  # skip header
-            row = row + [""] * (17 - len(row))  # pad to 17
+            row = row + [""] * (21 - len(row))  # pad to 21 (A:U)
             ticket = {
                 "date_created":     row[0],
                 "ticket_id":        row[1],
@@ -254,62 +278,15 @@ def get_tickets(status_filter: str = None) -> list:
                 "draft_id":         row[14],
                 "thread_id":        row[15],
                 "sent_at":          row[16],
+                "screenshot_url":   row[17],   # R — Drive share link or HTTPS
+                "in_report":        row[18],   # S
+                "report_date":      row[19],   # T
+                "attachment_urls":  row[20],   # U — comma-separated
             }
             if status_filter is None or ticket["status"].lower() == status_filter.lower():
                 tickets.append(ticket)
         return tickets
     except HttpError as e:
-        return [{"error": f"Sheets API error: {e}"}]
-
-
-DAILY_REPORT_TAB = "Daily Report"
-
-DR_HEADERS_V2 = [
-    "Date", "Time", "Source", "Name", "Issue",
-    "Stage", "Category", "Count?", "Notes", "ID", "Company", "Device",
-]
-
-
-def get_daily_report_rows(date_str: str) -> list:
-    """Return all Daily Report rows for date_str as list of dicts (12 fields).
-
-    Keys: date, time, source, name, issue, stage, category, count, notes, id, company, device
-    """
-    spreadsheet_id = get_sheet_id()
-    if not spreadsheet_id:
-        return [{"error": "Sheet not configured. Run tools/scripts/setup_sheets.py first."}]
-
-    try:
-        service = get_service()
-        result = service.spreadsheets().values().get(
-            spreadsheetId=spreadsheet_id,
-            range=f"'{DAILY_REPORT_TAB}'!A:L",
-        ).execute()
-        rows = result.get("values", [])
-        if not rows or len(rows) < 2:
-            return []
-
-        # Normalise header: handle both old (22-col) and new (12-col) layouts
-        header = [h.strip() for h in rows[0]]
-        # Map by position for new layout
-        key_map = {
-            "Date": "date", "Time": "time", "Source": "source",
-            "Name": "name", "Issue": "issue", "Stage": "stage",
-            "Category": "category", "Count?": "count", "Notes": "notes",
-            "ID": "id", "Company": "company", "Device": "device",
-        }
-
-        out = []
-        for row in rows[1:]:
-            row = row + [""] * (12 - len(row))  # pad to 12 cols
-            entry = {}
-            for i, h in enumerate(header[:12]):
-                key = key_map.get(h, h.lower())
-                entry[key] = row[i] if i < len(row) else ""
-            if not date_str or entry.get("date", "") == date_str:
-                out.append(entry)
-        return out
-    except Exception as e:
         return [{"error": f"Sheets API error: {e}"}]
 
 
@@ -355,5 +332,353 @@ def update_ticket(ticket_id: str, status: str = None, notes: str = None) -> dict
             ).execute()
 
         return {"updated": True, "ticket_id": ticket_id, "row": row_index}
+    except HttpError as e:
+        return {"error": f"Sheets API error: {e}"}
+
+
+# ── Daily Report functions ────────────────────────────────────────────────────
+
+def get_daily_report_rows(date_str: str) -> list:
+    """Return all Daily Report rows for a given date (YYYY-MM-DD) as dicts."""
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return [{"error": "Sheet not configured."}]
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DAILY_REPORT_TAB}'!A:AC",
+        ).execute()
+        rows = result.get("values", [])
+        if len(rows) <= 1:
+            return []
+        out = []
+        for i, row in enumerate(rows[1:], start=2):
+            row = row + [""] * (len(DR_HEADERS) - len(row))
+            entry = {h: row[DR_COL[h]] for h in DR_HEADERS}
+            entry["_row"] = i
+            if entry.get("date", "") == date_str:
+                out.append(entry)
+        return out
+    except HttpError as e:
+        return [{"error": f"Sheets API error: {e}"}]
+
+
+def upsert_daily_report_rows(rows: list) -> dict:
+    """
+    Safe idempotent upsert for Daily Report rows.
+    - Reads existing rows for each date present in `rows`.
+    - Approved rows (approval_status='approved') are NEVER deleted or overwritten.
+    - Non-approved rows for the date are deleted, then fresh rows are appended.
+    - Rows whose source_id already exists as approved are skipped.
+    """
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return {"error": "Sheet not configured."}
+    if not rows:
+        return {"appended": 0, "skipped": 0}
+
+    try:
+        service = get_service()
+
+        # Read all existing rows once
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DAILY_REPORT_TAB}'!A:AC",
+        ).execute()
+        existing = result.get("values", [])
+
+        # Get sheet ID for deleteDimension
+        meta = service.spreadsheets().get(spreadsheetId=spreadsheet_id).execute()
+        sheet_id = next(
+            s["properties"]["sheetId"]
+            for s in meta["sheets"]
+            if s["properties"]["title"] == DAILY_REPORT_TAB
+        )
+
+        # Build lookup: source_id -> {row_index (0-based), approval_status}
+        existing_map = {}  # source_id -> {idx, approval_status}
+        for i, row in enumerate(existing[1:], start=1):  # 0-based, skip header
+            row_padded = row + [""] * (len(DR_HEADERS) - len(row))
+            sid = row_padded[DR_COL["source_id"]]
+            status = row_padded[DR_COL["approval_status"]]
+            if sid:
+                existing_map[sid] = {"idx": i, "approval_status": status}
+
+        # Determine which dates are being pushed
+        dates_in_push = {r.get("date", "") for r in rows if r.get("date")}
+
+        # Collect non-approved row indices to delete (for dates we're pushing)
+        rows_to_delete = []
+        for sid, info in existing_map.items():
+            # Find the date for this existing row
+            row_data = existing[info["idx"]]
+            row_padded = row_data + [""] * (len(DR_HEADERS) - len(row_data))
+            row_date = row_padded[DR_COL["date"]]
+            if row_date in dates_in_push and info["approval_status"] != "approved":
+                rows_to_delete.append(info["idx"])
+
+        # Delete non-approved rows in reverse order
+        if rows_to_delete:
+            requests = [
+                {"deleteDimension": {"range": {
+                    "sheetId": sheet_id, "dimension": "ROWS",
+                    "startIndex": r, "endIndex": r + 1,
+                }}}
+                for r in sorted(rows_to_delete, reverse=True)
+            ]
+            service.spreadsheets().batchUpdate(
+                spreadsheetId=spreadsheet_id, body={"requests": requests}
+            ).execute()
+
+        # Build set of locked source_ids (approved, not deleted)
+        locked_ids = {
+            sid for sid, info in existing_map.items()
+            if info["approval_status"] == "approved"
+        }
+
+        # Filter new rows — skip those already locked
+        new_rows = [r for r in rows if r.get("source_id", "") not in locked_ids]
+        skipped = len(rows) - len(new_rows)
+
+        if not new_rows:
+            return {"appended": 0, "skipped": skipped}
+
+        # Re-read last row index after deletions
+        result2 = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DAILY_REPORT_TAB}'!A:A",
+        ).execute()
+        next_row = len(result2.get("values", [])) + 1
+
+        values = []
+        for r in new_rows:
+            values.append([r.get(h, "") for h in DR_HEADERS])
+
+        service.spreadsheets().values().update(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DAILY_REPORT_TAB}'!A{next_row}",
+            valueInputOption="RAW",
+            body={"values": values},
+        ).execute()
+
+        return {"appended": len(new_rows), "skipped": skipped}
+    except HttpError as e:
+        return {"error": f"Sheets API error: {e}"}
+
+
+def check_report_complete(date_str: str) -> dict:
+    """
+    Check whether all Daily Report rows for a date have been reviewed/approved.
+    Returns: {total, pending, reviewed, approved, excluded, complete}
+    """
+    rows = get_daily_report_rows(date_str)
+    if rows and "error" in rows[0]:
+        return rows[0]
+
+    total = len(rows)
+    counts = {"new": 0, "reviewed": 0, "approved": 0, "excluded": 0}
+    for r in rows:
+        s = r.get("approval_status", "new") or "new"
+        counts[s] = counts.get(s, 0) + 1
+
+    pending = counts["new"]
+    complete = total > 0 and pending == 0 and counts["approved"] > 0
+
+    return {
+        "date": date_str,
+        "total": total,
+        "pending": pending,
+        "reviewed": counts["reviewed"],
+        "approved": counts["approved"],
+        "excluded": counts["excluded"],
+        "complete": complete,
+    }
+
+
+def get_daily_summary(date_str: str) -> dict:
+    """
+    Compute aggregated counts for the boss DM from approved+included rows.
+    Only counts rows where approval_status='approved' AND include_in_report='Yes'.
+    Excluded rows are tallied separately.
+    """
+    rows = get_daily_report_rows(date_str)
+    if rows and "error" in rows[0]:
+        return rows[0]
+
+    totals = {
+        "stage1": 0, "stage2": 0, "stage3": 0,
+        "other_company": 0, "other_candidate": 0,
+        "total_platform_bug": 0, "total_user_error": 0, "total_borderline": 0,
+        "total_included": 0, "total_excluded": 0,
+        "total_slack": 0, "total_email_bugs": 0,
+    }
+    for r in rows:
+        if r.get("source") == "Slack":
+            totals["total_slack"] += 1
+        else:
+            totals["total_email_bugs"] += 1
+
+        approved = r.get("approval_status", "") == "approved"
+        include = r.get("include_in_report", "?")
+        verdict = r.get("human_verdict", "") or r.get("assessment", "")
+
+        if r.get("stage") == "EXCLUDED" or include == "No" or (approved and include != "Yes"):
+            totals["total_excluded"] += 1
+            continue
+
+        if not approved:
+            continue
+
+        totals["total_included"] += 1
+        bucket = r.get("report_bucket", "")
+        if bucket == "stage1":
+            totals["stage1"] += 1
+        elif bucket == "stage2":
+            totals["stage2"] += 1
+        elif bucket == "stage3":
+            totals["stage3"] += 1
+        elif bucket == "other_company":
+            totals["other_company"] += 1
+        elif bucket == "other_candidate":
+            totals["other_candidate"] += 1
+
+        if "platform bug" in verdict.lower():
+            totals["total_platform_bug"] += 1
+        elif "user error" in verdict.lower():
+            totals["total_user_error"] += 1
+        elif "borderline" in verdict.lower():
+            totals["total_borderline"] += 1
+
+    return {"date": date_str, **totals}
+
+
+def get_report_config(date_str: str) -> dict:
+    """Read total_completed and total_started for a date from the Config tab."""
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return {"total_completed": None, "total_started": None}
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{CONFIG_TAB}'!A:B",
+        ).execute()
+        rows = result.get("values", [])
+        cfg = {}
+        for row in rows:
+            if len(row) >= 2:
+                key = str(row[0]).strip()
+                val = str(row[1]).strip()
+                if key == f"total_completed:{date_str}":
+                    try:
+                        cfg["total_completed"] = int(val)
+                    except ValueError:
+                        pass
+                elif key == f"total_started:{date_str}":
+                    try:
+                        cfg["total_started"] = int(val)
+                    except ValueError:
+                        pass
+        return {
+            "total_completed": cfg.get("total_completed"),
+            "total_started": cfg.get("total_started"),
+        }
+    except HttpError as e:
+        return {"error": f"Sheets API error: {e}"}
+
+
+def set_report_config(date_str: str, total_completed: int, total_started: int) -> dict:
+    """Upsert total_completed and total_started for a date in the Config tab."""
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return {"error": "Sheet not configured."}
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{CONFIG_TAB}'!A:B",
+        ).execute()
+        rows = result.get("values", [])
+
+        completed_key = f"total_completed:{date_str}"
+        started_key   = f"total_started:{date_str}"
+        completed_row = None
+        started_row   = None
+
+        for i, row in enumerate(rows):
+            if row and str(row[0]).strip() == completed_key:
+                completed_row = i + 1  # 1-based
+            if row and str(row[0]).strip() == started_key:
+                started_row = i + 1
+
+        updates = []
+        if completed_row:
+            updates.append({"range": f"'{CONFIG_TAB}'!B{completed_row}", "values": [[total_completed]]})
+        if started_row:
+            updates.append({"range": f"'{CONFIG_TAB}'!B{started_row}", "values": [[total_started]]})
+
+        if updates:
+            service.spreadsheets().values().batchUpdate(
+                spreadsheetId=spreadsheet_id,
+                body={"valueInputOption": "USER_ENTERED", "data": updates},
+            ).execute()
+
+        # Append missing rows
+        append_rows = []
+        if not completed_row:
+            append_rows.append([completed_key, total_completed])
+        if not started_row:
+            append_rows.append([started_key, total_started])
+        if append_rows:
+            service.spreadsheets().values().append(
+                spreadsheetId=spreadsheet_id,
+                range=f"'{CONFIG_TAB}'!A:B",
+                valueInputOption="USER_ENTERED",
+                body={"values": append_rows},
+            ).execute()
+
+        return {"ok": True, "date": date_str, "total_completed": total_completed, "total_started": total_started}
+    except HttpError as e:
+        return {"error": f"Sheets API error: {e}"}
+
+
+def write_daily_summary(date_str: str, summary: dict) -> dict:
+    """Upsert a row in the Daily_Report_Summary tab for the given date."""
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return {"error": "Sheet not configured."}
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{DR_SUMMARY_TAB}'!A:A",
+        ).execute()
+        rows = result.get("values", [])
+
+        existing_row = None
+        for i, row in enumerate(rows):
+            if row and str(row[0]).strip() == date_str:
+                existing_row = i + 1
+                break
+
+        row_values = [summary.get(h, "") for h in DR_SUMMARY_HEADERS]
+
+        if existing_row:
+            service.spreadsheets().values().update(
+                spreadsheetId=spreadsheet_id,
+                range=f"'{DR_SUMMARY_TAB}'!A{existing_row}",
+                valueInputOption="RAW",
+                body={"values": [row_values]},
+            ).execute()
+        else:
+            service.spreadsheets().values().append(
+                spreadsheetId=spreadsheet_id,
+                range=f"'{DR_SUMMARY_TAB}'!A:S",
+                valueInputOption="RAW",
+                body={"values": [row_values]},
+            ).execute()
+
+        return {"ok": True}
     except HttpError as e:
         return {"error": f"Sheets API error: {e}"}

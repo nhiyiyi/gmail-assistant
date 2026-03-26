@@ -1,0 +1,15 @@
+source,id_or_name,time_gmt7,raw_issue,stage,category,assessment,notes
+Google Sheet,BUG-260323-001 Siddharth,12:43,"Error in loading interview set – platform fails consistently, deadline in 6 hours",Stage 1,Stuck at Preparing,Platform bug,Repeatable and consistent error
+Google Sheet,BUG-260323-002 Jacky,18:41,"Logged out mid-interview, link not saved, cannot resume, system blocks retake",Stage 2,Stuck during,Platform bug,Session not persisted; retake also blocked
+Google Sheet,BUG-260323-003 Pramod,18:41,"Video check fails in live interview; works fine in demo interview",Stage 1,Stuck at Preparing,Platform bug,Demo vs live inconsistency
+Slack,Aida Gurdian,03:41,"My information keeps getting erased",Stage 2,Answer not saved/lost,Borderline,"Repeated erasure implies platform; could be browser refresh by user"
+Slack,Jayvardhan Chetty,04:32,"Response not getting analyzed after first question; interview not moving to next questions",Stage 2,Stuck analyzing,Platform bug,Classic stuck analyzing – no user action could cause this
+Slack,Chandana S,12:44,"Not analyzing my answer and it is taking a lot of time",Stage 2,Stuck analyzing,Platform bug,Same pattern as Jayvardhan
+Slack,Priyanka Samanta,14:15,"Unable to submit question",Stage 2,Cannot submit,Borderline,Could be UI confusion or broken submit button
+Slack,Joshua Serafim,15:07,"Disconnected and comeback the interview is done",Stage 2,Stuck during,Borderline,Disconnect may be user-side; platform marking as done on disconnect is platform behavior
+Slack,Siddhi Joshi,15:39,"Not being able to access the interview link",Stage 1,Unable to access,Borderline,No error details – could be expired link or platform error
+Slack,Nikolay Kalinin,16:55,"Interview froze mid-session; after refresh interview started in wrong language (English instead of Russian)",Stage 2,Stuck during,Platform bug,Two bugs: freeze + language reset on reload
+Slack,Harshita Gupta,19:02,"CV is not getting uploaded (Android device)",Stage 1,Unable to upload CV,Likely platform bug,Mobile upload failure; no user error signal
+Slack,Aliz Fóti-Tóth,19:22,"Cannot upload CV in PDF or DOC format",Stage 1,Unable to upload CV,Platform bug,Both supported formats fail – not user error
+Slack,Isadora Paganoto,22:35,"Loops between first AI question and camera/mic check page; interview timer running",Stage 1,Stuck at Preparing,Platform bug,Loop behavior is platform-side
+Slack,M Purushotham,22:52,"Hey I want to change my language",Stage 1,Wrong language displayed,Likely user question,No system bug evidence; may not know how to change language preference

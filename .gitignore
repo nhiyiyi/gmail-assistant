@@ -8,3 +8,9 @@ dist/
 build/
 .DS_Store
 .gstack/
+tmp-*.png
+tmp_*.py
+tmp_*.json
+.claude/scheduled_tasks.lock
+dashboard/__pycache__/
+dashboard/daily_review.db

@@ -307,25 +307,86 @@ async def list_tools() -> list[types.Tool]:
                 "required": ["ticket_id"],
             },
         ),
-        # ── Daily Report sheet ───────────────────────────────────────────────
+        # ── Daily report tools ────────────────────────────────────────────────
         types.Tool(
-            name="get_daily_report_rows",
+            name="check_report_complete",
             description=(
-                "Read all rows from the 'Daily Report' Google Sheet tab for a given date. "
-                "Returns list of dicts with keys: date, time, source, name, issue, stage, "
-                "category, count, notes, id, company, device. "
-                "Use to check existing IDs (for incremental dedup) or to count Count?=Yes "
-                "rows when generating the Slack daily report."
+                "Check whether all Daily Report rows for a date have been reviewed/approved. "
+                "Returns: total, pending, reviewed, approved, excluded, and complete (bool)."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "date": {
-                        "type": "string",
-                        "description": "Date to filter by, YYYY-MM-DD. Returns all rows for that date.",
-                    },
+                    "date": {"type": "string", "description": "Report date YYYY-MM-DD"},
                 },
                 "required": ["date"],
+            },
+        ),
+        types.Tool(
+            name="get_report_summary",
+            description=(
+                "Get aggregated bug counts from approved+included Daily Report rows for a date. "
+                "Returns stage totals, verdict totals, and source breakdown."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date": {"type": "string", "description": "Report date YYYY-MM-DD"},
+                },
+                "required": ["date"],
+            },
+        ),
+        types.Tool(
+            name="set_report_config",
+            description=(
+                "Store total_completed and total_started for a date in the Config sheet tab. "
+                "Used for computing percentages in the boss DM."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date":            {"type": "string",  "description": "Report date YYYY-MM-DD"},
+                    "total_completed": {"type": "integer", "description": "Total completed interviews (including internal)"},
+                    "total_started":   {"type": "integer", "description": "Total unique emails that started (including internal)"},
+                },
+                "required": ["date", "total_completed", "total_started"],
+            },
+        ),
+        types.Tool(
+            name="upsert_daily_report_rows",
+            description=(
+                "Push classified daily report rows to the 'Daily Report' Google Sheet tab. "
+                "Safe to re-run: approved rows are never overwritten. "
+                "Non-approved rows for the affected dates are replaced. "
+                "Each row must include source_id (SLACK-{ts} or SHEET-{ticket_id})."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "rows": {
+                        "type": "array",
+                        "description": "List of row objects. Keys must match the 29-column CSV schema.",
+                        "items": {"type": "object"},
+                    },
+                },
+                "required": ["rows"],
+            },
+        ),
+        types.Tool(
+            name="send_report_dm",
+            description=(
+                "Send the daily report Slack DM when yesterday's report is fully approved. "
+                "Idempotent — checks dm_sent_at in the Summary tab before sending. "
+                "Reads counts from the Daily Report tab and totals from Config."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date":      {"type": "string", "description": "Report date YYYY-MM-DD"},
+                    "user_id":   {"type": "string", "description": "Slack user ID to DM (e.g. U12345678)"},
+                    "sheet_url": {"type": "string", "description": "Google Sheet URL for the link in the DM"},
+                },
+                "required": ["date", "user_id"],
             },
         ),
         # ── Batch processing tools ────────────────────────────────────────────
@@ -447,12 +508,20 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             return _handle_get_bug_tickets(arguments)
         elif name == "update_bug_ticket":
             return _handle_update_bug_ticket(arguments)
-        elif name == "get_daily_report_rows":
-            return _handle_get_daily_report_rows(arguments)
         elif name == "get_email_batch":
             return _handle_get_email_batch(arguments)
         elif name == "submit_drafts":
             return _handle_submit_drafts(arguments)
+        elif name == "upsert_daily_report_rows":
+            return _handle_upsert_daily_report_rows(arguments)
+        elif name == "check_report_complete":
+            return _handle_check_report_complete(arguments)
+        elif name == "get_report_summary":
+            return _handle_get_report_summary(arguments)
+        elif name == "set_report_config":
+            return _handle_set_report_config(arguments)
+        elif name == "send_report_dm":
+            return _handle_send_report_dm(arguments)
         else:
             return [types.TextContent(type="text", text=f"Unknown tool: {name}")]
     except FileNotFoundError as e:
@@ -641,11 +710,6 @@ def _handle_create_bug_ticket(args: dict) -> list[types.TextContent]:
         "sheet":     sheet_result,
     }
     return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
-
-
-def _handle_get_daily_report_rows(args: dict) -> list[types.TextContent]:
-    rows = sheets_client.get_daily_report_rows(args.get("date", ""))
-    return [types.TextContent(type="text", text=json.dumps(rows, indent=2))]
 
 
 def _handle_get_bug_tickets(args: dict) -> list[types.TextContent]:
@@ -897,6 +961,128 @@ def _handle_submit_drafts(args: dict) -> list[types.TextContent]:
 async def main():
     async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
         await app.run(read_stream, write_stream, app.create_initialization_options())
+
+
+# ── Daily report handlers ─────────────────────────────────────────────────────
+
+def _handle_upsert_daily_report_rows(args: dict) -> list[types.TextContent]:
+    rows = args.get("rows", [])
+    result = sheets_client.upsert_daily_report_rows(rows)
+    return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+
+def _handle_check_report_complete(args: dict) -> list[types.TextContent]:
+    result = sheets_client.check_report_complete(args["date"])
+    return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+
+def _handle_get_report_summary(args: dict) -> list[types.TextContent]:
+    result = sheets_client.get_daily_summary(args["date"])
+    return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+
+def _handle_set_report_config(args: dict) -> list[types.TextContent]:
+    result = sheets_client.set_report_config(
+        date_str=args["date"],
+        total_completed=args["total_completed"],
+        total_started=args["total_started"],
+    )
+    return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+
+def _handle_send_report_dm(args: dict) -> list[types.TextContent]:
+    """
+    Build and send the boss DM via Slack. Idempotent — skips if dm_sent_at is set.
+    The skill passes user_id; this handler builds the message text and delegates
+    to slack_send_message (MCP Slack tool) — but since MCP tools can't call other
+    MCP tools directly, this handler returns the formatted DM text so the skill
+    can forward it to slack_send_message itself.
+    """
+    from datetime import datetime, timezone
+
+    date_str  = args["date"]
+    user_id   = args["user_id"]
+    sheet_url = args.get("sheet_url", "")
+
+    # Check idempotency — read dm_sent_at from Summary tab
+    try:
+        service = sheets_client.get_service()
+        spreadsheet_id = sheets_client.get_sheet_id()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{sheets_client.DR_SUMMARY_TAB}'!A:S",
+        ).execute()
+        rows = result.get("values", [])
+        for row in rows[1:]:
+            row_padded = row + [""] * (len(sheets_client.DR_SUMMARY_HEADERS) - len(row))
+            row_dict = dict(zip(sheets_client.DR_SUMMARY_HEADERS, row_padded))
+            if row_dict.get("date") == date_str and row_dict.get("dm_sent_at"):
+                return [types.TextContent(type="text", text=json.dumps({
+                    "skipped": True, "reason": "DM already sent", "dm_sent_at": row_dict["dm_sent_at"]
+                }))]
+    except Exception:
+        pass  # If summary tab missing, proceed
+
+    # Get completion status
+    completion = sheets_client.check_report_complete(date_str)
+    if not completion.get("complete"):
+        return [types.TextContent(type="text", text=json.dumps({
+            "error": "Report not yet complete",
+            "pending": completion.get("pending", "?"),
+            "total": completion.get("total", "?"),
+        }))]
+
+    # Get counts
+    summary = sheets_client.get_daily_summary(date_str)
+    cfg     = sheets_client.get_report_config(date_str)
+
+    total_completed = cfg.get("total_completed")
+    total_started   = cfg.get("total_started")
+    total_included  = summary.get("total_included", 0)
+    total_excluded  = summary.get("total_excluded", 0)
+
+    pct_completed = f"{round(total_included / total_completed * 100, 2)}%" if total_completed else "TBD"
+    pct_started   = f"{round(total_included / total_started   * 100, 2)}%" if total_started   else "TBD"
+
+    # Format date for display (e.g. Mar 24)
+    try:
+        d = datetime.strptime(date_str, "%Y-%m-%d")
+        display_date = d.strftime("%b %-d") if hasattr(d, "strftime") else date_str
+    except Exception:
+        display_date = date_str
+
+    lines = [
+        f":white_check_mark: Daily Bug Report — {display_date} (APPROVED)",
+        "",
+        f"Total bugs: {total_included}",
+        f"  Stage 1 — Before interview: {summary.get('stage1', 0)}",
+        f"  Stage 2 — During interview: {summary.get('stage2', 0)}",
+        f"  Stage 3 — After interview: {summary.get('stage3', 0)}",
+        f"  Other (Company): {summary.get('other_company', 0)}",
+        f"  Other (Candidate): {summary.get('other_candidate', 0)}",
+        "",
+        f"Excluded: {total_excluded}  (User Error: {summary.get('total_user_error', 0)}, Borderline: {summary.get('total_borderline', 0)})",
+        "",
+        f"Out of {total_completed or 'TBD'} completed ({pct_completed})",
+        f"Out of {total_started or 'TBD'} started ({pct_started})",
+    ]
+    if sheet_url:
+        lines.append(f"\nSheet: {sheet_url}")
+
+    dm_text = "\n".join(lines)
+
+    # Record dm_sent_at in Summary tab
+    now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    summary_row = {**summary, "dm_sent_at": now_iso, "completion_status": "complete"}
+    sheets_client.write_daily_summary(date_str, summary_row)
+
+    return [types.TextContent(type="text", text=json.dumps({
+        "ok": True,
+        "user_id": user_id,
+        "dm_text": dm_text,
+        "dm_sent_at": now_iso,
+        "note": "Call slack_send_message with channel=user_id and the dm_text to deliver the DM.",
+    }, indent=2))]
 
 
 if __name__ == "__main__":

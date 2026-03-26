@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Review — Focus Mode</title>
+<style>
+:root{
+  --navy:#0f172a;--navy2:#1e293b;--or:#f97316;
+  --bg:#f1f5f9;--surf:#fff;--bd:#e2e8f0;--bd2:#cbd5e1;
+  --tx:#1e293b;--mu:#64748b;--mu2:#94a3b8;
+  --grn:#16a34a;--grn-l:#dcfce7;--grn-b:#86efac;
+  --red:#dc2626;--red-l:#fee2e2;--red-b:#fca5a5;
+  --yel:#d97706;--yel-l:#fef3c7;
+  --blu:#2563eb;--blu-l:#dbeafe;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--tx);height:100vh;display:flex;flex-direction:column;overflow:hidden;font-size:13px}
+
+#nav{background:var(--navy);height:48px;display:flex;align-items:center;padding:0 16px;gap:10px;flex-shrink:0}
+#logo{font-size:16px;font-weight:700;color:#fff}#logo span{color:var(--or)}
+.nsep{width:1px;height:16px;background:rgba(255,255,255,.15)}
+.nlink{font-size:12px;color:rgba(255,255,255,.45);text-decoration:none}.nlink:hover{color:rgba(255,255,255,.85)}
+.ncur{font-size:12px;color:rgba(255,255,255,.85);font-weight:600}
+.nright{margin-left:auto;display:flex;align-items:center;gap:6px}
+
+/* Counter badge in nav */
+#nav-counter{background:var(--or);color:#fff;border-radius:20px;padding:2px 10px;font-size:12px;font-weight:700}
+#nav-date-in{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;padding:4px 8px;border-radius:6px;font-size:12px;font-family:inherit;outline:none;width:130px}
+.btn-nav{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:6px;padding:5px 12px;cursor:pointer;font-size:12px;font-weight:500;font-family:inherit}.btn-nav:hover{background:rgba(255,255,255,.2)}
+.btn-or{background:var(--or);border:none;color:#fff;border-radius:6px;padding:5px 12px;cursor:pointer;font-size:12px;font-weight:600;font-family:inherit}.btn-or:hover{opacity:.9}
+
+/* Main: sidebar + focus area */
+#main{flex:1;display:flex;overflow:hidden}
+
+/* Sidebar */
+#sidebar{width:220px;background:var(--navy2);color:#fff;display:flex;flex-direction:column;gap:0;flex-shrink:0;overflow-y:auto}
+.sb-sec{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.07)}
+.sb-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.35);margin-bottom:8px}
+.sb-stat{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:12px}
+.sb-stat .s-label{color:rgba(255,255,255,.6)}
+.sb-stat .s-val{font-weight:700;color:#fff}
+.sb-stat .s-val.grn{color:#4ade80}
+.sb-stat .s-val.red{color:#f87171}
+.sb-stat .s-val.yel{color:#fcd34d}
+.sb-ring{position:relative;width:70px;height:70px;margin:8px auto}
+.ring-svg{width:70px;height:70px}
+.ring-bg{fill:none;stroke:rgba(255,255,255,.1);stroke-width:6}
+.ring-fill{fill:none;stroke:var(--or);stroke-width:6;stroke-linecap:round;stroke-dasharray:172;stroke-dashoffset:172;transform:rotate(-90deg);transform-origin:35px 35px;transition:stroke-dashoffset .6s}
+.ring-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-pct{font-size:16px;font-weight:700;color:#fff}
+.ring-sub{font-size:9px;color:rgba(255,255,255,.5)}
+
+.sb-filters{padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;flex-direction:column;gap:4px}
+.sf-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.35);margin-bottom:4px}
+.sb-fp{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.55);border-radius:5px;padding:3px 8px;cursor:pointer;font-size:11px;font-weight:500;font-family:inherit;text-align:left;width:100%}
+.sb-fp:hover{color:#fff}.sb-fp.on{background:var(--or);border-color:var(--or);color:#fff}
+
+/* Focus area */
+#focus{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:20px 24px;overflow-y:auto;gap:16px}
+
+/* Empty state */
+#focus-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--mu2);gap:10px;text-align:center}
+#focus-empty span{font-size:40px}
+
+/* The main focus card */
+#focus-card{width:100%;max-width:680px;background:var(--surf);border:1.5px solid var(--bd);border-radius:14px;overflow:hidden;display:none}
+.fc-header{padding:16px 20px;display:flex;align-items:flex-start;gap:14px;border-bottom:1px solid var(--bd)}
+.av{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+.fc-av{width:52px;height:52px;font-size:18px;flex-shrink:0}
+.fc-name{font-size:17px;font-weight:700;line-height:1.2}
+.fc-sub{font-size:12px;color:var(--mu);margin-top:3px}
+.fc-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
+.chip{display:inline-flex;align-items:center;font-size:10px;font-weight:700;padding:2px 8px;border-radius:8px;white-space:nowrap}
+.chip.slack{background:#f3e8ff;color:#4a154b}.chip.email{background:var(--blu-l);color:var(--blu)}.chip.sheet{background:#dcfce7;color:#16a34a}
+.chip.platform-bug{background:var(--red-l);color:var(--red)}.chip.likely-platform{background:var(--yel-l);color:var(--yel)}.chip.borderline{background:var(--yel-l);color:var(--yel)}.chip.user-error{background:#f1f5f9;color:var(--mu)}
+.chip.conf{background:var(--bg);border:1px solid var(--bd2)}
+
+.fc-body{padding:14px 20px;display:flex;flex-direction:column;gap:12px}
+.fc-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--mu2);margin-bottom:4px}
+.orig-box{background:#f8fafc;border:1px solid var(--bd);border-radius:6px;padding:10px 13px;font-size:13px;line-height:1.65;white-space:pre-wrap;max-height:130px;overflow:hidden;position:relative;transition:max-height .3s}
+.orig-box.open{max-height:600px}
+.orig-box:not(.open)::after{content:'';position:absolute;bottom:0;left:0;right:0;height:28px;background:linear-gradient(transparent,#f8fafc)}
+.tog{background:none;border:none;font-size:11px;color:var(--or);cursor:pointer;padding:3px 0;font-family:inherit}.tog:hover{text-decoration:underline}
+.abar{border-left:3px solid var(--bd2);padding-left:11px;font-size:13px;line-height:1.65}
+.abar.platform-bug{border-color:var(--red)}.abar.likely-platform{border-color:var(--yel)}.abar.borderline{border-color:var(--yel)}.abar.user-error{border-color:var(--mu2)}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+.mg label{display:block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--mu2);margin-bottom:1px}
+.mg .v{font-size:12px;word-break:break-all}.mg .v a{color:var(--or);text-decoration:none}.mg .v.mono{font-family:monospace;font-size:11px;color:var(--mu)}
+.fc-img img{width:100%;max-height:200px;object-fit:contain;border-radius:6px;border:1px solid var(--bd);cursor:pointer;display:block}
+
+.fc-edit{padding:12px 20px;border-top:1px solid var(--bd);background:#fafcff;display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.dr-sel{background:var(--surf);border:1px solid var(--bd2);color:var(--tx);padding:5px 8px;border-radius:6px;font-size:12px;font-family:inherit;outline:none}
+.dr-sel:focus{border-color:var(--or)}
+.dr-ni{flex:1;min-width:80px;background:var(--surf);border:1px solid var(--bd2);color:var(--tx);padding:5px 9px;border-radius:6px;font-size:12px;font-family:inherit;outline:none}
+.dr-ni:focus{border-color:var(--or)}
+
+/* Big action buttons */
+#actions{width:100%;max-width:680px;display:none;gap:12px}
+.act-big{flex:1;padding:14px 20px;border-radius:10px;border:2px solid;cursor:pointer;font-size:14px;font-weight:700;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s}
+.act-big.excl{background:var(--surf);border-color:var(--red-b);color:var(--red)}.act-big.excl:hover{background:var(--red-l)}
+.act-big.appr{background:var(--surf);border-color:var(--grn-b);color:var(--grn)}.act-big.appr:hover{background:var(--grn-l)}
+.act-big.appr.on{background:var(--grn-l);border-color:var(--grn)}
+.act-big.unex{background:var(--surf);border-color:var(--bd2);color:var(--mu)}.act-big.unex:hover{border-color:var(--or);color:var(--or)}
+.act-big .kbd{display:inline-block;background:rgba(0,0,0,.07);border-radius:4px;padding:1px 6px;font-family:monospace;font-size:11px}
+
+/* nav within focus area */
+#fc-nav{width:100%;max-width:680px;display:none;justify-content:space-between;align-items:center}
+.fc-nb{background:var(--surf);border:1px solid var(--bd2);color:var(--mu);border-radius:7px;padding:5px 12px;cursor:pointer;font-size:12px;font-weight:500;font-family:inherit}.fc-nb:hover{border-color:var(--navy);color:var(--tx)}
+#fc-pos{font-size:13px;font-weight:600;color:var(--mu)}
+
+#ov{position:fixed;inset:0;background:rgba(241,245,249,.65);display:none;align-items:center;justify-content:center;z-index:100}
+.sp{width:26px;height:26px;border:3px solid var(--bd2);border-top-color:var(--or);border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);background:var(--navy);color:#fff;padding:7px 16px;border-radius:7px;font-size:12px;font-weight:500;z-index:200;transition:transform .25s;white-space:nowrap}
+#toast.show{transform:translateX(-50%) translateY(0)}#toast.ok{background:var(--grn)}#toast.err{background:var(--red)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}
+#table-wrap::-webkit-scrollbar-thumb,#focus::-webkit-scrollbar-thumb{background:var(--bd2)}
+</style>
+</head>
+<body>
+
+<div id="nav">
+  <div id="logo">Flow<span>mingo</span></div>
+  <div class="nsep"></div>
+  <a href="/" class="nlink">Bug Dashboard</a>
+  <div class="nsep"></div>
+  <a href="/daily" class="nlink">Daily Review</a>
+  <div class="nsep"></div>
+  <span class="ncur">Focus Mode</span>
+  <div class="nright">
+    <input type="date" id="nav-date-in">
+    <button class="btn-or" onclick="loadReport()">Load</button>
+    <button class="btn-nav" onclick="markAll()">✓ All</button>
+    <button class="btn-nav" onclick="sendDm()">📤 DM</button>
+    <div id="nav-counter" style="display:none">—</div>
+  </div>
+</div>
+
+<div id="main">
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="sb-sec">
+      <div class="sb-lbl">Progress</div>
+      <div class="sb-ring">
+        <svg class="ring-svg" viewBox="0 0 70 70">
+          <circle class="ring-bg" cx="35" cy="35" r="27.5"/>
+          <circle class="ring-fill" id="ring-fill" cx="35" cy="35" r="27.5"/>
+        </svg>
+        <div class="ring-text">
+          <span class="ring-pct" id="ring-pct">0%</span>
+          <span class="ring-sub" id="ring-sub">0 / 0</span>
+        </div>
+      </div>
+    </div>
+    <div class="sb-sec">
+      <div class="sb-lbl">Breakdown</div>
+      <div class="sb-stat"><span class="s-label">Approved</span><span class="s-val grn" id="stat-app">—</span></div>
+      <div class="sb-stat"><span class="s-label">Excluded</span><span class="s-val red" id="stat-excl">—</span></div>
+      <div class="sb-stat"><span class="s-label">Pending</span><span class="s-val yel" id="stat-pend">—</span></div>
+      <div class="sb-stat" style="margin-top:6px"><span class="s-label">Platform Bug</span><span class="s-val" id="stat-pb">—</span></div>
+      <div class="sb-stat"><span class="s-label">User Error</span><span class="s-val" id="stat-ue">—</span></div>
+    </div>
+    <div class="sb-filters">
+      <div class="sf-lbl">Filter</div>
+      <button class="sb-fp on" data-fg="assess" onclick="setFilter('assess','all',this)">All Assessments</button>
+      <button class="sb-fp" data-fg="assess" onclick="setFilter('assess','platform-bug',this)">Platform Bug</button>
+      <button class="sb-fp" data-fg="assess" onclick="setFilter('assess','likely-platform',this)">Likely Platform</button>
+      <button class="sb-fp" data-fg="assess" onclick="setFilter('assess','borderline',this)">Borderline</button>
+      <button class="sb-fp" data-fg="assess" onclick="setFilter('assess','user-error',this)">User Error</button>
+    </div>
+    <div class="sb-filters">
+      <div class="sf-lbl">Show</div>
+      <button class="sb-fp on" data-fg="status" onclick="setFilter('status','all',this)">All</button>
+      <button class="sb-fp" data-fg="status" onclick="setFilter('status','pending',this)">Pending Only</button>
+      <button class="sb-fp" data-fg="status" onclick="setFilter('status','approved',this)">Approved</button>
+      <button class="sb-fp" data-fg="status" onclick="setFilter('status','excluded',this)">Excluded</button>
+    </div>
+    <div class="sb-sec" style="margin-top:auto">
+      <div class="sb-lbl">Keyboard</div>
+      <div style="color:rgba(255,255,255,.5);font-size:11px;line-height:1.9">
+        <kbd style="background:rgba(255,255,255,.1);border-radius:3px;padding:0 5px;font-family:monospace">J/K</kbd> navigate<br>
+        <kbd style="background:rgba(255,255,255,.1);border-radius:3px;padding:0 5px;font-family:monospace">A</kbd> approve<br>
+        <kbd style="background:rgba(255,255,255,.1);border-radius:3px;padding:0 5px;font-family:monospace">X</kbd> exclude<br>
+        <kbd style="background:rgba(255,255,255,.1);border-radius:3px;padding:0 5px;font-family:monospace">U</kbd> un-exclude<br>
+        <kbd style="background:rgba(255,255,255,.1);border-radius:3px;padding:0 5px;font-family:monospace">Space</kbd> open source
+      </div>
+    </div>
+  </div>
+
+  <!-- Focus area -->
+  <div id="focus">
+    <div id="focus-empty">
+      <span>🎯</span>
+      <p style="font-size:15px;font-weight:600;color:var(--mu)">Focus Mode</p>
+      <p style="font-size:13px;color:var(--mu2)">Select a date and load to start reviewing</p>
+    </div>
+
+    <div id="fc-nav">
+      <button class="fc-nb" onclick="move(-1)">← Prev</button>
+      <span id="fc-pos">—</span>
+      <button class="fc-nb" onclick="move(1)">Next →</button>
+    </div>
+
+    <div id="focus-card">
+      <div class="fc-header" id="fc-header"></div>
+      <div class="fc-body" id="fc-body"></div>
+      <div class="fc-edit" id="fc-edit">
+        <select class="dr-sel" id="stage-sel" onchange="onStageChange()" onblur="saveRow()"></select>
+        <select class="dr-sel" id="cat-sel" onblur="saveRow()"></select>
+        <input class="dr-ni" id="notes-in" type="text" placeholder="Notes…" onblur="saveRow()">
+      </div>
+    </div>
+
+    <div id="actions">
+      <button class="act-big excl" id="excl-btn" onclick="actExcl()">✗ Exclude <span class="kbd">X</span></button>
+      <button class="act-big appr" id="appr-btn" onclick="actApp()">✓ Approve <span class="kbd">A</span></button>
+    </div>
+  </div>
+</div>
+
+<div id="ov"><div class="sp"></div></div>
+<div id="toast"></div>
+
+<script>
+var API='/api';
+var entries=[],cursor=0,filters={assess:'all',status:'all'};
+var STAGES=['Stage 1','Stage 2','Stage 3','Other (Company)','Other (Candidate)','EXCLUDED'];
+var CATS={
+  'Stage 1':['Unable to upload CV','Stuck at Preparing','Unable to access','Email not received','Link already used / expired','Wrong language displayed','CV not carrying over'],
+  'Stage 2':['Stuck analyzing','Stuck during','Redirected to the beginning','Camera / microphone not working','Answer not saved / lost','Video upload failed','Question skipped / missing','AI avatar not loading','Cannot submit'],
+  'Stage 3':['Stuck evaluating','CV evaluation failed','Wrong / missing score','Result email not sent','Retake not working','Transcription missing / blank','Submission not visible to recruiter','Submission goes to wrong stage'],
+  'Other (Company)':['Cannot send invitations','Export broken','Quota issues','Webhook failures','Other (Company)'],
+  'Other (Candidate)':['Other (Candidate)'],
+  'EXCLUDED':['Test entry','Duplicate','Feature Request','UX confusion','Other']
+};
+var COLORS=['#e85d04','#2563eb','#16a34a','#7c3aed','#b91c1c','#0891b2','#d97706','#0d9488'];
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
+function aColor(s){var h=0;for(var i=0;i<(s||'').length;i++)h=(h*31+s.charCodeAt(i))&0xffff;return COLORS[h%COLORS.length]}
+function aInit(s){if(!s)return '?';var w=s.trim().split(/\s+/);return(w.length>1?(w[0][0]+w[w.length-1][0]):s.substring(0,2)).toUpperCase()}
+function aC(a){a=(a||'').toLowerCase();if(a.includes('likely platform'))return 'likely-platform';if(a.includes('platform bug'))return 'platform-bug';if(a.includes('borderline'))return 'borderline';if(a.includes('user error'))return 'user-error';return ''}
+function dThumb(url){if(!url)return '';var m=url.split(',')[0].match(/\/file\/d\/([a-zA-Z0-9_-]+)/);return m?'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w400-h300':url.split(',')[0]}
+function dView(url){if(!url)return '';var m=url.split(',')[0].match(/\/file\/d\/([a-zA-Z0-9_-]+)/);return m?'https://drive.google.com/file/d/'+m[1]+'/view':url.split(',')[0]}
+async function api(fn){var a=Array.prototype.slice.call(arguments,1);var r=await fetch(API+'/'+fn,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({args:a})});var d=await r.json();if(d&&d.error)throw new Error(d.error);return d}
+var _tt;
+function toast(msg,type){var el=document.getElementById('toast');el.textContent=msg;el.className='show '+(type||'');clearTimeout(_tt);_tt=setTimeout(function(){el.className=''},2500)}
+function ov(on){document.getElementById('ov').style.display=on?'flex':'none'}
+
+function setFilter(g,v,btn){filters[g]=v;document.querySelectorAll('.sb-fp[data-fg="'+g+'"]').forEach(function(b){b.classList.remove('on')});btn.classList.add('on');var vis=getVisible();if(vis.length>0&&cursor>=vis.length)cursor=0;render()}
+function getVisible(){return entries.filter(function(e){
+  if(filters.assess!=='all'&&aC(e.assessment)!==filters.assess)return false;
+  var app=e.approvalStatus==='approved',ex=e.stage==='EXCLUDED';
+  if(filters.status==='pending'&&(app||ex))return false;
+  if(filters.status==='approved'&&!app)return false;
+  if(filters.status==='excluded'&&!ex)return false;
+  return true;
+})}
+
+async function loadReport(){
+  var date=document.getElementById('nav-date-in').value;
+  if(!date){toast('Pick a date','err');return}
+  ov(true);cursor=0;
+  try{var data=await api('getDailyReport',date);entries=data.entries||[];updateStats();render()}
+  catch(e){toast('Error: '+e.message,'err')}finally{ov(false)}
+}
+
+function updateStats(){
+  var app=entries.filter(function(e){return e.approvalStatus==='approved'}).length;
+  var excl=entries.filter(function(e){return e.stage==='EXCLUDED'}).length;
+  var pend=entries.length-app-excl;
+  var pb=entries.filter(function(e){return (e.assessment||'').toLowerCase().includes('platform bug')}).length;
+  var ue=entries.filter(function(e){return (e.assessment||'').toLowerCase().includes('user error')}).length;
+  var pct=entries.length>0?Math.round(app/entries.length*100):0;
+  document.getElementById('ring-pct').textContent=pct+'%';
+  document.getElementById('ring-sub').textContent=app+' / '+entries.length;
+  var offset=172*(1-pct/100);
+  document.getElementById('ring-fill').style.strokeDashoffset=offset;
+  document.getElementById('stat-app').textContent=app;
+  document.getElementById('stat-excl').textContent=excl;
+  document.getElementById('stat-pend').textContent=pend;
+  document.getElementById('stat-pb').textContent=pb;
+  document.getElementById('stat-ue').textContent=ue;
+  var nc=document.getElementById('nav-counter');
+  nc.style.display=entries.length?'block':'none';
+  nc.textContent=pend+' pending';
+}
+
+function render(){
+  var vis=getVisible();
+  if(!vis.length){
+    document.getElementById('focus-empty').style.display='flex';
+    document.getElementById('focus-card').style.display='none';
+    document.getElementById('actions').style.display='none';
+    document.getElementById('fc-nav').style.display='none';
+    return;
+  }
+  document.getElementById('focus-empty').style.display='none';
+  document.getElementById('focus-card').style.display='block';
+  document.getElementById('actions').style.display='flex';
+  document.getElementById('fc-nav').style.display='flex';
+
+  if(cursor<0)cursor=0;
+  if(cursor>=vis.length)cursor=vis.length-1;
+  var e=vis[cursor];
+  var idx=entries.indexOf(e);
+
+  document.getElementById('fc-pos').textContent=(cursor+1)+' of '+vis.length;
+
+  // Header
+  var name=e.candidateName||e.email||'—';
+  var ac=aC(e.assessment);
+  var thumb=dThumb(e.screenshotUrl);
+  var srcC=e.source==='Slack'?'slack':e.source==='Google Sheet'?'sheet':'email';
+  var srcL=e.source==='Slack'?'Slack':e.source==='Google Sheet'?'GSheet':'Email';
+  var app=e.approvalStatus==='approved',ex=e.stage==='EXCLUDED';
+
+  var hdr='<div class="av fc-av" style="background:'+aColor(name)+'">'+esc(aInit(name))+'</div>'
+    +'<div style="flex:1;min-width:0">'
+    +'<div class="fc-name">'+esc(name)+'</div>'
+    +'<div class="fc-sub">'+esc(e.email||'')+(e.timeGmt7?' · '+esc(e.timeGmt7):'')+(e.interviewCo?' · '+esc(e.interviewCo):'')+'</div>'
+    +'<div class="fc-chips">'
+    +'<span class="chip '+srcC+'">'+srcL+'</span>'
+    +(ac?'<span class="chip '+ac+'">'+esc(e.assessment||'')+'</span>':'')
+    +(e.confidence?'<span class="chip conf">'+esc(e.confidence)+'</span>':'')
+    +(app?'<span class="chip" style="background:var(--grn-l);color:var(--grn)">✓ Approved</span>':'')
+    +(ex?'<span class="chip" style="background:var(--red-l);color:var(--red)">✗ Excluded</span>':'')
+    +'</div></div>';
+  if(e.sourceLink)hdr+='<a href="'+esc(e.sourceLink)+'" target="_blank" style="color:var(--or);font-size:12px;font-weight:600;text-decoration:none;flex-shrink:0">↗ Open</a>';
+  document.getElementById('fc-header').innerHTML=hdr;
+
+  // Body
+  var body='';
+  if(e.originalContent){
+    body+='<div><div class="fc-lbl">Issue Reported</div>'
+      +'<div class="orig-box" id="orig-box">'+esc(e.originalContent)+'</div>'
+      +'<button class="tog" onclick="togOrig()">show more ▾</button></div>';
+  }
+  if(e.assessment||e.assessmentNotes){
+    body+='<div><div class="fc-lbl">AI Assessment</div>'
+      +'<div class="abar '+ac+'">'+(e.assessment?'<strong>'+esc(e.assessment)+'</strong>':'')
+      +(e.assessmentNotes?(e.assessment?' · ':'')+esc(e.assessmentNotes):'')+'</div></div>';
+  }
+  if(thumb){
+    body+='<div class="fc-img"><div class="fc-lbl">Screenshot</div>'
+      +'<a href="'+esc(dView(e.screenshotUrl))+'" target="_blank"><img src="'+esc(thumb)+'" alt="screenshot"></a></div>';
+  }
+  var metas=[];
+  if(e.interviewPos)metas.push(['Position',e.interviewPos,false]);
+  if(e.topicRaw)metas.push(['Topic',e.topicRaw,false]);
+  if(e.submissionId)metas.push(['Submission',e.submissionId,true]);
+  if(e.browser||e.os)metas.push(['Device',[e.browser,e.os,e.device].filter(Boolean).join(' · '),true]);
+  if(metas.length){
+    body+='<div><div class="fc-lbl">Details</div><div class="mg">';
+    metas.forEach(function(m){body+='<div><label>'+esc(m[0])+'</label><div class="v'+(m[2]?' mono':'')+'">'+esc(m[1])+'</div></div>';});
+    body+='</div></div>';
+  }
+  if(e.humanNotes)body+='<div><div class="fc-lbl">Notes</div><div style="font-size:13px;color:var(--tx)">'+esc(e.humanNotes)+'</div></div>';
+  document.getElementById('fc-body').innerHTML=body;
+
+  // Editors
+  var ss=document.getElementById('stage-sel');
+  ss.innerHTML=STAGES.map(function(s){return '<option value="'+esc(s)+'"'+(e.stage===s?' selected':'')+'>'+esc(s)+'</option>';}).join('');
+  updateCats(e.stage,e.category);
+  document.getElementById('notes-in').value=e.humanNotes||'';
+
+  // Action buttons
+  var ab=document.getElementById('appr-btn'),eb=document.getElementById('excl-btn');
+  ab.className='act-big appr'+(app?' on':'');
+  ab.innerHTML=(app?'✓ Approved':'○ Approve')+' <span class="kbd">A</span>';
+  if(ex){
+    eb.className='act-big unex';eb.innerHTML='↩ Un-exclude <span class="kbd">U</span>';
+    eb.onclick=function(){actUnex()};
+  }else{
+    eb.className='act-big excl';eb.innerHTML='✗ Exclude <span class="kbd">X</span>';
+    eb.onclick=function(){actExcl()};
+  }
+}
+
+function updateCats(stage,cur){
+  var cs=document.getElementById('cat-sel');
+  var cats=CATS[stage]||[];
+  var h='<option value="">— category —</option>';
+  if(cur&&!cats.includes(cur))h+='<option value="'+esc(cur)+'" selected>'+esc(cur)+'</option>';
+  h+=cats.map(function(c){return '<option value="'+esc(c)+'"'+(cur===c?' selected':'')+'>'+esc(c)+'</option>';}).join('');
+  cs.innerHTML=h;
+}
+function onStageChange(){var ss=document.getElementById('stage-sel');updateCats(ss.value,'')}
+function togOrig(){var b=document.getElementById('orig-box');if(!b)return;var o=b.classList.toggle('open');var btn=b.nextElementSibling;if(btn)btn.textContent=o?'show less ▴':'show more ▾'}
+
+function move(dir){var vis=getVisible();cursor=Math.max(0,Math.min(vis.length-1,cursor+dir));render()}
+
+async function saveRow(){
+  var vis=getVisible();var e=vis[cursor];if(!e)return;
+  var stage=document.getElementById('stage-sel').value;
+  var cat=document.getElementById('cat-sel').value;
+  var notes=document.getElementById('notes-in').value;
+  if(stage===e.stage&&cat===e.category&&notes===e.humanNotes)return;
+  e.stage=stage;e.category=cat;e.humanNotes=notes;
+  try{await api('updateDailyReportRow',e.rowNumber,stage,cat,notes)}
+  catch(err){toast('Save failed','err')}
+}
+
+function advanceOrRender(){
+  var vis=getVisible();
+  if(cursor<vis.length)render();
+  else if(vis.length>0){cursor=vis.length-1;render()}
+  else render();
+  updateStats();
+}
+
+async function actApp(){
+  var vis=getVisible();var e=vis[cursor];if(!e)return;
+  var nv=e.approvalStatus==='approved'?'new':'approved';
+  e.approvalStatus=nv;
+  var origCursor=cursor;
+  try{
+    await api('updateDailyReportApproval',e.rowNumber,nv,'dashboard');
+    if(nv==='approved'&&filters.status==='pending'){cursor=origCursor;}
+    advanceOrRender();
+  }catch(err){e.approvalStatus=(nv==='approved'?'new':'approved');toast('Error','err')}
+}
+async function actExcl(){
+  var vis=getVisible();var e=vis[cursor];if(!e)return;
+  var prev=e.stage;e.stage='EXCLUDED';
+  try{await api('updateDailyReportRow',e.rowNumber,'EXCLUDED',e.category||'',e.humanNotes||'');advanceOrRender()}
+  catch(err){e.stage=prev;toast('Error','err')}
+}
+async function actUnex(){
+  var vis=getVisible();var e=vis[cursor];if(!e)return;
+  var prev=e.stage;e.stage='Stage 1';e.approvalStatus='new';
+  try{await api('updateDailyReportRow',e.rowNumber,'Stage 1','',e.humanNotes||'');updateStats();render()}
+  catch(err){e.stage=prev;toast('Error','err')}
+}
+async function markAll(){
+  var date=document.getElementById('nav-date-in').value;if(!date)return;
+  ov(true);try{var r=await api('markAllApproved',date);toast('Approved '+r.approved,'ok');await loadReport()}
+  catch(e){toast('Error: '+e.message,'err')}finally{ov(false)}
+}
+async function sendDm(){
+  var date=document.getElementById('nav-date-in').value;if(!date)return;
+  ov(true);try{var r=await api('sendReportDm',date);if(r.already_sent)toast('DM already sent');else toast('DM sent!','ok')}
+  catch(e){toast('Error: '+e.message,'err')}finally{ov(false)}
+}
+
+document.addEventListener('keydown',function(ev){
+  var tag=document.activeElement.tagName,inp=tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT';
+  if(ev.key==='Escape'){if(inp)document.activeElement.blur();return}
+  if(inp)return;
+  if(ev.key==='ArrowRight'||ev.key==='j'){ev.preventDefault();move(1)}
+  else if(ev.key==='ArrowLeft'||ev.key==='k'){ev.preventDefault();move(-1)}
+  else if(ev.key==='a'||ev.key==='A')actApp();
+  else if(ev.key==='x'||ev.key==='X')actExcl();
+  else if(ev.key==='u'||ev.key==='U')actUnex();
+  else if(ev.key===' '){
+    ev.preventDefault();
+    var vis=getVisible();var e=vis[cursor];
+    if(e&&e.sourceLink&&e.sourceLink.startsWith('http'))window.open(e.sourceLink,'_blank');
+    else togOrig();
+  }
+});
+
+(function(){
+  var t=new Date();t.setDate(t.getDate()-1);
+  document.getElementById('nav-date-in').value=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+  loadReport();
+})();
+</script>
+</body>
+</html>

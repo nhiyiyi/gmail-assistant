@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flowmingo Bug Dashboard</title>
+<style>
+:root {
+  --navy:    #0f172a;
+  --navy2:   #1e293b;
+  --orange:  #f97316;
+  --orange2: #ea580c;
+  --bg:      #f1f5f9;
+  --surface: #ffffff;
+  --border:  #e2e8f0;
+  --border2: #cbd5e1;
+  --text:    #1e293b;
+  --muted:   #64748b;
+  --muted2:  #94a3b8;
+  --green:   #16a34a;
+  --green-bg:#dcfce7;
+  --red:     #dc2626;
+  --red-bg:  #fee2e2;
+  --yellow:  #d97706;
+  --yellow-bg:#fef3c7;
+  --blue:    #2563eb;
+  --blue-bg: #dbeafe;
+  --purple:  #7c3aed;
+  --purple-bg:#ede9fe;
+  --accent:  #f97316;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* ── Top nav ── */
+#topnav {
+  background: var(--navy);
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+#logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+#logo span { color: var(--orange); }
+#nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.15); margin: 0 4px; }
+#nav-title { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+/* ── Stats bar ── */
+#stats-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+.stat-pill b { color: #fff; font-weight: 600; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted2); }
+.dot-open     { background: #94a3b8; }
+.dot-progress { background: #fbbf24; }
+.dot-fixed    { background: #4ade80; }
+.dot-queue    { background: var(--orange); }
+
+/* ── Tabs ── */
+#tabs {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+.tab-btn {
+  background: none; border: none; cursor: pointer;
+  padding: 11px 16px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s;
+  margin-bottom: -1px;
+}
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
+
+/* ── Main layout ── */
+#main { display: flex; flex: 1; overflow: hidden; }
+
+/* ── Left panel ── */
+.left-panel {
+  width: 320px;
+  min-width: 240px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ── Resize handle ── */
+.resize-handle {
+  width: 3px;
+  background: var(--border);
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.resize-handle:hover { background: var(--orange); }
+
+/* ── Right panel ── */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+}
+.detail-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex-shrink: 0;
+  background: var(--bg);
+}
+.filter-row { display: flex; gap: 6px; align-items: center; }
+select, input[type=text], input[type=date] {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+}
+select:focus, input:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(249,115,22,0.12); }
+.go-btn {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.go-btn:hover { background: var(--navy2); }
+
+/* ── List count bar ── */
+.list-count-bar {
+  padding: 7px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* ── List container ── */
+.list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Bug list item ── */
+.bug-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+  background: var(--surface);
+}
+.bug-item:hover { background: #f8fafc; }
+.bug-item.selected {
+  background: #fff7ed;
+  border-left-color: var(--orange);
+}
+.bug-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.bug-ticket { font-size: 11px; color: var(--muted); font-family: 'SF Mono', monospace; }
+.bug-date   { font-size: 11px; color: var(--muted2); }
+.bug-subject {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+}
+.bug-badges { display: flex; gap: 4px; flex-wrap: wrap; align-items: center; }
+
+/* ── Badges ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.b-Reported        { background: #f1f5f9; color: var(--muted); }
+.b-Verified        { background: var(--blue-bg); color: var(--blue); }
+.b-Fix             { background: var(--yellow-bg); color: var(--yellow); }
+.b-Resolved        { background: var(--green-bg); color: var(--green); }
+.b-Duplicate       { background: #f1f5f9; color: #94a3b8; }
+.b-WontFix         { background: #f1f5f9; color: #94a3b8; }
+.b-High            { background: var(--red-bg); color: var(--red); }
+.b-Medium          { background: var(--yellow-bg); color: var(--yellow); }
+.b-Low             { background: var(--green-bg); color: var(--green); }
+.b-inreport        { background: #fff7ed; color: var(--orange); }
+.b-excluded        { background: var(--red-bg); color: var(--red); }
+.b-approved        { background: var(--green-bg); color: var(--green); }
+.b-pending         { background: #f1f5f9; color: var(--muted); }
+.b-purple          { background: var(--purple-bg); color: var(--purple); }
+
+/* ── Detail card ── */
+.detail-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+.detail-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.detail-card-title .save-ok {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--green);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.detail-card-title .save-ok.show { opacity: 1; }
+
+/* ── Detail header ── */
+.detail-header {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+.dh-id { font-size: 11px; color: var(--muted); font-family: monospace; margin-bottom: 5px; }
+.dh-subject { font-size: 17px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 8px; }
+.dh-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.dh-meta a {
+  color: var(--orange);
+  text-decoration: none;
+  font-weight: 500;
+}
+.dh-meta a:hover { text-decoration: underline; }
+
+/* ── Button groups ── */
+.btn-group { display: flex; gap: 6px; flex-wrap: wrap; }
+.seg-btn {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  border-radius: 7px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.seg-btn:hover { border-color: var(--orange); color: var(--orange); }
+.seg-btn.on { border-color: currentColor; font-weight: 600; }
+.seg-btn.on.s-Reported        { color: var(--muted);  background: #f1f5f9;           border-color: var(--border2); }
+.seg-btn.on.s-Verified        { color: var(--blue);   background: var(--blue-bg);    border-color: #93c5fd; }
+.seg-btn.on.s-Fix             { color: var(--yellow); background: var(--yellow-bg);  border-color: #fcd34d; }
+.seg-btn.on.s-Resolved        { color: var(--green);  background: var(--green-bg);   border-color: #86efac; }
+.seg-btn.on.s-Duplicate       { color: #94a3b8;       background: #f1f5f9;           border-color: var(--border2); }
+.seg-btn.on.s-WontFix         { color: #94a3b8;       background: #f1f5f9;           border-color: var(--border2); }
+.seg-btn.on.p-High            { color: var(--red);    background: var(--red-bg);     border-color: #fca5a5; }
+.seg-btn.on.p-Medium          { color: var(--yellow); background: var(--yellow-bg);  border-color: #fcd34d; }
+.seg-btn.on.p-Low             { color: var(--green);  background: var(--green-bg);   border-color: #86efac; }
+.seg-btn.on.r-Yes             { color: var(--orange); background: #fff7ed;           border-color: #fdba74; }
+.seg-btn.on.r-No              { color: var(--red);    background: var(--red-bg);     border-color: #fca5a5; }
+
+/* ── Detail grid ── */
+.dg { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.dg-field label { display: block; font-size: 11px; color: var(--muted); font-weight: 600; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
+.dg-field .val  { font-size: 13px; color: var(--text); }
+.dg-field .val.mono { font-family: monospace; font-size: 11px; color: var(--muted); }
+
+/* ── Textarea / input fields ── */
+textarea.tf {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 9px 11px;
+  border-radius: 8px;
+  font-size: 13px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  outline: none;
+  line-height: 1.5;
+}
+textarea.tf:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(249,115,22,0.12); }
+input.ef {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  color: var(--text);
+  padding: 7px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+input.ef:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(249,115,22,0.12); }
+
+/* ── Empty state ── */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--muted2);
+  gap: 8px;
+  text-align: center;
+}
+.empty-state .ico { font-size: 36px; margin-bottom: 4px; }
+.empty-state p { font-size: 13px; color: var(--muted); }
+.empty-state .hint { font-size: 11px; color: var(--muted2); margin-top: 2px; }
+.kbd {
+  display: inline-block;
+  background: #f1f5f9;
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: monospace;
+  font-size: 11px;
+  color: var(--text);
+}
+
+/* ── Shortcut bar ── */
+.shortcut-bar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 5px 16px;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+/* ── Tab panes ── */
+.tab-pane { display: none; width: 100%; height: 100%; }
+.tab-pane.active { display: flex; flex: 1; overflow: hidden; }
+
+/* ── HR ── */
+.hr { border: none; border-top: 1px solid var(--border); margin: 14px 0; }
+
+/* ── DR controls ── */
+.dr-ctrl {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex-shrink: 0;
+  background: var(--bg);
+}
+.dr-date-row { display: flex; align-items: center; gap: 6px; }
+.dr-date-row input { flex: 1; }
+.load-btn {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.load-btn:hover { background: var(--navy2); }
+.prog-outer {
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.prog-inner {
+  height: 100%;
+  background: var(--orange);
+  transition: width 0.4s;
+  border-radius: 2px;
+}
+.prog-label { font-size: 11px; color: var(--muted); text-align: right; }
+.dr-bulk { display: flex; gap: 6px; }
+.bulk-btn {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  padding: 6px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.bulk-btn:hover { color: var(--text); border-color: var(--navy); }
+
+/* ── DR list item ── */
+.dr-item {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.1s;
+  background: var(--surface);
+}
+.dr-item:hover { background: #f8fafc; }
+.dr-item.selected { background: #fff7ed; border-left-color: var(--orange); }
+.dr-item.approved { border-left-color: #4ade80; }
+.dr-item.excluded { border-left-color: var(--red); }
+.dr-item-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
+.dr-stage-lbl { font-size: 11px; color: var(--muted2); }
+.dr-company { font-size: 12px; font-weight: 600; color: var(--text); }
+.dr-position { font-size: 11px; color: var(--muted); }
+.dr-verdict-snip { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
+
+/* ── DR approve buttons ── */
+.verdict-row { display: flex; gap: 8px; margin-bottom: 14px; }
+.vbtn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border2);
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+.vbtn:hover.approve { background: var(--green-bg); border-color: #86efac; color: var(--green); }
+.vbtn:hover.exclude { background: var(--red-bg);   border-color: #fca5a5; color: var(--red); }
+.vbtn.active.approve { background: var(--green-bg); border-color: #86efac; color: var(--green); }
+.vbtn.active.exclude { background: var(--red-bg);   border-color: #fca5a5; color: var(--red); }
+
+/* ── Verdict box ── */
+.verdict-box {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 14px;
+  white-space: pre-wrap;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+/* ── DM output ── */
+#dm-output {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  color: var(--text);
+  display: none;
+}
+
+/* ── Loading ── */
+#loading-overlay {
+  position: fixed; inset: 0;
+  background: rgba(241,245,249,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.spinner {
+  width: 30px; height: 30px;
+  border: 3px solid var(--border2);
+  border-top-color: var(--orange);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Toast ── */
+#toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%) translateY(60px);
+  background: var(--navy);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 200;
+  transition: transform 0.25s;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+#toast.show { transform: translateX(-50%) translateY(0); }
+#toast.success { background: var(--green); }
+#toast.error   { background: var(--red); }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted2); }
+</style>
+</head>
+<body>
+
+<!-- Top nav -->
+<div id="topnav">
+  <div id="logo">Flow<span>mingo</span></div>
+  <div id="nav-divider"></div>
+  <div id="nav-title">Bug Dashboard</div>
+  <div id="stats-row">
+    <div class="stat-pill"><span class="dot dot-open"></span><b id="stat-open">—</b>&nbsp;open</div>
+    <div class="stat-pill"><span class="dot dot-progress"></span><b id="stat-progress">—</b>&nbsp;in progress</div>
+    <div class="stat-pill"><span class="dot dot-fixed"></span><b id="stat-fixed">—</b>&nbsp;resolved</div>
+    <div class="stat-pill"><span class="dot dot-queue"></span><b id="stat-queue">—</b>&nbsp;in report</div>
+    <div class="stat-pill"><b id="stat-total">—</b>&nbsp;shown</div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div id="tabs">
+  <button class="tab-btn active" data-tab="bugs" onclick="switchTab('bugs')">Bug Tickets</button>
+  <button class="tab-btn" data-tab="daily" onclick="switchTab('daily')">Daily Review</button>
+</div>
+
+<!-- Main -->
+<div id="main">
+
+  <!-- ══ BUG TICKETS TAB ══ -->
+  <div class="tab-pane active" id="pane-bugs">
+
+    <div class="left-panel" id="bugs-left">
+      <!-- Filters -->
+      <div class="filter-bar">
+        <div class="filter-row">
+          <select id="f-date">
+            <option value="today">Today</option>
+            <option value="yesterday">Yesterday</option>
+            <option value="last7">Last 7 days</option>
+            <option value="all">All time</option>
+            <option value="custom">Custom…</option>
+          </select>
+        </div>
+        <div class="filter-row" id="custom-dates" style="display:none">
+          <input type="date" id="f-date-from">
+          <input type="date" id="f-date-to">
+        </div>
+        <div class="filter-row">
+          <select id="f-status"><option value="">All statuses</option></select>
+        </div>
+        <div class="filter-row">
+          <select id="f-priority"><option value="">All priorities</option><option>High</option><option>Medium</option><option>Low</option></select>
+          <select id="f-reporter"><option value="">All reporters</option></select>
+        </div>
+        <div class="filter-row">
+          <input type="text" id="search-input" placeholder="Search tickets…">
+          <button class="go-btn" onclick="loadBugs()">Go</button>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list-scroll">
+        <div class="list-count-bar" id="list-count">Loading…</div>
+        <div id="bug-list"></div>
+      </div>
+    </div>
+
+    <div class="resize-handle" id="resize-bugs"></div>
+
+    <div class="right-panel">
+      <div class="detail-scroll" id="bugs-detail-scroll">
+        <div class="empty-state" id="empty-state">
+          <div class="ico">🪲</div>
+          <p>Select a bug to view details</p>
+          <div class="hint"><span class="kbd">↑</span><span class="kbd">↓</span> navigate &nbsp;·&nbsp; <span class="kbd">V</span> Verified &nbsp; <span class="kbd">F</span> Fix in Progress &nbsp; <span class="kbd">R</span> Resolved</div>
+        </div>
+        <div id="bug-detail" style="display:none"></div>
+      </div>
+      <div class="shortcut-bar">
+        <span><span class="kbd">↑↓</span> navigate</span>
+        <span><span class="kbd">V</span> Verified</span>
+        <span><span class="kbd">F</span> Fix in Progress</span>
+        <span><span class="kbd">R</span> Resolved</span>
+        <span><span class="kbd">N</span> Focus notes</span>
+        <span><span class="kbd">I</span> Toggle in report</span>
+        <span><span class="kbd">/</span> Search</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ DAILY REVIEW TAB ══ -->
+  <div class="tab-pane" id="pane-daily">
+
+    <div class="left-panel" id="daily-left">
+      <div class="dr-ctrl">
+        <div class="dr-date-row">
+          <input type="date" id="dr-date-input">
+          <button class="load-btn" onclick="loadDailyReport()">Load</button>
+        </div>
+        <div class="prog-outer"><div class="prog-inner" id="prog-inner" style="width:0%"></div></div>
+        <div class="prog-label" id="prog-label">— / —</div>
+        <div class="dr-bulk">
+          <button class="bulk-btn" onclick="markAllApproved()">✓ Approve All</button>
+          <button class="bulk-btn" onclick="sendReportDm()">📤 Send DM</button>
+        </div>
+      </div>
+      <div class="list-scroll">
+        <div class="list-count-bar" id="dr-list-count">No data loaded</div>
+        <div id="dr-list"></div>
+      </div>
+    </div>
+
+    <div class="resize-handle" id="resize-daily"></div>
+
+    <div class="right-panel">
+      <div class="detail-scroll" id="daily-detail-scroll">
+        <div class="empty-state" id="dr-empty-state">
+          <div class="ico">📋</div>
+          <p>Select a Daily Review entry</p>
+          <div class="hint"><span class="kbd">↑↓</span> navigate &nbsp;·&nbsp; <span class="kbd">A</span> Approve &nbsp; <span class="kbd">X</span> Exclude</div>
+        </div>
+        <div id="dr-detail" style="display:none"></div>
+      </div>
+      <div class="shortcut-bar">
+        <span><span class="kbd">↑↓</span> navigate</span>
+        <span><span class="kbd">A</span> Approve</span>
+        <span><span class="kbd">X</span> Exclude</span>
+        <span><span class="kbd">U</span> Undo</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="loading-overlay"><div class="spinner"></div></div>
+<div id="toast"></div>
+
+<script>
+const API = '/api';
+let allBugs = [], config = {statuses:[], priorities:[], features:[]};
+let selectedIdx = -1, drEntries = [], drSelectedIdx = -1, currentTab = 'bugs';
+let saveTimers = {};
+
+// ── API ──────────────────────────────────────────────────────────
+async function api(fn, ...args) {
+  const r = await fetch(`${API}/${fn}`, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({args}),
+  });
+  const d = await r.json();
+  if (d && d.error) throw new Error(d.error);
+  return d;
+}
+
+// ── Toast ────────────────────────────────────────────────────────
+let _tt;
+function toast(msg, type='') {
+  const el = document.getElementById('toast');
+  el.textContent = msg; el.className = 'show ' + type;
+  clearTimeout(_tt); _tt = setTimeout(() => { el.className = ''; }, 2500);
+}
+
+function loading(on) {
+  document.getElementById('loading-overlay').style.display = on ? 'flex' : 'none';
+}
+
+// ── Tabs ─────────────────────────────────────────────────────────
+function switchTab(tab) {
+  currentTab = tab;
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.getElementById('pane-bugs').classList.toggle('active', tab === 'bugs');
+  document.getElementById('pane-daily').classList.toggle('active', tab === 'daily');
+  if (tab === 'daily' && drEntries.length === 0) loadDailyReport();
+}
+
+// ════════════════════════════════════════════════════════════════
+//  Bug Tickets
+// ════════════════════════════════════════════════════════════════
+function getFilters() {
+  const dateRange = document.getElementById('f-date').value;
+  const f = {dateRange};
+  if (dateRange === 'custom') {
+    f.dateFrom = document.getElementById('f-date-from').value;
+    f.dateTo   = document.getElementById('f-date-to').value;
+  }
+  const status   = document.getElementById('f-status').value;
+  const priority = document.getElementById('f-priority').value;
+  const reporter = document.getElementById('f-reporter').value;
+  const keyword  = document.getElementById('search-input').value.trim();
+  if (status)   f.status   = status;
+  if (priority) f.priority = priority;
+  if (reporter) f.email    = reporter;
+  if (keyword)  f.keyword  = keyword;
+  return f;
+}
+
+async function loadBugs() {
+  loading(true);
+  try {
+    const data = await api('getInitialData', getFilters());
+    allBugs = data.bugs || [];
+    config  = data.config || config;
+    populateDropdowns(data.reporters || []);
+    renderBugList();
+    updateStats(data.counters || {});
+    if (allBugs.length > 0 && selectedIdx < 0) selectBug(0);
+    else if (selectedIdx >= 0) selectBug(Math.min(selectedIdx, allBugs.length - 1));
+  } catch(e) {
+    toast('Error: ' + e.message, 'error');
+  } finally {
+    loading(false);
+  }
+}
+
+function populateDropdowns(reporters) {
+  const s = document.getElementById('f-status');
+  const cur = s.value;
+  while (s.options.length > 1) s.remove(1);
+  (config.statuses || []).forEach(st => s.appendChild(new Option(st, st)));
+  s.value = cur;
+  const r = document.getElementById('f-reporter');
+  const rcur = r.value;
+  while (r.options.length > 1) r.remove(1);
+  reporters.forEach(e => r.appendChild(new Option(e, e)));
+  r.value = rcur;
+}
+
+function updateStats(c) {
+  document.getElementById('stat-open').textContent     = c.open     ?? '—';
+  document.getElementById('stat-progress').textContent = c.inProgress ?? '—';
+  document.getElementById('stat-fixed').textContent    = c.fixed    ?? '—';
+  document.getElementById('stat-queue').textContent    = c.inQueue  ?? '—';
+  document.getElementById('stat-total').textContent    = c.total    ?? '—';
+}
+
+function statusClass(s) {
+  const m = {'Reported':'Reported','Verified':'Verified','Fix in Progress':'Fix',
+             'Resolved':'Resolved','Duplicate':'Duplicate',"Won't Fix":'WontFix'};
+  return m[s] || 'Reported';
+}
+
+function renderBugList() {
+  const list = document.getElementById('bug-list');
+  document.getElementById('list-count').textContent = `${allBugs.length} bug${allBugs.length !== 1 ? 's' : ''}`;
+  list.innerHTML = '';
+  allBugs.forEach((bug, idx) => {
+    const div = document.createElement('div');
+    div.className = 'bug-item' + (idx === selectedIdx ? ' selected' : '');
+    div.dataset.idx = idx;
+    const sc = statusClass(bug.status);
+    const pr = bug.priority || '';
+    div.innerHTML = `
+      <div class="bug-item-top">
+        <span class="bug-ticket">${esc(bug.ticketId||'—')}</span>
+        <span class="bug-date">${esc(bug.date||'')}</span>
+      </div>
+      <div class="bug-subject">${esc(bug.subject||bug.summaryEn||'(no subject)')}</div>
+      <div class="bug-badges">
+        <span class="badge b-${sc}">${esc(bug.status||'Reported')}</span>
+        ${pr ? `<span class="badge b-${pr}">${pr}</span>` : ''}
+        ${bug.inReport !== 'No'
+          ? '<span class="badge b-inreport">In Report</span>'
+          : '<span class="badge b-excluded">Excluded</span>'}
+        ${bug.mainIssue ? `<span class="badge b-purple" style="max-width:100px;overflow:hidden;text-overflow:ellipsis">${esc(bug.mainIssue)}</span>` : ''}
+      </div>`;
+    div.addEventListener('click', () => selectBug(idx));
+    list.appendChild(div);
+  });
+}
+
+function selectBug(idx) {
+  if (idx < 0 || idx >= allBugs.length) return;
+  selectedIdx = idx;
+  document.querySelectorAll('#bug-list .bug-item').forEach((el, i) =>
+    el.classList.toggle('selected', i === idx));
+  document.querySelector(`#bug-list .bug-item[data-idx="${idx}"]`)?.scrollIntoView({block:'nearest'});
+  renderBugDetail(allBugs[idx]);
+}
+
+function renderBugDetail(bug) {
+  document.getElementById('empty-state').style.display = 'none';
+  const d = document.getElementById('bug-detail');
+  d.style.display = 'block';
+
+  const statuses = config.statuses || ['Reported','Verified','Fix in Progress','Resolved','Duplicate',"Won't Fix"];
+  const statusBtns = statuses.map(s => {
+    const sc = statusClass(s); const on = bug.status === s;
+    return `<button class="seg-btn${on ? ` on s-${sc}` : ''}" onclick="setBugField('status',${JSON.stringify(s)},this)" data-val="${esc(s)}">${esc(s)}</button>`;
+  }).join('');
+
+  const prioBtns = ['High','Medium','Low'].map(p => {
+    const on = bug.priority === p;
+    return `<button class="seg-btn${on ? ` on p-${p}` : ''}" onclick="setBugField('priority','${p}',this)" data-val="${p}">${p}</button>`;
+  }).join('');
+
+  const repBtns = ['Yes','No'].map(v => {
+    const on = bug.inReport === v;
+    return `<button class="seg-btn${on ? ` on r-${v}` : ''}" onclick="setBugField('inReport','${v}',this)" data-val="${v}">${v === 'Yes' ? 'Include in report' : 'Exclude from report'}</button>`;
+  }).join('');
+
+  d.innerHTML = `
+    <div class="detail-header">
+      <div class="dh-id">${esc(bug.ticketId||'—')}</div>
+      <div class="dh-subject">${esc(bug.subject||bug.summaryEn||'(no subject)')}</div>
+      <div class="dh-meta">
+        <span>📅 ${esc(bug.date||'—')}</span>
+        ${bug.email    ? `<span>✉ ${esc(bug.email)}</span>` : ''}
+        ${bug.customer ? `<span>👤 ${esc(bug.customer)}</span>` : ''}
+        ${bug.gmailUrl ? `<a href="${esc(bug.gmailUrl)}" target="_blank">Open in Gmail →</a>` : ''}
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Status <span class="save-ok" id="sv-status">Saved</span></div>
+      <div class="btn-group">${statusBtns}</div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Priority <span class="save-ok" id="sv-priority">Saved</span></div>
+      <div class="btn-group">${prioBtns}</div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Report Queue <span class="save-ok" id="sv-inReport">Saved</span></div>
+      <div class="btn-group">${repBtns}</div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Notes <span class="save-ok" id="sv-notes">Saved</span></div>
+      <textarea class="tf" id="notes-field" placeholder="Add notes…">${esc(bug.notes||'')}</textarea>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Main Issue <span class="save-ok" id="sv-mainIssue">Saved</span></div>
+      <input class="ef" id="mi-field" value="${esc(bug.mainIssue||'')}" placeholder="e.g. Video call freeze">
+    </div>
+
+    <hr class="hr">
+
+    <div class="detail-card">
+      <div class="detail-card-title">Details</div>
+      <div class="dg">
+        <div class="dg-field"><label>Summary (EN)</label><div class="val">${esc(bug.summaryEn||'—')}</div></div>
+        <div class="dg-field"><label>Summary (VI)</label><div class="val">${esc(bug.summaryVi||'—')}</div></div>
+        <div class="dg-field"><label>Issue Type</label><div class="val">${esc(bug.issueType||'—')}</div></div>
+        <div class="dg-field"><label>Report Date</label><div class="val">${esc(bug.reportDate||'—')}</div></div>
+        <div class="dg-field"><label>Sent At</label><div class="val">${esc(bug.sentAt||'—')}</div></div>
+        <div class="dg-field"><label>Thread ID</label><div class="val mono">${esc(bug.threadId||'—')}</div></div>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Screenshot URL <span class="save-ok" id="sv-screenshot">Saved</span></div>
+      <input class="ef" id="ss-field" value="${esc(bug.screenshot||'')}" placeholder="https://…">
+    </div>
+  `;
+
+  // Auto-save wiring
+  ['notes-field|notes', 'mi-field|mainIssue', 'ss-field|screenshot'].forEach(pair => {
+    const [id, field] = pair.split('|');
+    const el = document.getElementById(id);
+    if (!el) return;
+    const tag = el.tagName === 'TEXTAREA' ? 'input' : 'input';
+    el.addEventListener('input', () => {
+      clearTimeout(saveTimers[field]);
+      saveTimers[field] = setTimeout(() => saveBugField(field, el.value), 800);
+    });
+  });
+}
+
+async function setBugField(field, value, btn) {
+  const bug = allBugs[selectedIdx]; if (!bug) return;
+  bug[field] = value;
+  if (btn) {
+    const grp = btn.parentElement;
+    grp.querySelectorAll('.seg-btn').forEach(b => {
+      b.className = b.className.replace(/ on [^\s]*/g, '').replace(/ on$/g, '');
+    });
+    const cls = field === 'status'   ? `on s-${statusClass(value)}` :
+                field === 'priority' ? `on p-${value}` :
+                field === 'inReport' ? `on r-${value}` : 'on';
+    btn.className += ' ' + cls;
+  }
+  // Update list badge
+  const li = document.querySelector(`#bug-list .bug-item[data-idx="${selectedIdx}"]`);
+  if (li) {
+    const badges = li.querySelector('.bug-badges');
+    if (badges) {
+      if (field === 'status') {
+        const sc = statusClass(value);
+        const el = badges.querySelector('[class*="b-Reported"],[class*="b-Verified"],[class*="b-Fix"],[class*="b-Resolved"],[class*="b-Duplicate"],[class*="b-WontFix"]');
+        if (el) { el.className = `badge b-${sc}`; el.textContent = value; }
+      } else if (field === 'priority') {
+        let el = badges.querySelector('.b-High,.b-Medium,.b-Low');
+        if (el) { el.className = `badge b-${value}`; el.textContent = value; }
+        else { const n = document.createElement('span'); n.className = `badge b-${value}`; n.textContent = value; badges.insertBefore(n, badges.children[1]); }
+      } else if (field === 'inReport') {
+        let el = badges.querySelector('.b-inreport,.b-excluded');
+        if (el) { el.className = `badge ${value === 'Yes' ? 'b-inreport' : 'b-excluded'}`; el.textContent = value === 'Yes' ? 'In Report' : 'Excluded'; }
+      }
+    }
+  }
+  await saveBugField(field, value);
+}
+
+async function saveBugField(field, value) {
+  const bug = allBugs[selectedIdx]; if (!bug) return;
+  try {
+    await api('updateBugField', bug.rowNumber, field, value);
+    flash(`sv-${field}`);
+  } catch(e) { toast('Save failed: ' + e.message, 'error'); }
+}
+
+function flash(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 1800);
+}
+
+// ════════════════════════════════════════════════════════════════
+//  Daily Review
+// ════════════════════════════════════════════════════════════════
+async function loadDailyReport() {
+  const dateStr = document.getElementById('dr-date-input').value;
+  if (!dateStr) { toast('Pick a date first', 'error'); return; }
+  loading(true);
+  try {
+    const data = await api('getDailyReport', dateStr);
+    drEntries = data.entries || [];
+    drSelectedIdx = -1;
+    renderDrList();
+    updateProgress(data.reviewed, data.total);
+    document.getElementById('dr-empty-state').style.display = 'flex';
+    document.getElementById('dr-detail').style.display = 'none';
+    if (drEntries.length > 0) selectDr(0);
+  } catch(e) {
+    toast('Error: ' + e.message, 'error');
+  } finally {
+    loading(false);
+  }
+}
+
+function stageLabel(s) {
+  if (!s) return '—';
+  return {1:'Stage 1 · Before',2:'Stage 2 · During',3:'Stage 3 · After','other':'Other'}[s] || s;
+}
+
+function renderDrList() {
+  const list = document.getElementById('dr-list');
+  document.getElementById('dr-list-count').textContent = `${drEntries.length} entr${drEntries.length !== 1 ? 'ies' : 'y'}`;
+  list.innerHTML = '';
+  drEntries.forEach((e, idx) => {
+    const approved = e.approvalStatus === 'approved';
+    const excluded = e.approvalStatus === 'excluded';
+    const div = document.createElement('div');
+    div.className = `dr-item${idx === drSelectedIdx ? ' selected' : ''}${approved ? ' approved' : ''}${excluded ? ' excluded' : ''}`;
+    div.dataset.idx = idx;
+    const co = e.interviewCo || e.company || '—';
+    const pos = e.interviewPos || e.position || '';
+    const verdict = (e.humanVerdict || '').substring(0, 70);
+    const statusBadge = approved ? '<span class="badge b-approved">✓ approved</span>'
+                      : excluded ? '<span class="badge b-excluded">✗ excluded</span>'
+                      :             '<span class="badge b-pending">pending</span>';
+    div.innerHTML = `
+      <div class="dr-item-row">
+        <span class="dr-stage-lbl">${esc(stageLabel(e.interviewStage || e.stage || ''))}</span>
+        ${statusBadge}
+      </div>
+      <div class="dr-company">${esc(co)}</div>
+      ${pos ? `<div class="dr-position">${esc(pos)}</div>` : ''}
+      ${verdict ? `<div class="dr-verdict-snip">${esc(verdict)}${(e.humanVerdict||'').length>70?'…':''}</div>` : ''}
+    `;
+    div.addEventListener('click', () => selectDr(idx));
+    list.appendChild(div);
+  });
+}
+
+function updateProgress(reviewed, total) {
+  const pct = total > 0 ? Math.round((reviewed||0) / total * 100) : 0;
+  document.getElementById('prog-inner').style.width = pct + '%';
+  document.getElementById('prog-label').textContent = `${reviewed||0} / ${total||0} reviewed (${pct}%)`;
+}
+
+function selectDr(idx) {
+  if (idx < 0 || idx >= drEntries.length) return;
+  drSelectedIdx = idx;
+  document.querySelectorAll('#dr-list .dr-item').forEach((el, i) =>
+    el.classList.toggle('selected', i === idx));
+  document.querySelector(`#dr-list .dr-item[data-idx="${idx}"]`)?.scrollIntoView({block:'nearest'});
+  renderDrDetail(drEntries[idx]);
+}
+
+function renderDrDetail(e) {
+  document.getElementById('dr-empty-state').style.display = 'none';
+  const d = document.getElementById('dr-detail');
+  d.style.display = 'block';
+  const approved = e.approvalStatus === 'approved';
+  const excluded = e.approvalStatus === 'excluded';
+  const co = e.interviewCo || e.company || '—';
+  const pos = e.interviewPos || e.position || '';
+  d.innerHTML = `
+    <div class="detail-header">
+      <div class="dh-id">${esc(stageLabel(e.interviewStage || e.stage || ''))}</div>
+      <div class="dh-subject">${esc(co)}</div>
+      ${pos ? `<div style="font-size:13px;color:var(--muted);margin-top:4px">${esc(pos)}</div>` : ''}
+    </div>
+
+    ${e.humanVerdict ? `<div class="detail-card"><div class="detail-card-title">AI Verdict</div><div class="verdict-box">${esc(e.humanVerdict)}</div></div>` : ''}
+
+    <div class="detail-card">
+      <div class="detail-card-title">Decision</div>
+      <div class="verdict-row">
+        <button class="vbtn approve${approved ? ' active' : ''}" onclick="setDrVerdict('approved')">✓ Approve</button>
+        <button class="vbtn exclude${excluded ? ' active' : ''}" onclick="setDrVerdict('excluded')">✗ Exclude</button>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Details</div>
+      <div class="dg" style="margin-bottom:0">
+        <div class="dg-field"><label>Category</label><div class="val">${esc(e.category||'—')}</div></div>
+        <div class="dg-field"><label>Stage</label><div class="val">${esc(stageLabel(e.interviewStage||e.stage||''))}</div></div>
+        <div class="dg-field"><label>Email</label><div class="val mono">${esc(e.email||'—')}</div></div>
+        <div class="dg-field"><label>Date</label><div class="val">${esc(e.reportDate||e.date||'—')}</div></div>
+      </div>
+    </div>
+
+    <div class="detail-card">
+      <div class="detail-card-title">Reviewer Notes <span class="save-ok" id="sv-dr-notes">Saved</span></div>
+      <textarea class="tf" id="dr-notes-field" placeholder="Add reviewer notes…">${esc(e.humanNotes||'')}</textarea>
+    </div>
+  `;
+
+  document.getElementById('dr-notes-field').addEventListener('input', function() {
+    clearTimeout(saveTimers['dr-notes']);
+    saveTimers['dr-notes'] = setTimeout(() => saveDrNotes(), 800);
+  });
+}
+
+async function setDrVerdict(verdict) {
+  const e = drEntries[drSelectedIdx]; if (!e) return;
+  const prev = e.approvalStatus;
+  e.approvalStatus = verdict;
+  // Update buttons
+  document.querySelector('#dr-detail .vbtn.approve')?.classList.toggle('active', verdict === 'approved');
+  document.querySelector('#dr-detail .vbtn.exclude')?.classList.toggle('active', verdict === 'excluded');
+  // Update list
+  const li = document.querySelector(`#dr-list .dr-item[data-idx="${drSelectedIdx}"]`);
+  if (li) {
+    li.classList.toggle('approved', verdict === 'approved');
+    li.classList.toggle('excluded', verdict === 'excluded');
+    const badge = li.querySelector('.badge');
+    if (badge) {
+      if (verdict === 'approved') { badge.className = 'badge b-approved'; badge.textContent = '✓ approved'; }
+      if (verdict === 'excluded') { badge.className = 'badge b-excluded'; badge.textContent = '✗ excluded'; }
+    }
+  }
+  try {
+    await api('updateDailyReportApproval', e.rowNumber, verdict, 'dashboard');
+    updateProgress(drEntries.filter(x => x.approvalStatus).length, drEntries.length);
+    setTimeout(() => {
+      if (drSelectedIdx + 1 < drEntries.length) selectDr(drSelectedIdx + 1);
+    }, 280);
+  } catch(err) {
+    e.approvalStatus = prev;
+    toast('Save failed: ' + err.message, 'error');
+  }
+}
+
+async function saveDrNotes() {
+  const e = drEntries[drSelectedIdx]; if (!e) return;
+  const notes = document.getElementById('dr-notes-field').value;
+  try {
+    await api('updateDailyReportRow', e.rowNumber, e.interviewStage||e.stage||'', e.category||'', notes);
+    flash('sv-dr-notes');
+  } catch(err) { toast('Save failed: ' + err.message, 'error'); }
+}
+
+async function markAllApproved() {
+  const dateStr = document.getElementById('dr-date-input').value;
+  if (!dateStr) { toast('No date selected', 'error'); return; }
+  loading(true);
+  try {
+    const r = await api('markAllApproved', dateStr);
+    toast(`Approved ${r.approved} entries`, 'success');
+    await loadDailyReport();
+  } catch(e) { toast('Error: ' + e.message, 'error'); } finally { loading(false); }
+}
+
+async function sendReportDm() {
+  const dateStr = document.getElementById('dr-date-input').value;
+  if (!dateStr) { toast('No date selected', 'error'); return; }
+  loading(true);
+  try {
+    const r = await api('sendReportDm', dateStr);
+    if (r.already_sent) toast(`DM already sent at ${r.dm_sent_at}`, '');
+    else toast('DM text ready — see below', 'success');
+    let out = document.getElementById('dm-output');
+    if (!out) { out = document.createElement('div'); out.id = 'dm-output'; document.getElementById('dr-detail').appendChild(out); }
+    out.style.display = 'block';
+    out.textContent = r.message || '(no message)';
+  } catch(e) { toast('Error: ' + e.message, 'error'); } finally { loading(false); }
+}
+
+// ════════════════════════════════════════════════════════════════
+//  Keyboard shortcuts
+// ════════════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => {
+  const inInput = ['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName);
+  if (currentTab === 'bugs') {
+    if (!inInput) {
+      if (e.key==='ArrowDown'||e.key==='j') { e.preventDefault(); selectBug(selectedIdx+1); }
+      if (e.key==='ArrowUp'  ||e.key==='k') { e.preventDefault(); selectBug(selectedIdx-1); }
+      if (e.key==='v'||e.key==='V') setBugField('status','Verified');
+      if (e.key==='f'||e.key==='F') setBugField('status','Fix in Progress');
+      if (e.key==='r'||e.key==='R') setBugField('status','Resolved');
+      if (e.key==='i'||e.key==='I') { const b=allBugs[selectedIdx]; if(b) setBugField('inReport',b.inReport==='Yes'?'No':'Yes'); }
+      if (e.key==='n'||e.key==='N') { const n=document.getElementById('notes-field'); if(n){e.preventDefault();n.focus();} }
+      if (e.key==='/') { e.preventDefault(); document.getElementById('search-input').focus(); }
+    }
+    if (e.key==='Escape'&&inInput) document.activeElement.blur();
+  }
+  if (currentTab === 'daily') {
+    if (!inInput) {
+      if (e.key==='ArrowDown'||e.key==='j') { e.preventDefault(); selectDr(drSelectedIdx+1); }
+      if (e.key==='ArrowUp'  ||e.key==='k') { e.preventDefault(); selectDr(drSelectedIdx-1); }
+      if (e.key==='a'||e.key==='A') setDrVerdict('approved');
+      if (e.key==='x'||e.key==='X') setDrVerdict('excluded');
+      if (e.key==='u'||e.key==='U') setDrVerdict('');
+    }
+    if (e.key==='Escape'&&inInput) document.activeElement.blur();
+  }
+});
+
+document.getElementById('search-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') loadBugs();
+});
+
+document.getElementById('f-date').addEventListener('change', function() {
+  document.getElementById('custom-dates').style.display = this.value === 'custom' ? 'flex' : 'none';
+});
+
+// ── Panel resize ─────────────────────────────────────────────────
+function setupResize(handleId, panelId) {
+  const handle = document.getElementById(handleId);
+  const panel  = document.getElementById(panelId);
+  if (!handle || !panel) return;
+  let dragging = false, startX, startW;
+  handle.addEventListener('mousedown', e => { dragging=true; startX=e.clientX; startW=panel.offsetWidth; document.body.style.userSelect='none'; document.body.style.cursor='col-resize'; });
+  document.addEventListener('mousemove', e => { if (!dragging) return; panel.style.width = Math.min(600, Math.max(200, startW+(e.clientX-startX)))+'px'; });
+  document.addEventListener('mouseup', () => { dragging=false; document.body.style.userSelect=''; document.body.style.cursor=''; });
+}
+setupResize('resize-bugs', 'bugs-left');
+setupResize('resize-daily', 'daily-left');
+
+// ── Utility ──────────────────────────────────────────────────────
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// ── Init ─────────────────────────────────────────────────────────
+(function() {
+  const t = new Date();
+  document.getElementById('dr-date-input').value =
+    `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+  loadBugs();
+})();
+</script>
+</body>
+</html>
