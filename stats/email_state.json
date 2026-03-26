@@ -6120,6 +6120,63 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d28bee87ce9097": {
+      "thread_id": "19d28bee87ce9097",
+      "from": "hamzahaider38385@gmail.com",
+      "subject": "Request for job..",
+      "date": "Thu, 26 Mar 2026 11:03:42 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4822408853857309531",
+      "draft_message_id": "19d28efd7a1d9573",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T06:58:20.489105+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d28e97072f28c4": {
+      "thread_id": "19d2486df75c0d47",
+      "from": "kinbueno37@hotmail.com",
+      "subject": "Re: Your next step \u2014 AI Developer at My School Suite",
+      "date": "Thu, 26 Mar 2026 06:51:16 +0000",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2480913445421512872",
+      "draft_message_id": "19d28efd92b2b42c",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T06:58:21.356995+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d28c64b113d12a": {
+      "thread_id": "19c26cfbb217c8cc",
+      "from": "violetotienoh@gmail.com",
+      "subject": "Re: Follow-Up on Reward Update.",
+      "date": "Thu, 26 Mar 2026 09:12:56 +0300",
+      "sender_type": "B",
+      "topic": "billing",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6156880706334464959",
+      "draft_message_id": "19d28efdddf7920c",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T06:58:22.254363+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
