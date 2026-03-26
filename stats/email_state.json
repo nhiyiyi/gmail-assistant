@@ -6405,6 +6405,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d29fe914dec34e": {
+      "thread_id": "19d29fe914dec34e",
+      "from": "nimrahameed903@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Nimra Hameed",
+      "date": "Thu, 26 Mar 2026 16:54:01 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3289043427058451786",
+      "draft_message_id": "19d2a30040b6b900",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:48:04.117484+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2a0da06f57f1b": {
+      "thread_id": "19d2a0da06f57f1b",
+      "from": "gordana.cvetanovic@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Thu, 26 Mar 2026 13:10:14 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5176638072685559023",
+      "draft_message_id": "19d2a300861a0b34",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:48:05.158276+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d29f0f28ca4c94": {
+      "thread_id": "19d23fec6487de73",
+      "from": "nuhailyas21@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Nuha",
+      "date": "Thu, 26 Mar 2026 16:38:54 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5836891225821907819",
+      "draft_message_id": "19d2a300dd702dc3",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:48:06.207461+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d29b8fa6071523": {
+      "thread_id": "19d29b8fa6071523",
+      "from": "makwalekoketso@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Thu, 26 Mar 2026 12:37:38 +0200",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-70799570011305417",
+      "draft_message_id": "19d2a3113ba627f0",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:49:13.169254+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d29b3040765467": {
+      "thread_id": "19d0b84abe744a6d",
+      "from": "shivam27modi@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Shivam",
+      "date": "Thu, 26 Mar 2026 16:00:51 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3677130193554971935",
+      "draft_message_id": "19d2a3117c2eb01a",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:49:14.339920+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d299ab2d9f55fe": {
+      "thread_id": "19d28db0d60b32fb",
+      "from": "ugwumbaevangelinenkeadi@gmail.com",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Thu, 26 Mar 2026 11:04:44 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6359353222733030863",
+      "draft_message_id": "19d2a31a93e93f88",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:49:51.688693+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d299931736ec05": {
+      "thread_id": "19d28e81bba0364c",
+      "from": "hafizmuhammad9120@gmail.com",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Thu, 26 Mar 2026 15:03:05 +0500",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3755165085217201828",
+      "draft_message_id": "19d2a31ad79b522d",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T12:49:52.717978+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
