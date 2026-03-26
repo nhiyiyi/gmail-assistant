@@ -6063,6 +6063,63 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d2863ea8158e60": {
+      "thread_id": "19b2036c9ee73941",
+      "from": "aishaarif556@gmail.com",
+      "subject": "Re: [Flowmingo] Congrats on Passing 1st Round of Screening",
+      "date": "Thu, 26 Mar 2026 09:25:17 +0500",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3034410289290980196",
+      "draft_message_id": "19d2884b8cc774e8",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T05:01:20.634844+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2864361ca9f9d": {
+      "thread_id": "19d284cf96323971",
+      "from": "kboumehdi09@gmail.com",
+      "subject": "Re: [Flowmingo] Our Sincere Apologies for Upcoming Meeting",
+      "date": "Thu, 26 Mar 2026 05:25:35 +0100",
+      "sender_type": "D",
+      "topic": "recruiter",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1370227238083259249",
+      "draft_message_id": "19d2884bd3b10524",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T05:01:21.464949+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d28273c2d06e63": {
+      "thread_id": "19d28273c2d06e63",
+      "from": "rlavenyaa@gmail.com",
+      "subject": "Re: [Flowmingo] Our Sincere Apologies for Upcoming Meeting",
+      "date": "Thu, 26 Mar 2026 08:48:59 +0530",
+      "sender_type": "D",
+      "topic": "recruiter",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1055735560245508814",
+      "draft_message_id": "19d2884bf4936a60",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T05:01:22.289340+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
