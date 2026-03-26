@@ -6785,6 +6785,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d2c0533b9de75f": {
+      "thread_id": "19d2225bc4afdd58",
+      "from": "wissamw109@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for wissam",
+      "date": "Fri, 27 Mar 2026 00:20:19 +0300",
+      "sender_type": "C",
+      "topic": "onboarding",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2606778273965564896",
+      "draft_message_id": "19d2c072daa7f43f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T21:22:41.533799+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
