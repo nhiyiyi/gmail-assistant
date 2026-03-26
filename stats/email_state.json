@@ -6671,6 +6671,120 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d2b7ab7dbf84e2": {
+      "thread_id": "19cd23dd2d4c866d",
+      "from": "pragya.ahuja94@gmail.com",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Fri, 27 Mar 2026 00:19:02 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8308951802601610421",
+      "draft_message_id": "19d2b7d93247ff45",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:23.845488+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2b785ad71a6da": {
+      "thread_id": "19d268e4db1cbc85",
+      "from": "harisabdullah884@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Haris Abdullah",
+      "date": "Thu, 26 Mar 2026 23:46:28 +0500",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4110499226057416125",
+      "draft_message_id": "19d2b7d976e85a44",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:24.885984+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2b640a9060489": {
+      "thread_id": "19d29871a169f5ac",
+      "from": "sadia.husna.work@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Thu, 26 Mar 2026 23:24:17 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-854575469073027793",
+      "draft_message_id": "19d2b7d9aa6759ff",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:26.060646+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2b5ab9b9e97d1": {
+      "thread_id": "19d2b5ab9b9e97d1",
+      "from": "conniehtruong@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Connie",
+      "date": "Thu, 26 Mar 2026 14:14:03 -0400",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1960633803038792706",
+      "draft_message_id": "19d2b7d9e066c99c",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:27.096608+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2aec158672137": {
+      "thread_id": "19d0ffae9e9f806c",
+      "from": "nirva.tork@gmail.com",
+      "subject": "Re: [Flowmingo] Insider Preview: What's Coming Next",
+      "date": "Thu, 26 Mar 2026 17:39:28 +0200",
+      "sender_type": "D",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6456018561632378801",
+      "draft_message_id": "19d2b7da33db684c",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:28.236395+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2ae1686ada53d": {
+      "thread_id": "19d2ae1686ada53d",
+      "from": "tsadoung@gmail.com",
+      "subject": "Re: [Flowmingo] Our Sincere Apologies for Upcoming Meeting",
+      "date": "Thu, 26 Mar 2026 16:01:32 +0000",
+      "sender_type": "D",
+      "topic": "partner",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5345633741332099988",
+      "draft_message_id": "19d2b7da6bbf7cdd",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-26T18:52:29.338820+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
