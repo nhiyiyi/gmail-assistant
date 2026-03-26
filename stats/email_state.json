@@ -6006,6 +6006,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d245a216aa184a": {
+      "thread_id": "19d245a216aa184a",
+      "from": "roshnijainchimc@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Roshni",
+      "date": "Wed, 25 Mar 2026 15:06:06 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8845334034541524078",
+      "draft_message_id": "19d27b662ff9d858",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T01:15:58.243184+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d27875945c81e1": {
+      "thread_id": "19d27875945c81e1",
+      "from": "c.ngeneigwe@aol.com",
+      "subject": "Re: Flowmingo Offer Letter for (Chuk)Chukwuemeka 255.60",
+      "date": "Thu, 26 Mar 2026 00:24:27 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "critical",
+      "review_status": "review",
+      "draft_id": "r-5098978418913349663",
+      "draft_message_id": "19d27b6c85103274",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T01:16:24.005212+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2767e59bd9aee": {
+      "thread_id": "19d2767e59bd9aee",
+      "from": "samwasfi2@gmail.com",
+      "subject": "Re: You've Advanced to the Interview Round!",
+      "date": "Thu, 26 Mar 2026 01:49:57 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5617376502858174897",
+      "draft_message_id": "19d27b6cb548c157",
+      "kb_version": "815031e63f5d",
+      "processed_at": "2026-03-26T01:16:24.762629+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
