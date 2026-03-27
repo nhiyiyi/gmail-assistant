@@ -8172,6 +8172,82 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d30ef587508838": {
+      "thread_id": "19d30ef587508838",
+      "from": "sahla.shirin03@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Sahla",
+      "date": "Fri, 27 Mar 2026 23:14:30 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-419621765803480461",
+      "draft_message_id": "19d31309231d21f0",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T21:26:00.776324+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d30c7a99bc9d36": {
+      "thread_id": "19d2e50a0bfc17bb",
+      "from": "sanaulhaque1980@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 22:31:11 +0300",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8683185932898775071",
+      "draft_message_id": "19d313096facfc90",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T21:26:01.609386+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d30a9531906197": {
+      "thread_id": "19d30a9531906197",
+      "from": "oluwakayikun2010@gmail.com",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Fri, 27 Mar 2026 19:58:01 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6067843208733879209",
+      "draft_message_id": "19d313099a99eacb",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T21:26:02.427531+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d306e379715a66": {
+      "thread_id": "19d306e379715a66",
+      "from": "olivekagoya@gmail.com",
+      "subject": "Re: Inquiry",
+      "date": "Fri, 27 Mar 2026 20:53:30 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5241906087158659366",
+      "draft_message_id": "19d31309d58b3403",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T21:26:03.155127+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
