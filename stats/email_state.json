@@ -6804,6 +6804,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d2da89003cd244": {
+      "thread_id": "19d2da89003cd244",
+      "from": "marcelinomariebeth@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 12:58:20 +0800",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2512935271293620047",
+      "draft_message_id": "19d2dac98fafa62b",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:00.173943+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2d9f9c33ca18f": {
+      "thread_id": "19d2d9f9c33ca18f",
+      "from": "juniorkatanta@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 06:48:32 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2967192410730614985",
+      "draft_message_id": "19d2dac9cc71d18d",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:01.112239+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2d9d1f980b629": {
+      "thread_id": "19d2d9d1f980b629",
+      "from": "ajaj.hasan@hotmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Fri, 27 Mar 2026 04:46:01 +0000",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1209816562373426502",
+      "draft_message_id": "19d2daca110fc5f8",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:02.096832+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2d980262ef5e6": {
+      "thread_id": "19d2d980262ef5e6",
+      "from": "anandkarrahul42@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 10:10:15 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5479370449794052000",
+      "draft_message_id": "19d2daca46a02f02",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:03.083291+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2d90d9a0de3d5": {
+      "thread_id": "19d2d90d9a0de3d5",
+      "from": "hadushkalayou2012@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 07:32:26 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3197308527272690444",
+      "draft_message_id": "19d2daca930a5b84",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:04.015256+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2d414a1ae351a": {
+      "thread_id": "19d2d414a1ae351a",
+      "from": "ssimonmarconi@gmail.com",
+      "subject": "Re: Welcome to the Team! Your Flowmingo Onboarding Program is Here",
+      "date": "Fri, 27 Mar 2026 00:05:31 -0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S29",
+      "urgency": "critical",
+      "review_status": "review",
+      "draft_id": "r-6781412542610224869",
+      "draft_message_id": "19d2dacac5e0cb4f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:04.963765+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d2d3cfc6fd7d9e": {
+      "thread_id": "19d2d3cfc6fd7d9e",
+      "from": "ssimonmarconi@gmail.com",
+      "subject": "Re: Resignation",
+      "date": "Fri, 27 Mar 2026 00:00:51 -0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8133874018335760160",
+      "draft_message_id": "19d2dacb1032f0b4",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-27T05:03:05.925477+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
