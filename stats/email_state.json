@@ -7108,6 +7108,348 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d2ea0906d00f9e": {
+      "thread_id": "19d2ea0906d00f9e",
+      "from": "",
+      "subject": "Application \u2013 Talent Acquisition Business Partner",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7464793531760819371",
+      "draft_message_id": "19d2eaf1150e223c",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:19.022970+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e9f419fdd4fa": {
+      "thread_id": "19d2e9f419fdd4fa",
+      "from": "",
+      "subject": "Re: Flowmingo Offer Letter for Friez Amron",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6146834644199802516",
+      "draft_message_id": "19d2eaf7af720333",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:46.073225+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e99f4e59fc88": {
+      "thread_id": "19d2e99f4e59fc88",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2349361191628973009",
+      "draft_message_id": "19d2eaf8076da845",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:47.718956+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e997e66cbc9c": {
+      "thread_id": "19d2e997e66cbc9c",
+      "from": "",
+      "subject": "Re: Flowmingo Offer Letter for Shwe",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2425404479421249181",
+      "draft_message_id": "19d2eaf8788fb48e",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:49.540521+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e96a46e3f3f6": {
+      "thread_id": "19d2e96a46e3f3f6",
+      "from": "",
+      "subject": "Re: Flowmingo Offer Letter for Osama",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8317413565158715745",
+      "draft_message_id": "19d2eaf8e17c9ead",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:51.545493+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e86dab78752a": {
+      "thread_id": "19d2e86dab78752a",
+      "from": "",
+      "subject": "Re: Welcome to the Team! Your Flowmingo Onboarding Program is Here",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r128925623662885043",
+      "draft_message_id": "19d2eaf954c2a7aa",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:45:52.784717+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e8330c66194b": {
+      "thread_id": "19d2e8330c66194b",
+      "from": "",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4455378679275591335",
+      "draft_message_id": "19d2eb0a600faa5a",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:03.056730+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e7fa768dc487": {
+      "thread_id": "19d2633597c79eeb",
+      "from": "",
+      "subject": "Re: Issue while getting my AI interview",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r826613735453303396",
+      "draft_message_id": "19d2eb0aa88bc312",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:04.175007+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e732ffbff29b": {
+      "thread_id": "19d2e732ffbff29b",
+      "from": "",
+      "subject": "Re: Interview Rescheduling and System Update",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2120149481973129237",
+      "draft_message_id": "19d2eb0ae7c00b12",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:05.298929+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e637aa291727": {
+      "thread_id": "19d2e60038d48626",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2754225137659299418",
+      "draft_message_id": "19d2eb0b41c0b2cd",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:06.396017+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e618d193c100": {
+      "thread_id": "19d2e618d193c100",
+      "from": "",
+      "subject": "Re: Callbox DB Inc.: Interview invitation for Sales Development Representative - Meliniel Catalan Padillo",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4388886647702029461",
+      "draft_message_id": "19d2eb0b942665d4",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:07.443076+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e616edc604b1": {
+      "thread_id": "19d2e616edc604b1",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6184699734781442642",
+      "draft_message_id": "19d2eb0bddea0ee1",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:08.573659+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e50a0bfc17bb": {
+      "thread_id": "19d2e50a0bfc17bb",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1639156633891700120",
+      "draft_message_id": "19d2eb14c6926ab8",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:45.622870+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e4c159607cf6": {
+      "thread_id": "19d2e4c159607cf6",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4330060914208593025",
+      "draft_message_id": "19d2eb154a5772d9",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:47.571686+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e3846c1f8cd0": {
+      "thread_id": "19d2e3846c1f8cd0",
+      "from": "",
+      "subject": "Re: New job opportunites at Flowmingo for Fatima Iqbal",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3762404635821925688",
+      "draft_message_id": "19d2eb15bfad15d0",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:49.241136+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e1aa6ea8f5a7": {
+      "thread_id": "19d2e1aa6ea8f5a7",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2928577420454088634",
+      "draft_message_id": "19d2eb160e26744a",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:47:50.884406+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2e19afbe7c916": {
+      "thread_id": "19d2e19afbe7c916",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6747741296166999834",
+      "draft_message_id": "19d2eb1d118024de",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:48:19.460365+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d2dc9bf17c453b": {
+      "thread_id": "19d2dc9bf17c453b",
+      "from": "",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "",
+      "sender_type": "",
+      "topic": "",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2436616421478239385",
+      "draft_message_id": "19d2eb1d5fa46e2e",
+      "kb_version": "",
+      "processed_at": "2026-03-27T09:48:20.584655+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
