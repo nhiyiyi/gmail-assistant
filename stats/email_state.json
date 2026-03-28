@@ -8362,6 +8362,82 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d3308027757a26": {
+      "thread_id": "19d3308027757a26",
+      "from": "umar.farooq1592@gmail.com",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "2026-03-28",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S26",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2297361632926734795",
+      "draft_message_id": "19d3330baf5efd15",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T06:45:25.684094+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d32f50b3933a84": {
+      "thread_id": "19d32f50b3933a84",
+      "from": "haokiptina10@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Tina",
+      "date": "2026-03-28",
+      "sender_type": "A",
+      "topic": "recruitment",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3039229292494310887",
+      "draft_message_id": "19d3330bfcf7964a",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T06:45:26.735904+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d32d83516807ba": {
+      "thread_id": "19d32d83516807ba",
+      "from": "tranthidanvy335@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Finance Accounting Intern - Vy Tran",
+      "date": "2026-03-28",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5382176780291172211",
+      "draft_message_id": "19d3330c32b0d45f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T06:45:27.805811+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d32ea2fe7eab39": {
+      "thread_id": "19d2f7242629d091",
+      "from": "aaditibansal90@gmail.com",
+      "subject": "Re: You're in \u2014 here's your Flowmingo Partner Starter Kit",
+      "date": "2026-03-28",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8224525829909592393",
+      "draft_message_id": "19d3330c7026d209",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T06:45:28.914755+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
