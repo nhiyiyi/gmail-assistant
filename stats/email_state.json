@@ -8438,6 +8438,120 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d3330a78348a16": {
+      "thread_id": "19d3330a78348a16",
+      "from": "mansi4428@gmail.com",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Sat, 28 Mar 2026 12:15:03 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2180605185447848473",
+      "draft_message_id": "19d33c68d217aadc",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:04.330328+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3336bd8a4e7af": {
+      "thread_id": "19d3336bd8a4e7af",
+      "from": "iiwarui13@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Shot by",
+      "date": "Sat, 28 Mar 2026 09:51:42 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "R4/R5",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1074872758642932403",
+      "draft_message_id": "19d33c691437e135",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:05.265018+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d333bf8992ab45": {
+      "thread_id": "19d333bf8992ab45",
+      "from": "vs7797382@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Vaishali Singh",
+      "date": "Sat, 28 Mar 2026 12:27:28 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "brand moment",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7599031828603120383",
+      "draft_message_id": "19d33c6947060ead",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:06.120717+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3347912ec71f7": {
+      "thread_id": "19d3347912ec71f7",
+      "from": "tinbitesofoniyas@gmail.com",
+      "subject": "Re: You're in \u2014 here's your Flowmingo Partner Starter Kit",
+      "date": "Sat, 28 Mar 2026 10:10:02 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1538671690529513782",
+      "draft_message_id": "19d33c698a1edc47",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:07.049595+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d334ade2e3e75c": {
+      "thread_id": "19d334ade2e3e75c",
+      "from": "komaltiwari8841@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Komal Tiwari",
+      "date": "Sat, 28 Mar 2026 12:43:43 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6493243163397033534",
+      "draft_message_id": "19d33c69afc7bd99",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:07.984557+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d338a61d46cb78": {
+      "thread_id": "19d338a61d46cb78",
+      "from": "chidiservice77@gmail.com",
+      "subject": "Re: ParallelScore Global Ltd: Interview invitation for Director of Operations - Chidi Charles Ukaumune",
+      "date": "Sat, 28 Mar 2026 09:22:56 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "brand moment",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8033366170643655805",
+      "draft_message_id": "19d33c69f9c0b1ac",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T09:29:08.850864+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
