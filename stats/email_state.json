@@ -8552,6 +8552,82 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3453132c8c75e": {
+      "thread_id": "19d3453132c8c75e",
+      "from": "dita03.sinaga@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Dita",
+      "date": "Sat, 28 Mar 2026 20:02:18 +0800",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2659803409942856350",
+      "draft_message_id": "19d346d5e51202e8",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T12:31:16.719617+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d343f933035894": {
+      "thread_id": "19d343f933035894",
+      "from": "zamanbdm4@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - ARIF HAQUE",
+      "date": "Sat, 28 Mar 2026 17:10:58 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-9074036363134206042",
+      "draft_message_id": "19d346d61a083a98",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T12:31:17.582396+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d33f45166ed4ca": {
+      "thread_id": "19d33f45166ed4ca",
+      "from": "m.faisalaawan11@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Muhammad Faisal Awan",
+      "date": "Sat, 28 Mar 2026 13:18:48 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1098109020076261358",
+      "draft_message_id": "19d346d64d3e19c4",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T12:31:18.446865+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d33e5663e76c7e": {
+      "thread_id": "19d33e5663e76c7e",
+      "from": "kathuriadeepak17@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "date": "Sat, 28 Mar 2026 15:32:31 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-922988365747791535",
+      "draft_message_id": "19d346d68a2fa9a7",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T12:31:19.294225+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
