@@ -8723,6 +8723,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d358e28c1888c3": {
+      "thread_id": "19d270970e988681",
+      "from": "catadiaz80@gmail.com",
+      "subject": "Re: New job opportunites at Flowmingo for Catalina",
+      "date": "Sat, 28 Mar 2026 12:46:27 -0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-718963867298699411",
+      "draft_message_id": "19d35b119d5cf68f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T18:24:52.419407+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d356858735228c": {
+      "thread_id": "19d356858735228c",
+      "from": "andynaicker970@gmail.com",
+      "subject": "Re: AI iNTERVIEW",
+      "date": "Sat, 28 Mar 2026 17:05:18 +0000",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3800880754357067813",
+      "draft_message_id": "19d35b11a5486b63",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T18:24:53.142252+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d35146b40c6bea": {
+      "thread_id": "19d35146b40c6bea",
+      "from": "rukoyahshittu0@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Rukoyah",
+      "date": "Sat, 28 Mar 2026 16:33:28 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7818534149321611292",
+      "draft_message_id": "19d35b11f85afe4d",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T18:24:53.948503+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
