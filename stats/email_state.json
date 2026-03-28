@@ -8780,6 +8780,25 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d35e2ea6b04a93": {
+      "thread_id": "19d35e2ea6b04a93",
+      "from": "tasnimsumi65@gmail.com",
+      "subject": "Re: You're in \u2014 here's your Flowmingo Partner Starter Kit",
+      "date": "Sun, 29 Mar 2026 01:18:55 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2735444923789718679",
+      "draft_message_id": "19d36524e09293da",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T21:20:57.900837+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
