@@ -8248,6 +8248,101 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d31b9ed8629daa": {
+      "thread_id": "19d2da89003cd244",
+      "from": "marcelinomariebeth@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Sat, 28 Mar 2026 07:55:48 +0800",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2916002656286491591",
+      "draft_message_id": "19d31fcb2d9ca1a2",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T01:08:58.442410+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d31aa7e0a14bf6": {
+      "thread_id": "19d31aa7e0a14bf6",
+      "from": "cristianantoniazzi1@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Cristian",
+      "date": "Fri, 27 Mar 2026 20:38:56 -0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4363986334262154922",
+      "draft_message_id": "19d31fcb67e97eab",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T01:08:59.614382+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d318e56a9759e4": {
+      "thread_id": "19d318e56a9759e4",
+      "from": "cinthiallv@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 17:08:13 -0600",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1521106968453600510",
+      "draft_message_id": "19d31fcbbcf890ef",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T01:09:00.675384+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d31777493bc82d": {
+      "thread_id": "19d31777493bc82d",
+      "from": "sebastiayala99@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 17:43:13 -0500",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5733004370080699714",
+      "draft_message_id": "19d31fcbff18aa41",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T01:09:01.788782+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d313ee53a98ea7": {
+      "thread_id": "19d313ee53a98ea7",
+      "from": "ambargabriellecuna@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Fri, 27 Mar 2026 17:41:24 -0400",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7850991051916906617",
+      "draft_message_id": "19d31fcc53263ffa",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T01:09:02.887910+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }

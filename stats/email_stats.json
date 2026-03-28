@@ -1126,10 +1126,26 @@
         "19d30a9531906197",
         "19d306e379715a66"
       ]
+    },
+    "2026-03-28": {
+      "emails_processed": 7,
+      "total_input_tokens": 21400,
+      "total_output_tokens": 300,
+      "total_cost_usd": 0.0687,
+      "drafts_created": 7,
+      "email_ids": [
+        "19d31bdda2b73d4b",
+        "19d2ff23a7e67548",
+        "19d31b9ed8629daa",
+        "19d31aa7e0a14bf6",
+        "19d318e56a9759e4",
+        "19d31777493bc82d",
+        "19d313ee53a98ea7"
+      ]
     }
   },
   "total": {
-    "emails_processed": 1055,
-    "total_cost_usd": 4.145769
+    "emails_processed": 1062,
+    "total_cost_usd": 4.214469
   }
 }
