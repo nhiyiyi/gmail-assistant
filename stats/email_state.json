@@ -8628,6 +8628,101 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d34d176e8edbf7": {
+      "thread_id": "19d34d176e8edbf7",
+      "from": "hello@kaprix.co.uk",
+      "subject": "Re: Flowmingo Product Updates - March 25, 2026",
+      "date": "Sat, 28 Mar 2026 19:20:21 +0500",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-697597860920695394",
+      "draft_message_id": "19d350a2662c6230",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T15:22:31.901532+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d34bc2097b74d3": {
+      "thread_id": "19d34bc2097b74d3",
+      "from": "emmanuelloyato889@gmail.com",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step",
+      "date": "Sat, 28 Mar 2026 16:57:03 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1480624663484947819",
+      "draft_message_id": "19d350a2a3bedc03",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T15:22:32.985838+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d34a9837603eec": {
+      "thread_id": "19cf69ce4fbf500a",
+      "from": "divya.perambudur@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Divya",
+      "date": "Sat, 28 Mar 2026 19:06:45 +0530",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6148676302283725286",
+      "draft_message_id": "19d350a2e3db78ee",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T15:22:34.184075+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3483058e33d80": {
+      "thread_id": "19d3483058e33d80",
+      "from": "priyaricha500@gmail.com",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Sat, 28 Mar 2026 18:24:40 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1893647568006700075",
+      "draft_message_id": "19d350add60f3a37",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T15:23:18.623265+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3476bfd711e41": {
+      "thread_id": "19d1b8e5a27e5775",
+      "from": "zainochaudhry143@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Zainab",
+      "date": "Sat, 28 Mar 2026 17:41:18 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7315656472811010430",
+      "draft_message_id": "19d350ae29a6b49e",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-28T15:23:19.755508+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
