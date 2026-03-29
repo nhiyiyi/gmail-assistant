@@ -8856,6 +8856,82 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d37f987a2ffa7d": {
+      "thread_id": "19d37f987a2ffa7d",
+      "from": "iniobongokon93@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - Iniobong Okon",
+      "date": "Sun, 29 Mar 2026 06:02:57 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3149366090122781638",
+      "draft_message_id": "19d37fc0fa247b2a",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T05:05:59.929279+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d378374270617c": {
+      "thread_id": "19c2fc3d1d7b7054",
+      "from": "shravanjbalaji@berkeley.edu",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Sat, 28 Mar 2026 22:54:02 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S26",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5614668819673214093",
+      "draft_message_id": "19d37fc1306024bb",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T05:06:00.969407+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d37a2e75de500a": {
+      "thread_id": "19d2ef47d01d0fdd",
+      "from": "shankarmutkekar1378@gmail.com",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 29 Mar 2026 08:58:22 +0530",
+      "sender_type": "B",
+      "topic": "account",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4147033575976494160",
+      "draft_message_id": "19d37fc176285f4f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T05:06:02.028197+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d376b5e81fb0c6": {
+      "thread_id": "19d376b5e81fb0c6",
+      "from": "tasneemmessam@gmail.com",
+      "subject": "Request for Extension \u2013 Interview Submission",
+      "date": "Sun, 29 Mar 2026 04:27:42 +0200",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S3/S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1521586373232855240",
+      "draft_message_id": "19d37fc1a4960c4c",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T05:06:03.019253+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
