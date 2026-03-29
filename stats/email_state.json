@@ -8932,6 +8932,25 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d3864c809c9912": {
+      "thread_id": "19d3864c809c9912",
+      "from": "manjuananya29@gmail.com",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Manju Vasanth",
+      "date": "Sun, 29 Mar 2026 12:30:06 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3814810824940600298",
+      "draft_message_id": "19d38eb65e15bfc4",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T09:27:25.179511+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
