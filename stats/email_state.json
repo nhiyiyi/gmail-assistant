@@ -9008,6 +9008,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3a0ce869d31d9": {
+      "thread_id": "19d3a0ce869d31d9",
+      "from": "emmanuelloyato889@gmail.com",
+      "subject": "Re: ONBOARDING",
+      "date": "2026-03-29",
+      "sender_type": "E",
+      "topic": "unclear",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r375265502966828510",
+      "draft_message_id": "19d3a306567b8847",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T15:22:24.378780+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d39b51a903304c": {
+      "thread_id": "19d39b51a903304c",
+      "from": "prerna.pc93@gmail.com",
+      "subject": "Re: Need extension on interview timeline.",
+      "date": "2026-03-29",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8466197900117273880",
+      "draft_message_id": "19d3a306a7024db5",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T15:22:25.530491+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d39a11e9833cf5": {
+      "thread_id": "19d39a11e9833cf5",
+      "from": "vjbc1422@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for VICKY JANE",
+      "date": "2026-03-29",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r691739563427104882",
+      "draft_message_id": "19d3a306fd00b854",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T15:22:26.654512+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
