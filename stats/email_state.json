@@ -8799,6 +8799,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3726fc013be87": {
+      "thread_id": "19d3726fc013be87",
+      "from": "ashutoshvnsbhu21@gmail.com",
+      "subject": "Request for Permanent Deletion of Account and Personal Data",
+      "date": "Sun, 29 Mar 2026 06:43:00 +0530",
+      "sender_type": "B",
+      "topic": "data_privacy",
+      "scenario": "S33",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3699341277598199083",
+      "draft_message_id": "19d372b588b12b60",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T01:18:01.660818+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d36ffb73b13d8e": {
+      "thread_id": "19d36ffb73b13d8e",
+      "from": "pratikshapol218@gmail.com",
+      "subject": "Request for Extension to Complete AI Interview",
+      "date": "Sun, 29 Mar 2026 00:04:46 +0530",
+      "sender_type": "B",
+      "topic": "candidate_support",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8007603684885407395",
+      "draft_message_id": "19d372b5c7afa784",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T01:18:02.491757+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d36fc896617f25": {
+      "thread_id": "19d36fc896617f25",
+      "from": "ashutoshvnsbhu21@gmail.com",
+      "subject": "Request for Permanent Deletion of Account and Personal Data",
+      "date": "Sun, 29 Mar 2026 05:56:37 +0530",
+      "sender_type": "B",
+      "topic": "data_privacy",
+      "scenario": "S33",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3292106981794825838",
+      "draft_message_id": "19d372b5e00ccc02",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T01:18:03.286847+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
