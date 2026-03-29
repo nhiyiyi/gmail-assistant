@@ -9065,6 +9065,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3a9a849b26c24": {
+      "thread_id": "19d3a9a849b26c24",
+      "from": "duha.abu.shanab.234@gmail.com",
+      "subject": "Re: Jordan : Interview invitation for Full Stack Developer - Duha  Abu shanab",
+      "date": "Sun, 29 Mar 2026 20:18:04 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4097794661279758531",
+      "draft_message_id": "19d3ad971ee1234c",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T18:27:02.627773+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3a81c8fce7c85": {
+      "thread_id": "19d3a81c8fce7c85",
+      "from": "rabeccamusungu1@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Rabecca",
+      "date": "Sun, 29 Mar 2026 19:50:52 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2391452025875360616",
+      "draft_message_id": "19d3ad9748138812",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T18:27:03.548178+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3a461c16d61de": {
+      "thread_id": "19d3a461c16d61de",
+      "from": "mfahmd1998@gmail.com",
+      "subject": "Re: [Flowmingo] Your One-Time Password (OTP)",
+      "date": "Sun, 29 Mar 2026 15:46:02 +0000",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r9142254486548221544",
+      "draft_message_id": "19d3ad977c831cf7",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-29T18:27:04.413855+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
