@@ -9179,6 +9179,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3d0f8174e29eb": {
+      "thread_id": "19d3d0f8174e29eb",
+      "from": "shaharyar995@gmail.com",
+      "subject": "Re: Confirmation of AI Interview Submission",
+      "date": "Mon, 30 Mar 2026 09:45:45 +0500",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1649102434120773049",
+      "draft_message_id": "19d3d2d1539fc8fe",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-30T05:17:38.837651+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3cbac4bb07395": {
+      "thread_id": "19d3cbac4bb07395",
+      "from": "chirakanbhorn@gmail.com",
+      "subject": "Re: Flowmingo Offer Letter for Chirakanbhorn",
+      "date": "Mon, 30 Mar 2026 10:12:31 +0700",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5745927650553220329",
+      "draft_message_id": "19d3d2d19683ad98",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-30T05:17:40.014164+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
