@@ -9160,6 +9160,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3c1af3cad2447": {
+      "thread_id": "19d3c1af3cad2447",
+      "from": "dianamaronen@gmail.com",
+      "subject": "Update on Interview Process - Talent Acquisition Specialist",
+      "date": "Sun, 29 Mar 2026 19:17:59 -0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4778609949045690177",
+      "draft_message_id": "19d3c5173d2b5920",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-30T01:17:44.448710+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
