@@ -10585,6 +10585,63 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d42af968debf98": {
+      "thread_id": "19d42af968debf98",
+      "from": "Aditi Bansal <aaditibansal90@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Tue, 31 Mar 2026 12:28:02 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6463166240806215240",
+      "draft_message_id": "19d42b1bd7fb13e6",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T07:00:38.666189+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4282e58b71374": {
+      "thread_id": "19d4282e58b71374",
+      "from": "\"'AI Copilot & ChatGPT: Prakti\u010dna radionica za br\u017ee i pametnije zadatke' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\ud83e\udd16 Primjena AI alata sa stvarnim poslovnim primjerima",
+      "date": "31 Mar 2026 06:09:13 -0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T07:00:40.442156+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4245d0afafe63": {
+      "thread_id": "19d4245d0afafe63",
+      "from": "Viktoriia Tsaider <viktoriia.tsaider@seranking.com>",
+      "subject": "Still relevant after your SE Ranking trial?",
+      "date": "Mon, 30 Mar 2026 22:02:41 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2842653812027291363",
+      "draft_message_id": "19d42b1c85c048d9",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T07:00:41.347819+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
