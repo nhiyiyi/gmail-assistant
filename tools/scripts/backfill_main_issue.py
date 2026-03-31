@@ -2,7 +2,7 @@
 backfill_main_issue.py — Generate "Main Issue (VI)" for all Bug Ticket rows.
 
 For every row that has Issue Summary (VI) or Issue Summary (EN) but an empty
-col D (Main Issue), calls GPT-4o-mini to produce a single Vietnamese sentence
+col D (Main Issue), calls GPT-5-mini to produce a single Vietnamese sentence
 of <10 words that captures the core issue, then writes it to col D.
 
 Usage:
@@ -42,7 +42,7 @@ OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 
 def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject: str) -> str:
     """
-    Call GPT-4o-mini and return a <10-word Vietnamese sentence summarising
+    Call GPT-5-mini and return a <10-word Vietnamese sentence summarising
     the core bug. Raises on API error.
     """
     source = summary_vi or summary_en or subject
@@ -65,7 +65,7 @@ def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject:
             "Content-Type": "application/json",
         },
         json={
-            "model": "gpt-4o-mini",
+            "model": "gpt-5-mini",
             "max_tokens": 60,
             "messages": [{"role": "user", "content": prompt}],
         },

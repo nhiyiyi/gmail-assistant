@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Log daily API cost from Anthropic Console into api_stats.json.
+Log daily API cost from OpenAI Console into api_stats.json.
 
 Usage:
     python log_api_cost.py --total 1.45
     python log_api_cost.py --total 1.45 --date 2026-03-20
 
-Get your total from: https://console.anthropic.com/settings/usage
+Get your total from: https://platform.openai.com/usage
 The script computes conversation cost = total - email_processing_cost.
 """
 
@@ -38,7 +38,7 @@ def get_email_cost(day: str) -> float:
 def main():
     parser = argparse.ArgumentParser(description="Log daily API cost split")
     parser.add_argument("--total", type=float, required=True,
-                        help="Total daily cost from console.anthropic.com/settings/usage")
+                        help="Total daily cost from platform.openai.com/usage")
     parser.add_argument("--date", default=str(date.today()),
                         help="Date (YYYY-MM-DD), defaults to today")
     args = parser.parse_args()

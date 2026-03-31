@@ -33,9 +33,9 @@ jobs:
 
       - name: Process emails
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          claude -p "/process-emails" --model claude-haiku-4-5-20251001 --dangerously-skip-permissions
+          claude -p "/process-emails" --model gpt-5-mini --dangerously-skip-permissions
 
       - name: Save state back to repo
         run: |
