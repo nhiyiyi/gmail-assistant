@@ -28,14 +28,11 @@ jobs:
           echo '${{ secrets.GOOGLE_CREDENTIALS }}' > credentials/credentials.json
           echo '${{ secrets.GOOGLE_TOKEN }}' > credentials/token.json
 
-      - name: Install Claude Code
-        run: npm install -g @anthropic-ai/claude-code
-
       - name: Process emails
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          claude -p "/process-emails" --model gpt-5-mini --dangerously-skip-permissions
+          python tools/scripts/process_emails_openai.py
 
       - name: Save state back to repo
         run: |
