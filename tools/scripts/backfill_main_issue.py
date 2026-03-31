@@ -2,7 +2,7 @@
 backfill_main_issue.py — Generate "Main Issue (VI)" for all Bug Ticket rows.
 
 For every row that has Issue Summary (VI) or Issue Summary (EN) but an empty
-col D (Main Issue), calls Claude Haiku to produce a single Vietnamese sentence
+col D (Main Issue), calls GPT-4o-mini to produce a single Vietnamese sentence
 of <10 words that captures the core issue, then writes it to col D.
 
 Usage:
@@ -10,7 +10,7 @@ Usage:
     python tools/scripts/backfill_main_issue.py
 
 Requires:
-    ANTHROPIC_API_KEY environment variable (or a .env file in the project root)
+    OPENAI_API_KEY environment variable (or a .env file in the project root)
 """
 
 import os
@@ -33,16 +33,16 @@ COL_SUMMARY_EN = 10  # J — Issue Summary (EN)
 COL_SUBJECT    = 12  # L — Subject
 COL_TICKET_ID  = 2   # B — Ticket ID
 
-ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
+OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
 
 # ---------------------------------------------------------------------------
-# Claude call
+# OpenAI call
 # ---------------------------------------------------------------------------
 
 
 def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject: str) -> str:
     """
-    Call Claude Haiku and return a <10-word Vietnamese sentence summarising
+    Call GPT-4o-mini and return a <10-word Vietnamese sentence summarising
     the core bug. Raises on API error.
     """
     source = summary_vi or summary_en or subject
@@ -59,14 +59,13 @@ def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject:
     )
 
     resp = requests.post(
-        ANTHROPIC_API_URL,
+        OPENAI_API_URL,
         headers={
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-            "content-type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
         },
         json={
-            "model": "claude-haiku-4-5-20251001",
+            "model": "gpt-4o-mini",
             "max_tokens": 60,
             "messages": [{"role": "user", "content": prompt}],
         },
@@ -74,7 +73,7 @@ def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject:
     )
     resp.raise_for_status()
     body = resp.json()
-    text = (body.get("content") or [{}])[0].get("text", "").strip()
+    text = body["choices"][0]["message"]["content"].strip()
     # Remove trailing period if any (consistent style)
     return text.rstrip(".")
 
@@ -85,18 +84,18 @@ def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject:
 
 
 def main():
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
         # Try reading from .env in project root
         env_path = Path(__file__).parent.parent.parent / ".env"
         if env_path.exists():
             for line in env_path.read_text().splitlines():
-                if line.startswith("ANTHROPIC_API_KEY="):
+                if line.startswith("OPENAI_API_KEY="):
                     api_key = line.split("=", 1)[1].strip().strip('"').strip("'")
                     break
 
     if not api_key:
-        print("ERROR: ANTHROPIC_API_KEY not found.")
+        print("ERROR: OPENAI_API_KEY not found.")
         print("  Set it as an environment variable or add it to .env")
         sys.exit(1)
 
