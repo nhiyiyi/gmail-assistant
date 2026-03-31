@@ -11592,6 +11592,291 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d44853c4e17697": {
+      "thread_id": "19d44853c4e17697",
+      "from": "Futurepedia <mail@newsletter.futurepedia.io>",
+      "subject": "Google Gemini Has a Hidden Superpower",
+      "date": "Tue, 31 Mar 2026 15:31:11 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7729546557182545935",
+      "draft_message_id": "19d449e7e27ce44e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:52.243771+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4484a1883d6b9": {
+      "thread_id": "19d448467031f942",
+      "from": "Mark Studebaker <mark@flowmingo.com>",
+      "subject": "Flowmingo check in",
+      "date": "Tue, 31 Mar 2026 15:30:15 +0000 (UTC)",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2734937255980264992",
+      "draft_message_id": "19d449e847c91338",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:53.831897+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d44793165dedc1": {
+      "thread_id": "19d44793165dedc1",
+      "from": "Product Hunt Daily <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 AI but for your brain",
+      "date": "Tue, 31 Mar 2026 15:18:02 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2489234644648755024",
+      "draft_message_id": "19d449e8bd386f65",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:55.154272+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4477a7292c15f": {
+      "thread_id": "19d4477a7292c15f",
+      "from": "Sally Harmon <eventmarketing@email.crunchbase.com>",
+      "subject": "Join us: What VCs are betting on in agentic AI",
+      "date": "Tue, 31 Mar 2026 15:16:21 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8582548467817374372",
+      "draft_message_id": "19d449e90bf6afbf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:56.523264+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4473a98339506": {
+      "thread_id": "19d3eb07ae78a6dc",
+      "from": "Mutaiba Naseer <mutaibanaseer@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Mutaiba",
+      "date": "Tue, 31 Mar 2026 20:11:50 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6093883370166283611",
+      "draft_message_id": "19d449e9494d8c4f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:58.427923+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4472d7ce15c8c": {
+      "thread_id": "19d3ea475af468e6",
+      "from": "Geraldin Djembo <djembogeraldin@gmail.com>",
+      "subject": "Re: Subject: Request for assistance with kidney surgely ( pyelonephritis)",
+      "date": "Tue, 31 Mar 2026 16:10:57 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8506181940744562922",
+      "draft_message_id": "19d449e9c72431b4",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:58:59.824368+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d446dc22fce8c3": {
+      "thread_id": "19d446dc22fce8c3",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83e\udd16 Stay ahead with AI solutions",
+      "date": "Tue, 31 Mar 2026 11:05:32 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2789946368697560564",
+      "draft_message_id": "19d449ea2ecd8c37",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:01.159763+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d443c74f3cf2dd": {
+      "thread_id": "19d443c74f3cf2dd",
+      "from": "Shilpi Shah <Shilpi.Shah@talentpredix.com>",
+      "subject": "TalentPredix Live Demo - happening now!",
+      "date": "Tue, 31 Mar 2026 14:11:40 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4572620390031629660",
+      "draft_message_id": "19d449f45354a82d",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:43.055338+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4437740c5b1be": {
+      "thread_id": "19d4437740c5b1be",
+      "from": "nikhila malraju <conversation-nikhilamalraj-talentacquisitionspeci-8kr@indeedemail.com>",
+      "subject": "[Action required] New application for Talent Acquisition Specialist, Remote",
+      "date": "Tue, 31 Mar 2026 14:06:13 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2032380313563235149",
+      "draft_message_id": "19d449f4b415282b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:44.423196+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d44093b906f29a": {
+      "thread_id": "19d3ee73401e2e1d",
+      "from": "Dil Afroz <dil.afroz.ab@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Dil Abedin",
+      "date": "Tue, 31 Mar 2026 18:45:35 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2504372457708578732",
+      "draft_message_id": "19d449f51e2ae272",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:45.765443+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d440287e8c3bf0": {
+      "thread_id": "19d440287e8c3bf0",
+      "from": "Chika Godfrey <godfrey.achika@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Chika Godfrey",
+      "date": "Tue, 31 Mar 2026 14:08:13 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7854679208855265043",
+      "draft_message_id": "19d449f54cc140ef",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:47.166975+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d43f7c1bfa0f28": {
+      "thread_id": "19d3fbdb76635ea8",
+      "from": "Hyder Ali Syed <hyderalesyed@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Hyder",
+      "date": "Tue, 31 Mar 2026 17:56:30 +0500",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r643458227319291184",
+      "draft_message_id": "19d449f5ab5e9c0d",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T15:59:48.624760+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d43f61087b9f86": {
+      "thread_id": "19d43f5179d789a4",
+      "from": "\"'ISOKEN CONSULTING GROUP' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Final Call: Pension Fund Masterclass, Mombasa - April 2026",
+      "date": "Tue, 31 Mar 2026 12:53:59 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6212784560473717843",
+      "draft_message_id": "19d449f8d06af6da",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T16:00:01.020904+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d43f1075d40319": {
+      "thread_id": "19d2e8a4c76aa52c",
+      "from": "john ogbebor <johnaifuwa17@gmail.com>",
+      "subject": "Re: PRACTICE NOT IN ENGLISH",
+      "date": "Tue, 31 Mar 2026 13:47:46 +0100",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8776362093576140913",
+      "draft_message_id": "19d449f90cddaf33",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T16:00:02.464189+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d43af60645d150": {
+      "thread_id": "19d438e6c392b268",
+      "from": "Adanna John <adannajohn06@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Tue, 31 Mar 2026 07:37:28 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7323002572977487733",
+      "draft_message_id": "19d449f96764c6f0",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T16:00:03.817234+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
