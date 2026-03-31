@@ -179,12 +179,12 @@ def _compact_summary(thread_data: dict, email_meta: dict) -> dict:
 CLASSIFICATION_SCHEMA = """\
 Respond with a JSON object ONLY — no other text. Schema:
 {
-  "classification": "FM/no-reply" | "FM/bug" | "FM/ready" | "FM/review",
+  "classification": "FM/bug" | "FM/ready" | "FM/review",
   "scenario": "S8" (matched scenario code, or "unclear"),
   "topic": "technical" | "candidate" | "partner" | "billing" | "other",
   "urgency": "normal" | "urgent" | "critical",
   "sender_type": "A" | "B" | "C" | "D" | "E",
-  "draft_body": "..." (FM/ready and FM/review only; omit or null for FM/no-reply and FM/bug),
+  "draft_body": "..." (FM/ready and FM/review only; omit or null for FM/bug),
   "review_reason": "..." (FM/review only — exact [REVIEW NEEDED: ...] string; omit otherwise),
   "bug": {
     "customer_name": "...",
@@ -198,10 +198,17 @@ Respond with a JSON object ONLY — no other text. Schema:
 }
 
 Classification rules summary:
-- FM/no-reply: thread already has support reply (has_support_reply=true), OR disengaged statement with no request, OR automated/no-reply sender.
-- FM/bug: D4=Bug signal (platform didn't work as expected, specific error, "it didn't work", image attachment present). Takes priority over all SOP scenarios.
-- FM/review: use when any single dimension fails — D2=partial context, D3=not covered or fabrication risk, D5=elevated/critical, etc. MUST include exact [REVIEW NEEDED: <specific reason>] in review_reason AND prepend it to draft_body.
-- FM/ready: all dimensions pass — question/brand moment, full context, fully covered, not a bug, normal sensitivity, no prior support reply.
+- Every human email gets a reply — there is no FM/no-reply. Even disengaged statements
+  ("I already have a job", "I'm not interested") get a short warm closing reply (FM/ready).
+  Threads where support has already replied (has_support_reply=true) are an exception —
+  those should be FM/review with reason "thread already has support reply".
+- FM/bug: D4=Bug signal (platform didn't work as expected, specific error, "it didn't work",
+  image attachment present). Takes priority over all SOP scenarios.
+- FM/review: use when any dimension fails — D2=partial context, D3=not covered or fabrication
+  risk, D5=elevated/critical, etc. MUST include exact [REVIEW NEEDED: <specific reason>] in
+  review_reason AND prepend it to draft_body.
+- FM/ready: question, request, brand moment, or any statement deserving a warm close —
+  full context, covered by SOP, not a bug, normal sensitivity.
 
 For FM/ready and FM/review drafts, follow SOP email structure exactly:
 - "Dear <Name>," — extract name from sign-off/signature, infer from email if missing
@@ -429,7 +436,6 @@ def main():
     # Process in groups of 8
     GROUP_SIZE = 8
     all_drafts:     list = []
-    all_no_reply:   list = []
     all_bug_emails: list = []
     first_group = True
 
@@ -449,8 +455,7 @@ def main():
             top_k=5,
         )
 
-        group_drafts:   list = []
-        group_no_reply: list = []
+        group_drafts: list = []
 
         for email in group:
             subj = email.get("subject", "")
@@ -467,14 +472,7 @@ def main():
                 classification = cls.get("classification", "FM/review")
                 print(classification, flush=True)
 
-                if classification == "FM/no-reply":
-                    group_no_reply.append({
-                        "id":      eid,
-                        "from":    email.get("from", ""),
-                        "subject": subj,
-                    })
-
-                elif classification == "FM/bug":
+                if classification == "FM/bug":
                     bug = cls.get("bug", {})
                     all_bug_emails.append({"email": email, "bug": bug})
 
@@ -536,17 +534,17 @@ def main():
             time.sleep(0.3)  # rate limit guard
 
         # Submit this group
-        no_reply_to_submit = group_no_reply[:]
+        auto_skipped_items = []
         if first_group:
-            no_reply_to_submit += [
+            auto_skipped_items = [
                 {"id": e["id"], "from": e.get("from", ""), "subject": e.get("subject", "")}
                 for e in auto_skipped
             ]
             first_group = False
 
-        submit_result = submit_drafts(group_drafts, no_reply_to_submit)
+        submit_result = submit_drafts(group_drafts, auto_skipped_items)
         print(f"  Submitted: {len(submit_result['created'])} drafts, "
-              f"{submit_result['no_reply_processed']} no-reply")
+              f"{submit_result['no_reply_processed']} auto-skipped (system emails)")
         if submit_result.get("failed"):
             for f in submit_result["failed"]:
                 print(f"  FAIL: {f}")
@@ -563,7 +561,6 @@ def main():
                     print(f"  WARN: log_action_item failed: {ex}")
 
         all_drafts.extend(group_drafts)
-        all_no_reply.extend(no_reply_to_submit)
 
     # Bug tickets
     if all_bug_emails:
@@ -579,14 +576,13 @@ def main():
 
     # Report
     print("\n=== Summary ===")
-    ready_count   = sum(1 for d in all_drafts if d.get("review_status") == "ready")
-    review_count  = sum(1 for d in all_drafts if d.get("review_status") == "review")
-    no_reply_count = len([i for i in all_no_reply if i.get("id")])
-    bug_count     = len(all_bug_emails)
-    print(f"FM/ready:    {ready_count}")
-    print(f"FM/review:   {review_count}")
-    print(f"FM/bug:      {bug_count}")
-    print(f"FM/no-reply: {no_reply_count}")
+    ready_count  = sum(1 for d in all_drafts if d.get("review_status") == "ready")
+    review_count = sum(1 for d in all_drafts if d.get("review_status") == "review")
+    bug_count    = len(all_bug_emails)
+    print(f"FM/ready:         {ready_count}")
+    print(f"FM/review:        {review_count}")
+    print(f"FM/bug:           {bug_count}")
+    print(f"Auto-skipped:     {len(auto_skipped)} (system/automated senders)")
 
     try:
         stats_data = stats_module.get_stats()
