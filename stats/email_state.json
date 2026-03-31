@@ -9863,6 +9863,424 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d3f5e2adcfe77f": {
+      "thread_id": "19d3f5e2b52ad225",
+      "from": "ISOKEN CONSULTING GROUP <training@kentaglobal.com>",
+      "subject": "International Executive Programme | Amsterdam & The Hague, Netherlands | 8\u201319 June 2026",
+      "date": "Mon, 30 Mar 2026 15:30:11 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3289062248905301295",
+      "draft_message_id": "19d41e5609cbfc27",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:17:25.823386+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3f3db63121115": {
+      "thread_id": "19d3f3db63121115",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udc40 Software with no commitments? Yes, please",
+      "date": "Mon, 30 Mar 2026 10:55:00 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3748355249277942038",
+      "draft_message_id": "19d41e5640314bde",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:17:26.863052+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3f39c9e6a0652": {
+      "thread_id": "19d3f39c9e6a0652",
+      "from": "Karen Mann <mann.karen@mcleanco.com>",
+      "subject": "Last chance: HR AI survey closes April 3",
+      "date": "Mon, 30 Mar 2026 08:50:41 -0600",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4051782963178135959",
+      "draft_message_id": "19d41e569853dc6b",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:17:27.957390+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3f0b989457816": {
+      "thread_id": "19d3f0b989457816",
+      "from": "\"'David Johnson' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Quick Follow Up moment to Be Featured",
+      "date": "Mon, 30 Mar 2026 14:00:09 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6668296243454176785",
+      "draft_message_id": "19d41e56efc27d7b",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:17:29.055186+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3ee8fa178c5c0": {
+      "thread_id": "19d3ee8fa178c5c0",
+      "from": "Shilpi Shah <Shilpi.Shah@talentpredix.com>",
+      "subject": "TalentPredix Live Demo - happening tomorrow!",
+      "date": "Mon, 30 Mar 2026 13:22:23 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6902195449204635982",
+      "draft_message_id": "19d41e5f020c57f0",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:02.519685+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ee73401e2e1d": {
+      "thread_id": "19d3ee73401e2e1d",
+      "from": "Dil Afroz <dil.afroz.ab@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Dil Abedin",
+      "date": "Mon, 30 Mar 2026 18:50:17 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5786112686188515260",
+      "draft_message_id": "19d41e5f51bac8f1",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:03.570143+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ee3529e38549": {
+      "thread_id": "19d3ee3529e38549",
+      "from": "Tasneem mohamed Essam <tasneemmessam@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Tasneem",
+      "date": "Mon, 30 Mar 2026 15:16:01 +0200",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3027558300262342961",
+      "draft_message_id": "19d41e5f8eb50aad",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:04.611399+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ece695c4453c": {
+      "thread_id": "19d3ece695c4453c",
+      "from": "Nivea Clement <clementnivea0@gmail.com>",
+      "subject": "Unable to complete interview",
+      "date": "Mon, 30 Mar 2026 13:52:49 +0100",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S20",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1134342563452558933",
+      "draft_message_id": "19d41e678afb38f4",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:37.524272+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ec8e099567b1": {
+      "thread_id": "19d3ec8e099567b1",
+      "from": "Sandeep Kumar Tiwari <sandeeptiwari1695@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Sandeep Kumar Tiwari",
+      "date": "Mon, 30 Mar 2026 18:17:10 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6751455646952664922",
+      "draft_message_id": "19d41e67dc5d2ff4",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:38.599553+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ebcce3e27b4d": {
+      "thread_id": "19d3ebcce3e27b4d",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Opportunities in Talent Acquisition with Flowmingo",
+      "date": "Mon, 30 Mar 2026 12:34:04 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3790974799267925944",
+      "draft_message_id": "19d41e682859e8b3",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:39.698505+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3eba4f3be2dda": {
+      "thread_id": "19d3308027757a26",
+      "from": "Umar Farooq <umar.farooq1592@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Mon, 30 Mar 2026 17:31:15 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4917832680785548120",
+      "draft_message_id": "19d41e68788949b0",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:40.749832+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3eb250515fb64": {
+      "thread_id": "19d3eb250515fb64",
+      "from": "Bobbi Moyer <bmoyer0257@outlook.com>",
+      "subject": "RE: Flowmingo Offer Letter for Bobbi",
+      "date": "Mon, 30 Mar 2026 12:22:40 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8149024881135059707",
+      "draft_message_id": "19d41e68ac5f362d",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:18:41.832733+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3eb07ae78a6dc": {
+      "thread_id": "19d3eb07ae78a6dc",
+      "from": "Mutaiba Naseer <mutaibanaseer@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Mutaiba",
+      "date": "Mon, 30 Mar 2026 17:20:31 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1366597312015770510",
+      "draft_message_id": "19d41e6e7b4891f3",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:05.543123+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3eada7228b526": {
+      "thread_id": "19d3eada7228b526",
+      "from": "Allan Angutsa <allanangutsa95@gmail.com>",
+      "subject": "",
+      "date": "Mon, 30 Mar 2026 15:17:26 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6830839764734901621",
+      "draft_message_id": "19d41e6eaeadaa21",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:06.681669+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3ea475af468e6": {
+      "thread_id": "19d3ea475af468e6",
+      "from": "Geraldin Djembo <djembogeraldin@gmail.com>",
+      "subject": "Subject: Request for assistance with kidney surgely ( pyelonephritis)",
+      "date": "Mon, 30 Mar 2026 13:07:26 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6731621441571209933",
+      "draft_message_id": "19d41e6ee0acb329",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:07.819103+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3e8f7aa380693": {
+      "thread_id": "19c0a26f9612c4b8",
+      "from": "support@flowmingo.ai",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit),",
+      "date": "Mon, 30 Mar 2026 04:44:43 -0700",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-297512268305634448",
+      "draft_message_id": "19d41e6f413c5fa9",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:08.887202+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3e380f37243aa": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Mon, 30 Mar 2026 10:09:10 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6234427141615311675",
+      "draft_message_id": "19d41e6f912e97cb",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:10.046001+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3ceee7b1b9050": {
+      "thread_id": "19d38db7ae7d80a6",
+      "from": "Iftekhar Ahmed <ia22@rice.edu>",
+      "subject": "Re: [Flowmingo Response] Response from Get in touch",
+      "date": "Sun, 29 Mar 2026 23:09:29 -0500",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8608171802182019142",
+      "draft_message_id": "19d41e6fc4ec8435",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:11.112547+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d28a4cd409dff2": {
+      "thread_id": "19cff4b6d4c03021",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Scale Your Tech & Non-Tech Hiring with HackerEarth!",
+      "date": "Thu, 26 Mar 2026 05:36:16 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6241986424478471838",
+      "draft_message_id": "19d41e70093a4982",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:12.192592+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d245418a9b7415": {
+      "thread_id": "19d1a1f41cd394e1",
+      "from": "Daniel Hocaoglu <danielhocaoglu123@outlook.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Dan",
+      "date": "Wed, 25 Mar 2026 09:29:40 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7345752012224299484",
+      "draft_message_id": "19d41e7325c44434",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:24.826436+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d18ff097c3fbfb": {
+      "thread_id": "19d18ff097c3fbfb",
+      "from": "Faiza Tasnim <pinkandspicyyy@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Faiza",
+      "date": "Mon, 23 Mar 2026 10:40:44 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5378574975042691302",
+      "draft_message_id": "19d41e7363df7408",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:25.899414+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19cc211524172e0f": {
+      "thread_id": "19c26cfbb217c8cc",
+      "from": "violet otieno <violetotienoh@gmail.com>",
+      "subject": "Re: Follow-Up on Reward Update.",
+      "date": "Fri, 6 Mar 2026 10:33:47 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6709384090215253829",
+      "draft_message_id": "19d41e73ad654534",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:19:26.984306+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
