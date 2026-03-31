@@ -10376,6 +10376,82 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d3e119f323cc91": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Mon, 30 Mar 2026 09:27:09 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5399951304915352935",
+      "draft_message_id": "19d41f1e054c0d21",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:31:05.080840+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19cff4b6d4c03021": {
+      "thread_id": "19cff4b6d4c03021",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Scale Your Tech & Non-Tech Hiring with HackerEarth!",
+      "date": "Wed, 18 Mar 2026 04:54:13 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6432496521047837962",
+      "draft_message_id": "19d41f1e789f681f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:31:06.198159+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19c2cf316bd21984": {
+      "thread_id": "19c26cfbb217c8cc",
+      "from": "violet otieno <violetotienoh@gmail.com>",
+      "subject": "Re: Follow-Up on Reward Update.",
+      "date": "Thu, 5 Feb 2026 11:37:21 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7874642019495404031",
+      "draft_message_id": "19d41f1ea670fa7d",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:31:07.345194+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19c237b566674476": {
+      "thread_id": "19c0a26f9612c4b8",
+      "from": "Ngozi Nwodo <nwodongozi75@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Tue, 3 Feb 2026 13:28:11 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7600605766536516889",
+      "draft_message_id": "19d41f1efd389d2f",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:31:08.521871+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
