@@ -1248,11 +1248,11 @@
       ]
     },
     "2026-03-31": {
-      "emails_processed": 106,
-      "total_input_tokens": 519173,
-      "total_output_tokens": 7883,
-      "total_cost_usd": 1.675764,
-      "drafts_created": 106,
+      "emails_processed": 139,
+      "total_input_tokens": 742202,
+      "total_output_tokens": 10609,
+      "total_cost_usd": 2.385741,
+      "drafts_created": 139,
       "email_ids": [
         "19d41a04011a398b",
         "19d41853fc78802d",
@@ -1359,12 +1359,45 @@
         "19d420ade8b079b0",
         "19d42af968debf98",
         "19d4282e58b71374",
-        "19d4245d0afafe63"
+        "19d4245d0afafe63",
+        "19d42b7c78d22f50",
+        "19d432e7539e52c7",
+        "19d431615d99e803",
+        "19d430fe44fe0992",
+        "19d430eafc3acecf",
+        "19d430cc21f56a11",
+        "19d4303d695172c7",
+        "19d42fdba11db2d6",
+        "19d42eba6b6022df",
+        "19d42eaf5962f31c",
+        "19d42e9ff9f6567e",
+        "19d42e9c3d34c179",
+        "19d42e9736d4d152",
+        "19d42e6681fe3457",
+        "19d42e4c6c3fab26",
+        "19d42e334137df36",
+        "19d42e068fcfaaea",
+        "19d42dc47877df82",
+        "19d42db0f19f00da",
+        "19d42da8164ab4f8",
+        "19d42d4f89ce9ad3",
+        "19d42c4d0fb48c36",
+        "19d42be0a7dbb2d9",
+        "19d42b84a2040392",
+        "19d42b6f378c7bb3",
+        "19d42a37f1f520f3",
+        "19d3dc7a9ed62da1",
+        "19d3726f5b33bbd9",
+        "19d34baa135bba17",
+        "19d346963a27946c",
+        "19d2cc9939b5b265",
+        "19d29e4c57d9689c",
+        "19d25bdffc76a11e"
       ]
     }
   },
   "total": {
-    "emails_processed": 1254,
-    "total_cost_usd": 6.140499
+    "emails_processed": 1287,
+    "total_cost_usd": 6.850476
   }
 }
