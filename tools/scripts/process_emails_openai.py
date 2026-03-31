@@ -38,7 +38,7 @@ import bug_template
 # ── Config ───────────────────────────────────────────────────────────────────
 
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
-MODEL = "gpt-5-mini"
+MODEL = "gpt-4o-mini"
 SUPPORT_DOMAINS = ["flowmingo.ai"]
 
 NO_REPLY_FROM = [

@@ -65,7 +65,7 @@ def generate_main_issue(api_key: str, summary_vi: str, summary_en: str, subject:
             "Content-Type": "application/json",
         },
         json={
-            "model": "gpt-5-mini",
+            "model": "gpt-4o-mini",
             "max_tokens": 60,
             "messages": [{"role": "user", "content": prompt}],
         },
