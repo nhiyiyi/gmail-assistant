@@ -215,7 +215,10 @@ For FM/ready and FM/review drafts, follow SOP email structure exactly:
 - Address issue directly
 - Include exactly once: "Let us know if you have any questions,"
 - End with: "Best regards," (no name after)
-- English only, no emojis, no markdown
+- English only, no emojis
+- PLAIN TEXT ONLY — absolutely no markdown. Do not use **bold**, *italic*, `code`,
+  # headers, or any markdown syntax. These appear as raw symbols in email. If labelling
+  a list item use plain text: "Role: ..." not "**Role**: ..."
 
 For FM/bug, set bug.main_issue_vi to a single Vietnamese sentence strictly under 10 words starting with the affected subject.
 """
