@@ -12105,6 +12105,139 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d45ba4e7b93e15": {
+      "thread_id": "19d45ba4e7b93e15",
+      "from": "Anshul Saxena <anshulsaxena74@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Wed, 1 Apr 2026 02:38:37 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3374423927932029048",
+      "draft_message_id": "19d45cc151645ac2",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:16.587737+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d45a83607c65fe": {
+      "thread_id": "19d45a83607c65fe",
+      "from": "Mah Yiika <yiikacares5@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Mah",
+      "date": "Wed, 1 Apr 2026 00:48:49 +0400",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6944506773290175136",
+      "draft_message_id": "19d45cc18c493430",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:17.566904+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d45a08dff8cc04": {
+      "thread_id": "19d45a08dff8cc04",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "31 Mar 2026 16:40:40 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8338761000596420073",
+      "draft_message_id": "19d45cc1ca464d57",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:18.505569+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d459fd7934524c": {
+      "thread_id": "19d42fe428e17441",
+      "from": "Olaniyi Oluwapelumi <olaniyioluwa@gmail.com>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15-Min With Us (Oluwapelumi Olaniyi) @ Wed Apr 1, 2026 3:15pm - 3:30pm (GMT+7) (Customer Support Flowmingo)",
+      "date": "Tue, 31 Mar 2026 21:39:40 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1036993229510720984",
+      "draft_message_id": "19d45cc21b8deaed",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:19.422705+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d455a88a037415": {
+      "thread_id": "19d231478a1ebae0",
+      "from": "Osvaldo Sambo <osvaldoalexsambo@gmail.com>",
+      "subject": "Re: URGENT \u2013 Strategic Partnership: Ministry of Foreign Affairs (MIREX) Expansion \u2013 Request for Corporate Proposal",
+      "date": "Tue, 31 Mar 2026 20:23:39 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3033675259499568653",
+      "draft_message_id": "19d45cc23ae72fe4",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:20.344804+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d45541b90e5313": {
+      "thread_id": "19d45541b90e5313",
+      "from": "Diosaya Aghosa <diosaya58@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Diosaya",
+      "date": "Tue, 31 Mar 2026 20:16:57 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1101736488308773103",
+      "draft_message_id": "19d45cc2602116fd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:21.278639+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d448475cf94464": {
+      "thread_id": "19d448467031f942",
+      "from": "Mark Studebaker <mark@flowmingo.com>",
+      "subject": "Flowmingo check in",
+      "date": "Tue, 31 Mar 2026 15:30:17 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2762401290971120444",
+      "draft_message_id": "19d45cc2a854587d",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-03-31T21:28:22.230647+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
