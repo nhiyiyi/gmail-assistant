@@ -10452,6 +10452,25 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d41f1919c7e984": {
+      "thread_id": "19d41f1919c7e984",
+      "from": "Team Zoho CRM <news@zohocrm.com>",
+      "subject": "March Digest: AI upgrades, new features and more",
+      "date": "Tue, 31 Mar 2026 09:00:40 +0530 (IST)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3284231233475424418",
+      "draft_message_id": "19d4205f59afd19a",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T03:53:00.354739+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
