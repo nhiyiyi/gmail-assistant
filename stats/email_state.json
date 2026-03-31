@@ -10471,6 +10471,120 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d42414db205245": {
+      "thread_id": "19d341b4741dc119",
+      "from": "Joshin Sharon <joshinsharon@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Tue, 31 Mar 2026 10:27:34 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3526775094488386855",
+      "draft_message_id": "19d424653e9e9180",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:20.087662+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d423f01013695b": {
+      "thread_id": "19d34d176e8edbf7",
+      "from": "Kaprix Consulting <hello@kaprix.co.uk>",
+      "subject": "Re: Flowmingo Product Updates - March 25, 2026",
+      "date": "Tue, 31 Mar 2026 09:55:07 +0500",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-945320692527490353",
+      "draft_message_id": "19d42465b8881ae2",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:22.173891+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d423ae9d9e8b91": {
+      "thread_id": "19d422b1a6eaa6ba",
+      "from": "Kartika <kartika@spxexpress.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Tue, 31 Mar 2026 11:50:38 +0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2133861456184576853",
+      "draft_message_id": "19d4246630b30ed8",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:24.203929+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d422a080dc6c99": {
+      "thread_id": "19d2eca5daf04e3d",
+      "from": "savita arora <1985savitaarora@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Savita",
+      "date": "Tue, 31 Mar 2026 10:02:11 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1141332407920750337",
+      "draft_message_id": "19d42466bc8973c0",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:26.242892+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d421210e31aca8": {
+      "thread_id": "19d3308027757a26",
+      "from": "Umar Farooq <umar.farooq1592@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Tue, 31 Mar 2026 09:05:59 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "9.2 Trigger B",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4970129019161570977",
+      "draft_message_id": "19d424673a93b733",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:28.357398+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d420ade8b079b0": {
+      "thread_id": "19c26cfbb217c8cc",
+      "from": "violet otieno <violetotienoh@gmail.com>",
+      "subject": "Re: Follow-Up on Reward Update.",
+      "date": "Tue, 31 Mar 2026 06:58:10 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7970262104890482324",
+      "draft_message_id": "19d42467a78d04d2",
+      "kb_version": "96d0c1d2e28b",
+      "processed_at": "2026-03-31T05:03:30.536212+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
