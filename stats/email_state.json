@@ -12618,6 +12618,215 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d48770410780e7": {
+      "thread_id": "19d38ff2dbc289cb",
+      "from": "Md Niamath <m.a.niamath@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Mohamed",
+      "date": "Wed, 1 Apr 2026 12:53:59 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8042024084837382215",
+      "draft_message_id": "19d487b11503a288",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:38.367245+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d486fdc93fdc05": {
+      "thread_id": "19d486fdc93fdc05",
+      "from": "Prachi Mehrotra <prachimehrotra29sep@gmail.com>",
+      "subject": "Update on Human Executive Role Application",
+      "date": "Wed, 1 Apr 2026 15:16:11 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6015505302072030145",
+      "draft_message_id": "19d487b13ded6a8f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:39.136061+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d48635f99ee50b": {
+      "thread_id": "19d48635f99ee50b",
+      "from": "Kanika Agarwal <hello@mindpeers.co>",
+      "subject": "AI upskilling & psychological hardiness themes by MindPeers",
+      "date": "Wed, 1 Apr 2026 15:02:41 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-798975761574023391",
+      "draft_message_id": "19d487b17caaf68e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:39.916062+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d48421fa23130b": {
+      "thread_id": "19d48421fa23130b",
+      "from": "Lutfi Lika <lutfi.lika2000@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Lutfi Lika",
+      "date": "Wed, 1 Apr 2026 10:56:08 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S33",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8661719702634193365",
+      "draft_message_id": "19d487b181b68394",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:40.666843+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4836a23d39f39": {
+      "thread_id": "19d3ee73401e2e1d",
+      "from": "Dil Afroz <dil.afroz.ab@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Dil Abedin",
+      "date": "Wed, 1 Apr 2026 14:13:40 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1602175853192749307",
+      "draft_message_id": "19d487b1c462fb3c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:41.450817+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4811ea75c27e0": {
+      "thread_id": "19d480d275e6ce86",
+      "from": "\"Mark Baker at d&i Leaders\" <info@sircula.com>",
+      "subject": "Essential workplace inclusion related news, content, events and jobs",
+      "date": "Wed, 1 Apr 2026 08:59:10 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4730341577738270134",
+      "draft_message_id": "19d487b1ed9fff54",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:42.237196+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d47fc4f01484ce": {
+      "thread_id": "19d47fc4f01484ce",
+      "from": "Job Up Career Consulting <jobup234@gmail.com>",
+      "subject": "Re: Strategic Collaboration & Local Recruitment Use Case: Appointment booked: [Flowmingo] 15-Min With Us (Ariyibi Daniel Damilare) @ Wed Apr 1, 2026 4pm - 4:15pm (GMT+7) (Customer Support Flowmingo)",
+      "date": "Wed, 1 Apr 2026 08:39:29 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1799967437096241655",
+      "draft_message_id": "19d487b23b43865c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:42.985537+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d47f68a8a23bc0": {
+      "thread_id": "19d47f16a1bf9c44",
+      "from": "\"'Nishita D'Souza' via Contact\" <contact@flowmingo.ai>",
+      "subject": "GulfTalent",
+      "date": "Wed, 01 Apr 2026 07:33:50 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8196889445452223045",
+      "draft_message_id": "19d487b244fd4066",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:58:43.791005+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d47e73231df3c5": {
+      "thread_id": "19d433edf2d4d937",
+      "from": "Job Up Career Consulting <jobup234@gmail.com>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15-Min With Us (Ariyibi Daniel Damilare) @ Wed Apr 1, 2026 4pm - 4:15pm (GMT+7) (Customer Support Flowmingo)",
+      "date": "Wed, 1 Apr 2026 08:16:54 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4856875004153002143",
+      "draft_message_id": "19d487b6a18abf89",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:59:01.801082+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d47e6f09d0794c": {
+      "thread_id": "19d47e6f09d0794c",
+      "from": "JunYuan Tan <junyuan@gethomebase.com>",
+      "subject": "[Flowmingo] 15 min with us (Vishal Kumar)",
+      "date": "Wed, 01 Apr 2026 07:16:46 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7339112997961297330",
+      "draft_message_id": "19d487b6e0d87928",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:59:02.579963+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d28ff6dc2fe02b": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Annu S' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Thu, 26 Mar 2026 07:15:16 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2251134486977469876",
+      "draft_message_id": "19d487b728adac9e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T09:59:03.537935+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
