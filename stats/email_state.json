@@ -12371,6 +12371,177 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d477564ab97fde": {
+      "thread_id": "19d16078cfbdca76",
+      "from": "POOJA CHOUDHURY <leshachoudhury32@gmail.com>",
+      "subject": "Re: Follow-up: HR Resource Executive Interview - Poojasri Choudhury",
+      "date": "Wed, 1 Apr 2026 10:42:16 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-878985757287767143",
+      "draft_message_id": "19d4778c0bc75cdf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:30.031202+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d477151336f2dd": {
+      "thread_id": "19d2eca5daf04e3d",
+      "from": "savita arora <1985savitaarora@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Savita",
+      "date": "Wed, 1 Apr 2026 10:38:10 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4933200563853792185",
+      "draft_message_id": "19d4778c4c97f2fb",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:30.791102+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4765a6de82215": {
+      "thread_id": "19d4765a6de82215",
+      "from": "Loom <info@e.atlassian.com>",
+      "subject": "Recap: [Flowmingo] 15-Min With Us (John Swindell)",
+      "date": "Tue, 31 Mar 2026 22:55:37 -0600",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4864756325814386322",
+      "draft_message_id": "19d4778c7dc906bb",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:31.498769+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d472ae22902953": {
+      "thread_id": "19d471ce96fa90c7",
+      "from": "Jessica Jones <jess.jones@flowmingo.ai>",
+      "subject": "Re: Google Meet Access \u2013 Please Add My Personal Email",
+      "date": "Wed, 1 Apr 2026 10:51:17 +0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4289659960295526171",
+      "draft_message_id": "19d4778ca6b53bc4",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:32.291113+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d471719d81c9d4": {
+      "thread_id": "19d471719d81c9d4",
+      "from": "Mohamed Wajahat <w@continum.in>",
+      "subject": "Accepted: [Flowmingo] 15 min with us (Mohamed  Wajahat)",
+      "date": "Wed, 1 Apr 2026 03:29:42 +0000",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2569639887892491144",
+      "draft_message_id": "19d4778cdcb54c9b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:32.967295+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4614da3421010": {
+      "thread_id": "19d4614da3421010",
+      "from": "Ice Zamora <ice@arboreal.management>",
+      "subject": "Accepted: [Flowmingo] 15 min with us (Ice Zamora)",
+      "date": "Tue, 31 Mar 2026 22:47:40 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1450008085593551583",
+      "draft_message_id": "19d4778d14977642",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:33.662756+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4484699c39ed2": {
+      "thread_id": "19d448467031f942",
+      "from": "Mark Studebaker <mark@flowmingo.com>",
+      "subject": "Flowmingo check in",
+      "date": "Tue, 31 Mar 2026 15:30:15 +0000 (UTC)",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r927958008513836489",
+      "draft_message_id": "19d4778d2e78b1a8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:34.392781+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d3e6142b2ff56b": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Mon, 30 Mar 2026 10:54:10 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3422726796960228124",
+      "draft_message_id": "19d4778d513451fe",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:35.175396+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d3da18ffe49fc8": {
+      "thread_id": "19d3da18ffe49fc8",
+      "from": "Jaya Anjana <anjushreebhas@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Jaya Anjana",
+      "date": "Mon, 30 Mar 2026 12:54:36 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5183638001038240815",
+      "draft_message_id": "19d4778e63265f64",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T05:16:39.568543+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
