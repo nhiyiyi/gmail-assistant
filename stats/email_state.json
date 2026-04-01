@@ -13530,6 +13530,253 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d4a54f34cb1b61": {
+      "thread_id": "19d3d97373544cee",
+      "from": "Yosan Mosisa <yosmos77@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Yosan",
+      "date": "Wed, 1 Apr 2026 21:35:59 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6409455734697778912",
+      "draft_message_id": "19d4a5cac1e1efbd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:43.005290+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4a3413d15c3bc": {
+      "thread_id": "19c5d242659fbee1",
+      "from": "Aleksandar Antevski <contact@antevski.online>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Wed, 1 Apr 2026 20:00:04 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "9.2 Trigger B",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8705497204124117156",
+      "draft_message_id": "19d4a5cb7c45bc8d",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:45.186868+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4a29f0b9938c7": {
+      "thread_id": "19d42af968debf98",
+      "from": "Aditi Bansal <aaditibansal90@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Wed, 1 Apr 2026 23:19:04 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1491925053253163452",
+      "draft_message_id": "19d4a5cbf1e2b3b1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:46.922039+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4a043426fbd16": {
+      "thread_id": "19d4a043426fbd16",
+      "from": "Daniel Odubanjo <danielodubanjo6@gmail.com>",
+      "subject": "Senior Product & Graphic Brand Designer",
+      "date": "Wed, 1 Apr 2026 18:07:46 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5918653221541637547",
+      "draft_message_id": "19d4a5cc59ce1f34",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:47.752461+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4a01d599fc82b": {
+      "thread_id": "19d48a91e92535f4",
+      "from": "Aleena Zaidi <zaidialeena7@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Aleena",
+      "date": "Wed, 1 Apr 2026 22:05:15 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5986090005240143299",
+      "draft_message_id": "19d4a5cc916116f6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:48.543661+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49fdcd672b73f": {
+      "thread_id": "19d47e6f09d0794c",
+      "from": "Vishal Kumar <vishal.kumar@baskethunt.in>",
+      "subject": "Re: [Flowmingo] 15 min with us (Vishal Kumar)",
+      "date": "Wed, 1 Apr 2026 22:30:47 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1386569619653894724",
+      "draft_message_id": "19d4a5ccd555ad05",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:44:49.378510+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d49f85defd339a": {
+      "thread_id": "19d49f52f8a1806c",
+      "from": "kholoud khalid <kholoudk94z@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Kholoud Alzahrani",
+      "date": "Wed, 1 Apr 2026 19:54:55 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5162773122617914679",
+      "draft_message_id": "19d4a5d3061ec08b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:15.081328+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49f4706852091": {
+      "thread_id": "19d3fbdb76635ea8",
+      "from": "Hyder Ali Syed <hyderalesyed@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Hyder",
+      "date": "Wed, 1 Apr 2026 21:50:36 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1365002946027741206",
+      "draft_message_id": "19d4a5d338ae95f9",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:16.283026+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49f410ccd4091": {
+      "thread_id": "19d4526379138e46",
+      "from": "Dinesh Dewangan <dineshgecr@gmail.com>",
+      "subject": "Re: Octogle Technologies: Interview invitation for Candidate Evaluation - Dinesh Dewangan",
+      "date": "Wed, 1 Apr 2026 22:20:13 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1493666809921483945",
+      "draft_message_id": "19d4a5d393efb460",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:17.133667+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49f32a37e947d": {
+      "thread_id": "19d4896eb4d99e54",
+      "from": "fatmah Al_asfoor <ftoomhabdullh.95@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Fatima",
+      "date": "Wed, 1 Apr 2026 19:49:12 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-400540559049626079",
+      "draft_message_id": "19d4a5d3b2ac0dab",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:17.954227+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d49f1ec91636cf": {
+      "thread_id": "19d487d2ecef1469",
+      "from": "\"Sindhu .m\" <sindhumanivannan8073@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Sindhu",
+      "date": "Wed, 1 Apr 2026 22:17:52 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-183019157013720620",
+      "draft_message_id": "19d4a5d3fe06af28",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:18.988731+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49e616851481d": {
+      "thread_id": "19d49e616851481d",
+      "from": "Brenda Kagwiria <brendakagwiria5@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Wed, 1 Apr 2026 19:34:52 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3590054761346361736",
+      "draft_message_id": "19d4a5d43602a8bc",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:19.820386+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d49e15eddbc082": {
+      "thread_id": "19d49e15eddbc082",
+      "from": "Faith Agboola <faithadedoyinagboola@gmail.com>",
+      "subject": "Assistance Required: AI Interview Link Not Working",
+      "date": "Wed, 1 Apr 2026 17:29:46 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3873286791629302036",
+      "draft_message_id": "19d4a5d47fdb63f1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T18:45:20.672677+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
