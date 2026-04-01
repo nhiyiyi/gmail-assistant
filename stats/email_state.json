@@ -12238,6 +12238,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d466c6f58cebc6": {
+      "thread_id": "19d39a11e9833cf5",
+      "from": "Chane BC <vjbc1422@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for VICKY JANE",
+      "date": "Wed, 1 Apr 2026 08:23:11 +0800",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1134387882758911764",
+      "draft_message_id": "19d46a1ddd2504f8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:46.913868+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d464428aef9b8d": {
+      "thread_id": "19d42b84a2040392",
+      "from": "Faiza Tasnim Rahman <faizatasnim14@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Wed, 1 Apr 2026 05:39:12 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5971546867965890650",
+      "draft_message_id": "19d46a1e0dba0633",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:48.070493+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4614dbe5d61d8": {
+      "thread_id": "19d4614da3421010",
+      "from": "Ice Zamora <ice@arboreal.management>",
+      "subject": "Accepted: [Flowmingo] 15 min with us (Ice Zamora)",
+      "date": "Tue, 31 Mar 2026 22:47:41 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2587423854346001037",
+      "draft_message_id": "19d46a1e45dee5cc",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:49.161281+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4605ce3dd60f8": {
+      "thread_id": "19d4605ce3dd60f8",
+      "from": "Aisha Goni <goniaisha99@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - Aisha Goni",
+      "date": "Tue, 31 Mar 2026 23:31:05 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r192614118597321702",
+      "draft_message_id": "19d46a1e98627d2e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:50.255618+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d45f65b952f322": {
+      "thread_id": "19d45f65b952f322",
+      "from": "Jose Oscar Taveras Smith <oscartaveras1999@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Jos\u00e9",
+      "date": "Tue, 31 Mar 2026 18:14:10 -0400",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r465378262860041154",
+      "draft_message_id": "19d46a1edfb8cd35",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:51.360306+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d45e27be85b103": {
+      "thread_id": "19d42da8164ab4f8",
+      "from": "el-kanate el-kanate <againathan1@gmail.com>",
+      "subject": "Re: Support for AI interview",
+      "date": "Tue, 31 Mar 2026 22:52:27 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-470397944909562401",
+      "draft_message_id": "19d46a1f266e26cf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:52.490972+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d44846c2f71eaa": {
+      "thread_id": "19d448467031f942",
+      "from": "Mark Studebaker <mark@flowmingo.com>",
+      "subject": "Flowmingo check in",
+      "date": "Tue, 31 Mar 2026 15:30:17 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5889382331996044679",
+      "draft_message_id": "19d46a1f723fad7a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T01:21:53.643828+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
