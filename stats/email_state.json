@@ -12542,6 +12542,82 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d47a16f07c2aee": {
+      "thread_id": "19d42e9f9ad136f0",
+      "from": "Moataz El Zoghaby <myzwalzghby@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Wed, 1 Apr 2026 08:00:40 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3009982469738365463",
+      "draft_message_id": "19d47df21b72844c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T07:08:19.367523+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4795cbe3d4d67": {
+      "thread_id": "19d4795cbe3d4d67",
+      "from": "Siddhi Jamdade <siddhijamdade29@gmail.com>",
+      "subject": "Re: Ziqsy Limited: Interview invitation for Business Analyst - SIDDHI AMBADAS JAMDADE",
+      "date": "Wed, 1 Apr 2026 11:17:57 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-9187209278853283225",
+      "draft_message_id": "19d47df250d6f900",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T07:08:20.410602+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d448467031f942": {
+      "thread_id": "19d448467031f942",
+      "from": "Mark Studebaker <mark@flowmingo.com>",
+      "subject": "Flowmingo check in",
+      "date": "Tue, 31 Mar 2026 15:30:16 +0000 (UTC)",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3964368458523173677",
+      "draft_message_id": "19d47df2929d0e5e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T07:08:21.663291+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d290fe1634eb05": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Thu, 26 Mar 2026 07:33:14 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2689352829874654299",
+      "draft_message_id": "19d47df2fafe1a44",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T07:08:22.834586+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
