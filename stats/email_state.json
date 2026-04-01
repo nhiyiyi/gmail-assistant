@@ -13777,6 +13777,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4adbe97a88a4b": {
+      "thread_id": "19d4adbe97a88a4b",
+      "from": "kholoud khalid <kholoudk94z@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Thu, 2 Apr 2026 00:03:24 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6862063358075296956",
+      "draft_message_id": "19d4af69794c9492",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:48.453202+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4ac852c5fbe93": {
+      "thread_id": "19d42e4c6c3fab26",
+      "from": "Zartek Technologies <info@zartek.in>",
+      "subject": "Re: [Flowmingo] Appreciation - can we support you better?",
+      "date": "Thu, 2 Apr 2026 02:12:02 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3354719153864870288",
+      "draft_message_id": "19d4af69aa259ced",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:49.557567+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4ab34595fd1e4": {
+      "thread_id": "19d4ab34595fd1e4",
+      "from": "kholoud khalid <kholoudk94z@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Kholoud",
+      "date": "Wed, 1 Apr 2026 23:19:02 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3177004241223882296",
+      "draft_message_id": "19d4af69f5e9d7ef",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:50.611697+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4ab1e2d155153": {
+      "thread_id": "19d49f52f8a1806c",
+      "from": "kholoud khalid <kholoudk94z@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Kholoud Alzahrani",
+      "date": "Wed, 1 Apr 2026 23:17:31 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2992238389300067019",
+      "draft_message_id": "19d4af6a230adcbb",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:51.675608+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4aa6a06c80991": {
+      "thread_id": "19d4aa6a06c80991",
+      "from": "Deidra Cox <dycox1@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Wed, 1 Apr 2026 16:05:13 -0400",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1063161128932308730",
+      "draft_message_id": "19d4af6a70676ecd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:52.704242+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4a87d562d3a80": {
+      "thread_id": "19d2cc9939b5b265",
+      "from": "Oluwasegun Joshua <olujoshua2209@gmail.com>",
+      "subject": "Re: Hello Jess Customers Support",
+      "date": "Wed, 1 Apr 2026 20:31:36 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6355389207321749542",
+      "draft_message_id": "19d4af6ab492cabf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-01T21:32:53.762402+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
