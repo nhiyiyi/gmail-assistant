@@ -14537,6 +14537,177 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4e25558812b96": {
+      "thread_id": "19d4e25558812b96",
+      "from": "Cherryl Fernandes <cherryl.fernandes@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Thu, 2 Apr 2026 15:22:28 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "9.2 Trigger B",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6604705782810690674",
+      "draft_message_id": "19d4e398ac96ce60",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:47.540886+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4de9d4457eecc": {
+      "thread_id": "19d491bee96c10eb",
+      "from": "Bankole Uzor <bankoleuzor@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Somto",
+      "date": "Thu, 2 Apr 2026 12:17:28 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-82484136629851566",
+      "draft_message_id": "19d4e398dda9c3fc",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:48.370432+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4de8b1374a4eb": {
+      "thread_id": "19d4de8b1374a4eb",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo AI's pipeline, fully automated",
+      "date": "Thu, 2 Apr 2026 11:16:18 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1233358347558406365",
+      "draft_message_id": "19d4e3993640a643",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:49.818422+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4de3af32c0571": {
+      "thread_id": "19d2eca5daf04e3d",
+      "from": "savita arora <1985savitaarora@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Savita",
+      "date": "Thu, 2 Apr 2026 16:40:49 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-171422267784195458",
+      "draft_message_id": "19d4e39948ea35d0",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:50.607308+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4de34e49c9af0": {
+      "thread_id": "19d4de34e49c9af0",
+      "from": "Kimberly Deaton <kcdeaton1@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Kimberly Deaton",
+      "date": "Thu, 2 Apr 2026 07:10:19 -0400",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7854379730028742299",
+      "draft_message_id": "19d4e3999abfd93c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:52.030026+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4ddc66b338dc7": {
+      "thread_id": "19d4ddc66b338dc7",
+      "from": "Yameen Mir <meeryamin61@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Yamin Mir",
+      "date": "Thu, 2 Apr 2026 16:32:47 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2780745757813636594",
+      "draft_message_id": "19d4e399f5bac200",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:52.751713+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4dbca426e9774": {
+      "thread_id": "19d4dbca426e9774",
+      "from": "Picky Assist <newsletter@pickyassist.com>",
+      "subject": "2026 Predictions!! Is Your WhatsApp Strategy Already Outdated?\u00a0\u00a0",
+      "date": "Thu, 02 Apr 2026 10:28:21 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-368756523661550623",
+      "draft_message_id": "19d4e39a3902e0aa",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:54.082799+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4db0999926b03": {
+      "thread_id": "19d4db0999926b03",
+      "from": "Asvitha C <asvithachandrasekar7@gmail.com>",
+      "subject": "Human Resource Executive Interview",
+      "date": "Thu, 2 Apr 2026 15:44:58 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2390441022990765929",
+      "draft_message_id": "19d4e39a6501feac",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:55.059228+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4d9c534925da7": {
+      "thread_id": "19d4d9c534925da7",
+      "from": "muhammad bilal <muhammadbilal6623@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Muhammad",
+      "date": "Thu, 2 Apr 2026 14:52:47 +0500",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6773486962008889207",
+      "draft_message_id": "19d4e39b7011a540",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T12:44:59.346270+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
