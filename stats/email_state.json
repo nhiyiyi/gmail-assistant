@@ -14822,6 +14822,44 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d4f0a9e9c6ed24": {
+      "thread_id": "19d4f0a9e9c6ed24",
+      "from": "Solomon John <solocy2@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Thu, 2 Apr 2026 17:32:50 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5024651524063925144",
+      "draft_message_id": "19d4f7f26101c733",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T18:40:26.953037+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4ef8e25f22d54": {
+      "thread_id": "19d4ef8e25f22d54",
+      "from": "Deidra Cox <dycox1@gmail.com>",
+      "subject": "Linkedin company add",
+      "date": "Thu, 2 Apr 2026 12:13:32 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8974209712743712233",
+      "draft_message_id": "19d4f7f2a8af1ffe",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T18:40:28.000895+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
