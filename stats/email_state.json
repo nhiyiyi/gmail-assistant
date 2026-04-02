@@ -13948,6 +13948,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4c7a4d46a584b": {
+      "thread_id": "19cff5be8e5016ef",
+      "from": "\"'Indrani C' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Flowmingo AI + HackerEarth: AI-Powered Hiring for Every Role!",
+      "date": "Thu, 02 Apr 2026 04:36:11 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r834287365640283933",
+      "draft_message_id": "19d4c8cb082aa676",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:22.754334+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4c5ebe6c8e1ec": {
+      "thread_id": "19d476abd9c5ad39",
+      "from": "Bilkisu Yakubu <bilkisu.yakub2018@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Thu, 2 Apr 2026 05:05:56 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4175374562770922219",
+      "draft_message_id": "19d4c8cb50821486",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:23.816581+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c4ee83787c7b": {
+      "thread_id": "19d4c4ee83787c7b",
+      "from": "Enggel Vt <enggelvt@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Enggel",
+      "date": "Thu, 2 Apr 2026 10:48:44 +0700",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4366553138282766591",
+      "draft_message_id": "19d4c8cb899dca24",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:24.898182+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c2381f592106": {
+      "thread_id": "19d4c2381f592106",
+      "from": "rehana ameen <rabs.rehan@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for rehana",
+      "date": "Thu, 2 Apr 2026 08:31:13 +0530",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5009231791157648502",
+      "draft_message_id": "19d4c8cbc3349be8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:25.961126+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c1e25e1279af": {
+      "thread_id": "19d4c1e25e1279af",
+      "from": "SaleSmartly <SaleSmartly@marketing.salesmartly.com>",
+      "subject": "\ud83d\udcca \u4f60\u7684\u884c\u4e1a\u4e5f\u80fd\u590d\u5236\uff1a7\u5927\u5ba2\u6237\u589e\u957f\u6848\u4f8b\u4e00\u6b21\u770b\u5168",
+      "date": "Thu, 2 Apr 2026 10:55:31 +0800 (CST)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r120958008960964785",
+      "draft_message_id": "19d4c8cc006b66c1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:27.046447+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4bec230e6199a": {
+      "thread_id": "19d4bec230e6199a",
+      "from": "\"The Experience Effect | Digital Marketing Courses\" <hello@experience-effect.com>",
+      "subject": "New AI Courses for Marketers\u2014Now Live",
+      "date": "Thu, 02 Apr 2026 02:00:56 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6271672341098487444",
+      "draft_message_id": "19d4c8cc5170d5be",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T04:56:28.144707+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
