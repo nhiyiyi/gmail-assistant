@@ -14708,6 +14708,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4ec5baf8b166f": {
+      "thread_id": "19d4ec5baf8b166f",
+      "from": "Product Hunt Daily <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 Github has zoning laws now",
+      "date": "Thu, 2 Apr 2026 15:17:51 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r119257072314460136",
+      "draft_message_id": "19d4ee3a23de5c6a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:34.868814+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4ebe0439830ee": {
+      "thread_id": "19d4ebe0439830ee",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udca1 Your next big breakthrough starts here",
+      "date": "Thu, 02 Apr 2026 11:09:24 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4919840669802971223",
+      "draft_message_id": "19d4ee3a4c20eb73",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:36.201008+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4e61310eb5ebf": {
+      "thread_id": "19d4e61310eb5ebf",
+      "from": "\"Aliyu Ja'afar Abdullahi\" <jaafaraliyuabdullahi@gmail.com>",
+      "subject": "Enquiry on AI Interview",
+      "date": "Thu, 2 Apr 2026 14:27:50 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r724749388136076981",
+      "draft_message_id": "19d4ee3aa0b3376c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:37.040710+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4e5415f9006c8": {
+      "thread_id": "19d4e5415f9006c8",
+      "from": "Diya Verma <diyav872@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Diya Verma",
+      "date": "Thu, 2 Apr 2026 18:43:30 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3125403840412208310",
+      "draft_message_id": "19d4ee3ac4bc7f60",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:37.911613+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4e462e10d3023": {
+      "thread_id": "19d4e462e10d3023",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo AI\u2019s Outbound on Autopilot",
+      "date": "Thu, 2 Apr 2026 05:58:26 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5043006107115598489",
+      "draft_message_id": "19d4ee3b16d9bb9b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:38.736452+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4dd3eb2843e6a": {
+      "thread_id": "19d2eca5daf04e3d",
+      "from": "savita arora <1985savitaarora@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Savita",
+      "date": "Thu, 2 Apr 2026 16:23:36 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6434497935419900085",
+      "draft_message_id": "19d4ee3b43b369b3",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T15:50:39.632631+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
