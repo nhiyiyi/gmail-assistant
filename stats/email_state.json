@@ -14860,6 +14860,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d500da80b46e1c": {
+      "thread_id": "19d500da80b46e1c",
+      "from": "Kalilou DIABY <dika3584@gmail.com>",
+      "subject": "Can't take my assessment",
+      "date": "Thu, 2 Apr 2026 21:15:48 +0000",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7914256738580295765",
+      "draft_message_id": "19d501700ec1b184",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T21:26:19.426544+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4fe1b818ba5f0": {
+      "thread_id": "19d4fe1b818ba5f0",
+      "from": "Pamela hindy <hindylaia@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Pamela Andrade",
+      "date": "Thu, 2 Apr 2026 13:27:51 -0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7461708199325298585",
+      "draft_message_id": "19d50170601a0399",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T21:26:20.204877+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
