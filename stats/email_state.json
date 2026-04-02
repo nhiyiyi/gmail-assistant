@@ -14062,6 +14062,158 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4cf23376c206b": {
+      "thread_id": "19d4cf23376c206b",
+      "from": "Hanan Alsuraij <halsuraij35@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Hanan",
+      "date": "Thu, 2 Apr 2026 09:47:00 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4187949870954390265",
+      "draft_message_id": "19d4cfd925615cd8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:40.841861+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4cef9824801b4": {
+      "thread_id": "19d4cef9824801b4",
+      "from": "Fathima AK <fa.naufi@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Fathima Naufi",
+      "date": "Thu, 2 Apr 2026 09:44:09 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3257592606083915938",
+      "draft_message_id": "19d4cfd979e50783",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:42.105564+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4cb37aaa9f228": {
+      "thread_id": "19d4cb37aaa9f228",
+      "from": "Serphine Adhiambo <adhiamboserphine8@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Serphine",
+      "date": "Thu, 2 Apr 2026 08:38:28 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3510093629334287426",
+      "draft_message_id": "19d4cfd9d540c6dd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:43.382624+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4cafd132287b1": {
+      "thread_id": "19d4cafd132287b1",
+      "from": "Carla Patricia Osorio <zymley2104@gmail.com>",
+      "subject": "Re: Callbox DB Inc.: Interview invitation for Sales Development Representative - Carla Patricia Osorio",
+      "date": "Thu, 2 Apr 2026 13:34:27 +0800",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1288300135676974165",
+      "draft_message_id": "19d4cfda1b88ea32",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:44.649701+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4cad912609e03": {
+      "thread_id": "19d4cad912609e03",
+      "from": "Dhivya A <dhivya.ashok@zohocorp.com>",
+      "subject": "Join the Zoho Desk 101 : Session 2 on April 9th!",
+      "date": "Thu, 2 Apr 2026 11:02:14 +0530 (IST)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7671775507442687516",
+      "draft_message_id": "19d4cfda7f3ad856",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:45.886952+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c9733f2b0606": {
+      "thread_id": "19d4c9733f2b0606",
+      "from": "\"Sc. Farah\" <farah20022002.sf@gmail.com>",
+      "subject": "AI Interview Completion Confirmation",
+      "date": "Thu, 2 Apr 2026 08:07:35 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2248505218250110343",
+      "draft_message_id": "19d4cfdabc38aaad",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:47.143358+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c94a54958d0e": {
+      "thread_id": "19d4c94a54958d0e",
+      "from": "\"Sc. Farah\" <farah20022002.sf@gmail.com>",
+      "subject": "Re: Jordan : Interview invitation for Commercial Operations Specialist EU/NA - Farah AbuAmra",
+      "date": "Thu, 2 Apr 2026 08:04:48 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1516813637679117887",
+      "draft_message_id": "19d4cfdb1238e17a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:48.499009+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4c8ee0f618e6e": {
+      "thread_id": "19d1047e3e344821",
+      "from": "Zaarra Ahmed <ahmedzaarra@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Zara",
+      "date": "Thu, 2 Apr 2026 05:58:32 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3459311490695562276",
+      "draft_message_id": "19d4cfdc4daa2122",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T06:59:53.604219+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
