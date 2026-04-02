@@ -13891,6 +13891,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d4b57439c2fb5b": {
+      "thread_id": "19d4b57439c2fb5b",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Why Polished Brands Still Lose",
+      "date": "Wed, 1 Apr 2026 23:18:20 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-709605361783622839",
+      "draft_message_id": "19d4bbf63394cf9c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T01:12:07.768631+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d4b3c486cca497": {
+      "thread_id": "19d4b3c486cca497",
+      "from": "Shadrach Matthew <shadrachmatt@gmail.com>",
+      "subject": "Request to take the Intreview.",
+      "date": "Wed, 1 Apr 2026 23:48:59 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r776029219698198985",
+      "draft_message_id": "19d4bbf673fae02e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T01:12:08.544537+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d4b20f10441b9f": {
+      "thread_id": "19d458c17e536919",
+      "from": "John Swindell <john@tekly.dev>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15-Min With Us (John Swindell) @ Wed Apr 1, 2026 11:30am - 11:45am (GMT+7) (Customer Support Flowmingo)",
+      "date": "Wed, 1 Apr 2026 17:18:49 -0500",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6340307727772908701",
+      "draft_message_id": "19d4bbf68626d7c1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-02T01:12:09.354963+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
