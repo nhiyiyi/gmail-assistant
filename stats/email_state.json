@@ -14936,6 +14936,139 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d51aa3d5c58b90": {
+      "thread_id": "19d51aa3d5c58b90",
+      "from": "Andres Fuentes <andresf.fuentesa@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Andres",
+      "date": "Thu, 2 Apr 2026 23:46:29 -0500",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8411254654507850037",
+      "draft_message_id": "19d51b562d98a1ad",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:58:55.865540+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d51a5f7c79b87d": {
+      "thread_id": "19d51a5f7c79b87d",
+      "from": "\"Nhi (Yiyi) Vu\" <nhi.vu@flowmingo.ai>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15-Min With Us (matrix digital) @ Fri Apr 3, 2026 11:30am - 11:45am (GMT+7) (Nhi (Yiyi) Vu)",
+      "date": "Fri, 3 Apr 2026 11:41:54 +0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-714276335687094260",
+      "draft_message_id": "19d51b566fee7475",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:58:56.927617+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d517a906c209a6": {
+      "thread_id": "19d517a906c209a6",
+      "from": "My Ky Tran <ky.tran@featurii.com>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15 min with us (Anjali C G) @ Thu Apr 2, 2026 4:30pm - 4:45pm (GMT+7) (ky.tran@featurii.com)",
+      "date": "Fri, 3 Apr 2026 10:54:26 +0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r800751330686759992",
+      "draft_message_id": "19d51b56a7ff1edf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:58:57.949671+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5179d2b2360d4": {
+      "thread_id": "19d5179d2b2360d4",
+      "from": "My Ky Tran <ky.tran@featurii.com>",
+      "subject": "Re: Appointment booked: [Flowmingo] 15-Min With Us (Oliver silvo) @ Fri Apr 3, 2026 10:45am - 11am (GMT+7) (ky.tran@featurii.com)",
+      "date": "Fri, 3 Apr 2026 10:53:38 +0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3871673712788331739",
+      "draft_message_id": "19d51b56ebaa1fcb",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:58:58.950774+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5155001dc2a1a": {
+      "thread_id": "19d4d366fd743a31",
+      "from": "Komal Patil <komalk.patl93@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 3 Apr 2026 08:43:27 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6449255424324520225",
+      "draft_message_id": "19d51b57232d97f6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:59:00.083229+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d51172afa258de": {
+      "thread_id": "19d51172afa258de",
+      "from": "My Ky Tran <ky.tran@featurii.com>",
+      "subject": "Declined: [Flowmingo] 15 min with us (Rita Mukimba) @ Fri Apr 3, 2026 3pm - 3:15pm (GMT+7) (jess.jones@flowmingo.ai)",
+      "date": "Fri, 03 Apr 2026 02:06:02 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8736699796592967541",
+      "draft_message_id": "19d51b57613f7b4a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:59:01.104450+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5104e66f11386": {
+      "thread_id": "19d5104e66f11386",
+      "from": "Ravan Asura <ravanasura0019@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Ravan",
+      "date": "Fri, 3 Apr 2026 07:15:52 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r516730174878176432",
+      "draft_message_id": "19d51b5863a0e7ce",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T04:59:05.064597+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
