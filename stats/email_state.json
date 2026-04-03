@@ -15069,6 +15069,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5210eb871db7a": {
+      "thread_id": "19d5210eb871db7a",
+      "from": "zohodesk-systemgenerated@zohodesk.com",
+      "subject": "Your Zoho Desk portal has been deleted due to inactivity",
+      "date": "Thu, 2 Apr 2026 23:38:48 -0700 (PDT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1818548281052647464",
+      "draft_message_id": "19d52212dfb4063b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:39.595874+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d520c14de9416d": {
+      "thread_id": "19d4d63c986cae15",
+      "from": "Purva Sharma <purvasharma9166@gmail.com>",
+      "subject": "Fwd: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Fri, 3 Apr 2026 12:03:20 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6350732999508535842",
+      "draft_message_id": "19d52212eaa7ea5f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:40.454976+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5205c40af07c8": {
+      "thread_id": "19d5205c40af07c8",
+      "from": "Madhu Patel j r <jrmadhu791@gmail.com>",
+      "subject": "Regarding Web developer role",
+      "date": "Fri, 3 Apr 2026 11:56:27 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8517347950531136565",
+      "draft_message_id": "19d522133e6e0d4f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:41.331504+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d51e86faf678bc": {
+      "thread_id": "19d42e4c6c3fab26",
+      "from": "Zartek Technologies <info@zartek.in>",
+      "subject": "Re: [Flowmingo] Appreciation - can we support you better?",
+      "date": "Fri, 3 Apr 2026 11:24:26 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6330155318089256390",
+      "draft_message_id": "19d5221362d1d400",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:42.270115+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d51ce77e679c9d": {
+      "thread_id": "19d51b56d84fb4fe",
+      "from": "Hadija Hassan <hadijahassan17@gmail.com>",
+      "subject": "Re: Error during the interview for storekeeper.",
+      "date": "Fri, 3 Apr 2026 08:26:05 +0300",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4051400512716040871",
+      "draft_message_id": "19d52213a3bc791a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:43.340257+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d51bab3ec8d401": {
+      "thread_id": "19d51bab3ec8d401",
+      "from": "Prachi Mehrotra <prachimehrotra29sep@gmail.com>",
+      "subject": "Update on Human Resource Executive Interview Status",
+      "date": "Fri, 3 Apr 2026 10:34:30 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r586002875109992216",
+      "draft_message_id": "19d52213ec68021a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:44.231354+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d51b735dc9e28b": {
+      "thread_id": "19d51b735dc9e28b",
+      "from": "Mansi Shimpi <shimpimansi99@gmail.com>",
+      "subject": "Resend the AI interview link",
+      "date": "Fri, 3 Apr 2026 10:30:40 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5302385266664053854",
+      "draft_message_id": "19d5221410eed04c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T06:56:45.114867+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
