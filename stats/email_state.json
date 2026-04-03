@@ -14898,6 +14898,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d50742e7f0c1da": {
+      "thread_id": "19d50742e7f0c1da",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Your Best Buyers Need Better Proof",
+      "date": "Thu, 2 Apr 2026 23:08:01 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6189089343668639680",
+      "draft_message_id": "19d50e7cd9322f94",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T01:14:23.166935+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5065a0e707cea": {
+      "thread_id": "19d5065a0e707cea",
+      "from": "\"'Marilyn Hill' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Re: Follow-up on Hidden Talents Recruiters Solutions Feature for Flowmingo",
+      "date": "Thu, 2 Apr 2026 15:51:53 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8876773579240112248",
+      "draft_message_id": "19d50e7d354afaac",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T01:14:23.936523+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
