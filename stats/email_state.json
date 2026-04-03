@@ -16323,6 +16323,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5535f1d2e0000": {
+      "thread_id": "19d4aa6a06c80991",
+      "from": "Deidra Cox <dycox1@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Fri, 3 Apr 2026 17:17:59 -0400",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8441686821650420659",
+      "draft_message_id": "19d553ac1835e272",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T21:23:27.950890+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d54d1fc34e0c8c": {
+      "thread_id": "19d42b84a2040392",
+      "from": "Faiza Tasnim Rahman <faizatasnim14@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Sat, 4 Apr 2026 01:28:47 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1953632727633482625",
+      "draft_message_id": "19d553ac4ef42dba",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T21:23:29.031058+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d54a00188c3c2f": {
+      "thread_id": "19d54a00188c3c2f",
+      "from": "Sophia Perperidou <sophie.perperidou@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Sophia",
+      "date": "Fri, 3 Apr 2026 21:34:08 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7418103345870011944",
+      "draft_message_id": "19d553ac96da06da",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T21:23:29.990639+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
