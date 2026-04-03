@@ -15772,6 +15772,367 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d53f8a4cd89263": {
+      "thread_id": "19d53f8a4cd89263",
+      "from": "Futurepedia <mail@newsletter.futurepedia.io>",
+      "subject": "Claude Code Just Got A Whole Lot Easier",
+      "date": "Fri, 03 Apr 2026 15:31:04 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1173180099414809507",
+      "draft_message_id": "19d53f9933231ba1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:39.086980+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53f4223acd7cd": {
+      "thread_id": "19d53f4223acd7cd",
+      "from": "Product Hunt Daily <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 Cursor just got more serious",
+      "date": "Fri, 3 Apr 2026 15:26:38 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-111933326734487511",
+      "draft_message_id": "19d53f9976fb9d03",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:40.225139+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53ef1a394565e": {
+      "thread_id": "19d53ef1a394565e",
+      "from": "Asvitha C <asvithachandrasekar7@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Fri, 3 Apr 2026 20:50:58 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1421379988220165175",
+      "draft_message_id": "19d53f99bc863b52",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:41.295042+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53e99c761346c": {
+      "thread_id": "19d53e99c761346c",
+      "from": "Dripify <team@email.dripify.com>",
+      "subject": "Don't miss 15% off Dripify (ends April 6)",
+      "date": "Fri, 3 Apr 2026 11:15:08 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8782587750196524802",
+      "draft_message_id": "19d53f99ee4d9766",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:42.319198+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53e7cabe80c81": {
+      "thread_id": "19d53e7cabe80c81",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83e\uddd1\u200d\ud83d\udcbc Onboarding new team members? Try this",
+      "date": "Fri, 03 Apr 2026 11:13:10 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5105956212510120832",
+      "draft_message_id": "19d53f9a2fa0c7dc",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:43.432425+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53e7998bb6eac": {
+      "thread_id": "19d53e7998bb6eac",
+      "from": "Atul Singh <atulsta@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Atul Singh",
+      "date": "Fri, 3 Apr 2026 20:42:43 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2942645586435540267",
+      "draft_message_id": "19d53f9a9e8748fd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:44.572282+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53e509ba08457": {
+      "thread_id": "19d53e509ba08457",
+      "from": "vinay L <vinay.developer442@gmail.com>",
+      "subject": "Regarding a Flexible Tech Partnership Opportunity",
+      "date": "Fri, 3 Apr 2026 11:09:57 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8183331393714200088",
+      "draft_message_id": "19d53f9ad801b9c7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:45.661874+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d53cc27b54d073": {
+      "thread_id": "19d4d06184dc2e87",
+      "from": "Mutaiba Naseer <mutaibanaseer@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Fri, 3 Apr 2026 19:42:46 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-410119369691064405",
+      "draft_message_id": "19d53f9b0e524338",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:32:46.803157+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53c2b748f6421": {
+      "thread_id": "19d53c2b748f6421",
+      "from": "Leila Ali <leylahayatali@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Leila",
+      "date": "Fri, 3 Apr 2026 17:32:28 +0300",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7839956648913984295",
+      "draft_message_id": "19d53fa2aa177ed8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:18.178888+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53afadc1da156": {
+      "thread_id": "19d3308027757a26",
+      "from": "Umar Farooq <umar.farooq1592@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Fri, 3 Apr 2026 19:11:40 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "9.3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8501878617410272970",
+      "draft_message_id": "19d53fa308915f7e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:19.339003+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53aadc9c95378": {
+      "thread_id": "19d48b10cbe30da2",
+      "from": "Serawit Fekede <serawitfekede74@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Serawit",
+      "date": "Fri, 3 Apr 2026 17:06:26 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8237022211343352165",
+      "draft_message_id": "19d53fa35d1e08e8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:20.449052+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d53a76c79c4e44": {
+      "thread_id": "19d4a043426fbd16",
+      "from": "Daniel Odubanjo <danielodubanjo6@gmail.com>",
+      "subject": "Re: Senior Product & Graphic Brand Designer",
+      "date": "Fri, 3 Apr 2026 15:02:41 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7094742325640274675",
+      "draft_message_id": "19d53fa38467da31",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:21.610405+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d539e8e6936dc8": {
+      "thread_id": "19d539e8e6936dc8",
+      "from": "\"'David Johnson' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Checking In Your Interest in the Edition",
+      "date": "Fri, 3 Apr 2026 13:53:08 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1304530237207486011",
+      "draft_message_id": "19d53fa3c54dcd28",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:22.696840+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d539e1e9856a37": {
+      "thread_id": "19d539e1e9856a37",
+      "from": "Subham Biswal <subham.biswal999@gmail.com>",
+      "subject": "Request to Reschedule AI Interview / Assignment Test \u2013 Talent Acquisition Specialist Role",
+      "date": "Fri, 3 Apr 2026 19:22:28 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7557868893130897065",
+      "draft_message_id": "19d53fa40f0422ff",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:23.757239+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d538519d43c2ca": {
+      "thread_id": "19d538519d43c2ca",
+      "from": "Ochieng Stanley <ochiengstanley387@gmail.com>",
+      "subject": "Acceptance of Offer - Talent Acquisition Business Partner",
+      "date": "Fri, 3 Apr 2026 16:25:08 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3047738054303669648",
+      "draft_message_id": "19d53fa456855b24",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:24.824984+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5379af51bfb61": {
+      "thread_id": "19d5379af51bfb61",
+      "from": "\"'Josh Whitfield' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Tanuj, this made me think of you",
+      "date": "Fri, 03 Apr 2026 12:41:55 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1657259604484104325",
+      "draft_message_id": "19d53fa7f7bf8103",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:39.390682+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d536e4c2191da1": {
+      "thread_id": "19d536e4c2191da1",
+      "from": "Dan Ungureanu <dan1991liviu@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Dan",
+      "date": "Fri, 3 Apr 2026 16:00:16 +0300",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3535218041880023503",
+      "draft_message_id": "19d53fa82cb3748e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:40.469209+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d536940da4a14d": {
+      "thread_id": "19d471cabb24331c",
+      "from": "Fabiana <fabianagarcia1620@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 3 Apr 2026 09:54:47 -0300",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7634471063689035899",
+      "draft_message_id": "19d53fa86bfa0293",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:41.644466+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d523f84323d5a6": {
+      "thread_id": "19c5d242659fbee1",
+      "from": "Customer Support Flowmingo <support@flowmingo.ai>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Fri, 3 Apr 2026 00:29:47 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1539296717062027559",
+      "draft_message_id": "19d53fa8aaa716d7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-03T15:33:42.822149+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
