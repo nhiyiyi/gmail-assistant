@@ -16646,6 +16646,158 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d586f2a3f6267d": {
+      "thread_id": "19d586f2a3f6267d",
+      "from": "Aduragbemi Ilesanmi <ilesanmiaduragbemi75@gmail.com>",
+      "subject": "Re: [Flowmingo] Update About Your Interview Session",
+      "date": "Sat, 4 Apr 2026 13:19:18 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2424166882105849197",
+      "draft_message_id": "19d5878c914132bf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:05.015584+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5862ee5d376d1": {
+      "thread_id": "19d5862ee5d376d1",
+      "from": "\"'Emma of Torre.ai' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Tu vacante de Remote Talent Acquisition Specialist",
+      "date": "Sat, 04 Apr 2026 12:06:09 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-885343104901029555",
+      "draft_message_id": "19d5878cd773e3df",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:05.837452+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d585efdb0b4b2e": {
+      "thread_id": "19d585efdb0b4b2e",
+      "from": "\"'Emma of Torre.ai' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Your Remote Talent Acquisition Specialist opening",
+      "date": "Sat, 04 Apr 2026 12:01:41 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5707407595088986779",
+      "draft_message_id": "19d5878d148dc220",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:06.651060+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5845edfab5c81": {
+      "thread_id": "19d5845edfab5c81",
+      "from": "Shirley Omari <shirleyomari00@gmail.com>",
+      "subject": "Fwd: Flowmingo: Interview invitation for Talent Acquisition Specialist - Shirley Omari",
+      "date": "Sat, 4 Apr 2026 14:34:52 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2966079709828595064",
+      "draft_message_id": "19d5878d59ee2fac",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:07.543531+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d58413be9321f4": {
+      "thread_id": "19d58413be9321f4",
+      "from": "Danielle Jacquemin <daniellejacquemin81@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Danielle Jacquemin",
+      "date": "Sat, 4 Apr 2026 07:29:09 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2477718146868572166",
+      "draft_message_id": "19d5878d98bfd206",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:09.556948+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d58342c68ae27a": {
+      "thread_id": "19d58342c68ae27a",
+      "from": "Ruchi Tiwari <ruchi.sam14@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - RUCHI Tiwari",
+      "date": "Sat, 4 Apr 2026 16:44:52 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r947812731748584284",
+      "draft_message_id": "19d5878e1b339f58",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:10.695198+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d57e2c30cdae24": {
+      "thread_id": "19d57e2c30cdae24",
+      "from": "Jahan Ara Tasnin <jahanaratasnin@gmail.com>",
+      "subject": "Request to Reschedule Interview \u2013 Talent Acquisition Specialist Position",
+      "date": "Sat, 4 Apr 2026 15:45:59 +0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1769018396599146349",
+      "draft_message_id": "19d5878e5559d3a6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:11.596164+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d57d493a3d5e64": {
+      "thread_id": "19d57d493a3d5e64",
+      "from": "R L <youcanmail8@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for rabia",
+      "date": "Sat, 4 Apr 2026 14:30:29 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3882754051446400284",
+      "draft_message_id": "19d5878e6a2da0ea",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T12:30:13.091410+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
