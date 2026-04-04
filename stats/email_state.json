@@ -16513,6 +16513,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d572b0a4a5345d": {
+      "thread_id": "19d572b0a4a5345d",
+      "from": "institute via Contact <contact@flowmingo.ai>",
+      "subject": "Reminder: Secure Your Spot Now \u2013 April & May 2026 Flagship Programmes",
+      "date": "Thu, 02 Apr 2026 09:58:42 -0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1734170138178336177",
+      "draft_message_id": "19d573db0116b0a9",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T06:45:54.695486+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
