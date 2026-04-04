@@ -16893,6 +16893,101 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5964bf643e827": {
+      "thread_id": "19d5964bf643e827",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\u2b50 Top 5 recommended tools for you",
+      "date": "Sat, 04 Apr 2026 12:47:43 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r875049606375865583",
+      "draft_message_id": "19d59be7aaf548e0",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T18:25:49.228977+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d595440b339e0a": {
+      "thread_id": "19d4c2381f592106",
+      "from": "rehana ameen <rabs.rehan@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for rehana",
+      "date": "Sat, 4 Apr 2026 21:59:33 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5713715584830440389",
+      "draft_message_id": "19d59be7dc41ea81",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T18:25:49.994811+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5931472b382f0": {
+      "thread_id": "19c2c7ab0fddd58d",
+      "from": "Ayotunde Reuben <ayotundereuben@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Sat, 4 Apr 2026 16:51:20 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1508464799569590890",
+      "draft_message_id": "19d59be80ae3dcfa",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T18:25:50.893795+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d59277e0c71b29": {
+      "thread_id": "19d59277e0c71b29",
+      "from": "Alishba Sajjad <alishbasajjad2001@gmail.com>",
+      "subject": "Fwd: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Sat, 4 Apr 2026 20:40:37 +0500",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6976178732218034104",
+      "draft_message_id": "19d59be84606ea4f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T18:25:51.645184+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5924cd46bf639": {
+      "thread_id": "19d5924cd46bf639",
+      "from": "Aditi Prasad <aditi.prasad2023@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Aditi prasad",
+      "date": "Sat, 4 Apr 2026 21:07:41 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1131726738656112447",
+      "draft_message_id": "19d59be87798c208",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T18:25:52.466045+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
