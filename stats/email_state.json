@@ -16380,6 +16380,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d55f5877ae40aa": {
+      "thread_id": "19d55f5877ae40aa",
+      "from": "Hadeer Abdallah <hadeerabdallah220@gmail.com>",
+      "subject": "Re: [Flowmingo] Thank you for your feedback",
+      "date": "Sat, 4 Apr 2026 02:45:26 +0200",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6971529048366619879",
+      "draft_message_id": "19d5608e2c01bebe",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:36.845373+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d55ea0c1da65f7": {
+      "thread_id": "19d55ea0c1da65f7",
+      "from": "Hadeer Abdallah <hadeerabdallah220@gmail.com>",
+      "subject": "",
+      "date": "Sat, 4 Apr 2026 02:32:52 +0200",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4635158484999960307",
+      "draft_message_id": "19d5608e73445657",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:37.593348+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d55ea02005d352": {
+      "thread_id": "19d55ea02005d352",
+      "from": "Hadeer Abdalllha <hadeerabdalllha@gmail.com>",
+      "subject": "Re: [Flowmingo] Congrats on Passing 1st Round of Screening",
+      "date": "Sat, 4 Apr 2026 02:32:52 +0200",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4220831022504894099",
+      "draft_message_id": "19d5608e83898922",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:38.389853+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5597367832853": {
+      "thread_id": "19d5597367832853",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "More Capacity, Less Constant Pressure",
+      "date": "Fri, 3 Apr 2026 23:04:24 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2505298713879712502",
+      "draft_message_id": "19d5608ecc5464e5",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:39.117490+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5590d8099d315": {
+      "thread_id": "19d5590d8099d315",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "3 Apr 2026 18:57:26 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1866214619453249620",
+      "draft_message_id": "19d5608ee79cde9e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:39.814365+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5579f75707b0d": {
+      "thread_id": "19d4de34e49c9af0",
+      "from": "Kimberly Deaton <kcdeaton1@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Kimberly Deaton",
+      "date": "Fri, 3 Apr 2026 18:32:16 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2171111351718479263",
+      "draft_message_id": "19d5608f2953f5eb",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:40.621093+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d553fd0e548129": {
+      "thread_id": "19d553fd0e548129",
+      "from": "Alishba Sajjad <alishbasajjad2001@gmail.com>",
+      "subject": "Commission Related Query",
+      "date": "Sat, 4 Apr 2026 02:28:43 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5043418743461520597",
+      "draft_message_id": "19d5608f5248c57a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T01:08:41.355870+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
