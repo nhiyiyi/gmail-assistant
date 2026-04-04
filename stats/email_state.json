@@ -16532,6 +16532,120 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d57be2b502e92b": {
+      "thread_id": "19d4d43c89a17cbf",
+      "from": "Success Chinemelum <ugochukwusuccess10@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Sat, 4 Apr 2026 10:06:01 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2203094239237563970",
+      "draft_message_id": "19d57d1c4bf161f8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:39.019643+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5782d33c0a741": {
+      "thread_id": "19d5782d33c0a741",
+      "from": "Ananya Gupta <ananya.gupta02@yahoo.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Ananya Gupta",
+      "date": "Sat, 4 Apr 2026 08:01:10 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1700384954686049115",
+      "draft_message_id": "19d57d1c7e274176",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:39.808327+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d57821ba3026cc": {
+      "thread_id": "19d57821ba3026cc",
+      "from": "Glints Team <hi@platform.glints.com>",
+      "subject": "1 tin \u0111\u0103ng s\u1eafp h\u1ebft h\u1ea1n trong 5 ng\u00e0y n\u1eefa, gia h\u1ea1n ngay!",
+      "date": "Sat, 04 Apr 2026 16:00:30 +0800",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4773669108521110479",
+      "draft_message_id": "19d57d1cb38ad534",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:40.655229+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d57670516db3e1": {
+      "thread_id": "19d57670516db3e1",
+      "from": "Nihalika Verma <nihalikaverma@gmail.com>",
+      "subject": "Re: Welcome to the Team! Your Flowmingo Onboarding Program is Here",
+      "date": "Sat, 4 Apr 2026 13:00:20 +0530",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S29",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3869989676286048678",
+      "draft_message_id": "19d57d1cf7dc0d80",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:41.473470+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d575d5014d02a9": {
+      "thread_id": "19d575d5014d02a9",
+      "from": "Pinki Sharma <pinkish3242@gmail.com>",
+      "subject": "Interview done",
+      "date": "Sat, 4 Apr 2026 12:50:14 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7172086030620975054",
+      "draft_message_id": "19d57d1d17c18153",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:42.297527+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d574614b863277": {
+      "thread_id": "19d574614b863277",
+      "from": "Product Hunt <hello@producthunt.com>",
+      "subject": "p/openai - \"OpenAI acquires TBPN, the buzzy founder-led business talk show [streaming about tech, AI news]\"",
+      "date": "Sat, 4 Apr 2026 06:55:00 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3371899155913642772",
+      "draft_message_id": "19d57d1d4f7b39c0",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T09:27:43.088650+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
