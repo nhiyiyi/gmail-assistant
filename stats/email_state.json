@@ -16798,6 +16798,101 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d59064afd0d085": {
+      "thread_id": "19d59064afd0d085",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udc49 Discover your next essential tool",
+      "date": "Sat, 04 Apr 2026 11:04:35 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7232982241063736916",
+      "draft_message_id": "19d59158b4273fc7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T15:21:18.701211+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d58aceaa95426c": {
+      "thread_id": "19d58aceaa95426c",
+      "from": "Abdulkerim Nuri <abdulkerimnuri@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Abdulkerim Nuri",
+      "date": "Sat, 4 Apr 2026 13:26:55 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7123004652929138469",
+      "draft_message_id": "19d5915905b35564",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T15:21:19.495063+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d589ecbf2747b1": {
+      "thread_id": "19d15d0f7b88c35d",
+      "from": "Esther Johnson <jpbrandsej@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for ether",
+      "date": "Sat, 4 Apr 2026 15:11:20 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5000810503646111309",
+      "draft_message_id": "19d59159575f1fdd",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T15:21:20.629750+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d589d5b636c578": {
+      "thread_id": "19d589d5b636c578",
+      "from": "Ayodeji Oyebadejo <ayodejioyebadejo6@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Ayodeji",
+      "date": "Sat, 4 Apr 2026 11:29:46 +0100",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1464771745551340085",
+      "draft_message_id": "19d591599c80d1c4",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T15:21:21.381638+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d58805193aedd6": {
+      "thread_id": "19d58805193aedd6",
+      "from": "parvatham bhargavi <parvathambhargava055@gmail.com>",
+      "subject": "Remove my account history",
+      "date": "Sat, 4 Apr 2026 18:08:04 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S33",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6641475790697599652",
+      "draft_message_id": "19d59159a46c7f0e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T15:21:22.251345+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
