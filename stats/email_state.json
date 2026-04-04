@@ -16988,6 +16988,44 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d5a3fcc9c2d773": {
+      "thread_id": "19d5a3fcc9c2d773",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "4 Apr 2026 16:47:01 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3256484749272068387",
+      "draft_message_id": "19d5a5ef666e4887",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T21:21:06.746909+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d59e16ea0faddc": {
+      "thread_id": "19d491bee96c10eb",
+      "from": "Bankole Uzor <bankoleuzor@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Somto",
+      "date": "Sat, 4 Apr 2026 20:03:43 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1495013010027162348",
+      "draft_message_id": "19d5a5ef98843fc8",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-04T21:21:07.529820+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
