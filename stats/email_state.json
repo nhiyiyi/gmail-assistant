@@ -17140,6 +17140,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5d3755e361287": {
+      "thread_id": "19d5d3755e361287",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo's Pipeline, Fully Automated",
+      "date": "Sun, 5 Apr 2026 10:36:30 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2997017842814555173",
+      "draft_message_id": "19d5da09799661a7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T12:31:39.400419+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5d361c68d8de6": {
+      "thread_id": "19d5d361c68d8de6",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo AI's pipeline, fully automated",
+      "date": "Sun, 5 Apr 2026 10:35:11 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7601036291344700489",
+      "draft_message_id": "19d5da09afc7d32f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T12:31:40.157228+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5d1062965daae": {
+      "thread_id": "19d5d1062965daae",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo AI's Outreach on Autopilot",
+      "date": "Sun, 5 Apr 2026 05:53:58 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r535909480073755377",
+      "draft_message_id": "19d5da09d6d014c2",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T12:31:41.516074+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
