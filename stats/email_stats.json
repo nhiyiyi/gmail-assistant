@@ -1768,20 +1768,24 @@
       ]
     },
     "2026-04-05": {
-      "emails_processed": 3,
-      "total_input_tokens": 13543,
-      "total_output_tokens": 178,
-      "total_cost_usd": 0.043299,
-      "drafts_created": 3,
+      "emails_processed": 7,
+      "total_input_tokens": 40949,
+      "total_output_tokens": 674,
+      "total_cost_usd": 0.132957,
+      "drafts_created": 7,
       "email_ids": [
         "19d5af13fe51c390",
         "19d5ba00fef00477",
-        "19d5c3b634da7291"
+        "19d5c3b634da7291",
+        "19d5cd78fb0fc261",
+        "19d5cccdbb7f4572",
+        "19d5cacda7e0c019",
+        "19d5c8a5d31b9ad1"
       ]
     }
   },
   "total": {
-    "emails_processed": 1626,
-    "total_cost_usd": 13.826589
+    "emails_processed": 1630,
+    "total_cost_usd": 13.916247
   }
 }

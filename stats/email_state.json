@@ -17064,6 +17064,82 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5cd78fb0fc261": {
+      "thread_id": "19d5cd78fb0fc261",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo's pipeline, fully automated",
+      "date": "Sun, 5 Apr 2026 01:51:53 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4717773035972111140",
+      "draft_message_id": "19d5cf95d900e6da",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T09:28:59.967120+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5cccdbb7f4572": {
+      "thread_id": "19d5cccdbb7f4572",
+      "from": "rushabharia@astraneuraltech.com",
+      "subject": "Flowmingo AI's pipeline on autopilot",
+      "date": "Sun, 5 Apr 2026 01:40:12 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1773396690626080481",
+      "draft_message_id": "19d5cf961070d597",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T09:29:00.879280+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5cacda7e0c019": {
+      "thread_id": "19d5c82cf1d59bc8",
+      "from": "Archana Choudhary <archanaschoudhary009@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 5 Apr 2026 13:35:12 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r737478750767930008",
+      "draft_message_id": "19d5cf9627b80fae",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T09:29:01.796390+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5c8a5d31b9ad1": {
+      "thread_id": "19d5c82c8ccd21d0",
+      "from": "Jaya Singh <jayaprakashsingh938@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 5 Apr 2026 12:57:31 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2170131097066407962",
+      "draft_message_id": "19d5cf967e88c4b5",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T09:29:02.684717+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
