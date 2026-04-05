@@ -17387,6 +17387,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5f52d1ba1f61a": {
+      "thread_id": "19d5f52d1ba1f61a",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "5 Apr 2026 16:25:52 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r379012380651550494",
+      "draft_message_id": "19d5f85bc4b34846",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T21:21:34.039425+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5f1c165c9bd58": {
+      "thread_id": "19d5f1c165c9bd58",
+      "from": "Timothy Akinbola <akinbolatimothy7@gmail.com>",
+      "subject": "Re: Fortis Global Insurance: Interview invitation for Insurance Sales Executive I - BAMIDELE TIMOTHY",
+      "date": "Sun, 5 Apr 2026 20:25:54 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5414765098345725699",
+      "draft_message_id": "19d5f85c153df7f6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T21:21:34.859736+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
