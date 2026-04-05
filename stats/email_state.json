@@ -17026,6 +17026,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5ba00fef00477": {
+      "thread_id": "19d5ba00fef00477",
+      "from": "NAKUL AB <conversation-nakulab-talentacquisitionspeci-mlv@indeedemail.com>",
+      "subject": "[Action required] New application for Talent Acquisition Specialist, Remote",
+      "date": "Sun, 05 Apr 2026 03:11:46 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7710672264454292502",
+      "draft_message_id": "19d5c07bd531a965",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T05:05:05.000575+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
