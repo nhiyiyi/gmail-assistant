@@ -17045,6 +17045,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5c3b634da7291": {
+      "thread_id": "19d5c3b634da7291",
+      "from": "Muhammad Hamza Haider <hamzahaider38385@gmail.com>",
+      "subject": "Request for job..",
+      "date": "Sun, 5 Apr 2026 11:00:16 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2929816157708308958",
+      "draft_message_id": "19d5c6af016091c5",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T06:53:26.283394+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
