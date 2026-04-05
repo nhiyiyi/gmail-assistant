@@ -17254,6 +17254,139 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5ec92a3f26779": {
+      "thread_id": "19d5ec92a3f26779",
+      "from": "Chioma Okoroafor <chiomaijeomaokoroafor@gmail.com>",
+      "subject": "Inability to access interview invitation link - Chioma Okoroafor",
+      "date": "Sun, 5 Apr 2026 18:55:20 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8023647257350113950",
+      "draft_message_id": "19d5ee6cf636e61a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:27:58.493120+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5ebcfeb8bc2f3": {
+      "thread_id": "19d5ebcfeb8bc2f3",
+      "from": "Ojo Victor <ojovictor822@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - OJO VICTOR OLUWABUNMI",
+      "date": "Sun, 5 Apr 2026 18:42:03 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5280805532540659715",
+      "draft_message_id": "19d5ee6d3eb444b7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:27:59.226702+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5eaf16cf632c1": {
+      "thread_id": "19d5eaf16cf632c1",
+      "from": "Divya ranjith <divyasingan@gmail.com>",
+      "subject": "",
+      "date": "Sun, 5 Apr 2026 22:57:28 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6613677156801455176",
+      "draft_message_id": "19d5ee6d527d95c6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:27:59.927794+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5e9b998252dd8": {
+      "thread_id": "19d5e9b998252dd8",
+      "from": "Sabiya Pathan <sabiyayp13@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Sabiya",
+      "date": "Sun, 5 Apr 2026 22:35:35 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7755214250704712108",
+      "draft_message_id": "19d5ee6d8fbf979a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:28:00.680548+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5e8794ae44fe9": {
+      "thread_id": "19d5c82d43f19be4",
+      "from": "Mini Agarwal <mini.agarwal@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 5 Apr 2026 22:13:17 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S33",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9186000589836237151",
+      "draft_message_id": "19d5ee6db2a6798a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:28:01.433810+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d5e55ccc6f9476": {
+      "thread_id": "19d5e55ccc6f9476",
+      "from": "SAFI NAZIR <safinazir.official.02@gmail.com>",
+      "subject": "Request for Official Email to Verify Role on LinkedIn",
+      "date": "Sun, 5 Apr 2026 20:49:18 +0500",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4784587133767014449",
+      "draft_message_id": "19d5ee6dc47c6a0d",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:28:02.176314+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d5e16010555884": {
+      "thread_id": "19d5e16010555884",
+      "from": "Product Hunt Weekly <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 The end of video slop?",
+      "date": "Sun, 5 Apr 2026 14:39:49 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1829585663780031204",
+      "draft_message_id": "19d5ee6e08d0378a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-05T18:28:02.940523+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
