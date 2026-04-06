@@ -17444,6 +17444,44 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d60a674e94bce8": {
+      "thread_id": "19d0c0ed94ab63d6",
+      "from": "reagan fajardo <mdrhrmarketing@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Reagan",
+      "date": "Mon, 6 Apr 2026 10:36:43 +0800",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5730500158499987221",
+      "draft_message_id": "19d6137784bd33c3",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T05:15:19.584018+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d608a4e33e58c5": {
+      "thread_id": "19d608a4e33e58c5",
+      "from": "Hubstaff Talent <talent@hubstaff.com>",
+      "subject": "Top Candidate Matches for Talent Acquisition Specialist",
+      "date": "Mon, 6 Apr 2026 02:06:05 +0000",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6652989355804052835",
+      "draft_message_id": "19d61377db32ba5a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T05:15:20.859910+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
