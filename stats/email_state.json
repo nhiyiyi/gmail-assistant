@@ -18717,6 +18717,158 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d646fc24fd1e9d": {
+      "thread_id": "19d646fc24fd1e9d",
+      "from": "Atlassian <info@e.atlassian.com>",
+      "subject": "Tell us about your Atlassian experience!",
+      "date": "Mon, 06 Apr 2026 14:15:37 -0600",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8851733989054262979",
+      "draft_message_id": "19d64b2c8eef4f69",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:52.370092+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d64668dccb21bd": {
+      "thread_id": "19d64668dccb21bd",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "6 Apr 2026 16:05:33 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1279581535177449390",
+      "draft_message_id": "19d64b2cd17649a5",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:53.265945+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d643da73e01af4": {
+      "thread_id": "19d643da73e01af4",
+      "from": "Hatsumi <ananyasingh54404@gmail.com>",
+      "subject": "Regarding Assignment Details",
+      "date": "Tue, 7 Apr 2026 00:50:38 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7710350088455739765",
+      "draft_message_id": "19d64b2cedd9951e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:54.128003+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d6436bfddc3b89": {
+      "thread_id": "19d6436bfddc3b89",
+      "from": "Karen from McLean <karen.mann@mcleanco.com>",
+      "subject": "Are you using your organizational culture as a strategic asset?",
+      "date": "Mon, 06 Apr 2026 13:13:19 -0600",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6772715648594652286",
+      "draft_message_id": "19d64b2d3172fd63",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:54.937017+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d643036f2fa73c": {
+      "thread_id": "19d643036f2fa73c",
+      "from": "Rokeya Akter Riya <rokeyaakterriya25@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Rokeya Akter",
+      "date": "Tue, 7 Apr 2026 01:05:49 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8088517067895611270",
+      "draft_message_id": "19d64b2d72f0d53f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:55.839135+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d642f2a898732e": {
+      "thread_id": "19d642f2a898732e",
+      "from": "\"'ayobami akinrelere' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Re: INTERVIEW INVITATION FOR TRESURY TRADER",
+      "date": "Mon, 6 Apr 2026 19:05:00 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2602637070350470838",
+      "draft_message_id": "19d64b2db2184865",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:56.738049+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d642ac237e5128": {
+      "thread_id": "19d642ac237e5128",
+      "from": "Contra <hello@contra.com>",
+      "subject": "Your invite only job has expired",
+      "date": "Mon, 06 Apr 2026 19:00:11 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4757613044999719966",
+      "draft_message_id": "19d64b2dc9722be7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:28:57.608768+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d642087e3be6ce": {
+      "thread_id": "19d642087e3be6ce",
+      "from": "Farhad Asim Kayani <fakbpo@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Farhad",
+      "date": "Mon, 6 Apr 2026 23:48:51 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4662417305335056369",
+      "draft_message_id": "19d64b2f184470c7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T21:29:02.473974+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
