@@ -17482,6 +17482,63 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d6188fe21ec129": {
+      "thread_id": "19d6188fe21ec129",
+      "from": "Balaji Ashok <placement@10849113.brevosend.com>",
+      "subject": "Zero-Cost DevOps & Cloud Hiring | Job-Ready Talent Pool \u2014 Azure, AWS, GCP & GenAI",
+      "date": "Mon, 06 Apr 2026 06:44:20 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3616296733444758129",
+      "draft_message_id": "19d61a609a756194",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T07:16:05.171670+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d6180479223214": {
+      "thread_id": "19d6180479223214",
+      "from": "Neha Rane <neharane040317@gmail.com>",
+      "subject": "Application for Sales & Marketing / Operations Role \u2013 Available to join immediately",
+      "date": "Mon, 6 Apr 2026 10:29:58 +0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2759753019146739118",
+      "draft_message_id": "19d61a60c753c620",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T07:16:06.194060+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d61771b4b8a3b1": {
+      "thread_id": "19d61638edf445b7",
+      "from": "Stephen Maseko <stephenmaseko98@gmail.com>",
+      "subject": "Re: APPLIYING FOR A POSITION OF PORTER",
+      "date": "Mon, 6 Apr 2026 08:24:34 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4353100187945555032",
+      "draft_message_id": "19d61a6122c12843",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T07:16:07.620479+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
