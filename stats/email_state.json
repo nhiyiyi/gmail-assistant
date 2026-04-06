@@ -17425,6 +17425,25 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d5fff566406577": {
+      "thread_id": "19d538264ff5bff9",
+      "from": "Haddy Cham <jatounmum1996@gmail.com>",
+      "subject": "Re: WITHLOVE CARE LTD: Interview invitation for Home Care Assistant - Haddyjatou Cham",
+      "date": "Mon, 6 Apr 2026 00:34:11 +0100",
+      "sender_type": "B",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-604864730609275886",
+      "draft_message_id": "19d605defa37f09e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-06T01:17:42.697933+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
