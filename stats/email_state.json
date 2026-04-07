@@ -18983,6 +18983,44 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d6649ca29244ac": {
+      "thread_id": "19d6649ca29244ac",
+      "from": "Priti <pritip290504@gmail.com>",
+      "subject": "About UI UX assesment",
+      "date": "Tue, 7 Apr 2026 10:22:59 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2670011380910209749",
+      "draft_message_id": "19d665253353016e",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T05:02:45.453418+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d65f726b7f4ce3": {
+      "thread_id": "19d65f726b7f4ce3",
+      "from": "Anthony Ryan Pantoni <anthony@naluri.life>",
+      "subject": "Turunkan Biaya & Naikkan Produktivitas Flowmingo AI dengan Naluri",
+      "date": "Mon, 6 Apr 2026 20:23:05 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1733421572490553044",
+      "draft_message_id": "19d665257d840e05",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T05:02:46.614087+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
     }
   }
 }
