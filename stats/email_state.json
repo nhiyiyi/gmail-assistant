@@ -19021,6 +19021,101 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d66b427a35f051": {
+      "thread_id": "19d66b427a35f051",
+      "from": "Ross Fletcher <ross.fletcher30@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Ross",
+      "date": "Tue, 7 Apr 2026 07:49:31 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7872686067156788169",
+      "draft_message_id": "19d66c09f078d914",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T07:03:13.317745+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d669823db74b3b": {
+      "thread_id": "19d669823db74b3b",
+      "from": "\"'Vje\u0161tine uspje\u0161nog pregovaranja' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\ud83c\udfaf Nau\u010dite kako pregovarati s lako\u0107om, zadr\u017eati dobar odnos i posti\u0107i win-win ishod.",
+      "date": "07 Apr 2026 06:18:38 -0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T07:03:15.240235+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d6691d3e3cd4dc": {
+      "thread_id": "19d6691d3e3cd4dc",
+      "from": "Sandra Wilson <sandra@prohancegroup.net>",
+      "subject": "Workforce visibility when it matters most",
+      "date": "Tue, 07 Apr 2026 06:11:56 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4260236485444894232",
+      "draft_message_id": "19d66c0a8788f750",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T07:03:16.099354+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d66894d88b71bb": {
+      "thread_id": "19d66894d88b71bb",
+      "from": "The e27 Team <engage@e27.co>",
+      "subject": "Your next client is already reading us",
+      "date": "Tue, 7 Apr 2026 06:02:17 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4090486327729244992",
+      "draft_message_id": "19d66c0aca9ba7f9",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T07:03:16.900944+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d6683e301b4278": {
+      "thread_id": "19d6683e301b4278",
+      "from": "Anjali Verma <Anjali@hicsalesforcesolutions.com>",
+      "subject": "Transform Your Tech Team with Top IT Talent \u2013 Let's Connect!",
+      "date": "Tue, 7 Apr 2026 05:56:47 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4766848519666127595",
+      "draft_message_id": "19d66c0ae2446661",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T07:03:18.232796+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
