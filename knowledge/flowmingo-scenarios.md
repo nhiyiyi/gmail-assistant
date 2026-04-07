@@ -232,6 +232,8 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 
 ### **S22 – Recruiter/Company User Exploring Flowmingo (Type D)**
 
+**Applies to Type D only.** If the thread contains a partner offer letter (Business Partner or Talent Acquisition Partner), the sender is Type C — apply S14 instead. Do not share RECRUITER_CALENDAR_URL with Type C senders.
+
 - Invite them to schedule a brief conversation via RECRUITER_CALENDAR_URL.
 - Also invite them to share requirements by email and confirm you will assist promptly.
 

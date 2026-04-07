@@ -178,6 +178,7 @@ Classify each sender into one of these:
 - Type A – Flowmingo Program Candidate (applying to Flowmingo roles or partner programs).
 - Type B – External Client Candidate (interviewing for another company using Flowmingo).
 - Type C – Business Partner / Talent Acquisition Partner / Content Partner (already in or onboarding).
+  **Thread guard:** If the email thread contains an offer letter for a Business Partner or Talent Acquisition Partner role — regardless of whether the sender has accepted — classify as Type C. This applies even when the sender asks for a call, introduction, or meeting. Do not classify as Type D.
 - Type D – Recruiter / Company User (using Flowmingo to interview their candidates).
 - Type E – Vendor / third-party / unclear (service pitches, collaboration proposals, general inquiries).
 
