@@ -18869,6 +18869,120 @@
         "FM/ready"
       ],
       "ticket_id": null
+    },
+    "19d6570593d13436": {
+      "thread_id": "19d5c82ca9eff641",
+      "from": "\"Marlene S. Charles\" <marlenecharles04@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Mon, 6 Apr 2026 20:53:59 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3529500567863145779",
+      "draft_message_id": "19d65829f85a2dc7",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:52.823254+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d656be4387bbab": {
+      "thread_id": "19d656be4387bbab",
+      "from": "\"'Emma of Torre.ai' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Tu vacante de Designer",
+      "date": "Tue, 07 Apr 2026 00:51:00 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2725353043516222847",
+      "draft_message_id": "19d6582a18768689",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:53.585500+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d656a13100c72d": {
+      "thread_id": "19d656a13100c72d",
+      "from": "\"'Emma of Torre.ai' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Your Designer opening",
+      "date": "Tue, 07 Apr 2026 00:49:00 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-804798161482887552",
+      "draft_message_id": "19d6582a5c7e34be",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:54.396009+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d654480e4d3b74": {
+      "thread_id": "19d654480e4d3b74",
+      "from": "\"'Mia Rodriguez' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Nneka <> trainual intro",
+      "date": "Mon, 6 Apr 2026 20:07:54 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3594914968286093366",
+      "draft_message_id": "19d6582a65c4248f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:55.175040+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
+    },
+    "19d64d027922dd9d": {
+      "thread_id": "19d64d027922dd9d",
+      "from": "Hubstaff Talent <talent@hubstaff.com>",
+      "subject": "The Talent Acquisition Specialist Report: 2026-03-30 - 2026-04-05",
+      "date": "Mon, 6 Apr 2026 22:00:36 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4198000620993521535",
+      "draft_message_id": "19d6582abc5f94a5",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:55.930816+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null
+    },
+    "19d64c204ab55d19": {
+      "thread_id": "19d64c204ab55d19",
+      "from": "Aishani <aishani.ab83@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Aishani",
+      "date": "Tue, 7 Apr 2026 03:15:15 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1399066945992179543",
+      "draft_message_id": "19d6582ace74db96",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T01:15:56.728661+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null
     }
   }
 }
