@@ -108,18 +108,16 @@ def get_email_batch(max_results: int = 500) -> dict:
     if emails and isinstance(emails[0], dict) and "error" in emails[0]:
         return {"error": emails[0]["error"]}
 
-    processed_ids = set(state_module.load_state().get("emails", {}).keys())
-    already_count = sum(1 for e in emails if e.get("id") in processed_ids)
-    new_emails = [e for e in emails if e.get("id") not in processed_ids]
-
-    # Thread dedup (list_emails is newest-first; keep first occurrence)
+    # Never skip unread emails based on prior processing — if it's still unread
+    # it means mark_as_read failed or a draft was deleted. Re-process it.
+    # Thread dedup (list_emails is newest-first; keep first occurrence per thread)
     seen_threads: dict = {}
-    for e in new_emails:
+    for e in emails:
         tid = e.get("thread_id") or e["id"]
         if tid not in seen_threads:
             seen_threads[tid] = e
     deduped = list(seen_threads.values())
-    thread_dedup_count = len(new_emails) - len(deduped)
+    thread_dedup_count = len(emails) - len(deduped)
 
     to_fetch, auto_skipped = [], []
     for e in deduped:
@@ -145,7 +143,6 @@ def get_email_batch(max_results: int = 500) -> dict:
     return {
         "to_process": to_process,
         "auto_skipped": auto_skipped,
-        "already_processed_count": already_count,
         "thread_dedup_count": thread_dedup_count,
         "kb_version": kb_version,
     }
@@ -408,7 +405,6 @@ def main():
     print(
         f"Batch: {len(to_process)} to process, "
         f"{len(auto_skipped)} auto-skipped, "
-        f"{batch['already_processed_count']} already processed, "
         f"{batch['thread_dedup_count']} thread dupes removed"
     )
 
@@ -607,6 +603,12 @@ def main():
 
         # ── 8. Create draft + label + state ──────────────────────────────────
         try:
+            # Delete stale draft if re-processing a previously handled email
+            existing = state_module.load_state().get("emails", {}).get(eid, {})
+            old_draft_id = existing.get("draft_id")
+            if old_draft_id:
+                gmail_client.delete_draft(old_draft_id)
+
             dr = gmail_client.create_draft(
                 to=email["from"],
                 subject=subj,
@@ -788,6 +790,12 @@ def _save_review(
     eid  = email.get("id", "")
     subj = email.get("subject", "")
     try:
+        # If this email was previously processed and has a stale draft, delete it first
+        existing = state_module.load_state().get("emails", {}).get(eid, {})
+        old_draft_id = existing.get("draft_id")
+        if old_draft_id:
+            gmail_client.delete_draft(old_draft_id)
+
         dr = gmail_client.create_draft(
             to=email["from"],
             subject=subj,
