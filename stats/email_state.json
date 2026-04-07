@@ -20215,6 +20215,160 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d69bfbd9109bbc": {
+      "thread_id": "19d69bfbd9109bbc",
+      "from": "The Frontier by Product Hunt <hi@deeperlearning.producthunt.com>",
+      "subject": "Cursor just got a lot bigger",
+      "date": "Tue, 07 Apr 2026 21:01:02 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4768433944029814884",
+      "draft_message_id": "19d69dd9c55f01d8",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:33:45.487299+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d69b512e54d474": {
+      "thread_id": "19d69b512e54d474",
+      "from": "Caesar Ashom <ceaserspost@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - Ashom Caesar Azi",
+      "date": "Tue, 7 Apr 2026 21:45:25 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2929316422028067292",
+      "draft_message_id": "19d69ddb722f9642",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:33:52.229612+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6990043bd38d2": {
+      "thread_id": "19d6990043bd38d2",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "7 Apr 2026 16:08:55 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1952365685220039532",
+      "draft_message_id": "19d69ddcf417692a",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:33:58.371400+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d698364a8828fb": {
+      "thread_id": "19c291b1962750e4",
+      "from": "Ava Siena <avasiena75@gmail.com>",
+      "subject": "Re: \ud83d\ude80 February 2026 Promo \u2014 Strengthen Trust Before Customers Decide Elsewhere \ud83d\ude80",
+      "date": "Tue, 7 Apr 2026 12:55:00 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3973085626842211671",
+      "draft_message_id": "19d69dde62182642",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:34:04.455585+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d6953236b03053": {
+      "thread_id": "19d33e5663e76c7e",
+      "from": "Deepak Kathuria <kathuriadeepak17@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Wed, 8 Apr 2026 00:32:13 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4463748418386768447",
+      "draft_message_id": "19d69ddfe58d1917",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:34:10.451960+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d68fda77d77d8d": {
+      "thread_id": "19d68fda77d77d8d",
+      "from": "Abhaya Dharmadhikari <abhayadharmadhikari@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Abhaya Dharmadhikari",
+      "date": "Tue, 7 Apr 2026 22:58:49 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3339662553362344798",
+      "draft_message_id": "19d69de228039602",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:34:19.728570+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6667,
+      "repair_attempted": true,
+      "review_reason_code": "WRONG_SCENARIO"
+    },
+    "19d697994e245da7": {
+      "thread_id": "19d6525f36859609",
+      "from": "Mohd Affan Husain <mohdaffanhusain@gmail.com>",
+      "subject": "Re: Issue In Login Email",
+      "date": "Wed, 8 Apr 2026 01:14:14 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r5712061729297387432",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T21:34:21.837420+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260407-013",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
