@@ -1,0 +1,15 @@
+{
+  "scenario_id": "S33",
+  "description": "GDPR Data Deletion Request. Must confirm deletion within 2 working days. Must NOT promise a follow-up confirmation once deletion is complete.",
+  "required_facts": [
+    "2 working days"
+  ],
+  "forbidden_promises": [
+    "follow-up confirmation once deletion",
+    "let you know when deletion",
+    "confirm once deleted",
+    "send you a confirmation when"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

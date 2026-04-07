@@ -1,0 +1,8 @@
+{
+  "scenario_id": "FALLBACK",
+  "description": "Generic fallback contract — used when no specific contract matches the model's scenario_id.",
+  "required_facts": [],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

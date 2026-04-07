@@ -61,11 +61,12 @@ HEADERS = [
     "Sent At",             # Q
 ]
 
-BUG_TAB         = "Bug Tickets"
-ACTION_TAB      = "Actions Required"
-DAILY_REPORT_TAB  = "Daily Report"
-DR_SUMMARY_TAB    = "Daily_Report_Summary"
-CONFIG_TAB        = "Config"
+BUG_TAB             = "Bug Tickets"
+ACTION_TAB          = "Actions Required"
+DAILY_REPORT_TAB    = "Daily Report"
+DR_SUMMARY_TAB      = "Daily_Report_Summary"
+CONFIG_TAB          = "Config"
+REVIEW_PATTERNS_TAB = "Review Patterns"
 
 # 29-column Daily Report header order
 DR_HEADERS = [
@@ -682,3 +683,51 @@ def write_daily_summary(date_str: str, summary: dict) -> dict:
         return {"ok": True}
     except HttpError as e:
         return {"error": f"Sheets API error: {e}"}
+
+
+def upsert_reason_frequency(date: str, code: str, count: int) -> dict:
+    """
+    Upsert a review_reason_code frequency row in the "Review Patterns" tab.
+
+    Composite key: (date, code). If a row with that key exists, update its count.
+    Otherwise append a new row.
+
+    Columns: Date | review_reason_code | count
+    """
+    spreadsheet_id = get_sheet_id()
+    if not spreadsheet_id:
+        return {"error": "Sheet not configured. Run tools/scripts/setup_sheets.py first."}
+
+    try:
+        service = get_service()
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id,
+            range=f"'{REVIEW_PATTERNS_TAB}'!A:C",
+        ).execute()
+        rows = result.get("values", [])
+
+        existing_row = None
+        for i, row in enumerate(rows):
+            if len(row) >= 2 and row[0] == date and row[1] == code:
+                existing_row = i + 1  # 1-based sheet row
+                break
+
+        if existing_row:
+            service.spreadsheets().values().update(
+                spreadsheetId=spreadsheet_id,
+                range=f"'{REVIEW_PATTERNS_TAB}'!C{existing_row}",
+                valueInputOption="USER_ENTERED",
+                body={"values": [[count]]},
+            ).execute()
+            return {"updated": True, "date": date, "code": code, "count": count}
+        else:
+            service.spreadsheets().values().append(
+                spreadsheetId=spreadsheet_id,
+                range=f"'{REVIEW_PATTERNS_TAB}'!A:C",
+                valueInputOption="USER_ENTERED",
+                body={"values": [[date, code, count]]},
+            ).execute()
+            return {"appended": True, "date": date, "code": code, "count": count}
+    except HttpError as e:
+        return {"error": f"Sheets API error: {e}"}
+

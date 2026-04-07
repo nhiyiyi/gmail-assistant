@@ -1,0 +1,16 @@
+{
+  "scenario_id": "S27",
+  "description": "Vendor/Service Pitch Email. Must NOT decline in first sentence. Must NOT fabricate fictional names. Must NOT make commitments to implement or evaluate.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "we will implement",
+    "we plan to add",
+    "we are working on this",
+    "we will evaluate",
+    "we will consider your proposal",
+    "we are not interested",
+    "we do not need"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

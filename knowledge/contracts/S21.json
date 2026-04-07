@@ -1,0 +1,21 @@
+{
+  "scenario_id": "S21",
+  "description": "External Client Candidates: Results Timeline / Reminder Emails (Type B). Must NOT give 1-2 week estimate. Must tell them to contact hiring company.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "1-2 weeks",
+    "1 to 2 weeks",
+    "one to two weeks",
+    "within two weeks",
+    "within 2 weeks",
+    "we will contact you",
+    "we will follow up",
+    "our team will reach out"
+  ],
+  "ownership_patterns": [
+    "our team will contact",
+    "we will be in touch with results",
+    "we will send you the results"
+  ],
+  "force_review": false
+}

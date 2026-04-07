@@ -1,0 +1,17 @@
+{
+  "scenario_id": "S18",
+  "description": "Timeline Expectations — Flowmingo Program Candidates (Type A). Must NOT anchor the 1-2 week timeline. Must NOT mention onboarding details.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "from the interview date",
+    "from submission",
+    "from today",
+    "from the date",
+    "starting from",
+    "onboarding details",
+    "onboarding team will",
+    "onboarding information will"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

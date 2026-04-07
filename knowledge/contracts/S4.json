@@ -1,0 +1,20 @@
+{
+  "scenario_id": "S4",
+  "description": "Extensions/Rescheduling/Retakes — External Company Roles (Type B). Must tell them to contact hiring company; must NOT say use the original link.",
+  "required_facts": [
+    "contact the hiring company"
+  ],
+  "forbidden_promises": [
+    "use the original link",
+    "whenever you feel comfortable",
+    "approved your extension",
+    "we have extended",
+    "we can extend"
+  ],
+  "ownership_patterns": [
+    "we will change the deadline",
+    "we will issue a new link",
+    "we can change"
+  ],
+  "force_review": false
+}

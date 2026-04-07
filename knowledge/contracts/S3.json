@@ -1,0 +1,14 @@
+{
+  "scenario_id": "S3",
+  "description": "Extensions/Rescheduling/Retakes — Flowmingo Program Candidates (Type A). Always approve; tell them to use original link.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "contact the hiring company",
+    "contact the recruiter",
+    "cannot change deadlines",
+    "cannot issue new links",
+    "cannot extend"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

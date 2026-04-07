@@ -1,0 +1,12 @@
+{
+  "scenario_id": "S34",
+  "description": "Acceptance / Confirmation. Must NOT fabricate next steps. Must NOT say onboarding team will be in touch (not authorised for most types).",
+  "required_facts": [],
+  "forbidden_promises": [
+    "onboarding team will be in touch",
+    "onboarding details to follow",
+    "someone will contact you shortly with onboarding"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

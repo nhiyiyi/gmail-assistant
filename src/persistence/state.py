@@ -41,6 +41,9 @@ def save_email(
     kb_version: str,
     labels_applied: list,
     ticket_id: str = None,
+    validator_score: float = None,
+    repair_attempted: bool = False,
+    review_reason_code: str = None,
 ) -> dict:
     """Save state for a processed email. Returns the saved entry."""
     data = load_state()
@@ -60,6 +63,9 @@ def save_email(
         "processed_at": datetime.now(timezone.utc).isoformat(),
         "labels_applied": labels_applied,
         "ticket_id": ticket_id,
+        "validator_score": validator_score,
+        "repair_attempted": repair_attempted,
+        "review_reason_code": review_reason_code,
     }
     data["emails"][email_id] = entry
     save_state(data)

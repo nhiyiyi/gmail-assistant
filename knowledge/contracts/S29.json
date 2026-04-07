@@ -1,0 +1,15 @@
+{
+  "scenario_id": "S29",
+  "description": "Do-Not-Contact / Remove from Mailing List / GDPR Stop-Processing. Draft must flag for human review only — no substantive reply.",
+  "required_facts": [
+    "REVIEW NEEDED"
+  ],
+  "forbidden_promises": [
+    "we have unsubscribed you",
+    "you have been removed",
+    "we will stop contacting",
+    "we will no longer contact"
+  ],
+  "ownership_patterns": [],
+  "force_review": true
+}
