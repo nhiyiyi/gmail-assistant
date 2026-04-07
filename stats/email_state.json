@@ -2152,22 +2152,25 @@
     },
     "19d15a9335a65d84": {
       "thread_id": "19cd6eda24de4230",
-      "from": "ananya.shankar1503@gmail.com",
+      "from": "Ananya Shankar <ananya.shankar1503@gmail.com>",
       "subject": "Re: New job opportunites at Flowmingo for Ananya",
       "date": "Sun, 22 Mar 2026 18:38:10 +0530",
       "sender_type": "A",
-      "topic": "technical",
+      "topic": "candidate",
       "scenario": "unclear",
       "urgency": "normal",
       "review_status": "review",
-      "draft_id": "r8535280084889322817",
-      "draft_message_id": "19d1967b5e15cafb",
-      "kb_version": "5a5ec8cae792",
-      "processed_at": "2026-03-22T15:18:48.110675+00:00",
+      "draft_id": "r-2422271839030818841",
+      "draft_message_id": "19d676156fcb27e3",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:46.720874+00:00",
       "labels_applied": [
         "FM/review"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     },
     "19d154fd3e32a394": {
       "thread_id": "19d154fd3e32a394",
@@ -8460,22 +8463,25 @@
     },
     "19d3336bd8a4e7af": {
       "thread_id": "19d3336bd8a4e7af",
-      "from": "iiwarui13@gmail.com",
+      "from": "Shot by Ignatius <iiwarui13@gmail.com>",
       "subject": "Re: Flowmingo Offer Letter for Shot by",
       "date": "Sat, 28 Mar 2026 09:51:42 +0300",
       "sender_type": "C",
       "topic": "partner",
-      "scenario": "R4/R5",
+      "scenario": "S11",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r1074872758642932403",
-      "draft_message_id": "19d33c691437e135",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-28T09:29:05.265018+00:00",
+      "review_status": "ready",
+      "draft_id": "r3362150926893515907",
+      "draft_message_id": "19d6761445bba2cf",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:41.857836+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d333bf8992ab45": {
       "thread_id": "19d333bf8992ab45",
@@ -8574,22 +8580,25 @@
     },
     "19d343f933035894": {
       "thread_id": "19d343f933035894",
-      "from": "zamanbdm4@gmail.com",
+      "from": "Aarif Zaman <zamanbdm4@gmail.com>",
       "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - ARIF HAQUE",
       "date": "Sat, 28 Mar 2026 17:10:58 +0530",
       "sender_type": "A",
       "topic": "candidate",
       "scenario": "unclear",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r-9074036363134206042",
-      "draft_message_id": "19d346d61a083a98",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-28T12:31:17.582396+00:00",
+      "review_status": "ready",
+      "draft_id": "r7774502691044439159",
+      "draft_message_id": "19d67611aa79390c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:30.918380+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d33f45166ed4ca": {
       "thread_id": "19d33f45166ed4ca",
@@ -8612,22 +8621,25 @@
     },
     "19d33e5663e76c7e": {
       "thread_id": "19d33e5663e76c7e",
-      "from": "kathuriadeepak17@gmail.com",
-      "subject": "Re: Flowmingo Partner Checking in \u2014 we're with you every step \ud83d\udcaa",
+      "from": "Deepak Kathuria <kathuriadeepak17@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
       "date": "Sat, 28 Mar 2026 15:32:31 +0530",
       "sender_type": "C",
       "topic": "partner",
       "scenario": "unclear",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r-922988365747791535",
-      "draft_message_id": "19d346d68a2fa9a7",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-28T12:31:19.294225+00:00",
+      "review_status": "ready",
+      "draft_id": "r4393983300769989640",
+      "draft_message_id": "19d67612e737bae6",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:36.114045+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d34d176e8edbf7": {
       "thread_id": "19d34d176e8edbf7",
@@ -8821,22 +8833,25 @@
     },
     "19d36ffb73b13d8e": {
       "thread_id": "19d36ffb73b13d8e",
-      "from": "pratikshapol218@gmail.com",
+      "from": "Pratiksha Pol <pratikshapol218@gmail.com>",
       "subject": "Request for Extension to Complete AI Interview",
       "date": "Sun, 29 Mar 2026 00:04:46 +0530",
-      "sender_type": "B",
-      "topic": "candidate_support",
-      "scenario": "unclear",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r8007603684885407395",
-      "draft_message_id": "19d372b5c7afa784",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-29T01:18:02.491757+00:00",
+      "review_status": "ready",
+      "draft_id": "r-413655689465197852",
+      "draft_message_id": "19d6761092bf17d0",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:26.657648+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d36fc896617f25": {
       "thread_id": "19d36fc896617f25",
@@ -9011,41 +9026,47 @@
     },
     "19d3a0ce869d31d9": {
       "thread_id": "19d3a0ce869d31d9",
-      "from": "emmanuelloyato889@gmail.com",
-      "subject": "Re: ONBOARDING",
-      "date": "2026-03-29",
+      "from": "Emmanuel Loyato <emmanuelloyato889@gmail.com>",
+      "subject": "",
+      "date": "Sun, 29 Mar 2026 17:43:23 +0300",
       "sender_type": "E",
-      "topic": "unclear",
-      "scenario": "unclear",
+      "topic": "other",
+      "scenario": "S32",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r375265502966828510",
-      "draft_message_id": "19d3a306567b8847",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-29T15:22:24.378780+00:00",
+      "review_status": "ready",
+      "draft_id": "r-6501432732363675559",
+      "draft_message_id": "19d6760e55684ad2",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:17.484080+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 0.2,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d39b51a903304c": {
       "thread_id": "19d39b51a903304c",
-      "from": "prerna.pc93@gmail.com",
-      "subject": "Re: Need extension on interview timeline.",
-      "date": "2026-03-29",
-      "sender_type": "B",
+      "from": "Prerna Chauhan <prerna.pc93@gmail.com>",
+      "subject": "Need extension on interview timeline.",
+      "date": "Sun, 29 Mar 2026 18:37:30 +0530",
+      "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S4",
+      "scenario": "S3",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r8466197900117273880",
-      "draft_message_id": "19d3a306a7024db5",
-      "kb_version": "96d0c1d2e28b",
-      "processed_at": "2026-03-29T15:22:25.530491+00:00",
+      "review_status": "ready",
+      "draft_id": "r-3210410590206843381",
+      "draft_message_id": "19d6760f9d96a01b",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:22.431070+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
-      "ticket_id": null
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d39a11e9833cf5": {
       "thread_id": "19d39a11e9833cf5",
@@ -19116,6 +19137,292 @@
         "FM/review"
       ],
       "ticket_id": null
+    },
+    "19d674f9817da414": {
+      "thread_id": "19d674f9817da414",
+      "from": "Microsoft Advertising <adctr@microsoft.com>",
+      "subject": "V\u00e9rifier votre identit\u00e9 d\u2019annonceur pour renforcer la confiance",
+      "date": "Tue, 7 Apr 2026 09:39:20 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r48595473046053319",
+      "draft_message_id": "19d67600c1ec249c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:21.753371+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d674e0a2a6a95b": {
+      "thread_id": "19d674e0a2a6a95b",
+      "from": "Elamayil Ilanchezhiyan <elamayil.i@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Elamayil Ilanchezhiyan",
+      "date": "Tue, 7 Apr 2026 15:07:24 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "other",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1885063374822490715",
+      "draft_message_id": "19d67602b1cb96d1",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:29.793018+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d674b785877ac1": {
+      "thread_id": "19d674b785877ac1",
+      "from": "Microsoft Advertising <adctr@microsoft.com>",
+      "subject": "Bienvenue dans Microsoft Advertising\u00a0!",
+      "date": "Tue, 7 Apr 2026 09:34:50 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6499867219331776381",
+      "draft_message_id": "19d67603c3133eda",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:34.424137+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d673ab2fbfcda8": {
+      "thread_id": "19d673ab2fbfcda8",
+      "from": "Antara D <dekateantara@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Antara Dekate",
+      "date": "Tue, 7 Apr 2026 14:46:19 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2396913233612424687",
+      "draft_message_id": "19d67604dfeba8ef",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:38.425004+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d673934e2bbb82": {
+      "thread_id": "19d673934e2bbb82",
+      "from": "\"'Olivia Pienaar' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Staffing support",
+      "date": "Tue, 07 Apr 2026 09:14:02 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5808954050909079882",
+      "draft_message_id": "19d676052ca3f17f",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:39.618907+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d672d5d932df6e": {
+      "thread_id": "19d672b2d5862ae9",
+      "from": "\"Mark Baker at d&i Leaders\" <info@sircula.com>",
+      "subject": "Neurodiversity at Work: Flexible work environments, AI tools, frameworks and guidelines",
+      "date": "Tue, 7 Apr 2026 10:01:42 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2647228077196247379",
+      "draft_message_id": "19d676067798c11c",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:45.182398+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d671678f384f21": {
+      "thread_id": "19d671678f384f21",
+      "from": "Varshika Kashyap <varshika.smkmp@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Tue, 7 Apr 2026 14:06:43 +0530",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8938067523688539559",
+      "draft_message_id": "19d67607cb7939fe",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:50.577803+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6706c2a430167": {
+      "thread_id": "19d4a043426fbd16",
+      "from": "Daniel Odubanjo <danielodubanjo6@gmail.com>",
+      "subject": "Re: Senior Product & Graphic Brand Designer",
+      "date": "Tue, 7 Apr 2026 09:19:36 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5573003102772372139",
+      "draft_message_id": "19d67608eb50b8da",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:57:55.450424+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6685009e37233": {
+      "thread_id": "19d6685009e37233",
+      "from": "Amanda Lee <amanda@prohancemarketing.net>",
+      "subject": "Workforce visibility when it matters most",
+      "date": "Tue, 07 Apr 2026 05:57:43 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1536517948509751285",
+      "draft_message_id": "19d6760a6dfd0913",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:01.278471+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9167,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d618cad507a758": {
+      "thread_id": "19d618cad507a758",
+      "from": "George Arthur <in.fogeorgearthur@gmail.com>",
+      "subject": "I provide new high quality websites for guest posting.",
+      "date": "Sun, 5 Apr 2026 23:48:06 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3460861336613910286",
+      "draft_message_id": "19d6760bb3e3df9a",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:06.574244+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9167,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d51fb85771b013": {
+      "thread_id": "19d51fb85771b013",
+      "from": "\"marashy.m via Contact\" <contact@flowmingo.ai>",
+      "subject": "Reducing Costs With Connect Resources",
+      "date": "Thu, 2 Apr 2026 23:15:20 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8057443794493543334",
+      "draft_message_id": "19d6760c15289f02",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:07.774969+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d45b5cc884a4fb": {
+      "thread_id": "19d45b32c66d5dbd",
+      "from": "The Frontier by Product Hunt <hi@deeperlearning.producthunt.com>",
+      "subject": "RIP Sora",
+      "date": "Tue, 31 Mar 2026 21:01:02 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1942082112978232498",
+      "draft_message_id": "19d6760d0ba6e640",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:12.029750+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d623a139bff863": {
+      "thread_id": "19d623a139bff863",
+      "from": "eric rowan <ericrowan204@gmail.com>",
+      "subject": "Detected Potential Security Vulnerabilities in Your Application",
+      "date": "Mon, 6 Apr 2026 15:27:33 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r5115757933635625860",
+      "draft_message_id": "",
+      "kb_version": "1409f00cb028",
+      "processed_at": "2026-04-07T09:58:48.192974+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260407-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
