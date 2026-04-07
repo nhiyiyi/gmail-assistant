@@ -20105,6 +20105,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d692c3fee090e0": {
+      "thread_id": "19d692c3fee090e0",
+      "from": "Shreya Upadhyay <shreyau725@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Shreya Upadhyay",
+      "date": "Tue, 7 Apr 2026 23:49:45 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5211852026930270159",
+      "draft_message_id": "19d69430cb32b7b9",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T18:44:56.163149+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d68fe2f092848c": {
+      "thread_id": "19d68fda77d77d8d",
+      "from": "Abhaya Dharmadhikari <abhayadharmadhikari@gmail.com>",
+      "subject": "Fwd: Flowmingo: Interview invitation for Human Resources Executive - Abhaya Dharmadhikari",
+      "date": "Tue, 7 Apr 2026 22:59:25 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5106589501955107490",
+      "draft_message_id": "19d69433c291bd9c",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T18:45:08.263656+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9286,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT"
+    },
+    "19d690166b76e0ff": {
+      "thread_id": "19d5e96a18f76e25",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Tue, 7 Apr 2026 23:02:59 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-5854023303546093646",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T18:45:12.428746+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260407-010",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d68e8928894625": {
+      "thread_id": "19d1047e3e344821",
+      "from": "Zaarra Ahmed <ahmedzaarra@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Zara",
+      "date": "Tue, 7 Apr 2026 18:05:51 +0100",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-1790598845140803076",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T18:45:13.868736+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260407-011",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6817b0f03e401": {
+      "thread_id": "19d6817b0f03e401",
+      "from": "\"'ISOKEN CONSULTING GROUP' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Final Call: Pension Fund Masterclass, Mombasa - April 2026",
+      "date": "Tue,  7 Apr 2026 13:17:48 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6551220193345138994",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-07T18:45:15.116363+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260407-012",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
