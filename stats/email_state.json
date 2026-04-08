@@ -21249,6 +21249,94 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6e0a81ba2a127": {
+      "thread_id": "19d6e0a81ba2a127",
+      "from": "Futurepedia <mail@newsletter.futurepedia.io>",
+      "subject": "A Big Announcement from Futurepedia",
+      "date": "Wed, 08 Apr 2026 17:00:59 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6506810468497246748",
+      "draft_message_id": "19d6e77b8c581bb5",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T19:00:34.011373+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d6e095ed56ba62": {
+      "thread_id": "19d6e095ed56ba62",
+      "from": "Lipsha Panda <lipshapanda13@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Lipsha Panda",
+      "date": "Wed, 8 Apr 2026 22:29:47 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r415788020355339174",
+      "draft_message_id": "19d6e77d389321ab",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T19:00:40.365365+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6e01e59548811": {
+      "thread_id": "19d6e01e59548811",
+      "from": "Afsha arif <arifafsha77@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Afsha Afsha",
+      "date": "Wed, 8 Apr 2026 22:21:35 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5257553844575391821",
+      "draft_message_id": "19d6e77f7ce7d23f",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T19:00:49.812316+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6df20b384ace8": {
+      "thread_id": "19d6df20b384ace8",
+      "from": "\"'Tamara Parch' via Contact\" <contact@flowmingo.ai>",
+      "subject": "retell ai for voice agents?",
+      "date": "Wed, 08 Apr 2026 16:34:26 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7380899046579908867",
+      "draft_message_id": "19d6e77fc5d8eb04",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T19:00:51.067706+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
     }
   }
 }
