@@ -20545,6 +20545,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6bd7da8ea951d": {
+      "thread_id": "19d6bd7da8ea951d",
+      "from": "Arvind Kumar <arvind.paperlive.in@viazohocrm.in>",
+      "subject": "Zero-Cost DevOps & Cloud Hiring | Job-Ready Talent Pool",
+      "date": "Wed, 8 Apr 2026 12:16:36 +0530 (IST)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1382197012890654483",
+      "draft_message_id": "19d6be8cf791a21b",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T07:05:13.466976+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9167,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6bafe2e7896e8": {
+      "thread_id": "19d630909199ca70",
+      "from": "Arisha Ghaffar <arisha.ghaffar@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Arisha",
+      "date": "Wed, 8 Apr 2026 11:02:49 +0500",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8166853772529932819",
+      "draft_message_id": "19d6be900df4269f",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T07:05:26.092527+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6b9c12a512876": {
+      "thread_id": "19d6b9c12a512876",
+      "from": "Suleyman <yesuleymanderese@gmail.com>",
+      "subject": "Issue of Email",
+      "date": "Wed, 8 Apr 2026 08:41:15 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-793823759792344357",
+      "draft_message_id": "19d6be92aabf73a2",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T07:05:36.761687+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6b88a2d05391c": {
+      "thread_id": "19d6b88a2d05391c",
+      "from": "Mohamed Badran <mhmd.tharwatt@gmail.com>",
+      "subject": "Finance Leader | CMA 15 yrs Experiences | UAE & KSA Exposure",
+      "date": "Tue, 7 Apr 2026 22:20:01 -0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-198009269434391866",
+      "draft_message_id": "19d6be98ad394e84",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T07:06:01.372358+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d6bb23c865ffe7": {
+      "thread_id": "19d6bb23c865ffe7",
+      "from": "Thomas Peham <thomas.peham@otterly.ai>",
+      "subject": "Reddit marketing without getting yourself banned (free webinar)",
+      "date": "08 Apr 2026 06:05:29 -0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-7928745204584750211",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T07:06:04.849973+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
