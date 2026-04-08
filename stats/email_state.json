@@ -20435,6 +20435,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6b76456bf248a": {
+      "thread_id": "19d6b76456bf248a",
+      "from": "Jyoti Kumari <kumarijyoti75410@gmail.com>",
+      "subject": "Request for feedback",
+      "date": "Wed, 8 Apr 2026 10:29:50 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5344082137788213077",
+      "draft_message_id": "19d6b7a2b6cad926",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T05:04:22.883452+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6b6ed30ac2faa": {
+      "thread_id": "19d6b6ed30ac2faa",
+      "from": "Jyoti Kumari <kumarijyoti75410@gmail.com>",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Wed, 8 Apr 2026 10:21:41 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "B21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2718997378647446279",
+      "draft_message_id": "19d6b7a3e686d2de",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T05:04:27.847576+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6b2b43da4e2a5": {
+      "thread_id": "19d35146b40c6bea",
+      "from": "Rukoyah Shittu <rukoyahshittu0@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Rukoyah",
+      "date": "Wed, 8 Apr 2026 04:36:21 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1951178628453564551",
+      "draft_message_id": "19d6b7a5d5f19d46",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T05:04:35.584464+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6aec6e6b90ef3": {
+      "thread_id": "19d6aec6e6b90ef3",
+      "from": "Maricon Ruiz <maricon.ruiz@novare.com.ph>",
+      "subject": "Flowmingo Platform Inquiry",
+      "date": "Wed, 8 Apr 2026 10:29:20 +0800",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5797334382166297765",
+      "draft_message_id": "19d6b7a8f74f6e86",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T05:04:48.246408+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6667,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d6ad2af1c0d491": {
+      "thread_id": "19d6ad2af1c0d491",
+      "from": "\"AI for Google Ads Crash Course (28 April)\" <hello@experience-effect.com>",
+      "subject": "Google Ads 2026: What Works (and What Doesn\u2019t)",
+      "date": "Wed, 08 Apr 2026 02:01:21 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6989791841552531293",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T05:04:53.246788+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
