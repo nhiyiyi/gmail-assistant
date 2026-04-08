@@ -20875,6 +20875,94 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6d06cd9da9bfd": {
+      "thread_id": "19d6d06cd9da9bfd",
+      "from": "Peter Toniloba <petertoniloba@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Peter",
+      "date": "Wed, 8 Apr 2026 13:17:19 +0100",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-9097108318367208335",
+      "draft_message_id": "19d6d27bd79b2ad7",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T12:53:34.743713+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6ce1962b65a56": {
+      "thread_id": "19d6ce192a5595df",
+      "from": "\"'Ned Barker' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Growth capital query",
+      "date": "Wed, 08 Apr 2026 11:36:53 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r599991821673106768",
+      "draft_message_id": "19d6d27c1abf3bbd",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T12:53:35.948536+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d6cd93fb2cd044": {
+      "thread_id": "19d6cd93fb2cd044",
+      "from": "\"Nguy\u1ec5n Th\u1ecb Tr\u00e0 Thanh\" <nguyenthitrathanh54@gmail.com>",
+      "subject": "Inquiry about AI Interview Deadline - Nguy\u1ec5n Th\u1ecb Tr\u00e0 Thanh - Product intern",
+      "date": "Wed, 8 Apr 2026 18:27:36 +0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T12:53:44.795940+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6cbd5c086e15e": {
+      "thread_id": "19d6cbd5c086e15e",
+      "from": "Microsoft Advertising <adctr@microsoft.com>",
+      "subject": "Fonds correctement ajout\u00e9s \u00e0 vos comptes",
+      "date": "Wed, 8 Apr 2026 10:57:20 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7758837993101391520",
+      "draft_message_id": "19d6d27fa9b678bd",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T12:53:50.381943+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
