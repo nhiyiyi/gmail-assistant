@@ -20655,6 +20655,226 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6c7fda6f9ac12": {
+      "thread_id": "19d6c7fda6f9ac12",
+      "from": "Mailchimp Imports <imports@mailchimp.com>",
+      "subject": "Your audience import results: Flowmingo",
+      "date": "Wed, 08 Apr 2026 09:50:09 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1512232368910947679",
+      "draft_message_id": "19d6c86ec2765e8b",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:57:55.639513+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c765208fdbf2": {
+      "thread_id": "19d6288a7572ab3c",
+      "from": "animesh samrat <animeshs702@gmail.com>",
+      "subject": "Re: E2M Solutions: Interview invitation for Junior UI/UX Designer - Figma - Animesh Kumar",
+      "date": "Wed, 8 Apr 2026 15:03:05 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2565961622417419748",
+      "draft_message_id": "19d6c87271cc60f8",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:10.472698+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d6c292f3879f1e": {
+      "thread_id": "19d6c292f3879f1e",
+      "from": "Niki Basiouka <basioukaniki@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Niki",
+      "date": "Wed, 8 Apr 2026 11:14:59 +0300",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5756496249357727865",
+      "draft_message_id": "19d6c87431474d8f",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:17.724047+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c1cbc5738e45": {
+      "thread_id": "19d6c1cbc5738e45",
+      "from": "Nazifa Tasnim Promee <nazifatasnim.t@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Nazifa Tasnim",
+      "date": "Wed, 8 Apr 2026 14:01:39 +0600",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S14",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-256901398091277598",
+      "draft_message_id": "19d6c875ce92cdad",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:24.353274+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c1b607d9c067": {
+      "thread_id": "19d6c1b607d9c067",
+      "from": "Glints Team <hi@platform.glints.com>",
+      "subject": "Tin \u0111\u0103ng s\u1ebd h\u1ebft h\u1ea1n v\u00e0o ng\u00e0y mai, gia h\u1ea1n ngay!",
+      "date": "Wed, 08 Apr 2026 16:00:23 +0800",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6018104164338170989",
+      "draft_message_id": "19d6c876ff5914d3",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:29.022036+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d6c1872bf4b4ea": {
+      "thread_id": "19d6c1872bf4b4ea",
+      "from": "Natalya Sorokina <snatalya502@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Natalya",
+      "date": "Wed, 8 Apr 2026 10:00:48 +0200",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5184606765164231373",
+      "draft_message_id": "19d6c87b5bd9bb81",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:47.222102+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c09d9cd63178": {
+      "thread_id": "19d6c09d9cd63178",
+      "from": "BUKOLA OLANREWAJU <olanrewajubukola92@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - Olanrewaju Bukola",
+      "date": "Wed, 8 Apr 2026 08:41:02 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6851217897625871806",
+      "draft_message_id": "19d6c87d1ddff9d1",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:54.500836+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c09cad269d6e": {
+      "thread_id": "19d6c09cad269d6e",
+      "from": "Sharmini Suthan <sharmini@beinclarity.com>",
+      "subject": "You might not like how you sound (but you should check)",
+      "date": "Wed, 08 Apr 2026 07:41:10 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3497195237842530268",
+      "draft_message_id": "19d6c87e5def2ee9",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:58:59.321808+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6bec0a264cb9b": {
+      "thread_id": "19d6bec0a264cb9b",
+      "from": "Sara Gebreslassie <sarageslassie4@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for sara",
+      "date": "Wed, 8 Apr 2026 10:08:29 +0300",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3719302490289545666",
+      "draft_message_id": "19d6c88070caff9f",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:59:08.331306+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6c55292fe160b": {
+      "thread_id": "19d6c55292fe160b",
+      "from": "Echelon Singapore 2026 by e27 <ecosystem@e27.co>",
+      "subject": "8 weeks. One keynote that could change how your business builds AI. And a deadline you cannot miss.",
+      "date": "Wed, 8 Apr 2026 09:02:34 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r821067711639902988",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T09:59:10.255083+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
