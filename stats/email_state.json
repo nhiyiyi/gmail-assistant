@@ -21337,6 +21337,160 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d6ed73f47e4230": {
+      "thread_id": "19d6ed73f47e4230",
+      "from": "Rafah Bennil <rafahmbennil@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Rafah",
+      "date": "Wed, 8 Apr 2026 17:44:28 -0300",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6787384219050656293",
+      "draft_message_id": "19d6f0396bacc53e",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:21.677963+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6eb3cbb993815": {
+      "thread_id": "19d6eb3cbb993815",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "8 Apr 2026 16:06:07 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8704798438203615407",
+      "draft_message_id": "19d6f03b445215f3",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:28.795747+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6e922fac87fc0": {
+      "thread_id": "19d6e922fac87fc0",
+      "from": "Mr Ethical <mrethical006@gmail.com>",
+      "subject": "sdds",
+      "date": "Thu, 9 Apr 2026 00:29:14 +0500",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-7263631984775140754",
+      "draft_message_id": "19d6f03ebf3d5b73",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:42.286472+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d6e887dfaf0635": {
+      "thread_id": "19d6e887dfaf0635",
+      "from": "Brevo <contact@t.brevo.com>",
+      "subject": "You\u2019re almost out of email sending credits! \ud83d\ude31",
+      "date": "Wed, 08 Apr 2026 19:18:48 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3097280873418918268",
+      "draft_message_id": "19d6f040254efdb9",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:47.473933+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d6ecf846666398": {
+      "thread_id": "19d6ecf846666398",
+      "from": "Syed Ahmed <syedansrwork@gmail.com>",
+      "subject": "Fwd: You've advanced to the next round \u2014 Remote Customer Support Voice at Sygnext Software India Pvt Ltd.",
+      "date": "Thu, 9 Apr 2026 02:06:14 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6051641542404542971",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:48.833543+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-006",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6e92f95e73a6d": {
+      "thread_id": "19d6e92f95e73a6d",
+      "from": "Alpha Inferno Pvt Ltd <ethical204@gmail.com>",
+      "subject": "Critical Security Vulnerability Disclosure Report 03",
+      "date": "Thu, 9 Apr 2026 00:30:02 +0500",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-9064316952270144695",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:49.898805+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-007",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d6e92eaf93f7e9": {
+      "thread_id": "19d6e92eaf93f7e9",
+      "from": "Alpha Inferno Pvt Ltd <ethical204@gmail.com>",
+      "subject": "Security Vulnerability Disclosure Report 02",
+      "date": "Thu, 9 Apr 2026 00:29:59 +0500",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3691165648747338596",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-08T21:33:50.923234+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260408-008",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
