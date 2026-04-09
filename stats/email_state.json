@@ -22151,6 +22151,248 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d72453046d8296": {
+      "thread_id": "19cb39d04869daf8",
+      "from": "Pandita Kemevor <kemevorpandita@gmail.com>",
+      "subject": "Re: A request to help shape AI models (get your personalized interview insights + prep kit)",
+      "date": "Thu, 9 Apr 2026 12:43:33 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S9.2",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3509985252506562462",
+      "draft_message_id": "19d72510135f8b1e",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:56:45.155932+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d722b2ddf81d9b": {
+      "thread_id": "19d722b2ddf81d9b",
+      "from": "Ricky Pathak <pathakricky4@gmail.com>",
+      "subject": "Re: HlinkeR: Interview invitation for HR Generalist - PRANITA PATHAK",
+      "date": "Thu, 9 Apr 2026 17:45:10 +0530",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1787652060114662314",
+      "draft_message_id": "19d725117d9bbc7b",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:56:50.801778+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d720431ea8bb36": {
+      "thread_id": "19d720431ea8bb36",
+      "from": "Fernando Liazar Luemba Salvador <000fernandosalvador111@gmail.com>",
+      "subject": "Re: Flowmingo's April 2026 Updates Are Here!",
+      "date": "Thu, 9 Apr 2026 12:32:34 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4559501709223629519",
+      "draft_message_id": "19d725159aedb9dd",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:07.829194+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d71f2a86a40dcf": {
+      "thread_id": "19d6d663f991d519",
+      "from": "Anders Kirk <reiterkirk@hotmail.com>",
+      "subject": "Sv: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Thu, 9 Apr 2026 11:13:39 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8625561623627123109",
+      "draft_message_id": "19d725182f99a6a8",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:18.488521+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d71cee571162ff": {
+      "thread_id": "19d71cee571162ff",
+      "from": "rizwan ahsan <rizwanahsan2010@hotmail.com>",
+      "subject": "INTERVIEW LINK EMAIL",
+      "date": "Thu, 9 Apr 2026 10:34:32 +0000",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8874217550260333413",
+      "draft_message_id": "19d7251966c91288",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:23.537782+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d721f47671726c": {
+      "thread_id": "19d721f47671726c",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Activation of webhooks",
+      "date": "Thu, 9 Apr 2026 17:32:12 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r9219064441064525305",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:27.288955+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d721f0308f0346": {
+      "thread_id": "19d721f0308f0346",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: Your Magic Link for Desktop Login",
+      "date": "Thu, 9 Apr 2026 17:31:45 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-9217712747319265323",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:29.620891+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-005",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d72140c749203c": {
+      "thread_id": "19d43b6081203cee",
+      "from": "Lilianna Marcysiak <lilia.marcysiak@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Lilianna Marcysiak",
+      "date": "Thu, 9 Apr 2026 13:49:58 +0200",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3302079865524275141",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:30.727382+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-006",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d720082b8e565c": {
+      "thread_id": "19d720082b8e565c",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Facing not found error for the following code. Im using ngrok as webhook in flowmingo dashboard: https://unbarreled-recklessly-sharan.ngrok-free.dev/webhook",
+      "date": "Thu, 9 Apr 2026 16:58:36 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r8032220161387617505",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:33.302102+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-007",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d71dfe713ae75b": {
+      "thread_id": "19d71dfe713ae75b",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "404 error yet email being send msg is being displayed",
+      "date": "Thu, 9 Apr 2026 16:22:58 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3604382462311976301",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:34.670970+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-008",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7179edb8155e0": {
+      "thread_id": "19d7179edb8155e0",
+      "from": "\"'ISOKEN CONSULTING GROUP' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Transform Your HR Practice with Data \u2014 Register Now at Zanzibar",
+      "date": "Thu,  9 Apr 2026 09:01:35 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r3901793049107316051",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T12:57:35.909589+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-009",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
