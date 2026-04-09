@@ -22393,6 +22393,138 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d73004ea607387": {
+      "thread_id": "19d73004ea607387",
+      "from": "Product Hunt Daily <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 Hello, world",
+      "date": "Thu, 9 Apr 2026 16:08:09 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6694020844191748063",
+      "draft_message_id": "19d7302f8289f8cf",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:08.370118+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d72f9890d75b71": {
+      "thread_id": "19d72f9890d75b71",
+      "from": "Yamini Saini <ryamini88@gmail.com>",
+      "subject": "Clarification regarding Talent Acquisition role",
+      "date": "Thu, 9 Apr 2026 21:30:32 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3931874901297261676",
+      "draft_message_id": "19d730310bde8a85",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:14.763548+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d72f016a5623b2": {
+      "thread_id": "19d72f016a5623b2",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Need all the reply urgently pls",
+      "date": "Thu, 9 Apr 2026 21:20:15 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "urgent",
+      "review_status": "review",
+      "draft_id": "r-5036493483454970643",
+      "draft_message_id": "19d730325b98b094",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:19.793398+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d7299a4d68aebd": {
+      "thread_id": "19d7299a4d68aebd",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\ude35\u200d\ud83d\udcab Too many tabs? We\u2019ll simplify things",
+      "date": "Thu, 09 Apr 2026 10:15:52 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2513681277621740016",
+      "draft_message_id": "19d73034733b1d13",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:28.532496+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d727476a2e7d6e": {
+      "thread_id": "19d727476a2e7d6e",
+      "from": "Nedim Aksu <nedimaksu4@gmail.com>",
+      "subject": "Regarding My Application Experience",
+      "date": "Thu, 9 Apr 2026 16:35:15 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r288927585221106429",
+      "draft_message_id": "19d730365db02a6a",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:36.525414+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d72eca3979d3d2": {
+      "thread_id": "19d72eca3979d3d2",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "This endpoint webhook isnt working, activate it pls or tell me how to fix",
+      "date": "Thu, 9 Apr 2026 21:16:29 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6737172874399095486",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T16:11:38.360745+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-010",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
