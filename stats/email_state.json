@@ -21667,6 +21667,138 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d7111b88f143ed": {
+      "thread_id": "19d7111b88f143ed",
+      "from": "SE Ranking Team <support@email.seranking.com>",
+      "subject": "[Workshop] Own your AI share of voice with SE Ranking\u2019s AI Search Toolkit",
+      "date": "Thu, 9 Apr 2026 07:07:57 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2274181701937616523",
+      "draft_message_id": "19d71127fb5d56c7",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:08:51.626295+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d71024aea66e99": {
+      "thread_id": "19d71024aea66e99",
+      "from": "\"'Razvijanje liderskih kompetencija' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Savremeni lideri su uvijek korak ispred. Jeste li vi me\u0111u njima? \ud83c\udf1f",
+      "date": "09 Apr 2026 06:50:55 -0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4765720304450885128",
+      "draft_message_id": "19d7112847950513",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:08:52.785532+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d70f1c9d2f9a2a": {
+      "thread_id": "19d70f1c9d2f9a2a",
+      "from": "Zainab Saif <saifzainab437@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Zainab",
+      "date": "Thu, 9 Apr 2026 11:32:53 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1296644740001609054",
+      "draft_message_id": "19d71129de548580",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:08:59.104410+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d70df51ac4f40e": {
+      "thread_id": "19d70df51ac4f40e",
+      "from": "Shaikh Mostofa <shaikhgolammostofa@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Shaikh",
+      "date": "Thu, 9 Apr 2026 12:12:34 +0600",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2545009772173693744",
+      "draft_message_id": "19d7112b07af03ca",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:09:04.269170+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d70ca7e4e7ff1d": {
+      "thread_id": "19d70ca7e4e7ff1d",
+      "from": "Liz Alex <liz7326@hotmail.com>",
+      "subject": "Elizabeth Alex",
+      "date": "Thu, 9 Apr 2026 05:50:06 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8714617713652511370",
+      "draft_message_id": "19d7112c73a6a7ac",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:09:09.684590+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d70c98da1b6a4a": {
+      "thread_id": "19d70c98da1b6a4a",
+      "from": "suman godara <sumangodara088@gmail.com>",
+      "subject": "Re: [Flowmingo] Continue Your Application for Human Resources",
+      "date": "Thu, 9 Apr 2026 11:18:55 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4531259669094508363",
+      "draft_message_id": "19d7112dd164a306",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T07:09:15.254318+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
