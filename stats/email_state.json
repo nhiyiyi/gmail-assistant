@@ -22525,6 +22525,204 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d737c085e19026": {
+      "thread_id": "19d343f933035894",
+      "from": "Aarif Zaman <zamanbdm4@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - ARIF HAQUE",
+      "date": "Thu, 9 Apr 2026 23:53:06 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5783006487438028992",
+      "draft_message_id": "19d73904fae86b59",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:31.502308+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d736672d768c76": {
+      "thread_id": "19d6e095ed56ba62",
+      "from": "Lipsha Panda <lipshapanda13@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Lipsha Panda",
+      "date": "Thu, 9 Apr 2026 23:29:33 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2389315690251690786",
+      "draft_message_id": "19d739070da6affd",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:39.770857+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d73644f6987c3f": {
+      "thread_id": "19d712469dd0152d",
+      "from": "Farhana Akter <akterfarhana1820@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Farhana",
+      "date": "Thu, 9 Apr 2026 23:57:14 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7415111454018376758",
+      "draft_message_id": "19d7390801d919b1",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:44.326147+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d73620a768b44a": {
+      "thread_id": "19d6e01e59548811",
+      "from": "Afsha arif <arifafsha77@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Afsha Afsha",
+      "date": "Thu, 9 Apr 2026 23:24:43 +0530",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6443028742954466624",
+      "draft_message_id": "19d73909785c871f",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:49.557814+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7361846063fd7": {
+      "thread_id": "19d7361846063fd7",
+      "from": "SE Ranking <support@email.seranking.com>",
+      "subject": "[Request received]",
+      "date": "Thu, 09 Apr 2026 17:54:23 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "other",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3056528629380272250",
+      "draft_message_id": "19d7390a9cfcd0b4",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:54.219125+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d73607c9117a12": {
+      "thread_id": "19d73607c9117a12",
+      "from": "JonTel International <info@jontel.co.ke>",
+      "subject": "Thanks dear support@flowmingo.ai for your email",
+      "date": "Thu, 09 Apr 2026 17:53:10 GMT",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5017454468954548906",
+      "draft_message_id": "19d7390b71e47c16",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:45:58.110583+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d735fdabd4a3a8": {
+      "thread_id": "19d735fdabd4a3a8",
+      "from": "\"Recruitment & OnboardingTeam\" <careers@aymigrations.com>",
+      "subject": "Application Received \u2013 Next Steps with AY Migration Limited",
+      "date": "Thu, 09 Apr 2026 17:52:33 GMT",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1705079325875109526",
+      "draft_message_id": "19d7390c95125227",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:46:02.744842+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7313bd1503de2": {
+      "thread_id": "19d7313bd1503de2",
+      "from": "Microsoft Advertising <adctr@microsoft.com>",
+      "subject": "Microsoft Advertising account suspension removed",
+      "date": "Thu, 9 Apr 2026 16:29:23 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1144721570723157741",
+      "draft_message_id": "19d7390dcabb5ed2",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:46:07.796507+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7306b8ff83617": {
+      "thread_id": "19d7306b8ff83617",
+      "from": "mini vasudaven <vasudavens@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for",
+      "date": "Thu, 9 Apr 2026 20:14:57 +0400",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S30",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5506262353345150679",
+      "draft_message_id": "19d7390f1a83cc69",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T18:46:12.916107+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
