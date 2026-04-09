@@ -22723,6 +22723,182 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d73df6e4d2add1": {
+      "thread_id": "19d73df6e4d2add1",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "9 Apr 2026 16:11:53 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6932506131225174675",
+      "draft_message_id": "19d742d7ea4b8f1c",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:12.818057+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d73cd5cbebb09e": {
+      "thread_id": "19d39b51a903304c",
+      "from": "Prerna Chauhan <prerna.pc93@gmail.com>",
+      "subject": "Re: Need extension on interview timeline.",
+      "date": "Fri, 10 Apr 2026 01:21:59 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7270099380570754364",
+      "draft_message_id": "19d742d96a916b24",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:18.579140+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d73a0c2c300c0a": {
+      "thread_id": "19d727476a2e7d6e",
+      "from": "Nedim Aksu <nedimaksu4@gmail.com>",
+      "subject": "Re: Regarding My Application Experience",
+      "date": "Thu, 9 Apr 2026 22:03:13 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6685455891306737601",
+      "draft_message_id": "19d742dcca7d410b",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:32.459699+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d739cb1070a921": {
+      "thread_id": "19d717a6a60954b9",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: Candidate id",
+      "date": "Fri, 10 Apr 2026 00:28:50 +0530",
+      "sender_type": "D",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9003451227708030011",
+      "draft_message_id": "19d742dde29ae3ec",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:37.403860+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d739530bcc4ebf": {
+      "thread_id": "19d715b169711fe7",
+      "from": "Sanja Ignjatovic <signjatovic@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Thu, 9 Apr 2026 20:50:36 +0200",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S15",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2265615903080174211",
+      "draft_message_id": "19d742df857f9126",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:43.831016+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d739ba94c79016": {
+      "thread_id": "19d72f016a5623b2",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: Need all the reply urgently pls",
+      "date": "Fri, 10 Apr 2026 00:27:42 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-9046566443588546952",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:45.763029+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-011",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7396af1868afd": {
+      "thread_id": "19d71e7e1df6536a",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 10 Apr 2026 00:22:16 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r2406165711321938910",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:46.761007+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-012",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7391a1432f015": {
+      "thread_id": "19d728c62589311b",
+      "from": "practice fyco1 <fycopractice@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 10 Apr 2026 00:16:43 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r9166241303391862453",
+      "draft_message_id": "",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T21:37:47.730546+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260409-013",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
