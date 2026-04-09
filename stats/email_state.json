@@ -21491,6 +21491,72 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d6f6a1ccd255e0": {
+      "thread_id": "19d6f6a1ccd255e0",
+      "from": "institute via Contact <contact@flowmingo.ai>",
+      "subject": "Reminder: Secure Your Spot Now \u2013 April & May 2026 Flagship Programmes",
+      "date": "Wed, 08 Apr 2026 14:46:10 -0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2130081455547972074",
+      "draft_message_id": "19d6fc65d2649dc5",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T01:06:04.924508+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d6f64214a35571": {
+      "thread_id": "19d6f64214a35571",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Great Stories Create Stronger Champions",
+      "date": "Wed, 8 Apr 2026 23:18:43 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6955316636329601327",
+      "draft_message_id": "19d6fc665c7fe0fa",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T01:06:06.809127+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d6f07ae3d22400": {
+      "thread_id": "19d6f07ae3d22400",
+      "from": "\"'Salma Jennings' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Flowmingo | Hidden Talents Recruiters Solutions Recognition",
+      "date": "Wed, 8 Apr 2026 14:36:00 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-5597863783249714413",
+      "draft_message_id": "19d6fc66892713b9",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-09T01:06:07.931113+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
     }
   }
 }
