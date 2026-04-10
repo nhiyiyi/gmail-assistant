@@ -200,7 +200,7 @@ The following email types must be classified as FM/no-reply and skipped entirely
 
 Classify each sender into one of these:
 
-- Type A – Flowmingo Program Candidate (applying to Flowmingo roles or partner programs).
+- Type A – Flowmingo Program Candidate (applying to Flowmingo's own internal roles or partner programs). **Confirmation rule:** only classify as Type A if the email or thread explicitly mentions a role that belongs to Flowmingo itself — e.g. a role listed on flowmingo.ai/careers, or the Flowmingo Business Partner / Talent Acquisition Partner programme. Emailing contact@flowmingo.ai, mentioning "the AI interview", or having "Flowmingo" in the subject is NOT sufficient — Flowmingo sends interview invitations on behalf of external companies too. If you cannot confirm the role is Flowmingo's own, default to Type B (if external company signals exist) or Type E (if unclear).
 - Type B – External Client Candidate (interviewing for another company using Flowmingo).
 - Type C – Business Partner / Talent Acquisition Partner / Content Partner (already in or onboarding).
   **Thread guard:** If the email thread contains an offer letter for a Business Partner or Talent Acquisition Partner role — regardless of whether the sender has accepted — classify as Type C. This applies even when the sender asks for a call, introduction, or meeting. Do not classify as Type D.
