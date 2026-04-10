@@ -23075,6 +23075,138 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d76c473f02d286": {
+      "thread_id": "19d76c473f02d286",
+      "from": "Anshika Singh <1009anshikasingh@gmail.com>",
+      "subject": "Unable to access AI interview",
+      "date": "Fri, 10 Apr 2026 15:08:16 +0530",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7482668550421745558",
+      "draft_message_id": "19d76d531a8e5149",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T09:59:37.277489+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d76c082710767d": {
+      "thread_id": "19d76c082710767d",
+      "from": "Muhammad Mohsin <mmohsin109284@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Fri, 10 Apr 2026 14:36:42 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6116441602059037681",
+      "draft_message_id": "19d76d56f393921c",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T09:59:53.217824+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d76bb658cdb783": {
+      "thread_id": "19d33e5663e76c7e",
+      "from": "Deepak Kathuria <kathuriadeepak17@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Fri, 10 Apr 2026 15:01:14 +0530",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "critical",
+      "review_status": "ready",
+      "draft_id": "r2605787233449873417",
+      "draft_message_id": "19d76d5f36c85a5c",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T10:00:27.139425+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d76a05960cdc53": {
+      "thread_id": "19d76a05960cdc53",
+      "from": "AISHA MUHAMMAD <aishamuhammad6369@gmail.com>",
+      "subject": "",
+      "date": "Fri, 10 Apr 2026 10:01:39 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1142848206877897573",
+      "draft_message_id": "19d76d64a8d9144b",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T10:00:49.687041+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9286,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT"
+    },
+    "19d769df2ceacd6c": {
+      "thread_id": "19d769df2ceacd6c",
+      "from": "HR Office <hroffice@ocitravels.com>",
+      "subject": "Re: [Flowmingo] We\u2019re sorry we lost your trust",
+      "date": "Fri, 10 Apr 2026 08:59:08 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4155445114221546498",
+      "draft_message_id": "19d76d6d1cc5bdf2",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T10:01:24.061531+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6667,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d7686daa3f7b3f": {
+      "thread_id": "19d7686daa3f7b3f",
+      "from": "Gal Hadad <galhadadz@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Gal Hadad",
+      "date": "Fri, 10 Apr 2026 12:33:46 +0400",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S31",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1009009337387057750",
+      "draft_message_id": "19d76d6e7aa58128",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T10:01:29.498847+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
