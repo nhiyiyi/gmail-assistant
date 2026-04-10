@@ -755,12 +755,15 @@ def _compact_thread_summary(thread_data: dict, email_meta: dict) -> dict:
             "thread_context": "",
         }
 
-    # True only if the last message is from @flowmingo.ai
-    # (meaning support already replied — nothing left to draft)
+    # True only if the last message was SENT by Flowmingo (not received via contact form).
+    # Contact-form emails arrive as: "'Name' via Contact" <contact@flowmingo.ai> — they
+    # have INBOX/UNREAD labels, not SENT.  A real support reply will have SENT in labelIds.
     last_msg = messages[-1]
+    last_labels = last_msg.get("labels", [])
     has_support_reply = (
         any(d in last_msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
-        and "DRAFT" not in last_msg.get("labels", [])
+        and "SENT" in last_labels
+        and "DRAFT" not in last_labels
     )
 
     latest = messages[-1]
