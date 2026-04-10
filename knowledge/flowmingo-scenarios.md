@@ -104,7 +104,7 @@ Trigger: Customer mentions integrations, ATS/CRM, automation, job portals, or AP
 
 ### **S3 – Extensions/Rescheduling/Retakes (Flowmingo Program Candidates – Type A)**
 
-**SENDER TYPE GUARD — mandatory before approving anything:** Only apply S3 if the sender is clearly Type A (applying to a Flowmingo internal role or Flowmingo partner program). The key signal is that the original invitation email is from Flowmingo itself (flowmingo.ai domain, "Flowmingo is inviting you", or a Flowmingo hiring team member). If the invitation is from an external company using Flowmingo as the interview platform, the sender is Type B — route to S4 instead. Do not approve an extension before confirming sender type. When in doubt, apply S4.
+**SENDER TYPE GUARD — mandatory before approving anything:** Only apply S3 if the sender is Type A (applying to a Flowmingo internal role or Flowmingo partner program). If the overall sender_type classification has already determined Type A, that decision stands — apply S3. Do not re-run sender type inference inside this guard and override an established Type A classification. The guard's purpose is to catch cases where sender type is genuinely unknown (Type E / unclear), not to second-guess an already-confirmed Type A. If the original invitation in the thread is from an external company using Flowmingo as their platform, the sender is Type B — route to S4. If sender type is truly unclear and cannot be determined from the thread, default to S4.
 
 - Always approve extension without asking for a new deadline.
 - Tell them they can use the original link whenever they feel comfortable.
