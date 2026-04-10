@@ -248,6 +248,11 @@ For FM/ready and FM/review drafts, follow SOP email structure exactly:
 - PLAIN TEXT ONLY — absolutely no markdown. Do not use **bold**, *italic*, `code`,
   # headers, or any markdown syntax. These appear as raw symbols in email. If labelling
   a list item use plain text: "Role: ..." not "**Role**: ..."
+- TROUBLESHOOTING STEPS MUST USE HYPHEN BULLETS — this is mandatory, no exceptions.
+  Any list of 2+ steps or actions MUST be written as:
+  - Step one here
+  - Step two here
+  Never write steps as plain prose sentences. A numbered or prose list is always wrong.
 
 For FM/bug, set bug.main_issue_vi to a single Vietnamese sentence strictly under 10 words starting with the affected subject.
 """

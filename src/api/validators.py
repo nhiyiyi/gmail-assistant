@@ -101,6 +101,32 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
         working_draft = re.sub(r'\n{3,}', '\n\n', working_draft).strip()
         issues.append("FORMAT_VIOLATION: Duplicate [REVIEW NEEDED] in body stripped.")
 
+    # 0b. Unhyphenated troubleshooting steps — detect 2+ consecutive lines that look
+    #     like step instructions (start with capital letter, no leading "- " or digit)
+    #     appearing after a trigger phrase. Auto-prefix each with "- ".
+    _step_trigger = re.compile(
+        r'(please try[^:\n]*:?\s*\n|steps? below[^:\n]*:?\s*\n|following steps?[^:\n]*:?\s*\n)',
+        re.IGNORECASE,
+    )
+    if _step_trigger.search(working_draft):
+        def _add_hyphen_if_missing(m):
+            line = m.group(0)
+            # Only add hyphen to lines that are non-empty, start with a capital,
+            # and don't already have "- " or a number bullet or [REVIEW
+            if re.match(r'^[A-Z][^-\n]', line) and not re.match(r'^\d+\.', line):
+                return "- " + line
+            return line
+        # Find the trigger and fix bare lines in the block that follows
+        parts = _step_trigger.split(working_draft, maxsplit=1)
+        if len(parts) == 3:
+            before, trigger, after = parts[0], parts[1], parts[2]
+            # Fix lines in 'after' until a blank line (end of the step block)
+            step_block, rest = (after.split('\n\n', 1) + [''])[:2]
+            fixed_block = re.sub(r'^[A-Z][^\n]+$', _add_hyphen_if_missing, step_block, flags=re.MULTILINE)
+            if fixed_block != step_block:
+                working_draft = before + trigger + fixed_block + ('\n\n' + rest if rest else '')
+                issues.append("FORMAT_VIOLATION: Troubleshooting steps lacked hyphen bullets — auto-fixed.")
+
     # 1. Markdown in body
     total_checks += 1
     if _MARKDOWN_REGEX.search(working_draft):
