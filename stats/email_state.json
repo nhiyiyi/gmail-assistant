@@ -23053,6 +23053,28 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d761df55f2cadf": {
+      "thread_id": "19d761df55f2cadf",
+      "from": "mohammed farhana <mohammedfarhana28@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Farhana",
+      "date": "Fri, 10 Apr 2026 12:09:11 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7106837757580630068",
+      "draft_message_id": "19d763d4fa1e479c",
+      "kb_version": "b2605abb20c2",
+      "processed_at": "2026-04-10T07:13:43.328824+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
