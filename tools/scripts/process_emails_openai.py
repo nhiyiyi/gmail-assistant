@@ -55,10 +55,12 @@ NO_REPLY_FROM = [
     "noreply", "no-reply", "notifications@", "bounce@",
     "mailer-daemon", "donotreply", "do-not-reply", "postmaster@",
     "newsletter", "digest@", "weekly@", "daily@",
+    "events@",
 ]
 NO_REPLY_SUBJECT = [
     "verification code", "otp:", "unsubscribe", "auto-reply",
     "out of office", "delivery status notification", "mail delivery failed",
+    "conference & expo", "conference expo", " summit 20", "sponsorship opportunity",
 ]
 
 

@@ -218,34 +218,7 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
     else:
         passed_checks += 1
 
-    # ── MEDIUM CHECK: pure-acknowledgment body (no actual content) ────────────
-    # Catches drafts like "Thanks for reaching out. Sorry to hear about the issue."
-    # that acknowledge the email but provide zero actionable information.
-    _ACK_LINE = re.compile(
-        r'^(thanks?\s+(for|for reaching|you\b)|i\'?m sorry|sorry to|we appreciate|'
-        r'we understand|thank you for|i understand|we\'?re sorry|appreciate your)',
-        re.IGNORECASE,
-    )
-    _body_lines = [l.strip() for l in _body_only.split('\n') if l.strip()]
-    _has_substance = (
-        'http' in _body_only.lower()
-        or '- ' in _body_only
-        or re.search(r'\d+\.\s', _body_only)   # numbered list
-        or len(_body_only) > 200                # long enough to contain real info
-    )
-    if _body_lines and not _has_substance and all(_ACK_LINE.match(l) for l in _body_lines):
-        issues.append(
-            "AI_ERROR: Draft is a pure acknowledgment with no actionable content — "
-            "must provide steps, links, or a specific answer."
-        )
-        return _result(
-            severity="MEDIUM",
-            issues=issues,
-            total_checks=total_checks,
-            passed_checks=passed_checks,
-            fixed_draft=draft_body,
-            review_reason_code="AI_ERROR",
-        )
+
 
     # ── MEDIUM CHECKS ─────────────────────────────────────────────────────────
 
