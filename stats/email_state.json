@@ -23207,6 +23207,138 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d7750a9c2bcedf": {
+      "thread_id": "19d7750a9c2bcedf",
+      "from": "Milagros Cabrera <cabrera.milagros00@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 10 Apr 2026 09:14:13 -0300",
+      "sender_type": "C",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7149100508240051726",
+      "draft_message_id": "19d776a2fe115860",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:42:21.268721+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d774538494745a": {
+      "thread_id": "19d774538494745a",
+      "from": "Pranita Garg <gargpranita0512@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Pranita Garg",
+      "date": "Fri, 10 Apr 2026 17:31:40 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7313009522958292938",
+      "draft_message_id": "19d776a707c58ebd",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:42:38.555139+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.6,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d772651f42e7a3": {
+      "thread_id": "19d772651f42e7a3",
+      "from": "Events <events@creativespacemedia.co.za>",
+      "subject": "Disability Inclusion Conference 2026 - Invitation to Attend",
+      "date": "Fri, 10 Apr 2026 11:27:42 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-659089621566689918",
+      "draft_message_id": "19d776ab3e07183d",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:42:55.346012+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.3333,
+      "repair_attempted": true,
+      "review_reason_code": "PARTIAL_CONTEXT"
+    },
+    "19d76f610ee2f872": {
+      "thread_id": "19d6d663f991d519",
+      "from": "Anders Kirk <reiterkirk@hotmail.com>",
+      "subject": "Sv: Sv: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 10 Apr 2026 10:35:28 +0000",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5314068289865796169",
+      "draft_message_id": "19d776aeeb5e5426",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:43:10.722820+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d76e3e934f0a0c": {
+      "thread_id": "19d76e3e934f0a0c",
+      "from": "Sk Nagurbhee <sknagurbhee@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Nagurbhee Shaik",
+      "date": "Fri, 10 Apr 2026 15:45:28 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8912864621860199896",
+      "draft_message_id": "19d776b1bac8794e",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:43:21.779234+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d77062ad7c5547": {
+      "thread_id": "19d77062ad7c5547",
+      "from": "Picky Assist <newsletter@pickyassist.com>",
+      "subject": "Sell directly on WhatsApp with InstantCodes\u00a0\u00a0",
+      "date": "Fri, 10 Apr 2026 10:53:05 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r4789948201199973716",
+      "draft_message_id": "",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T12:43:23.253216+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260410-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
