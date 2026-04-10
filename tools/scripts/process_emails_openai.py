@@ -248,6 +248,10 @@ For FM/ready and FM/review drafts, follow SOP email structure exactly:
 - PLAIN TEXT ONLY — absolutely no markdown. Do not use **bold**, *italic*, `code`,
   # headers, or any markdown syntax. These appear as raw symbols in email. If labelling
   a list item use plain text: "Role: ..." not "**Role**: ..."
+- EVERY DRAFT MUST CONTAIN ACTUAL CONTENT — a specific answer, concrete steps, a link, or
+  a clear next action. Writing only "Thanks for reaching out" or "Sorry to hear that" with
+  nothing else is WRONG. If the SOP does not cover the situation, use FM/review — do not
+  produce an empty acknowledgment draft.
 - TROUBLESHOOTING STEPS MUST USE HYPHEN BULLETS — this is mandatory, no exceptions.
   Any list of 2+ steps or actions MUST be written as:
   - Step one here
