@@ -23339,6 +23339,160 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d78055cdeaa43e": {
+      "thread_id": "19d78055cdeaa43e",
+      "from": "Futurepedia <mail@newsletter.futurepedia.io>",
+      "subject": "Anthropic just made AI agents easier to build",
+      "date": "Fri, 10 Apr 2026 15:31:46 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3824247365808616449",
+      "draft_message_id": "19d780cdd85b6ca2",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:02.925170+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d77f97bf437004": {
+      "thread_id": "19d77f97bf437004",
+      "from": "\"'Deepanshu Garg' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Can we connect: Culinary Specialist Candidate Available",
+      "date": "Fri, 10 Apr 2026 11:18:07 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r291515400353894657",
+      "draft_message_id": "19d780ce722cdd98",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:05.659174+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED"
+    },
+    "19d77c27781e8898": {
+      "thread_id": "19d77c27781e8898",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\u2728 Software upgrades you\u2019ll actually love",
+      "date": "Fri, 10 Apr 2026 10:18:38 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8955340943250959073",
+      "draft_message_id": "19d780cff9af9b79",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:11.697587+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d77ac3a00b4ec7": {
+      "thread_id": "19d77ac3a00b4ec7",
+      "from": "Krithika Balachandar <krithiitinspire@gmail.com>",
+      "subject": "Human Resource Executive",
+      "date": "Fri, 10 Apr 2026 19:24:14 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3373004696809726013",
+      "draft_message_id": "19d780d1cc1649f4",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:19.526379+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d77874d9d31f5f": {
+      "thread_id": "19d77874d9d31f5f",
+      "from": "Sonam Chopra <drsonampt@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Sonam Chopra",
+      "date": "Fri, 10 Apr 2026 18:36:03 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5122688294678301490",
+      "draft_message_id": "19d780d48b0fce76",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:30.630675+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d776cf8f6be63f": {
+      "thread_id": "19d776cf8f6be63f",
+      "from": "Mohammad Nawfal Chowdhury <mnc.ewu@gmail.com>",
+      "subject": "Request for Employment Certificate",
+      "date": "Fri, 10 Apr 2026 15:45:07 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8159287524760938658",
+      "draft_message_id": "19d780d7b8c4f84b",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:43.433449+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d776c9c847ed76": {
+      "thread_id": "19d776c9c847ed76",
+      "from": "Hasni baloch <urooj.baloch09@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 10 Apr 2026 17:44:55 +0500",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3511478961347246519",
+      "draft_message_id": "19d780db38e102c2",
+      "kb_version": "14a98ee7a27c",
+      "processed_at": "2026-04-10T15:40:58.033037+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
