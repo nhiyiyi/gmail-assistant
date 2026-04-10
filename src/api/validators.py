@@ -89,6 +89,18 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
 
     # ── LOW CHECKS (auto-fix) ─────────────────────────────────────────────────
 
+    # 0. Duplicate [REVIEW NEEDED: ...] inside body — LLM sometimes puts it at the
+    #    top (correct) AND again mid-body (wrong). Keep only the leading one.
+    _rn_pattern = re.compile(r'\[REVIEW NEEDED:[^\]]*\]', re.IGNORECASE)
+    _rn_matches = list(_rn_pattern.finditer(working_draft))
+    if len(_rn_matches) > 1:
+        # Remove every occurrence except the very first
+        def _remove_after_first(m):
+            return "" if m.start() != _rn_matches[0].start() else m.group(0)
+        working_draft = _rn_pattern.sub(_remove_after_first, working_draft)
+        working_draft = re.sub(r'\n{3,}', '\n\n', working_draft).strip()
+        issues.append("FORMAT_VIOLATION: Duplicate [REVIEW NEEDED] in body stripped.")
+
     # 1. Markdown in body
     total_checks += 1
     if _MARKDOWN_REGEX.search(working_draft):
