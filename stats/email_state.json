@@ -23427,6 +23427,72 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d78abe9166e3d3": {
+      "thread_id": "19d67af565338f4a",
+      "from": "Umer Asghar <umerasghar6754@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Global Management Trainee - Muhammad Umer Asghar",
+      "date": "Fri, 10 Apr 2026 23:33:31 +0500",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4232630016067388477",
+      "draft_message_id": "19d78af9ec044c47",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-10T18:37:49.293027+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d78843a281fdc0": {
+      "thread_id": "19d77ac3a00b4ec7",
+      "from": "Krithika Balachandar <krithiitinspire@gmail.com>",
+      "subject": "Re: Human Resource Executive",
+      "date": "Fri, 10 Apr 2026 23:20:13 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1664581096561945374",
+      "draft_message_id": "19d78afaa2523e5d",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-10T18:37:52.697591+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d78820d98dbac9": {
+      "thread_id": "19d72f9890d75b71",
+      "from": "Yamini Saini <ryamini88@gmail.com>",
+      "subject": "Re: Clarification regarding Talent Acquisition role",
+      "date": "Fri, 10 Apr 2026 23:17:50 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S16",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2472220930262832452",
+      "draft_message_id": "19d78afba30b75cf",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-10T18:37:56.743335+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
