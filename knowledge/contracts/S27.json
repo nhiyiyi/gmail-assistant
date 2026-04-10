@@ -1,7 +1,9 @@
 {
   "scenario_id": "S27",
   "description": "Vendor/Service Pitch Email. Must NOT decline in first sentence. Must NOT fabricate fictional names. Must NOT make commitments to implement or evaluate.",
-  "required_facts": [],
+  "required_facts": [
+    "flowmingo.ai/utm_source=email-support"
+  ],
   "forbidden_promises": [
     "we will implement",
     "we plan to add",

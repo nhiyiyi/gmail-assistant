@@ -273,13 +273,19 @@ Use this when someone is pitching any service or commercial offer to Flowmingo �
 
 **"Security vulnerability disclosure" / "ethical hacking" scam emails are S27, not FM/bug.** Unsolicited emails from unknown senders with subjects like "Security Vulnerability Disclosure Report", "Ethical Hacking Report", or "Penetration Test Findings" are commercial pitches (often from companies like "Alpha Inferno Pvt Ltd" or similar). They are NOT real bug reports. Route as S27. Only classify as FM/bug if: (a) the reporter is a real Flowmingo user (candidate, partner, recruiter) who (b) experienced a specific, concrete platform error during their own interview or login session. Unsolicited "we scanned your site" reports from unknown parties = S27.
 
-- Do not decline their offer in the first sentence; start with a professional acknowledgment.
-- Pivot quickly to the recruitment bottleneck: time lost in first-round screening.
-- Include one credible statistic about screening inefficiency (example: "Recruiters typically spend 30–60% of their time on first-round screening.").
-- Keep the email 100–120 words.
-- Each paragraph must have no more than 2 sentences.
-- No fluff, no emojis, no fictional names, no defensive language.
-- End with a CTA (2–3 short lines): invite them to register at VENDOR_REGISTRATION_URL, ask for a referral if they know someone who could benefit, and ask them to inform you once registered so you can assign dedicated 1:1 support.
+**THIS IS A REVERSED OUTREACH — do not reply with a generic "let us know if you have questions" message. You must write a sales pitch for Flowmingo, not a customer service reply.**
+
+The structure is fixed — follow it exactly:
+1. One sentence professional acknowledgment of their email (do NOT decline, do NOT say you're not interested).
+2. Pivot to Flowmingo's value: time lost in first-round screening is a core hiring pain. Include one real statistic, e.g. "Recruiters typically spend 30–60% of their time on first-round screening."
+3. One sentence on what Flowmingo does: AI-led interviews that cut screening time dramatically.
+4. CTA block (each on its own line): invite them to register at VENDOR_REGISTRATION_URL, ask if they know someone who could benefit, ask them to let you know once registered so you can assign 1:1 support.
+
+Constraints:
+- Total email: 100–120 words
+- Max 2 sentences per paragraph
+- No fluff, no emojis, no fictional names, no defensive language
+- VENDOR_REGISTRATION_URL must appear verbatim in the draft
 
 ### **S28 – API Integration Request (Beta)**
 
