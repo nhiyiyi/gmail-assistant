@@ -157,9 +157,11 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
                 "has_attachments": False}
 
     last_msg = messages[-1]
+    last_labels = last_msg.get("labels", [])
     has_support_reply = (
         any(d in last_msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
-        and "DRAFT" not in last_msg.get("labels", [])
+        and "SENT" in last_labels
+        and "DRAFT" not in last_labels
     )
     latest_body = (last_msg.get("body") or last_msg.get("snippet", ""))[:1000]
     attachments = last_msg.get("attachments", [])
