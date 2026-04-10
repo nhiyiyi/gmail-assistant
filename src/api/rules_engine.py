@@ -103,9 +103,13 @@ def route(email: dict) -> dict:
         risk_triggers.append("already_replied")
 
     # ── PARTIAL_CONTEXT (attachment present but content not visible) ──────────
+    # Only flag if the message body itself is short — meaning content is likely
+    # entirely in the attachment.  If there's enough body text (>= 80 chars) the
+    # model can draft a meaningful reply without seeing the attachment.
     attachment_mimes = {a.get("mimeType", "") for a in attachments}
     has_image_attachment = bool(attachment_mimes & _IMAGE_MIME_TYPES)
-    if has_attachments:
+    body_too_short = len(message.strip()) < 80
+    if has_attachments and body_too_short:
         risk_triggers.append("attachment_present")
 
     # ── BUG DETECTION ─────────────────────────────────────────────────────────

@@ -62,7 +62,7 @@ def _strip_markdown(text: str) -> str:
 
 # ── Salutation / closing constants ───────────────────────────────────────────
 
-_SALUTATION_PREFIX = "Dear Customer,"   # prepended if missing
+_SALUTATION_PREFIX = "Dear [Name],"     # prepended if missing (triggers AI_ERROR below)
 _LUK_CLOSING      = "\n\nLet us know if you have any questions,"
 _BR_CLOSING       = "\n\nBest regards,"
 
@@ -121,23 +121,46 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
     else:
         passed_checks += 1
 
-    # ── HIGH CHECK: empty / short draft (after LOW fixes) ────────────────────
-    # Evaluated here (before MEDIUM) so we short-circuit on catastrophic draft.
+    # ── HIGH CHECK: "Dear Customer" / "Dear [Name]" — name was not extracted ──
     total_checks += 1
-    stripped_len = len(working_draft.strip())
-    if stripped_len < 50:
+    _sal_lower = working_draft.lower()
+    if _sal_lower.startswith("dear customer") or _sal_lower.startswith("dear [name]"):
         issues.append(
-            f"FORMAT_VIOLATION: Draft is {stripped_len} chars after auto-fix "
-            f"(minimum 50 required)."
+            "AI_ERROR: Salutation uses generic placeholder — sender name was not extracted."
         )
-        # HIGH — do not apply further checks; return immediately
         return _result(
             severity="HIGH",
             issues=issues,
             total_checks=total_checks,
             passed_checks=passed_checks,
-            fixed_draft=draft_body,       # preserve original
-            review_reason_code="FORMAT_VIOLATION",
+            fixed_draft=draft_body,
+            review_reason_code="AI_ERROR",
+        )
+    else:
+        passed_checks += 1
+
+    # ── HIGH CHECK: empty / short body (after LOW fixes, excluding boilerplate) ─
+    # Strip salutation line and closing boilerplate before measuring body length,
+    # so auto-appended closings don't mask an empty body.
+    _body_only = re.sub(
+        r"(?i)^dear\s[^\n]+\n+|let us know if you have any questions,.*|best regards,.*",
+        "",
+        working_draft,
+        flags=re.DOTALL,
+    ).strip()
+    total_checks += 1
+    if len(_body_only) < 30:
+        issues.append(
+            f"FORMAT_VIOLATION: Draft body is effectively empty ({len(_body_only)} chars) — "
+            f"LLM produced no reply content."
+        )
+        return _result(
+            severity="HIGH",
+            issues=issues,
+            total_checks=total_checks,
+            passed_checks=passed_checks,
+            fixed_draft=draft_body,
+            review_reason_code="AI_ERROR",
         )
     else:
         passed_checks += 1
