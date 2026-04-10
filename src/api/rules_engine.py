@@ -102,14 +102,15 @@ def route(email: dict) -> dict:
     if email.get("has_support_reply"):
         risk_triggers.append("already_replied")
 
-    # ── PARTIAL_CONTEXT (attachment present but content not visible) ──────────
-    # Only flag if the message body itself is short — meaning content is likely
-    # entirely in the attachment.  If there's enough body text (>= 80 chars) the
-    # model can draft a meaningful reply without seeing the attachment.
+    # ── PARTIAL_CONTEXT (image attachment only) ───────────────────────────────
+    # Only flag image attachments — those are typically screenshots that the LLM
+    # cannot see and which may be the core of the support request (bug evidence).
+    # Non-image attachments (PDFs, docs, etc.) are almost always supplementary;
+    # the body text is sufficient to draft a reply.  Image attachments that
+    # contain bug screenshots are also caught by the bug path below.
     attachment_mimes = {a.get("mimeType", "") for a in attachments}
     has_image_attachment = bool(attachment_mimes & _IMAGE_MIME_TYPES)
-    body_too_short = len(message.strip()) < 80
-    if has_attachments and body_too_short:
+    if has_image_attachment:
         risk_triggers.append("attachment_present")
 
     # ── BUG DETECTION ─────────────────────────────────────────────────────────
