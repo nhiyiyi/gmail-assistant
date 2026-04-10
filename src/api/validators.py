@@ -124,6 +124,16 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
     else:
         passed_checks += 1
 
+    # 4b. Signature / confidentiality notice after "Best regards," — strip it.
+    # The SOP prohibits any name, title, or signature after "Best regards,".
+    # LLMs sometimes append "Jessica from Flowmingo..." or a confidentiality block.
+    _br_idx = working_draft.lower().rfind("best regards")
+    if _br_idx != -1:
+        _after_br = working_draft[_br_idx + len("best regards"):].lstrip(",").strip()
+        if len(_after_br) > 2:  # more than just whitespace after "Best regards,"
+            working_draft = working_draft[:_br_idx] + "Best regards,"
+            issues.append("FORMAT_VIOLATION: Content after 'Best regards,' stripped (signature/footer not allowed).")
+
     # ── HIGH CHECK: "Dear Customer" / "Dear [Name]" — name was not extracted ──
     total_checks += 1
     _sal_lower = working_draft.lower()

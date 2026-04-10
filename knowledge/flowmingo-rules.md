@@ -80,7 +80,9 @@ Then end the email with:
 
 Best regards,
 
-Do not include any name, title, or signature after "Best regards,".
+Do not include any name, title, or signature after "Best regards,". Do not add any confidentiality notice, footer, or disclaimer — these must never appear in a support reply.
+
+**RESPOND TO THE LATEST MESSAGE ONLY.** The prior thread messages are context only — do not respond to them, infer requests from them, or fabricate intent based on them. If the latest message contains only contact details, a signature block, or no actionable text, classify it as FM/no-reply — do not draft a response to something the sender did not actually ask.
 
 ## **4. FORMAT & CONTENT LIMITS**
 
