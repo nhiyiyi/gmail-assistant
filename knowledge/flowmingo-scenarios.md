@@ -2,10 +2,13 @@
 
 This section applies only when the email clearly relates to the AI development/data contribution program.
 
-### **9.1 Trigger A: Email contains "interview results + Your Career Kit"**
+### **9.1 Trigger A: Email contains "interview results + Your Career Kit" OR sender is asking about gifts/rewards/dashboard/program status and has previously consented**
+
+**IMMEDIATE DELIVERY RULE:** When a sender asks about their gifts, rewards, dashboard, program status, or says anything like "I am still awaiting feedback", "where are my gifts", "what do I receive", "can I access my results" — and their consent is visible anywhere in the thread (they sent the exact consent phrase, or a prior Flowmingo reply confirmed their consent was recorded) — share AI_PROGRAM_GIFT_DASHBOARD in this reply immediately. Do NOT say "we will follow up", "we will get back to you", or invent any date. The gifts are available now; give them the link now.
 
 - If the sender asks for sheet access: share AI_PROGRAM_GIFT_DASHBOARD.
-- If the sender asks for an update on gifts: thank them for confirming consent, share AI_PROGRAM_GIFT_DASHBOARD, and explain what they receive (see 9.3).
+- If the sender asks for an update on gifts or is following up on a previous consent: thank them for their patience, share AI_PROGRAM_GIFT_DASHBOARD immediately, and explain what they receive (see 9.3). Do not defer.
+- If the sender's subject line contains "[Flowmingo] Your AI Assessment Report is now available": this is Trigger A — the report is part of the gifts pack. Share AI_PROGRAM_GIFT_DASHBOARD and explain what they receive (see 9.3).
 
 ### **9.2 Trigger B: Email subject is "A request to help shape AI models"**
 
@@ -13,7 +16,7 @@ This section applies only when the email clearly relates to the AI development/d
 - If the sender reports over-quota/error accessing the form: apologize and share AI_PROGRAM_FORM_NEW_LINK; ask them to fill it in and confirm you will get back when there are new updates.
 - If the sender says they did not give consent but received gifts: apologize, ask them to disregard the previous email, and confirm their interview will not be used and will not be included in the dataset.
 - If the sender questions the "$200 value": clarify it represents the combined value of the perks package and is not a direct cash payout.
-- If the sender writes exactly: "I consent and confirm that I have read the A2 and A5 forms.": thank them for confirming, share AI_PROGRAM_GIFT_DASHBOARD immediately so they can access their gifts now, explain what they receive (see 9.3), and invite them to share any photos they would like featured on Flowmingo's LinkedIn page. Do NOT say you will follow up within one week — send the dashboard link in the same reply.
+- If the sender writes exactly: "I consent and confirm that I have read the A2 and A5 forms.": thank them for confirming, share AI_PROGRAM_GIFT_DASHBOARD immediately so they can access their gifts now, explain what they receive (see 9.3), and invite them to share any photos they would like featured on Flowmingo's LinkedIn page. Do NOT say you will follow up within one week — send the dashboard link in the same reply. This is the most important rule in this section: consent given = dashboard sent in the same reply, no deferral.
 - If the sender is interested but has not confirmed the A2/A5 statement: share AI_PROGRAM_DOCS_FOLDER and ask them to reply with the exact consent statement above; after receiving confirmation, confirm you will follow up within one week and invite them to share photos for LinkedIn.
 - If the sender disagrees: clearly state their interview will not be used for the program and reassure them.
 - If the sender requests deletion of any data: ask them to confirm the email address used for the interview, and confirm their data will be completely removed. Do not promise follow-up confirmation once deletion is complete.
@@ -101,14 +104,18 @@ Trigger: Customer mentions integrations, ATS/CRM, automation, job portals, or AP
 
 ### **S3 – Extensions/Rescheduling/Retakes (Flowmingo Program Candidates – Type A)**
 
+**SENDER TYPE GUARD — mandatory before approving anything:** Only apply S3 if the sender is clearly Type A (applying to a Flowmingo internal role or Flowmingo partner program). The key signal is that the original invitation email is from Flowmingo itself (flowmingo.ai domain, "Flowmingo is inviting you", or a Flowmingo hiring team member). If the invitation is from an external company using Flowmingo as the interview platform, the sender is Type B — route to S4 instead. Do not approve an extension before confirming sender type. When in doubt, apply S4.
+
 - Always approve extension without asking for a new deadline.
 - Tell them they can use the original link whenever they feel comfortable.
+- If they ask for the interview link: do not promise to send one. Tell them to use the link from the original invitation email they received.
 - For retakes: use the same link; if it shows completed, use a different email (one completion per email).
 
 ### **S4 – Extensions/Rescheduling/Retakes (External Company Roles – Type B)**
 
 - Explain Flowmingo is the interview platform provider and cannot change deadlines or issue new links on behalf of the hiring company.
 - Advise them to contact the hiring company/recruiter directly.
+- Do NOT approve, agree to, or imply any extension. Do NOT say "we can accommodate your request." That language is only authorised for Type A (S3).
 
 ### **S5 – Exceeded Number of Attempts**
 
@@ -187,7 +194,7 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 ### **S15 – Positive Feedback / Product Suggestions**
 
 - Apply the universal writing standard: show you read their email, reflect their specific points.
-- Always invite them to share their experience on TRUSTPILOT_URL. Do not hedge.
+- The Trustpilot invite is MANDATORY in every S15 reply — it must appear in the email body. Use TRUSTPILOT_URL. Do not hedge, do not skip it. A reply without the Trustpilot invite is incomplete.
 - Do not fabricate commitments about implementing suggestions or future product changes.
 
 ### **S16 – Withdraw from a Process**
@@ -208,6 +215,8 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 **MANDATORY PRE-CHECK — do this before writing anything else:** Scan the full email thread for any shortlist-only clause — phrases like "only shortlisted candidates will be contacted", "only successful candidates will be contacted", "due to application volume", or similar. If found anywhere in the thread (including the original outreach email), apply the shortlist-only exception below and do NOT use the 1–2 week timeline at all.
 
 - **Exception — shortlist-only context:** The thread contains a shortlist-only clause. DO NOT give a timeline. Acknowledge their completion warmly, thank them for their effort, and wish them well. Do not promise any follow-up or review update. This applies equally to follow-up emails where the candidate is asking for status confirmation ("did you receive my email", "just checking in", etc.) — if the original outreach had a shortlist-only clause, the answer is still the same: acknowledge warmly, no timeline, no promise of contact.
+
+- **Exception — long wait (weeks/months with no update):** If the candidate explicitly states they have been waiting many weeks or months with no contact — e.g. "it's been 10 months", "I interviewed three months ago and heard nothing" — do NOT respond with "1–2 weeks". That response is insulting when the wait has already far exceeded the normal window. Instead: acknowledge the wait directly, apologise genuinely, and apply the shortlist-only exception handling (warm acknowledgment, no timeline promise, no false follow-up commitment). If they want to explore current opportunities, direct them to JOBS_URL. The "1–2 weeks" guideline only applies when the wait is within normal range.
 
 - If they completed the interview (no shortlist-only clause in thread): thank them and explain results and next steps are typically within 1–2 weeks. Use language like: "Results and next steps are typically shared within 1–2 weeks." Do NOT add any anchor point or qualifier to this timeline (e.g. do NOT say "from the interview date", "from submission", "from today", or any similar phrase — the SOP specifies no anchor).
 - If they will do the interview (no shortlist-only clause in thread): thank them and explain that after completion, results and next steps are typically within 1–2 weeks. Same rule: no anchor qualifier.
@@ -261,6 +270,8 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 ### **S27 – Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, etc.)**
 
 Use this when someone is pitching any service or commercial offer to Flowmingo — including but not limited to: lead generation, prospecting tools, infrastructure, software, media/PR features, paid magazine profiles, award/recognition programs (e.g. "Top X in APAC"), sponsored content, and directory listings. It does NOT apply to recruiters wanting to hire using Flowmingo.
+
+**"Security vulnerability disclosure" / "ethical hacking" scam emails are S27, not FM/bug.** Unsolicited emails from unknown senders with subjects like "Security Vulnerability Disclosure Report", "Ethical Hacking Report", or "Penetration Test Findings" are commercial pitches (often from companies like "Alpha Inferno Pvt Ltd" or similar). They are NOT real bug reports. Route as S27. Only classify as FM/bug if: (a) the reporter is a real Flowmingo user (candidate, partner, recruiter) who (b) experienced a specific, concrete platform error during their own interview or login session. Unsolicited "we scanned your site" reports from unknown parties = S27.
 
 - Do not decline their offer in the first sentence; start with a professional acknowledgment.
 - Pivot quickly to the recruitment bottleneck: time lost in first-round screening.
@@ -338,6 +349,8 @@ Reply directly with the following text exactly:
 ### **S34 – Acceptance / Confirmation**
 
 Applies when: sender confirms they accept an offer, are joining a program, have completed a required step, or are ready to proceed — with no question attached.
+
+**EDGE CASE — "Can I have more time to decide?":** This is NOT an acceptance (S34) and NOT a withdrawal (S16). Do NOT authorise a specific deadline or timeframe — support cannot make that commitment. Acknowledge warmly, confirm that the offer details are in the previous email, and let them know they can proceed whenever they are ready. Keep it brief and warm.
 
 This is a brand moment. Reply warmly and confirm what happens next based on sender type:
 
