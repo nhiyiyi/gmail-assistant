@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-process_emails_openai.py — Process Flowmingo support emails using OpenAI gpt-4o-mini.
+process_emails_openai.py — Process Flowmingo support emails using OpenAI gpt-5.4-nano.
 
 Validate-Repair pipeline:
   1. rules_engine.route()       — deterministic pre-routing (before LLM)
@@ -47,7 +47,7 @@ import bug_template
 # ── Config ───────────────────────────────────────────────────────────────────
 
 OPENAI_API_URL       = "https://api.openai.com/v1/chat/completions"
-MODEL                = "gpt-4o-mini"
+MODEL                = "gpt-5.4-nano"
 SUPPORT_DOMAINS      = ["flowmingo.ai"]
 CONFIDENCE_THRESHOLD = 0.7
 
