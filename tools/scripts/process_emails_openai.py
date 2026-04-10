@@ -46,7 +46,7 @@ import bug_template
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
-OPENAI_API_URL       = "https://api.openai.com/v1/chat/completions"
+OPENAI_API_URL       = "https://api.openai.com/v1/responses"
 MODEL                = "gpt-5.4-nano"
 SUPPORT_DOMAINS      = ["flowmingo.ai"]
 CONFIDENCE_THRESHOLD = 0.7
@@ -69,7 +69,7 @@ def call_openai(
     user_prompt: str,
     max_tokens: int = 1200,
 ) -> dict:
-    """Call OpenAI chat completions with JSON mode. Returns parsed JSON dict."""
+    """Call OpenAI Responses API with JSON mode. Returns parsed JSON dict."""
     resp = requests.post(
         OPENAI_API_URL,
         headers={
@@ -78,9 +78,9 @@ def call_openai(
         },
         json={
             "model": MODEL,
-            "max_tokens": max_tokens,
-            "response_format": {"type": "json_object"},
-            "messages": [
+            "max_output_tokens": max_tokens,
+            "text": {"format": {"type": "json_object"}},
+            "input": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
@@ -90,11 +90,11 @@ def call_openai(
     resp.raise_for_status()
     body = resp.json()
     usage = body.get("usage", {})
-    text = body["choices"][0]["message"]["content"].strip()
+    text = body["output"][0]["content"][0]["text"].strip()
     return {
         "result": json.loads(text),
-        "input_tokens": usage.get("prompt_tokens", 0),
-        "output_tokens": usage.get("completion_tokens", 0),
+        "input_tokens": usage.get("input_tokens", 0),
+        "output_tokens": usage.get("output_tokens", 0),
     }
 
 
