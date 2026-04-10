@@ -27,6 +27,29 @@ _PARTNER_KEYWORDS = ["business partner", "talent acquisition partner", "bp progr
 _PARTNER_SUBJECTS = ["business partner", "partner program", "commission", "payout",
                      "referral", "quickstart", "onboarding"]
 
+# Type A: Flowmingo's own roles (from flowmingo.ai/careers).
+# These role names are specific to Flowmingo — confirmed Type A when present in subject/body.
+_FLOWMINGO_ROLES = [
+    "marketing growth business partner",
+    "full-stack engineer",
+    "full stack engineer",
+    "growth product intern",
+    "human resources executive",
+    "backend engineer",
+    "global management trainee",
+    "finance & accounting intern",
+    "finance and accounting intern",
+    "qa/qc intern",
+    "qc intern",
+    "product intern",
+    "marketing & operations intern",
+    "marketing and operations intern",
+    "sales growth business partner",
+    "talent acquisition business partner",
+    "flowmingo partner program",
+    "flowmingo global management trainee",
+]
+
 # ── Bug heuristics ────────────────────────────────────────────────────────────
 
 # Strong bug signals in message text
@@ -166,6 +189,11 @@ def _detect_sender_type(from_addr: str, subject: str, message: str) -> str:
     if any(k in combined for k in _PARTNER_KEYWORDS) or \
        any(k in subject for k in _PARTNER_SUBJECTS):
         return "C"
+
+    # Type A: confirmed if subject or body mentions one of Flowmingo's own role names
+    combined_lower = combined.lower()
+    if any(role in combined_lower for role in _FLOWMINGO_ROLES):
+        return "A"
 
     # Type B: external company role signals
     if _EXTERNAL_COMPANY_REGEX.search(message):
