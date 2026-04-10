@@ -599,6 +599,12 @@ def main():
             if not final_draft.startswith("[REVIEW NEEDED"):
                 final_draft = "[REVIEW NEEDED: Contract requires human review for this scenario.]\n\n" + final_draft
 
+        # Safety net: if [REVIEW NEEDED] is embedded anywhere in the draft body,
+        # the LLM flagged it internally — always force FM/review regardless of validator result.
+        if label == "FM/ready" and "[REVIEW NEEDED" in final_draft:
+            label = "FM/review"
+            review_reason_code = review_reason_code or "AI_ERROR"
+
         print(f"{label} [{severity} score={validator_score:.2f}]")
 
         # ── 8. Create draft + label + state ──────────────────────────────────

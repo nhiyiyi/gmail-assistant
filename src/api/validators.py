@@ -98,8 +98,11 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
         passed_checks += 1
 
     # 2. Missing salutation ("Dear ")
+    # Strip any leading [REVIEW NEEDED: ...] prefix before checking — the LLM is
+    # instructed to prepend it to draft_body, so it may appear before "Dear Name,".
+    _sal_check = re.sub(r"^\[REVIEW NEEDED:[^\]]*\]\s*", "", working_draft, flags=re.IGNORECASE).strip()
     total_checks += 1
-    if not working_draft.lower().startswith("dear "):
+    if not _sal_check.lower().startswith("dear "):
         issues.append("MISSING_SALUTATION: Draft does not start with 'Dear ...'.")
         working_draft = _SALUTATION_PREFIX + "\n\n" + working_draft
     else:
