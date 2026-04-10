@@ -54,6 +54,7 @@ CONFIDENCE_THRESHOLD = 0.7
 NO_REPLY_FROM = [
     "noreply", "no-reply", "notifications@", "bounce@",
     "mailer-daemon", "donotreply", "do-not-reply", "postmaster@",
+    "newsletter", "digest@", "weekly@", "daily@",
 ]
 NO_REPLY_SUBJECT = [
     "verification code", "otp:", "unsubscribe", "auto-reply",
@@ -90,7 +91,17 @@ def call_openai(
     resp.raise_for_status()
     body = resp.json()
     usage = body.get("usage", {})
-    text = body["output"][0]["content"][0]["text"].strip()
+    # Responses API: body["output"][0]["content"][0]["text"]
+    # If the model refused or returned unexpected structure, log it clearly.
+    output = body.get("output", [])
+    if not output:
+        raise ValueError(f"Responses API returned empty output. Full body: {json.dumps(body)[:500]}")
+    content = output[0].get("content", [])
+    if not content:
+        raise ValueError(f"Responses API output[0].content is empty. Full body: {json.dumps(body)[:500]}")
+    text = content[0].get("text", "").strip()
+    if not text:
+        raise ValueError(f"Responses API content[0].text is empty. Full body: {json.dumps(body)[:500]}")
     return {
         "result": json.loads(text),
         "input_tokens": usage.get("input_tokens", 0),
