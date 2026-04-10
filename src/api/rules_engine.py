@@ -167,6 +167,23 @@ def _detect_sender_type(from_addr: str, subject: str, message: str) -> str:
        any(k in subject for k in _PARTNER_SUBJECTS):
         return "C"
 
+    # Type A: Flowmingo-invitation signals in thread context or subject
+    # Only classify as A if there is a clear Flowmingo invitation signal —
+    # subject contains "Flowmingo" + "invitation"/"invite"/"shortlisted", OR
+    # message thread contains "flowmingo is inviting you" / "flowmingo.ai domain invite".
+    _A_SIGNALS = [
+        r'flowmingo[^\n]*invit',
+        r'invit[^\n]*flowmingo',
+        r'shortlisted[^\n]*flowmingo',
+        r'flowmingo[^\n]*shortlisted',
+        r'flowmingo[^\n]*talent acquisition',
+        r'flowmingo[^\n]*business partner',
+        r'applying to flowmingo',
+        r'flowmingo.*program.*candidate',
+    ]
+    if re.search("|".join(_A_SIGNALS), combined, re.IGNORECASE):
+        return "A"
+
     # Type B: external company role signals
     if _EXTERNAL_COMPANY_REGEX.search(message):
         return "B"
