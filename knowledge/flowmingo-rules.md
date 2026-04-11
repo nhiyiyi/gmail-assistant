@@ -148,7 +148,7 @@ Keep all frequently used URLs and contact info centralized here. Update this sec
 
 ### **7.4 Vendor Registration URL (for vendor/partner pitches only)**
 
-- VENDOR_REGISTRATION_URL: flowmingo.ai/utm_source=email-support
+- VENDOR_REGISTRATION_URL: https://flowmingo.ai?utm_source=email-support
 
 ## **8. ABOUT FLOWMINGO & PRICING**
 

@@ -1,8 +1,8 @@
 {
   "scenario_id": "S27",
-  "description": "Vendor/Service Pitch Email. Must NOT decline in first sentence. Must NOT fabricate fictional names. Must NOT make commitments to implement or evaluate.",
+  "description": "Vendor/Service Pitch Email (intent_direction=inbound_pitch). Must use Jessica persona. Must acknowledge sender's specific email in sentence 1. Must NOT decline in first sentence. Must NOT fabricate fictional names. Must NOT make commitments to implement or evaluate.",
   "required_facts": [
-    "flowmingo.ai/utm_source=email-support"
+    "https://flowmingo.ai?utm_source=email-support"
   ],
   "forbidden_promises": [
     "we will implement",

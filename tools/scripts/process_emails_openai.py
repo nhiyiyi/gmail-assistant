@@ -182,12 +182,19 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     prior_context = ""
     if len(messages) > 1:
         parts = []
-        for msg in messages[:-1]:
+        prior_msgs = messages[:-1]
+        for i, msg in enumerate(prior_msgs):
             is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
             sender = "Support" if is_support else msg.get("from", "").split("<")[0].strip()[:15]
-            snippet = (msg.get("body") or msg.get("snippet", ""))[:100].replace("\n", " ")
+            # Give the most recent Flowmingo SENT reply up to 800 chars so the next
+            # model call can see what was already promised — prevents repetition and
+            # contradictory multi-turn replies. Other prior messages capped at 200 chars.
+            is_last_prior = (i == len(prior_msgs) - 1)
+            is_sent_support = is_support and "SENT" in msg.get("labels", [])
+            body_limit = 800 if (is_last_prior and is_sent_support) else 200
+            snippet = (msg.get("body") or msg.get("snippet", ""))[:body_limit].replace("\n", " ")
             parts.append(f"[{msg.get('date', '')[:10]}] {sender}: {snippet}")
-        prior_context = " | ".join(parts)[:500]
+        prior_context = " | ".join(parts)[:2000]
 
     return {
         "id": email_meta["id"],
@@ -204,19 +211,127 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     }
 
 
-# ── Classification prompt ─────────────────────────────────────────────────────
+# ── Node 1: Intent & Route Classifier ────────────────────────────────────────
+# Focused LLM call with NO knowledge base — cheap, fast, determines routing only.
 
-CLASSIFICATION_SCHEMA = """\
-Respond with a JSON object ONLY — no other text. Schema:
+NODE1_CLASSIFIER_SCHEMA = """\
+You are a Flowmingo email intent classifier. Your ONLY job is to determine routing.
+Do NOT draft a reply. Do NOT load the SOP.
+
+OUTPUT: JSON object ONLY — no other text.
 {
-  "classification": "FM/bug" | "FM/ready" | "FM/review",
-  "scenario": "S8" (matched scenario code, or "unclear"),
-  "scenario_confidence": 0.85,  // float 0.0-1.0. <0.5 for ambiguous, >0.8 for clear match.
-  "topic": "technical" | "candidate" | "partner" | "billing" | "other",
-  "urgency": "normal" | "urgent" | "critical",
+  "intent_direction": "inbound_support" | "inbound_pitch" | "inbound_prospect" | "unclear",
   "sender_type": "A" | "B" | "C" | "D" | "E",
-  "draft_body": "..." (FM/ready and FM/review only; omit or null for FM/bug),
-  "review_reason": "..." (FM/review only — exact [REVIEW NEEDED: ...] string; omit otherwise),
+  "scenario": "S8",
+  "scenario_confidence": 0.85,
+  "topic": "technical" | "candidate" | "partner" | "billing" | "vendor_pitch" | "other",
+  "urgency": "normal" | "urgent" | "critical",
+  "classification_hint": "FM/bug" | "FM/ready" | "FM/review",
+  "is_bug": false,
+  "reviewer_briefing": "",
+  "route_reasoning": "1-2 sentence explanation"
+}
+
+=== STEP 1: DETERMINE intent_direction FIRST ===
+
+"inbound_pitch": Sender is offering a service, product, content, talent sourcing, PR placement,
+or any commercial offer TO Flowmingo. Direction: sender wants to SELL something to Flowmingo.
+Signals: "I can offer", "we provide", "we'd like to pitch", "share a candidate profile with you",
+"we can help you with", "media feature", "award program", "lead generation for you",
+"offer our services", "partnership opportunity", "we specialize in", "we help companies like yours".
+Examples: marketing services, lead gen, HR/TA services pitched to Flowmingo, media features,
+awards programs, candidate placement offers, talent sourcing services.
+CRITICAL: "share a candidate profile for your review" = inbound_pitch. Flowmingo is a platform,
+not a recruiter. Support never receives or processes candidate profiles on Flowmingo's behalf.
+Route: ALWAYS S27 regardless of sender_type.
+
+"inbound_prospect": Sender is a recruiter, company, or HR professional enquiring about USING
+Flowmingo for their own hiring. Direction: they want to buy or try Flowmingo.
+Signals: "how does Flowmingo work", "interested in using", "want to try", "set up interviews",
+"pricing question", "demo request", "I want to hire using your platform".
+Route: S22 (Type D).
+
+"inbound_support": Sender has a question, issue, or request about their own Flowmingo experience.
+Route: full scenario routing (S1–S34).
+
+"unclear": Cannot determine direction from email content alone.
+Route: FM/review with reviewer_briefing explaining the ambiguity.
+
+=== STEP 2: SCENARIO ROUTING ===
+
+After setting intent_direction:
+- inbound_pitch → scenario = "S27", sender_type = "E" (unless clearly partner/known type)
+- inbound_prospect + company/recruiter → scenario = "S22", sender_type = "D"
+- inbound_support → apply S1–S34 matching based on email content
+
+S13 TRIGGER — classify as S13 for ANY of these (regardless of exact phrasing):
+- Reference letter, reference check, employment certificate, work certificate,
+  letter of employment, certificate of engagement, confirmation of role,
+  proof of employment, work verification, any document confirming role/relationship.
+→ classification_hint = FM/ready, scenario = "S13", scenario_confidence = 0.95.
+  Never ask clarifying questions for S13. The answer is always a decline.
+
+FM/bug signals: specific platform error, "it didn't work", image attachment with error context.
+
+=== STEP 3: REVIEW ROUTING ===
+
+classification_hint = FM/review when:
+- scenario_confidence < 0.7
+- intent_direction = "unclear"
+- has_support_reply = true
+- Legal/GDPR/DNC sensitivity (S29)
+- Ambiguous S22 vs S27 (large HR/recruitment platform — could be either)
+
+For ALL FM/review: populate reviewer_briefing with 3 sentences:
+1. What this email appears to be about.
+2. Why it was flagged for review (specific reason, not just "low confidence").
+3. Recommended action for the human reviewer (e.g., "Send Option A if prospect, Option B if pitch").
+
+=== SENDER TYPE REFERENCE ===
+A = Flowmingo program candidate (own internal roles)
+B = External company candidate (using Flowmingo as platform)
+C = Business Partner / TA Partner / Content Partner
+D = Recruiter / Company user
+E = Vendor / third-party / unclear
+"""
+
+
+def build_node1_prompt(email: dict) -> tuple[str, str]:
+    """Build Node 1 (intent classifier) prompt — no KB loaded."""
+    has_attachments = bool(email.get("attachments"))
+    attachment_note = ""
+    if has_attachments:
+        att_list = [a.get("filename", a.get("mimeType", "unknown")) for a in email["attachments"]]
+        attachment_note = f"\nAttachments: {', '.join(att_list)}"
+
+    system_prompt = NODE1_CLASSIFIER_SCHEMA
+
+    user_prompt = (
+        f"From: {email['from']}\n"
+        f"Subject: {email['subject']}\n"
+        f"Has support reply already: {email.get('has_support_reply', False)}\n"
+        f"Message count in thread: {email.get('message_count', 1)}"
+        f"{attachment_note}\n\n"
+        f"Customer message:\n{email.get('latest_message', '')}\n\n"
+    )
+    if email.get("thread_context"):
+        user_prompt += f"Prior thread context:\n{email['thread_context']}\n"
+
+    return system_prompt, user_prompt
+
+
+# ── Node 2: Draft Writer ──────────────────────────────────────────────────────
+# Full KB loaded. Writes the email reply based on Node 1 routing output.
+
+NODE2_DRAFT_RULES = """\
+You are a Flowmingo support email writer. Node 1 has already classified this email.
+Your job is to write the reply draft only — no re-classification needed.
+
+OUTPUT: JSON object ONLY — no other text.
+{
+  "draft_body": "...",
+  "review_reason": "",
+  "reviewer_briefing": "",
   "bug": {
     "customer_name": "...",
     "issue_summary": "...",
@@ -225,60 +340,137 @@ Respond with a JSON object ONLY — no other text. Schema:
     "issue_type": "...",
     "troubleshooting_steps": ["...", "..."],
     "original_message_trimmed": "..."
-  }  // FM/bug only; omit otherwise
+  }
 }
 
-Classification rules summary:
-- Every human email gets a reply — there is no FM/no-reply. Even disengaged statements
-  ("I already have a job", "I'm not interested") get a short warm closing reply (FM/ready).
-  Threads where support has already replied (has_support_reply=true) are an exception —
-  those should be FM/review with reason "thread already has support reply".
-- FM/bug: D4=Bug signal (platform didn't work as expected, specific error, "it didn't work",
-  image attachment present). Takes priority over all SOP scenarios.
-- FM/review: use when any dimension fails — D2=partial context, D3=not covered or fabrication
-  risk, D5=elevated/critical, etc. MUST include exact [REVIEW NEEDED: <specific reason>] in
-  review_reason AND prepend it to draft_body.
-- FM/ready: question, request, brand moment, or any statement deserving a warm close —
-  full context, covered by SOP, not a bug, normal sensitivity.
+reviewer_briefing and review_reason: populate only when classification_hint is FM/review.
+bug: populate only when classification_hint is FM/bug.
 
-For FM/ready and FM/review drafts, follow SOP email structure exactly:
-- "Dear <Name>," — extract name from sign-off/signature, infer from email if missing
-- Address issue directly
-- Include exactly once: "Let us know if you have any questions,"
-- End with: "Best regards," (no name after)
-- English only, no emojis
-- PLAIN TEXT ONLY — absolutely no markdown. Do not use **bold**, *italic*, `code`,
-  # headers, or any markdown syntax. These appear as raw symbols in email. If labelling
-  a list item use plain text: "Role: ..." not "**Role**: ..."
-- EVERY DRAFT MUST CONTAIN ACTUAL CONTENT — a specific answer, concrete steps, a link, or
-  a clear next action. Writing only "Thanks for reaching out" or "Sorry to hear that" with
-  nothing else is WRONG. If the SOP does not cover the situation, use FM/review — do not
-  produce an empty acknowledgment draft.
-- TROUBLESHOOTING STEPS MUST USE HYPHEN BULLETS — this is mandatory, no exceptions.
-  Any list of 2+ steps or actions MUST be written as:
-  - Step one here
-  - Step two here
-  Never write steps as plain prose sentences. A numbered or prose list is always wrong.
+=== DRAFT RULES ===
 
-For FM/bug, set bug.main_issue_vi to a single Vietnamese sentence strictly under 10 words starting with the affected subject.
+1. GREETING: "Dear [Name]," — extract name from sign-off, signature, or email prefix.
+
+2. OPENING SENTENCE: Reference something specific from THIS email — their company name,
+   their specific question, or their specific situation.
+   Never use "Thanks for reaching out." as the complete first sentence.
+
+3. BODY: Contain a concrete answer, step, link, or action.
+   Never produce an empty acknowledgment ("Thanks for your message." alone is wrong).
+   Never ask a clarifying question when the SOP already has the answer.
+   Never invite the sender to share documents you will then decline to process.
+
+4. THREAD AWARENESS: Read prior_thread_context carefully.
+   - Never ask a question already answered in a prior message.
+   - Never repeat information already given in a prior Flowmingo reply.
+   - Never contradict a prior Flowmingo reply.
+
+5. FORMAT: Plain text only. No markdown, no bold, no asterisks, no headers.
+   Hyphen bullets ONLY for troubleshooting step lists.
+
+6. ENDING: End with exactly once: "Let us know if you have any questions,"
+   Then: "Best regards,"
+
+7. FM/review drafts MUST still contain a full draft body (not just the review tag).
+   A reviewer must be able to send it with minor edits, not start from scratch.
+
+=== S27 TEMPLATE (intent_direction = inbound_pitch) ===
+
+This is a reversed outreach — write a sales pitch FOR Flowmingo.
+Use this exact structure:
+
+Dear [Name],
+
+My name is Jessica — Customer Support Representative at Flowmingo.
+
+[One sentence acknowledging their specific offering or proposal from their email.]
+
+If you find boosting hiring efficiency by 3x for free as something you would like,
+please register here: https://flowmingo.ai?utm_source=email-support
+
+Let us know if you do register, so that I can give you dedicated 1:1 support
+as a token of appreciation for reaching out.
+
+Let us know if you have any questions,
+
+Best regards,
+
+Constraints: 80–120 words. The acknowledgment sentence must reference their specific email.
+Do not add a second "Let us know if you have any questions," — it is already in the template.
+
+=== S13 TEMPLATE (reference/cert request) ===
+
+Decline immediately. Do NOT ask what wording they need. Do NOT ask for more details.
+Do NOT say "reach out to the company that issued your offer" — for internal Flowmingo
+roles (Talent Acquisition Business Partner, Business Partner, any Flowmingo program role),
+Flowmingo IS that company. Simply decline clearly and warmly.
+
+=== AMBIGUOUS S22 vs S27 (intent_direction = unclear) ===
+
+Write TWO complete email options. Human reviewer deletes the one that does not apply.
+
+review_reason = "[REVIEW NEEDED: ambiguous intent — delete one option before sending]"
+
+draft_body format:
+--- OPTION A: If this is an inbound prospect (company wanting to use Flowmingo) ---
+Dear [Name],
+[S22 draft]
+
+--- OPTION B: If this is a vendor/service pitch to Flowmingo ---
+Dear [Name],
+[S27 draft using Jessica persona]
+
+=== FOR FM/BUG ===
+Set bug.main_issue_vi to a single Vietnamese sentence under 10 words starting with the affected subject.
 """
 
 
-def build_classify_prompt(email: dict, kb_text: str) -> tuple[str, str]:
+def build_node2_prompt(
+    email: dict,
+    kb_text: str,
+    node1: dict,
+    validation_errors: list[str] | None = None,
+) -> tuple[str, str]:
+    """Build Node 2 (draft writer) prompt with full KB and Node 1 routing context."""
     has_attachments = bool(email.get("attachments"))
     attachment_note = ""
     if has_attachments:
         att_list = [a.get("filename", a.get("mimeType", "unknown")) for a in email["attachments"]]
         attachment_note = f"\nAttachments: {', '.join(att_list)}"
 
+    intent_dir      = node1.get("intent_direction", "inbound_support")
+    scenario        = node1.get("scenario", "unclear")
+    sender_type     = node1.get("sender_type", "E")
+    conf            = node1.get("scenario_confidence", 0.5)
+    hint            = node1.get("classification_hint", "FM/review")
+    reviewer_brief  = node1.get("reviewer_briefing", "")
+
+    routing_block = (
+        f"=== ROUTING FROM NODE 1 ===\n"
+        f"intent_direction: {intent_dir}\n"
+        f"sender_type: {sender_type}\n"
+        f"scenario: {scenario}\n"
+        f"scenario_confidence: {conf:.2f}\n"
+        f"classification_hint: {hint}\n"
+    )
+    if reviewer_brief:
+        routing_block += f"reviewer_briefing (from Node 1): {reviewer_brief}\n"
+    routing_block += "=== END ROUTING ===\n"
+
     system_prompt = (
-        "You are a Flowmingo customer support AI. "
-        "Use the SOP below to classify and respond to support emails.\n\n"
+        "You are a Flowmingo support email writer.\n\n"
         "=== FLOWMINGO SOP ===\n"
         f"{kb_text}\n"
         "=== END SOP ===\n\n"
-        + CLASSIFICATION_SCHEMA
+        + routing_block + "\n"
+        + NODE2_DRAFT_RULES
     )
+
+    if validation_errors:
+        system_prompt += (
+            "\n\n[VALIDATION ERRORS FROM PRIOR DRAFT — fix all of these:]\n"
+            + "\n".join(f"- {e}" for e in validation_errors)
+            + "\n[End of validation errors. Produce a corrected draft avoiding every violation above.]"
+        )
 
     user_prompt = (
         f"Email ID: {email['id']}\n"
@@ -294,6 +486,22 @@ def build_classify_prompt(email: dict, kb_text: str) -> tuple[str, str]:
         user_prompt += f"Prior thread context:\n{email['thread_context']}\n"
 
     return system_prompt, user_prompt
+
+
+def _prepend_reviewer_block(draft_body: str, reviewer_briefing: str, review_reason: str) -> str:
+    """Prepend the REVIEWER BRIEFING block to an FM/review draft."""
+    parts = []
+    if reviewer_briefing and reviewer_briefing.strip():
+        parts.append(
+            "--- REVIEWER BRIEFING ---\n"
+            + reviewer_briefing.strip()
+            + "\n--- END BRIEFING ---"
+        )
+    if review_reason and not draft_body.startswith("[REVIEW NEEDED"):
+        parts.append(review_reason)
+    if parts:
+        return "\n\n".join(parts) + "\n\n" + draft_body
+    return draft_body
 
 
 # ── Bug ticket ────────────────────────────────────────────────────────────────
@@ -495,13 +703,13 @@ def main():
             top_k=5,
         )
 
-        # ── 4. OpenAI v1 call ─────────────────────────────────────────────────
-        sys_p, usr_p = build_classify_prompt(email, kb_text)
+        # ── 4. Node 1: Intent & Route Classifier (no KB, fast) ────────────────
+        n1_sys, n1_usr = build_node1_prompt(email)
         try:
-            resp = call_openai(api_key, sys_p, usr_p, max_tokens=1200)
-            cls  = resp["result"]
+            resp1  = call_openai(api_key, n1_sys, n1_usr, max_tokens=400)
+            node1  = resp1["result"]
         except (json.JSONDecodeError, KeyError, Exception) as ex:
-            print(f"FM/review [AI_ERROR: {ex}]")
+            print(f"FM/review [AI_ERROR node1: {ex}]")
             _save_review(
                 email=email,
                 draft_body=f"[REVIEW NEEDED: AI processing error — {ex}]\n\n",
@@ -514,13 +722,58 @@ def main():
             reason_codes.append("AI_ERROR")
             continue
 
-        classification      = cls.get("classification", "FM/review")
-        model_scenario_id   = cls.get("scenario", "unclear")
-        scenario_confidence = float(cls.get("scenario_confidence", 0.5))
+        model_scenario_id   = node1.get("scenario", "unclear")
+        scenario_confidence = float(node1.get("scenario_confidence", 0.5))
+        intent_direction    = node1.get("intent_direction", "inbound_support")
 
-        # ── LLM-detected bug (rules_engine missed it) ─────────────────────────
-        if classification == "FM/bug":
-            print("FM/bug [LLM]")
+        # ── Node 1 bug detection ──────────────────────────────────────────────
+        if node1.get("classification_hint") == "FM/bug" or node1.get("is_bug"):
+            print("FM/bug [Node1]")
+            gmail_client.apply_labels(eid, ["FM/bug"])
+            tid = email.get("thread_id", eid)
+            if tid not in seen_bug_thread_ids:
+                seen_bug_thread_ids.add(tid)
+                all_bug_emails.append({"email": email, "bug": {}})
+            bug_count += 1
+            continue
+
+        # ── 5. Contract selection (using Node 1 scenario) ─────────────────────
+        contract, extra_triggers = sc_module.select(contracts, pre_hint, model_scenario_id)
+        risk_triggers.extend(extra_triggers)
+
+        if "unknown_scenario" in extra_triggers:
+            reason_codes.append("UNKNOWN_SCENARIO")
+
+        # ── 6. Node 2: Draft Writer (full KB) ────────────────────────────────
+        n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1)
+        try:
+            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=2000)
+            cls    = resp2["result"]
+        except (json.JSONDecodeError, KeyError, Exception) as ex:
+            print(f"FM/review [AI_ERROR node2: {ex}]")
+            _save_review(
+                email=email,
+                draft_body=f"[REVIEW NEEDED: AI draft error — {ex}]\n\n",
+                review_reason_code="AI_ERROR",
+                kb_version=kb_version,
+                validator_score=None,
+                repair_attempted=False,
+                scenario=model_scenario_id,
+                topic=node1.get("topic", "other"),
+                urgency=node1.get("urgency", "normal"),
+                sender_type=node1.get("sender_type", "E"),
+                input_tokens=resp1.get("input_tokens", 0),
+            )
+            review_count += 1
+            reason_codes.append("AI_ERROR")
+            continue
+
+        total_input_tokens  = resp1.get("input_tokens", 0) + resp2.get("input_tokens", 0)
+        total_output_tokens = resp1.get("output_tokens", 0) + resp2.get("output_tokens", 0)
+
+        # ── LLM-detected bug (Node 2 found it) ───────────────────────────────
+        if cls.get("bug") and cls["bug"].get("issue_summary"):
+            print("FM/bug [Node2]")
             gmail_client.apply_labels(eid, ["FM/bug"])
             tid = email.get("thread_id", eid)
             if tid not in seen_bug_thread_ids:
@@ -529,63 +782,63 @@ def main():
             bug_count += 1
             continue
 
-        # ── 5. Contract selection ─────────────────────────────────────────────
-        contract, extra_triggers = sc_module.select(contracts, pre_hint, model_scenario_id)
-        risk_triggers.extend(extra_triggers)
-
-        # Unknown scenario → track and fall through to validation with FALLBACK
-        if "unknown_scenario" in extra_triggers:
-            reason_codes.append("UNKNOWN_SCENARIO")
-
-        # ── 6. Confidence gate ────────────────────────────────────────────────
+        # ── 7. Confidence gate ────────────────────────────────────────────────
         if scenario_confidence < CONFIDENCE_THRESHOLD:
             print(f"FM/review [LOW_CONFIDENCE {scenario_confidence:.2f}]")
             draft_body = cls.get("draft_body") or ""
-            if cls.get("review_reason") and not draft_body.startswith("[REVIEW NEEDED"):
-                draft_body = f"{cls['review_reason']}\n\n{draft_body}"
+            reviewer_briefing = node1.get("reviewer_briefing") or cls.get("reviewer_briefing") or ""
+            review_reason = (
+                cls.get("review_reason")
+                or f"[REVIEW NEEDED: Low scenario confidence ({scenario_confidence:.2f}) — scenario: {model_scenario_id}]"
+            )
+            # Enforce non-empty draft — if draft is empty or too short, generate a fallback
+            if len(draft_body.strip()) < 60:
+                draft_body = (
+                    f"[REVIEW NEEDED: Low confidence — please write or approve a reply.]\n\n"
+                    f"[Draft not generated due to very low scenario confidence ({scenario_confidence:.2f}). "
+                    f"Email appears to be: {reviewer_briefing or 'unknown intent'}]"
+                )
+            final_draft = _prepend_reviewer_block(draft_body, reviewer_briefing, review_reason)
             _save_review(
                 email=email,
-                draft_body=draft_body or f"[REVIEW NEEDED: Low scenario confidence ({scenario_confidence:.2f})]\n\n",
+                draft_body=final_draft,
                 review_reason_code="LOW_CONFIDENCE",
                 kb_version=kb_version,
                 validator_score=None,
                 repair_attempted=False,
                 scenario=model_scenario_id,
-                topic=cls.get("topic", "other"),
-                urgency=cls.get("urgency", "normal"),
-                sender_type=cls.get("sender_type", "E"),
-                input_tokens=resp.get("input_tokens", 0),
+                topic=node1.get("topic", "other"),
+                urgency=node1.get("urgency", "normal"),
+                sender_type=node1.get("sender_type", "E"),
+                input_tokens=total_input_tokens,
             )
             review_count += 1
             reason_codes.append("LOW_CONFIDENCE")
             continue
 
-        # ── 7. Validate + repair ──────────────────────────────────────────────
-        draft_body_v1   = cls.get("draft_body") or ""
-        v1              = validators.validate(draft_body_v1, contract, risk_triggers)
-        severity        = v1["severity"]
-        validator_score = v1["validator_score"]
-        final_draft     = v1["fixed_draft"]
+        # ── 8. Validate + repair ──────────────────────────────────────────────
+        draft_body_v1    = cls.get("draft_body") or ""
+        v1               = validators.validate(draft_body_v1, contract, risk_triggers)
+        severity         = v1["severity"]
+        validator_score  = v1["validator_score"]
+        final_draft      = v1["fixed_draft"]
         repair_attempted = False
         review_reason_code: str | None = v1.get("review_reason_code")
         label = "FM/ready"
 
         if severity in ("PASS", "LOW"):
-            # AUTO-FIX applied in validator, draft is clean
             label = "FM/ready"
 
         elif severity == "MEDIUM":
-            # repair_v2: re-classify with validation errors injected
-            sys_p2 = sys_p + (
-                "\n\n[VALIDATION ERRORS FROM PRIOR DRAFT — you must fix all of these:]\n"
-                + "\n".join(f"- {issue}" for issue in v1["issues"])
-                + "\n[End of validation errors. Produce a corrected draft that avoids every violation listed above.]"
-            )
+            # repair_v2: re-run Node 2 with validation errors injected
+            n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"])
             try:
-                resp2 = call_openai(api_key, sys_p2, usr_p, max_tokens=2000)
-                draft_v2 = resp2["result"].get("draft_body") or ""
+                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=2000)
+                draft_v2 = resp_r["result"].get("draft_body") or ""
                 v2 = validators.validate(draft_v2, contract, risk_triggers)
                 repair_attempted = True
+                total_input_tokens  += resp_r.get("input_tokens", 0)
+                total_output_tokens += resp_r.get("output_tokens", 0)
 
                 if v2["severity"] in ("PASS", "LOW"):
                     final_draft     = v2["fixed_draft"]
@@ -593,47 +846,55 @@ def main():
                     review_reason_code = None
                     label = "FM/ready"
                 else:
-                    # Keep higher validator_score version
                     if v2["validator_score"] >= v1["validator_score"]:
                         final_draft     = v2["fixed_draft"]
                         validator_score = v2["validator_score"]
                         review_reason_code = v2.get("review_reason_code")
-                    # else keep v1 final_draft / validator_score (already set above)
                     label = "FM/review"
             except Exception as ex:
                 print(f"  WARN: repair_v2 failed: {ex}")
                 repair_attempted = True
                 label = "FM/review"
-                # final_draft stays as v1 auto-fixed
 
         elif severity == "HIGH":
-            final_draft = draft_body_v1  # preserve original on HIGH
+            final_draft = draft_body_v1
             label = "FM/review"
 
-        # For FM/review, prepend review reason if needed
+        # For FM/review: prepend REVIEWER BRIEFING block
         if label == "FM/review":
-            if review_reason_code and not final_draft.startswith("[REVIEW NEEDED"):
-                final_draft = f"[REVIEW NEEDED: {review_reason_code}]\n\n{final_draft}"
-            elif cls.get("review_reason") and not final_draft.startswith("[REVIEW NEEDED"):
-                final_draft = f"{cls['review_reason']}\n\n{final_draft}"
+            reviewer_briefing = node1.get("reviewer_briefing") or cls.get("reviewer_briefing") or ""
+            review_reason = (
+                f"[REVIEW NEEDED: {review_reason_code}]" if review_reason_code
+                else (cls.get("review_reason") or "[REVIEW NEEDED]")
+            )
+            if not final_draft.startswith("--- REVIEWER BRIEFING"):
+                final_draft = _prepend_reviewer_block(final_draft, reviewer_briefing, review_reason)
+
+        # Enforce non-empty FM/review draft
+        if label == "FM/review":
+            stripped = final_draft.replace("--- REVIEWER BRIEFING ---", "").replace("--- END BRIEFING ---", "")
+            stripped = stripped.replace("[REVIEW NEEDED", "").strip()
+            if len(stripped) < 60:
+                final_draft += (
+                    "\n\n[Draft body was empty or too short. Please write a reply manually "
+                    f"based on the reviewer briefing above. Scenario: {model_scenario_id}]"
+                )
 
         # Special handling for force_review contracts (e.g. S29 DNC)
         if contract.get("force_review") and label == "FM/ready":
             label = "FM/review"
-            if not final_draft.startswith("[REVIEW NEEDED"):
+            if "--- REVIEWER BRIEFING" not in final_draft and "[REVIEW NEEDED" not in final_draft:
                 final_draft = "[REVIEW NEEDED: Contract requires human review for this scenario.]\n\n" + final_draft
 
-        # Safety net: if [REVIEW NEEDED] is embedded anywhere in the draft body,
-        # the LLM flagged it internally — always force FM/review regardless of validator result.
+        # Safety net: embedded [REVIEW NEEDED] in draft body forces FM/review
         if label == "FM/ready" and "[REVIEW NEEDED" in final_draft:
             label = "FM/review"
             review_reason_code = review_reason_code or "AI_ERROR"
 
         print(f"{label} [{severity} score={validator_score:.2f}]")
 
-        # ── 8. Create draft + label + state ──────────────────────────────────
+        # ── 9. Create draft + label + state ──────────────────────────────────
         try:
-            # Delete stale draft if re-processing a previously handled email
             existing = state_module.load_state().get("emails", {}).get(eid, {})
             old_draft_id = existing.get("draft_id")
             if old_draft_id:
@@ -654,10 +915,10 @@ def main():
                 from_addr=email.get("from", ""),
                 subject=subj,
                 date=email.get("date", ""),
-                sender_type=cls.get("sender_type", route_info.get("sender_type", "E")),
-                topic=cls.get("topic", "other"),
+                sender_type=node1.get("sender_type", route_info.get("sender_type", "E")),
+                topic=node1.get("topic", "other"),
                 scenario=model_scenario_id,
-                urgency=cls.get("urgency", "normal"),
+                urgency=node1.get("urgency", "normal"),
                 review_status="ready" if label == "FM/ready" else "review",
                 draft_id=dr.get("draft_id", ""),
                 draft_message_id=dr.get("message_id", ""),
@@ -669,13 +930,13 @@ def main():
             )
             stats_module.log_processing(
                 email_id=eid,
-                input_tokens=resp.get("input_tokens", 0),
-                output_tokens=resp.get("output_tokens", 0),
+                input_tokens=total_input_tokens,
+                output_tokens=total_output_tokens,
                 subject=subj,
                 from_addr=email.get("from", ""),
                 scenario=model_scenario_id,
-                topic=cls.get("topic", "other"),
-                urgency=cls.get("urgency", "normal"),
+                topic=node1.get("topic", "other"),
+                urgency=node1.get("urgency", "normal"),
                 review_status="ready" if label == "FM/ready" else "review",
             )
             if label == "FM/ready":
