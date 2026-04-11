@@ -23999,6 +23999,116 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d7dbf8335a2f89": {
+      "thread_id": "19d7dbf8335a2f89",
+      "from": "Amrita Upadhyay <riyapitcher@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Amrita Upadhyay",
+      "date": "Sat, 11 Apr 2026 23:43:00 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6410907509138299799",
+      "draft_message_id": "19d7dcc546f0744d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T18:27:17.267083+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9333,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT"
+    },
+    "19d7d8626c2e9c9f": {
+      "thread_id": "19d7d8626c2e9c9f",
+      "from": "Rokeya Akter Riya <rokeyaakterriya25@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Sat, 11 Apr 2026 23:10:08 +0600",
+      "sender_type": "C",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6878381171589990157",
+      "draft_message_id": "19d7dcc87f381b24",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T18:27:30.053280+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8571,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT"
+    },
+    "19d7d47d24ecf406": {
+      "thread_id": "19d70df51ac4f40e",
+      "from": "Shaikh Mostofa <shaikhgolammostofa@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Shaikh",
+      "date": "Sat, 11 Apr 2026 22:02:14 +0600",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7620410204319482576",
+      "draft_message_id": "19d7dcca3777bae2",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T18:27:36.937755+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7d8b82641b77d": {
+      "thread_id": "19d7d8b82641b77d",
+      "from": "Rwego Ida <rwegoida@gmail.com>",
+      "subject": "Incomplete HR and Admin Manager Interview",
+      "date": "Sat, 11 Apr 2026 20:16:35 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r2154506352317135740",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T18:27:38.933457+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260411-011",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7d45fa5900f29": {
+      "thread_id": "19d7d45fa5900f29",
+      "from": "imran khalid <imrankhalid2907@gmail.com>",
+      "subject": "Video uploading failed",
+      "date": "Sat, 11 Apr 2026 21:30:16 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3862860962946699843",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T18:27:40.270720+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260411-012",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
