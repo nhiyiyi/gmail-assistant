@@ -19451,20 +19451,20 @@
       "from": "Aarif Zaman <zamanbdm4@gmail.com>",
       "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - ARIF HAQUE",
       "date": "Tue, 7 Apr 2026 17:57:16 +0530",
-      "sender_type": "A",
-      "topic": "candidate",
-      "scenario": "S34",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r-4392950994521008845",
-      "draft_message_id": "19d680190bf834e3",
-      "kb_version": "b2605abb20c2",
-      "processed_at": "2026-04-07T12:53:47.917054+00:00",
+      "review_status": "bug",
+      "draft_id": "r1850427314897814285",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T12:31:30.197922+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/bug"
       ],
-      "ticket_id": null,
-      "validator_score": 1.0,
+      "ticket_id": "BUG-260411-009",
+      "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -22422,21 +22422,21 @@
       "subject": "Clarification regarding Talent Acquisition role",
       "date": "Thu, 9 Apr 2026 21:30:32 +0530",
       "sender_type": "A",
-      "topic": "other",
-      "scenario": "S31",
+      "topic": "candidate",
+      "scenario": "S1",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r-3931874901297261676",
-      "draft_message_id": "19d730310bde8a85",
-      "kb_version": "b2605abb20c2",
-      "processed_at": "2026-04-09T16:11:14.763548+00:00",
+      "review_status": "review",
+      "draft_id": "r-2904603574493260120",
+      "draft_message_id": "19d7c868b3417aec",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T12:31:26.071647+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/review"
       ],
       "ticket_id": null,
-      "validator_score": 0.8,
+      "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": null
+      "review_reason_code": "LOW_CONFIDENCE"
     },
     "19d72f016a5623b2": {
       "thread_id": "19d72f016a5623b2",
@@ -23886,6 +23886,28 @@
         "FM/bug"
       ],
       "ticket_id": "BUG-260411-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7bf1791fdd5cc": {
+      "thread_id": "19d722b2ddf81d9b",
+      "from": "Ricky Pathak <pathakricky4@gmail.com>",
+      "subject": "Re: HlinkeR: Interview invitation for HR Generalist - PRANITA PATHAK",
+      "date": "Sat, 11 Apr 2026 15:18:22 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-233778761140443946",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T12:31:28.554617+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260411-008",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
