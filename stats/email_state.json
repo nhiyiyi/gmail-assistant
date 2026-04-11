@@ -22531,20 +22531,20 @@
       "from": "Aarif Zaman <zamanbdm4@gmail.com>",
       "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - ARIF HAQUE",
       "date": "Thu, 9 Apr 2026 23:53:06 +0530",
-      "sender_type": "B",
-      "topic": "candidate",
-      "scenario": "S34",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r-5891232863062560752",
-      "draft_message_id": "19d786aa61f1fd2a",
-      "kb_version": "2fb8ac2bcb15",
-      "processed_at": "2026-04-10T17:22:29.441163+00:00",
+      "review_status": "bug",
+      "draft_id": "r-6694424476956223803",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:37.157893+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/bug"
       ],
-      "ticket_id": null,
-      "validator_score": 1.0,
+      "ticket_id": "BUG-260411-007",
+      "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -23345,22 +23345,22 @@
       "from": "Krithika Balachandar <krithiitinspire@gmail.com>",
       "subject": "Human Resource Executive",
       "date": "Fri, 10 Apr 2026 19:24:14 +0530",
-      "sender_type": "A",
-      "topic": "candidate",
-      "scenario": "unclear",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r-1140804370338231315",
-      "draft_message_id": "19d78695956879c2",
-      "kb_version": "2fb8ac2bcb15",
-      "processed_at": "2026-04-10T17:21:03.662004+00:00",
+      "review_status": "bug",
+      "draft_id": "r-7340461340876779234",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:35.025811+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/bug"
       ],
-      "ticket_id": null,
+      "ticket_id": "BUG-260411-005",
       "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": "LOW_CONFIDENCE"
+      "review_reason_code": null
     },
     "19d77874d9d31f5f": {
       "thread_id": "19d77874d9d31f5f",
@@ -23390,21 +23390,21 @@
       "subject": "Request for Employment Certificate",
       "date": "Fri, 10 Apr 2026 15:45:07 +0300",
       "sender_type": "E",
-      "topic": "other",
-      "scenario": "unclear",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r6708829862915416427",
-      "draft_message_id": "19d786972a7dd090",
-      "kb_version": "2fb8ac2bcb15",
-      "processed_at": "2026-04-10T17:21:10.428643+00:00",
+      "review_status": "bug",
+      "draft_id": "r4182875528003469709",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:36.071708+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/bug"
       ],
-      "ticket_id": null,
+      "ticket_id": "BUG-260411-006",
       "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": "LOW_CONFIDENCE"
+      "review_reason_code": null
     },
     "19d776c9c847ed76": {
       "thread_id": "19d776c9c847ed76",
@@ -23496,25 +23496,25 @@
     },
     "19d757dae8a48c03": {
       "thread_id": "19d72f9890d75b71",
-      "from": "ryamini88@gmail.com",
+      "from": "Yamini Saini <ryamini88@gmail.com>",
       "subject": "Re: Clarification regarding Talent Acquisition role",
       "date": "Fri, 10 Apr 2026 09:14:12 +0530",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S16",
+      "scenario": "S1",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r-1350366689718580442",
-      "draft_message_id": "19d784ec32a83722",
-      "kb_version": "2fb8ac2bcb15",
-      "processed_at": "2026-04-10T16:52:09.421313+00:00",
+      "review_status": "review",
+      "draft_id": "r4596888210574241952",
+      "draft_message_id": "19d7be0e6f5cff1e",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:30.616756+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/review"
       ],
       "ticket_id": null,
       "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": null
+      "review_reason_code": "LOW_CONFIDENCE"
     },
     "19d75393fb13e4a3": {
       "thread_id": "19d35146b40c6bea",
@@ -23812,14 +23812,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-5604005959657739869",
+      "draft_id": "r5921991735889744334",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-11T08:37:15.751380+00:00",
+      "processed_at": "2026-04-11T09:30:33.958847+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260411-001",
+      "ticket_id": "BUG-260411-004",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -23842,6 +23842,50 @@
         "FM/bug"
       ],
       "ticket_id": "BUG-260411-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7bcb888f7bd0e": {
+      "thread_id": "19d7bcb888f7bd0e",
+      "from": "\"'Mulat Timothy' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Murungi Timothy",
+      "date": "Sat, 11 Apr 2026 12:06:48 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1656962550362906768",
+      "draft_message_id": "19d7be0a6e5b6f3b",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:14.088222+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9091,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d7bc1041ce8ba7": {
+      "thread_id": "19d7bc1041ce8ba7",
+      "from": "Mulat Timothy <timothymulat4@gmail.com>",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Sat, 11 Apr 2026 11:55:24 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-8668465504476347687",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-11T09:30:32.833544+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260411-003",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
