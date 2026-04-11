@@ -23625,6 +23625,50 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d79a75ca15802c": {
+      "thread_id": "19d79a75ca15802c",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "The easier way to stay visible",
+      "date": "Fri, 10 Apr 2026 23:08:22 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6181935383338248453",
+      "draft_message_id": "19d7a18bac460fc4",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-11T01:12:14.750530+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d796590bc37004": {
+      "thread_id": "19d77f97bf437004",
+      "from": "\"'Deepanshu Garg' via Contact\" <contact@flowmingo.ai>",
+      "subject": "RE: Can we connect: Culinary Specialist Candidate Available",
+      "date": "Fri, 10 Apr 2026 17:56:28 -0400",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6512061904029312993",
+      "draft_message_id": "19d7a18cb122234a",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-11T01:12:19.360566+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
