@@ -23669,6 +23669,50 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d7ad76626aede8": {
+      "thread_id": "19d7ad76626aede8",
+      "from": "Microsoft Advertising <adctr@microsoft.com>",
+      "subject": "Violation of Policy - Ad or Ad Component Disapprovals",
+      "date": "Sat, 11 Apr 2026 04:40:27 +0000",
+      "sender_type": "E",
+      "topic": "billing",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8945696991616387083",
+      "draft_message_id": "19d7ade5fc647208",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-11T04:48:07.682691+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.2,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d7a62ed74e5e2d": {
+      "thread_id": "19d7a62ed74e5e2d",
+      "from": "Echelon Singapore 2026 by e27 <ecosystem@e27.co>",
+      "subject": "Sorry, not sorry. We're announcing this on a Saturday.",
+      "date": "Sat, 11 Apr 2026 02:32:34 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6369094964953549602",
+      "draft_message_id": "19d7ade72026d717",
+      "kb_version": "2fb8ac2bcb15",
+      "processed_at": "2026-04-11T04:48:12.780445+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
