@@ -2153,10 +2153,21 @@
         "19d7e256922edcaa",
         "19d7d3a08ffbf07f"
       ]
+    },
+    "2026-04-12": {
+      "emails_processed": 2,
+      "total_input_tokens": 10274,
+      "total_output_tokens": 0,
+      "total_cost_usd": 0.030822,
+      "drafts_created": 2,
+      "email_ids": [
+        "19d7efdcc7e03ffd",
+        "19d7eca89e8c8995"
+      ]
     }
   },
   "total": {
-    "emails_processed": 1947,
-    "total_cost_usd": 20.30376
+    "emails_processed": 1949,
+    "total_cost_usd": 20.334582
   }
 }

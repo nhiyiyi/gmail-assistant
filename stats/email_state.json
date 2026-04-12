@@ -24153,6 +24153,28 @@
       "validator_score": 0.8333,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d7eca89e8c8995": {
+      "thread_id": "19d7eca89e8c8995",
+      "from": "\"'Senja' via Contact\" <contact@flowmingo.ai>",
+      "subject": "LIVE: Ask Claude anything with Senja MCP",
+      "date": "Sat, 11 Apr 2026 23:04:51 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3228494723596746021",
+      "draft_message_id": "19d7f46c8edd1b22",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T01:20:39.016083+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
