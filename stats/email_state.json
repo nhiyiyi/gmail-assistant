@@ -24175,6 +24175,28 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d7f7a0bb7bd41b": {
+      "thread_id": "19d7f7a0bb7bd41b",
+      "from": "\"'Ace Healthcare Recruitment Team' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Sun, 12 Apr 2026 02:16:26 GMT",
+      "sender_type": "D",
+      "topic": "candidate",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4344506304652901598",
+      "draft_message_id": "19d801d0fb55060b",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T05:14:41.776607+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
