@@ -24527,6 +24527,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d834d9fffbbd6f": {
+      "thread_id": "19d834d9fffbbd6f",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "12 Apr 2026 16:06:32 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3341190053813475914",
+      "draft_message_id": "19d8393f4d6bbc3d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T21:23:26.156100+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d834305c0b9dc5": {
+      "thread_id": "19d834305c0b9dc5",
+      "from": "Elvis Damptey <elvisdamptey4@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Sun, 12 Apr 2026 19:54:46 +0000",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S25",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r390048715502483187",
+      "draft_message_id": "19d83940a1903a4d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T21:23:36.151294+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d832f5e210db39": {
+      "thread_id": "19d6d663f991d519",
+      "from": "Anders Kirk <reiterkirk@hotmail.com>",
+      "subject": "Sv: Sv: Sv: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 12 Apr 2026 19:33:30 +0000",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7534609433292101828",
+      "draft_message_id": "19d839431f242eec",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T21:23:41.017520+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d82fbd7c9ba1a9": {
+      "thread_id": "19d82fbd7c9ba1a9",
+      "from": "Ragini Karaley <ragini.karaley@gmail.com>",
+      "subject": "Fwd: Flowmingo: Interview invitation for Human Resources Executive - Ragini Karaley",
+      "date": "Mon, 13 Apr 2026 00:07:02 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8062637376418917732",
+      "draft_message_id": "19d839448cdaa074",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T21:23:48.356587+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d83231cb8a5f60": {
+      "thread_id": "19d83231cb8a5f60",
+      "from": "Anshul Saxena <anshulsaxena74@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Mon, 13 Apr 2026 00:49:51 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r2692880578627819964",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T21:23:50.068560+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260412-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
