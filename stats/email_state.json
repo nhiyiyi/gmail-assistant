@@ -24219,6 +24219,72 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d81a06016b47a0": {
+      "thread_id": "19d81a06016b47a0",
+      "from": "Laiba Noor <laibanur17@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Sun, 12 Apr 2026 17:17:27 +0500",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9068492637740743646",
+      "draft_message_id": "19d81affbd9cc13d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T12:34:47.603001+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d818f0037cda89": {
+      "thread_id": "19d818f0037cda89",
+      "from": "Karan Makvana <makvanakaran776@gmail.com>",
+      "subject": "Regarding Completion of AI Interview",
+      "date": "Sun, 12 Apr 2026 17:28:32 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r164614437352959330",
+      "draft_message_id": "19d81b00ca86ff0a",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T12:34:52.180076+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8116e1ed76eb6": {
+      "thread_id": "19d8116e1ed76eb6",
+      "from": "Aswathi Rajendran <aswathirnair.rajendran@gmail.com>",
+      "subject": "Response for AI Interview for Human resources Executive",
+      "date": "Sun, 12 Apr 2026 15:17:16 +0530",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8790628445054201497",
+      "draft_message_id": "19d81b02c3cbd25d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T12:35:00.399364+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
