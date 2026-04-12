@@ -24461,6 +24461,72 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d82e1492f21f90": {
+      "thread_id": "19d82e1492f21f90",
+      "from": "Arianna Lamera <arianna.lamera1@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Sun, 12 Apr 2026 20:08:02 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5530493430348749268",
+      "draft_message_id": "19d82f6314313e4f",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T18:31:06.853706+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d82982ae392112": {
+      "thread_id": "19d82982ae392112",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "5 top recommended software products for you \u2b50",
+      "date": "Sun, 12 Apr 2026 12:48:19 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8347998732077478743",
+      "draft_message_id": "19d82f653d45742d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T18:31:15.038972+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9333,
+      "repair_attempted": true,
+      "review_reason_code": "WRONG_SCENARIO"
+    },
+    "19d828ed173659ed": {
+      "thread_id": "19d828ed173659ed",
+      "from": "Ayushi Garg <gargayushi221994@gmail.com>",
+      "subject": "Completion of AI Interview \u2013 Human Resources Executive Position",
+      "date": "Sun, 12 Apr 2026 22:07:57 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S12",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4238250504141991520",
+      "draft_message_id": "19d82f66bb419434",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-12T18:31:21.135929+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
     }
   }
 }
