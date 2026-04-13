@@ -25165,6 +25165,72 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d878be594f5826": {
+      "thread_id": "19d878be594f5826",
+      "from": "Gayatri sahu <gayatri99sahu@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Gayatri Sahu",
+      "date": "Mon, 13 Apr 2026 21:22:50 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S4",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6134612619428202951",
+      "draft_message_id": "19d8796fbe21ac1c",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T16:05:12.998749+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9333,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT"
+    },
+    "19d8779d893189be": {
+      "thread_id": "19d8779d893189be",
+      "from": "Barbara Dominguez <barjdominguez@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Barbara",
+      "date": "Mon, 13 Apr 2026 12:33:05 -0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6302428129979496587",
+      "draft_message_id": "19d879719593450f",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T16:05:20.153291+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8728725c41c24": {
+      "thread_id": "19d8728725c41c24",
+      "from": "\"'ISOKEN CONSULTING GROUP' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Transform Your HR Practice with Data \u2014 Register Now at Zanzibar",
+      "date": "Mon, 13 Apr 2026 14:04:09 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r376333437180997910",
+      "draft_message_id": "19d87972a9ad9f6f",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T16:05:25.194016+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
