@@ -25011,6 +25011,50 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8623fb4207e57": {
+      "thread_id": "19d8623fb4207e57",
+      "from": "Elena Dima <e.dima8473@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Elena",
+      "date": "Mon, 13 Apr 2026 12:19:43 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5580538149026403180",
+      "draft_message_id": "19d865ff460fdaa8",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T10:25:29.602641+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85d79d2a537e8": {
+      "thread_id": "19d85d79d2a537e8",
+      "from": "sadia Wali <sadia.wali.writer@gmail.com>",
+      "subject": "Applying for the post of a female content writer",
+      "date": "Mon, 13 Apr 2026 00:56:16 -0700",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-771021096352253189",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T10:25:40.476937+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260413-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
