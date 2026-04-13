@@ -24813,6 +24813,204 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d85cac97ae6f72": {
+      "thread_id": "19d85cac97ae6f72",
+      "from": "Noorain Essack <nooraind.essack@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Noorain Essack",
+      "date": "Mon, 13 Apr 2026 09:42:18 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5299854024104856738",
+      "draft_message_id": "19d85cdd94972902",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:45:54.388528+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85c778c194ac1": {
+      "thread_id": "19d85c36274c65c2",
+      "from": "Mark Baker <info@sircula.com>",
+      "subject": "RE: Attendance at the d&i Leaders Workplace Inclusion Forum 2026",
+      "date": "Mon, 13 Apr 2026 08:38:41 +0100",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6688391217303806602",
+      "draft_message_id": "19d85cdedb84ac2e",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:45:59.484436+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85c3f80686eb2": {
+      "thread_id": "19d85c3f80686eb2",
+      "from": "\"'Oladunni Agiri' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Reoccurring Interview invite",
+      "date": "Mon, 13 Apr 2026 07:34:54 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6833113706353991047",
+      "draft_message_id": "19d85ce0255a43d5",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:05.396808+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d85b8056b81f6a": {
+      "thread_id": "19d85b8056b81f6a",
+      "from": "Queene Bucana <queenekish@gmail.com>",
+      "subject": "Re: Callbox DB Inc.: Interview invitation for Client Success Manager [ILO] - Queene Bucana",
+      "date": "Mon, 13 Apr 2026 00:21:47 -0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r939031080082477690",
+      "draft_message_id": "19d85ce34148561f",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:17.995592+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85b6dba3fe6b9": {
+      "thread_id": "19d85b6dba3fe6b9",
+      "from": "\"'Ola Szczerba' via Contact\" <contact@flowmingo.ai>",
+      "subject": "mScan - mobile app supporting warehouses",
+      "date": "Mon, 13 Apr 2026 03:20:42 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7075067158920428614",
+      "draft_message_id": "19d85ce4931f0cd4",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:23.163040+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85942747b15e9": {
+      "thread_id": "19d85942747b15e9",
+      "from": "Trust Support <trust.operations@trustpilot.com>",
+      "subject": "Follow-up to your recent inquiry - Case #01689289",
+      "date": "Mon, 13 Apr 2026 06:42:48 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7454817827640842234",
+      "draft_message_id": "19d85ce6005f3106",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:29.203545+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d8577476b42d21": {
+      "thread_id": "19d8577476b42d21",
+      "from": "Azmi N <azmi@algobash.com>",
+      "subject": "FMCG clients save 80% time - so can Flowmingo AI",
+      "date": "Mon, 13 Apr 2026 06:11:16 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9065838753520515788",
+      "draft_message_id": "19d85ce75a51a212",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:34.486910+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85768871ec731": {
+      "thread_id": "19d85768871ec731",
+      "from": "\"AI Prompting for Marketers Crash Course (21 April)\" <hello@experience-effect.com>",
+      "subject": "Generic Prompts = Poor Results (Fix It)",
+      "date": "Mon, 13 Apr 2026 06:10:25 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3030918303266456560",
+      "draft_message_id": "19d85ce88b74e3ef",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:39.192661+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d85bfb0287062c": {
+      "thread_id": "19d85bfb0287062c",
+      "from": "Tarun Kaushik <tkaushik7071@gmail.com>",
+      "subject": "Re: Biorev Studios (Palak): Interview invitation for Senior Manual QA Engineer - Tarun Kaushik",
+      "date": "Mon, 13 Apr 2026 13:00:11 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3214745687676064784",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T07:46:41.067728+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260413-001",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
