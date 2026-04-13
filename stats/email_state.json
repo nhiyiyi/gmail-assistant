@@ -25055,6 +25055,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d86e5ff5d65c34": {
+      "thread_id": "19d7b9027b3cdaa3",
+      "from": "Stephen Maseko <stephenmaseko98@gmail.com>",
+      "subject": "Re: APPLIYING FOR THE POST OF WAITER",
+      "date": "Mon, 13 Apr 2026 14:47:15 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3707554099907807621",
+      "draft_message_id": "19d86eb6789b27a7",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T12:57:48.378690+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d86b1332064b63": {
+      "thread_id": "19d8116e1ed76eb6",
+      "from": "Aswathi Rajendran <aswathirnair.rajendran@gmail.com>",
+      "subject": "Re: Response for AI Interview for Human resources Executive",
+      "date": "Mon, 13 Apr 2026 17:23:58 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S11",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2102472899472338433",
+      "draft_message_id": "19d86eb8da925889",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T12:57:57.795303+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d86ba5c177b5ee": {
+      "thread_id": "19d81ff78c1e3501",
+      "from": "Sara M <sara.mdd3@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Mon, 13 Apr 2026 15:03:58 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r2483710447056775042",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T12:58:02.102557+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260413-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d869ec9a861b2e": {
+      "thread_id": "19d869ec9a861b2e",
+      "from": "Priya Joshi <priya.work95@gmail.com>",
+      "subject": "Regarding Interview for HR executive",
+      "date": "Mon, 13 Apr 2026 17:03:50 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-1494010914032606482",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T12:58:03.464907+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260413-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d866eaa244e112": {
+      "thread_id": "19d866eaa244e112",
+      "from": "Mehrishi <mehrishi.tiwari1@gmail.com>",
+      "subject": "Application for HR Executive Role \u2013 Unable to Apply via Website",
+      "date": "Mon, 13 Apr 2026 16:11:20 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-4572556979669772943",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T12:58:04.717387+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260413-005",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
