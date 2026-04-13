@@ -24703,6 +24703,116 @@
       "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8552f129013e1": {
+      "thread_id": "19d8552f129013e1",
+      "from": "Barbare Getia <barbaregetia@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Mon, 13 Apr 2026 09:31:29 +0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1561716248505359095",
+      "draft_message_id": "19d85533f65a4358",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T05:31:59.236768+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8529303302d93": {
+      "thread_id": "19d8529303302d93",
+      "from": "sophia gregory <gresophia1@gmail.com>",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Mon, 13 Apr 2026 00:45:49 -0400",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S12",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6012646840012401796",
+      "draft_message_id": "19d855353adb9d95",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T05:32:04.453153+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d852650bcb76be": {
+      "thread_id": "19d852650bcb76be",
+      "from": "Shruti Khore <shrutikhore08@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Shruti Khore",
+      "date": "Mon, 13 Apr 2026 10:12:39 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2419189376727813247",
+      "draft_message_id": "19d855369d23d473",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T05:32:10.082154+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d849ab35365dd7": {
+      "thread_id": "19d849ab35365dd7",
+      "from": "Chioma Udom <udomchioma@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Mon, 13 Apr 2026 03:10:07 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6698175179215526511",
+      "draft_message_id": "19d85537acc7aeee",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T05:32:14.657438+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8499f75df92f0": {
+      "thread_id": "19d8499f75df92f0",
+      "from": "Hubstaff Talent <talent@hubstaff.com>",
+      "subject": "Top Candidate Matches for Talent Acquisition Specialist",
+      "date": "Mon, 13 Apr 2026 02:09:33 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2969620599328563080",
+      "draft_message_id": "19d8553912d190e2",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-13T05:32:20.185286+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
