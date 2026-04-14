@@ -25671,6 +25671,160 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8a636d4c5a49f": {
+      "thread_id": "19d8a636d4c5a49f",
+      "from": "Geetika Bareja <geetikabareja@gmail.com>",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Tue, 14 Apr 2026 10:37:29 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3553424720695892181",
+      "draft_message_id": "19d8a69a3621ba87",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:33.052592+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a3cfae410abc": {
+      "thread_id": "19d8a3cfae410abc",
+      "from": "maha Saied <mahasaied1234@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Maha Saied",
+      "date": "Tue, 14 Apr 2026 06:25:31 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6722879180092908674",
+      "draft_message_id": "19d8a69b9d1f29a5",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:38.593304+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a3b8f33886bf": {
+      "thread_id": "19d8a3b8f33886bf",
+      "from": "Mohini Yadav <mohinipal1990@gmail.com>",
+      "subject": "Follow-up on AI Interview & Assessment \u2013 HR Executive Role",
+      "date": "Tue, 14 Apr 2026 09:53:58 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8500167473676653834",
+      "draft_message_id": "19d8a69d1b7776fa",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:44.610359+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d89a9d81401a26": {
+      "thread_id": "19d89a9d81401a26",
+      "from": "NEHA SHETTY <nehashetty317@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 07:14:47 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S18",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8385969751754743021",
+      "draft_message_id": "19d8a69f8cc6b14d",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:55.201968+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a3473485aacf": {
+      "thread_id": "19d776cf8f6be63f",
+      "from": "Mohammad Nawfal Chowdhury <mnc.ewu@gmail.com>",
+      "subject": "Re: Request for Employment Certificate",
+      "date": "Tue, 14 Apr 2026 10:16:13 +0600",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-109407114400929755",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:58.061432+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a22210da2d67": {
+      "thread_id": "19d8a22210da2d67",
+      "from": "Prakhar Singh <prakharsingh1998@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 09:26:10 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6833240798743428822",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:14:59.548663+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a0051c8c3e25": {
+      "thread_id": "19d8a0051c8c3e25",
+      "from": "Joseph bernard <josephbus890@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Mon, 13 Apr 2026 23:19:13 -0400",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-4140041375941929129",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T05:15:01.358710+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
