@@ -25066,10 +25066,10 @@
       "scenario": "S22",
       "urgency": "normal",
       "review_status": "review",
-      "draft_id": "r3707554099907807621",
-      "draft_message_id": "19d86eb6789b27a7",
+      "draft_id": "r-6848502907080289688",
+      "draft_message_id": "19d8c149b2497447",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T12:57:48.378690+00:00",
+      "processed_at": "2026-04-14T13:00:54.658422+00:00",
       "labels_applied": [
         "FM/review"
       ],
@@ -25085,18 +25085,18 @@
       "date": "Mon, 13 Apr 2026 17:23:58 +0530",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S11",
+      "scenario": "S1",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r-2102472899472338433",
-      "draft_message_id": "19d86eb8da925889",
+      "draft_id": "r-8392991076762622156",
+      "draft_message_id": "19d8c14bb349ce75",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T12:57:57.795303+00:00",
+      "processed_at": "2026-04-14T13:01:02.889905+00:00",
       "labels_applied": [
         "FM/ready"
       ],
       "ticket_id": null,
-      "validator_score": 1.0,
+      "validator_score": 0.8333,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25110,14 +25110,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r2483710447056775042",
+      "draft_id": "r-3775081150277889844",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T12:58:02.102557+00:00",
+      "processed_at": "2026-04-14T13:01:48.341417+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-003",
+      "ticket_id": "BUG-260414-048",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25132,14 +25132,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-1494010914032606482",
+      "draft_id": "r5784602989775003378",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T12:58:03.464907+00:00",
+      "processed_at": "2026-04-14T13:01:49.582083+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-004",
+      "ticket_id": "BUG-260414-049",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25154,14 +25154,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-4572556979669772943",
+      "draft_id": "r1805295489694845270",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T12:58:04.717387+00:00",
+      "processed_at": "2026-04-14T13:01:50.773815+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-005",
+      "ticket_id": "BUG-260414-050",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25173,40 +25173,40 @@
       "date": "Mon, 13 Apr 2026 21:22:50 +0530",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S4",
+      "scenario": "S8",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r6134612619428202951",
-      "draft_message_id": "19d8796fbe21ac1c",
+      "review_status": "ready",
+      "draft_id": "r8343536039795431547",
+      "draft_message_id": "19d8c144d0288885",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T16:05:12.998749+00:00",
+      "processed_at": "2026-04-14T13:00:34.737796+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
       "ticket_id": null,
-      "validator_score": 0.9333,
-      "repair_attempted": true,
-      "review_reason_code": "MISSING_REQUIRED_FACT"
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null
     },
     "19d8779d893189be": {
       "thread_id": "19d8779d893189be",
       "from": "Barbara Dominguez <barjdominguez@gmail.com>",
       "subject": "Re: Flowmingo Offer Letter for Barbara",
       "date": "Mon, 13 Apr 2026 12:33:05 -0300",
-      "sender_type": "E",
-      "topic": "technical",
-      "scenario": "bug",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S13",
       "urgency": "normal",
-      "review_status": "bug",
-      "draft_id": "r2192429377971482872",
-      "draft_message_id": "",
+      "review_status": "ready",
+      "draft_id": "r-844702279458935650",
+      "draft_message_id": "19d8c146bcade7fd",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:41.618948+00:00",
+      "processed_at": "2026-04-14T13:00:42.359279+00:00",
       "labels_applied": [
-        "FM/bug"
+        "FM/ready"
       ],
-      "ticket_id": "BUG-260413-015",
-      "validator_score": null,
+      "ticket_id": null,
+      "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25220,10 +25220,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r376333437180997910",
-      "draft_message_id": "19d87972a9ad9f6f",
+      "draft_id": "r-7355429568360465832",
+      "draft_message_id": "19d8c147cf883eee",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T16:05:25.194016+00:00",
+      "processed_at": "2026-04-14T13:00:47.149850+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25239,13 +25239,13 @@
       "date": "Mon, 13 Apr 2026 17:50:01 +0000",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S32",
+      "scenario": "S8",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r4962206382430266895",
-      "draft_message_id": "19d88361c9af6424",
+      "draft_id": "r8737021706571909426",
+      "draft_message_id": "19d8c13ebecbce0a",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:01.701312+00:00",
+      "processed_at": "2026-04-14T13:00:09.467118+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25264,10 +25264,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r4266107668417562518",
-      "draft_message_id": "19d88364dc81c7cf",
+      "draft_id": "r8139073200504578166",
+      "draft_message_id": "19d8c14215313af9",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:14.276696+00:00",
+      "processed_at": "2026-04-14T13:00:23.331213+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25281,20 +25281,20 @@
       "from": "\"Aliyu Ja'afar Abdullahi\" <jaafaraliyuabdullahi@gmail.com>",
       "subject": "Re: Enquiry on AI Interview",
       "date": "Mon, 13 Apr 2026 18:26:32 +0100",
-      "sender_type": "E",
-      "topic": "technical",
-      "scenario": "bug",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
       "urgency": "normal",
-      "review_status": "bug",
-      "draft_id": "r-3077744105327964797",
-      "draft_message_id": "",
+      "review_status": "ready",
+      "draft_id": "r-8773045790710391451",
+      "draft_message_id": "19d8c1401c55a6dc",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:23.564368+00:00",
+      "processed_at": "2026-04-14T13:00:15.386613+00:00",
       "labels_applied": [
-        "FM/bug"
+        "FM/ready"
       ],
-      "ticket_id": "BUG-260413-006",
-      "validator_score": null,
+      "ticket_id": null,
+      "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25308,14 +25308,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3883543287032968028",
+      "draft_id": "r-5323192110384646652",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:26.024828+00:00",
+      "processed_at": "2026-04-14T13:01:38.258320+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-007",
+      "ticket_id": "BUG-260414-040",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25330,14 +25330,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r2473648460036458650",
+      "draft_id": "r2600063677088509028",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:31.546556+00:00",
+      "processed_at": "2026-04-14T13:01:39.488827+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-008",
+      "ticket_id": "BUG-260414-041",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25352,14 +25352,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-7678612852150162702",
+      "draft_id": "r3254942212153394522",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:32.844577+00:00",
+      "processed_at": "2026-04-14T13:01:40.694808+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-009",
+      "ticket_id": "BUG-260414-042",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25374,14 +25374,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-7586766522944060896",
+      "draft_id": "r-4657927718641233132",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:34.137035+00:00",
+      "processed_at": "2026-04-14T13:01:41.812555+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-010",
+      "ticket_id": "BUG-260414-043",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25396,14 +25396,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3350225950391067805",
+      "draft_id": "r5543336158265731648",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:35.445444+00:00",
+      "processed_at": "2026-04-14T13:01:43.283427+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-011",
+      "ticket_id": "BUG-260414-044",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25418,14 +25418,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r6224599259576670344",
+      "draft_id": "r-9141262002599568038",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:36.835099+00:00",
+      "processed_at": "2026-04-14T13:01:44.502199+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-012",
+      "ticket_id": "BUG-260414-045",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25440,14 +25440,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-8373826095492750949",
+      "draft_id": "r-2129539305807233287",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:38.351354+00:00",
+      "processed_at": "2026-04-14T13:01:45.783448+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-013",
+      "ticket_id": "BUG-260414-046",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25462,14 +25462,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3222692200801500585",
+      "draft_id": "r8781463895027860424",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T18:59:40.130592+00:00",
+      "processed_at": "2026-04-14T13:01:46.939893+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-014",
+      "ticket_id": "BUG-260414-047",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25484,10 +25484,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r1104289889621226345",
-      "draft_message_id": "19d88c7b24bde7e9",
+      "draft_id": "r-9073831479970059245",
+      "draft_message_id": "19d8c13b596a2167",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T21:38:03.125295+00:00",
+      "processed_at": "2026-04-14T12:59:55.603328+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25503,20 +25503,20 @@
       "date": "Mon, 13 Apr 2026 21:32:48 +0200",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S8",
+      "scenario": "S22",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r-2371019900366180021",
-      "draft_message_id": "19d88c7c90d0b19b",
+      "review_status": "review",
+      "draft_id": "r-5313455078542120415",
+      "draft_message_id": "19d8c13d53baaea1",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T21:38:08.784792+00:00",
+      "processed_at": "2026-04-14T13:00:04.155127+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/review"
       ],
       "ticket_id": null,
-      "validator_score": 1.0,
+      "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": null
+      "review_reason_code": "LOW_CONFIDENCE"
     },
     "19d8858b656b4913": {
       "thread_id": "19d8858b656b4913",
@@ -25528,14 +25528,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-7780852758411261277",
+      "draft_id": "r-4065189819823239286",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-13T21:38:11.562281+00:00",
+      "processed_at": "2026-04-14T13:01:37.104599+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260413-016",
+      "ticket_id": "BUG-260414-039",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25616,10 +25616,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r-2181293218893461067",
-      "draft_message_id": "19d8994bd012d40a",
+      "draft_id": "r-5338345606691930306",
+      "draft_message_id": "19d8c137f9190eab",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T01:22:00.455875+00:00",
+      "processed_at": "2026-04-14T12:59:41.861263+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25634,63 +25634,63 @@
       "subject": "",
       "date": "Mon, 13 Apr 2026 22:45:49 +0100",
       "sender_type": "E",
-      "topic": "other",
-      "scenario": "S8",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r3811003037298590541",
-      "draft_message_id": "19d8994dbe2e3fc5",
+      "review_status": "bug",
+      "draft_id": "r-2686258195979726795",
+      "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T01:22:07.942408+00:00",
+      "processed_at": "2026-04-14T13:01:35.912234+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/bug"
       ],
-      "ticket_id": null,
+      "ticket_id": "BUG-260414-038",
       "validator_score": null,
       "repair_attempted": false,
-      "review_reason_code": "LOW_CONFIDENCE"
+      "review_reason_code": null
     },
     "19d8939555626a76": {
       "thread_id": "19d8939555626a76",
       "from": "Hayat <hayaatrainer@gmail.com>",
       "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - HAYAT SHAIKH",
       "date": "Tue, 14 Apr 2026 00:30:48 +0530",
-      "sender_type": "E",
-      "topic": "technical",
-      "scenario": "bug",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S15",
       "urgency": "normal",
-      "review_status": "bug",
-      "draft_id": "r7584649419379623625",
-      "draft_message_id": "",
+      "review_status": "review",
+      "draft_id": "r-2577661663287544709",
+      "draft_message_id": "19d8c13642660114",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T01:22:09.986721+00:00",
+      "processed_at": "2026-04-14T12:59:35.379977+00:00",
       "labels_applied": [
-        "FM/bug"
+        "FM/review"
       ],
-      "ticket_id": "BUG-260414-001",
-      "validator_score": null,
-      "repair_attempted": false,
-      "review_reason_code": null
+      "ticket_id": null,
+      "validator_score": 0.7143,
+      "repair_attempted": true,
+      "review_reason_code": "WRONG_SCENARIO"
     },
     "19d8a636d4c5a49f": {
       "thread_id": "19d8a636d4c5a49f",
       "from": "Geetika Bareja <geetikabareja@gmail.com>",
       "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
       "date": "Tue, 14 Apr 2026 10:37:29 +0530",
-      "sender_type": "A",
-      "topic": "candidate",
-      "scenario": "S1",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
       "urgency": "normal",
-      "review_status": "ready",
-      "draft_id": "r3553424720695892181",
-      "draft_message_id": "19d8a69a3621ba87",
+      "review_status": "bug",
+      "draft_id": "r-1741486628516347071",
+      "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:33.052592+00:00",
+      "processed_at": "2026-04-14T13:01:31.976843+00:00",
       "labels_applied": [
-        "FM/ready"
+        "FM/bug"
       ],
-      "ticket_id": null,
-      "validator_score": 1.0,
+      "ticket_id": "BUG-260414-035",
+      "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25704,15 +25704,15 @@
       "scenario": "S8",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r6722879180092908674",
-      "draft_message_id": "19d8a69b9d1f29a5",
+      "draft_id": "r7620167325161540490",
+      "draft_message_id": "19d8c130ef01a7b2",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:38.593304+00:00",
+      "processed_at": "2026-04-14T12:59:13.047429+00:00",
       "labels_applied": [
         "FM/ready"
       ],
       "ticket_id": null,
-      "validator_score": 0.8333,
+      "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25723,13 +25723,13 @@
       "date": "Tue, 14 Apr 2026 09:53:58 +0530",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S34",
+      "scenario": "S12",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r-8500167473676653834",
-      "draft_message_id": "19d8a69d1b7776fa",
+      "draft_id": "r-1055701431956356437",
+      "draft_message_id": "19d8c13213f39898",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:44.610359+00:00",
+      "processed_at": "2026-04-14T12:59:17.592169+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25745,13 +25745,13 @@
       "date": "Tue, 14 Apr 2026 07:14:47 +0530",
       "sender_type": "A",
       "topic": "other",
-      "scenario": "S18",
+      "scenario": "S6",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r-8385969751754743021",
-      "draft_message_id": "19d8a69f8cc6b14d",
+      "draft_id": "r-3408217186744936861",
+      "draft_message_id": "19d8c13479893b12",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:55.201968+00:00",
+      "processed_at": "2026-04-14T12:59:27.661313+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25766,19 +25766,19 @@
       "subject": "Re: Request for Employment Certificate",
       "date": "Tue, 14 Apr 2026 10:16:13 +0600",
       "sender_type": "E",
-      "topic": "technical",
-      "scenario": "bug",
+      "topic": "other",
+      "scenario": "S13",
       "urgency": "normal",
-      "review_status": "bug",
-      "draft_id": "r-109407114400929755",
-      "draft_message_id": "",
+      "review_status": "ready",
+      "draft_id": "r-3858980195167326235",
+      "draft_message_id": "19d8c1330ca0d368",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:58.061432+00:00",
+      "processed_at": "2026-04-14T12:59:22.033716+00:00",
       "labels_applied": [
-        "FM/bug"
+        "FM/ready"
       ],
-      "ticket_id": "BUG-260414-002",
-      "validator_score": null,
+      "ticket_id": null,
+      "validator_score": 1.0,
       "repair_attempted": false,
       "review_reason_code": null
     },
@@ -25792,14 +25792,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r6833240798743428822",
+      "draft_id": "r-4351860424791958663",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:14:59.548663+00:00",
+      "processed_at": "2026-04-14T13:01:33.165063+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-003",
+      "ticket_id": "BUG-260414-036",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25814,14 +25814,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-4140041375941929129",
+      "draft_id": "r-1524886961722863139",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T05:15:01.358710+00:00",
+      "processed_at": "2026-04-14T13:01:34.529828+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-004",
+      "ticket_id": "BUG-260414-037",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25836,10 +25836,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r4019909908275811253",
-      "draft_message_id": "19d8ad87ab073f6c",
+      "draft_id": "r4182463121062742269",
+      "draft_message_id": "19d8c12a8aab363c",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:15:36.940018+00:00",
+      "processed_at": "2026-04-14T12:58:47.222822+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25853,22 +25853,22 @@
       "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
       "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
       "date": "Tue, 14 Apr 2026 05:31:35 GMT",
-      "sender_type": "B",
+      "sender_type": "D",
       "topic": "candidate",
-      "scenario": "S1",
+      "scenario": "S22",
       "urgency": "normal",
-      "review_status": "review",
-      "draft_id": "r1872767591147191129",
-      "draft_message_id": "19d8ad8ac77eef51",
+      "review_status": "ready",
+      "draft_id": "r5618186818844984768",
+      "draft_message_id": "19d8c12d31e0d622",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:15:49.849243+00:00",
+      "processed_at": "2026-04-14T12:58:57.942952+00:00",
       "labels_applied": [
-        "FM/review"
+        "FM/ready"
       ],
       "ticket_id": null,
-      "validator_score": null,
+      "validator_score": 1.0,
       "repair_attempted": false,
-      "review_reason_code": "LOW_CONFIDENCE"
+      "review_reason_code": null
     },
     "19d8a6f08cc8066d": {
       "thread_id": "19d8a6f08cc8066d",
@@ -25877,13 +25877,13 @@
       "date": "Tue, 14 Apr 2026 10:50:11 +0530",
       "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S32",
+      "scenario": "S8",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r3715817478734452171",
-      "draft_message_id": "19d8ad8c73a6cbd5",
+      "draft_id": "r5601903640999414121",
+      "draft_message_id": "19d8c12e6c9335ee",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:15:56.292931+00:00",
+      "processed_at": "2026-04-14T12:59:02.880324+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -25902,14 +25902,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-8295906092591116319",
+      "draft_id": "r-833110480711349523",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:15:58.175164+00:00",
+      "processed_at": "2026-04-14T13:01:25.385535+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-005",
+      "ticket_id": "BUG-260414-030",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25924,14 +25924,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r6088588091350183646",
+      "draft_id": "r-4452869032466279917",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:15:59.347285+00:00",
+      "processed_at": "2026-04-14T13:01:26.718128+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-006",
+      "ticket_id": "BUG-260414-031",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25946,14 +25946,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-9217915818826642180",
+      "draft_id": "r-7262786318394038711",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:16:00.569713+00:00",
+      "processed_at": "2026-04-14T13:01:27.900615+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-007",
+      "ticket_id": "BUG-260414-032",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25968,14 +25968,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-4471590876260304369",
+      "draft_id": "r-5784179376011250249",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:16:01.822805+00:00",
+      "processed_at": "2026-04-14T13:01:29.219967+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-008",
+      "ticket_id": "BUG-260414-033",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -25990,14 +25990,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-2008151046431525704",
+      "draft_id": "r8361371909070087755",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T07:16:03.076443+00:00",
+      "processed_at": "2026-04-14T13:01:30.573163+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-009",
+      "ticket_id": "BUG-260414-034",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26074,14 +26074,14 @@
       "subject": "Re: Flowmingo \u2013 Your Offer Letter",
       "date": "Tue, 14 Apr 2026 09:26:53 +0100",
       "sender_type": "E",
-      "topic": "vendor_pitch",
+      "topic": "partner",
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "review",
-      "draft_id": "r2008327939974694366",
-      "draft_message_id": "19d8b74f3e815de5",
+      "draft_id": "r-6807354920042245555",
+      "draft_message_id": "19d8c123ed487886",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:06:31.411799+00:00",
+      "processed_at": "2026-04-14T12:58:19.747586+00:00",
       "labels_applied": [
         "FM/review"
       ],
@@ -26095,15 +26095,15 @@
       "from": "Nikheta Gokuldas <nikigokuldas@gmail.com>",
       "subject": "Interview Completeion",
       "date": "Tue, 14 Apr 2026 11:29:31 +0400",
-      "sender_type": "E",
+      "sender_type": "A",
       "topic": "candidate",
-      "scenario": "S8",
+      "scenario": "S1",
       "urgency": "normal",
       "review_status": "review",
-      "draft_id": "r-6455549674293991766",
-      "draft_message_id": "19d8b751cdd6e4d3",
+      "draft_id": "r-4860379147003537434",
+      "draft_message_id": "19d8c1269f0fffe5",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:06:42.394871+00:00",
+      "processed_at": "2026-04-14T12:58:30.535881+00:00",
       "labels_applied": [
         "FM/review"
       ],
@@ -26118,14 +26118,14 @@
       "subject": "Your organization now has Goals, Projects, and more",
       "date": "Tue, 14 Apr 2026 07:28:55 +0000",
       "sender_type": "E",
-      "topic": "other",
-      "scenario": "S34",
+      "topic": "technical",
+      "scenario": "S32",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r-6791101906024308214",
-      "draft_message_id": "19d8b75356b2e1c6",
+      "draft_id": "r-6667473408397559941",
+      "draft_message_id": "19d8c127d4c4e7ea",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:06:48.241006+00:00",
+      "processed_at": "2026-04-14T12:58:35.625022+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -26144,10 +26144,10 @@
       "scenario": "S27",
       "urgency": "normal",
       "review_status": "ready",
-      "draft_id": "r3876578052179573847",
-      "draft_message_id": "19d8b754a12765e0",
+      "draft_id": "r374460958430763855",
+      "draft_message_id": "19d8c12933365e43",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:06:54.087677+00:00",
+      "processed_at": "2026-04-14T12:58:41.299552+00:00",
       "labels_applied": [
         "FM/ready"
       ],
@@ -26232,14 +26232,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3765823308773586878",
+      "draft_id": "r1666766238680028060",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:06:59.654561+00:00",
+      "processed_at": "2026-04-14T13:01:14.791116+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-013",
+      "ticket_id": "BUG-260414-022",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26254,14 +26254,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3179706936622241580",
+      "draft_id": "r513997762420901319",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:01.000732+00:00",
+      "processed_at": "2026-04-14T13:01:15.972983+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-014",
+      "ticket_id": "BUG-260414-023",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26276,14 +26276,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3594662909158173755",
+      "draft_id": "r-4736178842336445909",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:02.333188+00:00",
+      "processed_at": "2026-04-14T13:01:17.220584+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-015",
+      "ticket_id": "BUG-260414-024",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26298,14 +26298,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-8206353612147854299",
+      "draft_id": "r7159768954770558517",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:03.578287+00:00",
+      "processed_at": "2026-04-14T13:01:18.455687+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-016",
+      "ticket_id": "BUG-260414-025",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26320,14 +26320,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r-29539331976941677",
+      "draft_id": "r5759900848129596947",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:04.835868+00:00",
+      "processed_at": "2026-04-14T13:01:19.702428+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-017",
+      "ticket_id": "BUG-260414-026",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26342,14 +26342,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r645861778223603600",
+      "draft_id": "r4320667441626736660",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:06.041372+00:00",
+      "processed_at": "2026-04-14T13:01:21.040642+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-018",
+      "ticket_id": "BUG-260414-027",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26364,14 +26364,14 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r3905326384716555052",
+      "draft_id": "r2568820562794593063",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:07.326538+00:00",
+      "processed_at": "2026-04-14T13:01:22.393352+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-019",
+      "ticket_id": "BUG-260414-028",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
@@ -26386,14 +26386,146 @@
       "scenario": "bug",
       "urgency": "normal",
       "review_status": "bug",
-      "draft_id": "r9016233961231342872",
+      "draft_id": "r-9178703342041634841",
       "draft_message_id": "",
       "kb_version": "7158cbe0b0a3",
-      "processed_at": "2026-04-14T10:07:08.824541+00:00",
+      "processed_at": "2026-04-14T13:01:23.727327+00:00",
       "labels_applied": [
         "FM/bug"
       ],
-      "ticket_id": "BUG-260414-020",
+      "ticket_id": "BUG-260414-029",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8bec41ad19d38": {
+      "thread_id": "19d8bec41ad19d38",
+      "from": "\"'Hirshin Manchanda' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Hello JunYuan, about your Talent Acquisition Business Partner role",
+      "date": "Tue, 14 Apr 2026 12:16:45 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5810705480331265329",
+      "draft_message_id": "19d8c1187d9c2899",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T12:57:33.096781+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8be1fa9561c62": {
+      "thread_id": "19d8be1fa9561c62",
+      "from": "\"'ISOKEN CONSULTING GROUP' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\ud83c\udf31 Register Now: Public Sector Sustainability in Addis Ababa!",
+      "date": "Tue, 14 Apr 2026 12:05:16 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5914213946947999760",
+      "draft_message_id": "19d8c119c966cdbe",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T12:57:38.458156+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8bbac8780e367": {
+      "thread_id": "19d4d63c986cae15",
+      "from": "Purva Sharma <purvasharma9166@gmail.com>",
+      "subject": "Re: Fwd: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Tue, 14 Apr 2026 16:52:35 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S14",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5898141028581587523",
+      "draft_message_id": "19d8c11be0c8d6a3",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T12:57:47.273354+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8b564c0e0491f": {
+      "thread_id": "19d8b5596e227908",
+      "from": "Chukwuebuka Godwin Anagboso <anagbosochukwuebuka@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 10:32:48 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4532783242300699271",
+      "draft_message_id": "19d8c11e6a7551d5",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T12:57:57.295407+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8b3d7fc4d2dca": {
+      "thread_id": "19d8b3d7fc4d2dca",
+      "from": "Noah Oluwafemi <noaholuwafemi20@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 10:05:39 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S12",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4672318000899893684",
+      "draft_message_id": "19d8c12087c36667",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T12:58:06.229546+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8b97bbd227a7f": {
+      "thread_id": "19d8b97bbd227a7f",
+      "from": "\"G. Marcysiak\" <grazynamarcysiak@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Lilianna Marcysiak",
+      "date": "Tue, 14 Apr 2026 12:44:15 +0200",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-823835460279229008",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T13:01:13.380320+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-021",
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
