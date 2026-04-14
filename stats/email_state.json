@@ -25825,6 +25825,182 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8ad78df57f6e5": {
+      "thread_id": "19d8ad78df57f6e5",
+      "from": "Azmi N <azmi@algobash.com>",
+      "subject": "Klien FMCG kami berhemat 80% waktu - Flowmingo AI juga bisa",
+      "date": "Tue, 14 Apr 2026 07:14:32 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4019909908275811253",
+      "draft_message_id": "19d8ad87ab073f6c",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:15:36.940018+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a794b0c73b9f": {
+      "thread_id": "19d8a794b0c73b9f",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Tue, 14 Apr 2026 05:31:35 GMT",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r1872767591147191129",
+      "draft_message_id": "19d8ad8ac77eef51",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:15:49.849243+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d8a6f08cc8066d": {
+      "thread_id": "19d8a6f08cc8066d",
+      "from": "Mohini Yadav <mohinipal1990@gmail.com>",
+      "subject": "Follow-up on AI Interview & Assessment \u2013 HR Executive Role",
+      "date": "Tue, 14 Apr 2026 10:50:11 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S32",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3715817478734452171",
+      "draft_message_id": "19d8ad8c73a6cbd5",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:15:56.292931+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8ad0e9419dd3a": {
+      "thread_id": "19d8ad0e9419dd3a",
+      "from": "Jibrin Inuwa <jibinuwa@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 08:07:05 +0100",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-8295906092591116319",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:15:58.175164+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-005",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8aade52c28cc9": {
+      "thread_id": "19d8aade52c28cc9",
+      "from": "Derick Otieno <dkotieno1@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 09:28:50 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6088588091350183646",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:15:59.347285+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-006",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8aa4348058ce1": {
+      "thread_id": "19d8aa4348058ce1",
+      "from": "Ivy Kunihira <ivykunihira@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 09:18:02 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-9217915818826642180",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:16:00.569713+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-007",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a91626168c82": {
+      "thread_id": "19d8a91626168c82",
+      "from": "Marc Legaspi <marc.g.legaspi@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 07:57:43 +0200",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-4471590876260304369",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:16:01.822805+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-008",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8a6aa178f09bd": {
+      "thread_id": "19d8a6aa178f09bd",
+      "from": "sajjad khan <sajjadmkb@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 10:15:24 +0500",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-2008151046431525704",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-14T07:16:03.076443+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260414-009",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
