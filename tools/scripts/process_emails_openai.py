@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-process_emails_openai.py — Process Flowmingo support emails using OpenAI gpt-5.4-nano.
+process_emails_openai.py — Process Flowmingo support emails using OpenAI gpt-4o-mini.
 
 Validate-Repair pipeline:
   1. rules_engine.route()       — deterministic pre-routing (before LLM)
@@ -46,8 +46,8 @@ import bug_template
 
 # ── Config ───────────────────────────────────────────────────────────────────
 
-OPENAI_API_URL       = "https://api.openai.com/v1/responses"
-MODEL                = "gpt-5.4-nano"
+OPENAI_API_URL       = "https://api.openai.com/v1/chat/completions"
+MODEL                = "gpt-4o-mini"
 SUPPORT_DOMAINS      = ["flowmingo.ai"]
 CONFIDENCE_THRESHOLD = 0.7
 
@@ -72,7 +72,7 @@ def call_openai(
     user_prompt: str,
     max_tokens: int = 1200,
 ) -> dict:
-    """Call OpenAI Responses API with JSON mode. Returns parsed JSON dict."""
+    """Call OpenAI Chat Completions API with JSON mode. Returns parsed JSON dict."""
     resp = requests.post(
         OPENAI_API_URL,
         headers={
@@ -81,9 +81,9 @@ def call_openai(
         },
         json={
             "model": MODEL,
-            "max_output_tokens": max_tokens,
-            "text": {"format": {"type": "json_object"}},
-            "input": [
+            "max_tokens": max_tokens,
+            "response_format": {"type": "json_object"},
+            "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
@@ -93,21 +93,17 @@ def call_openai(
     resp.raise_for_status()
     body = resp.json()
     usage = body.get("usage", {})
-    # Responses API: body["output"][0]["content"][0]["text"]
-    # If the model refused or returned unexpected structure, log it clearly.
-    output = body.get("output", [])
-    if not output:
-        raise ValueError(f"Responses API returned empty output. Full body: {json.dumps(body)[:500]}")
-    content = output[0].get("content", [])
-    if not content:
-        raise ValueError(f"Responses API output[0].content is empty. Full body: {json.dumps(body)[:500]}")
-    text = content[0].get("text", "").strip()
+    # Chat Completions: body["choices"][0]["message"]["content"]
+    choices = body.get("choices", [])
+    if not choices:
+        raise ValueError(f"Chat API returned no choices. Full body: {json.dumps(body)[:500]}")
+    text = choices[0].get("message", {}).get("content", "").strip()
     if not text:
-        raise ValueError(f"Responses API content[0].text is empty. Full body: {json.dumps(body)[:500]}")
+        raise ValueError(f"Chat API choices[0].message.content is empty. Full body: {json.dumps(body)[:500]}")
     return {
         "result": json.loads(text),
-        "input_tokens": usage.get("input_tokens", 0),
-        "output_tokens": usage.get("output_tokens", 0),
+        "input_tokens": usage.get("prompt_tokens", 0),
+        "output_tokens": usage.get("completion_tokens", 0),
     }
 
 

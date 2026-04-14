@@ -111,11 +111,20 @@ Also applies to: newsletters, marketing emails, automated notifications, vendor 
 
 Apply when D4 = Bug signal. This takes priority over all SOP scenarios (S6–S9, S20, etc.) — a scenario being "Fully covered" in D3 does NOT override FM/bug when D4 = Bug signal.
 
-Two tiers — both go to create_bug_ticket:
-- **Detailed**: Specific error message or clear platform behavior described (e.g., "Status failed 400", "Failed to load the interview set", "already submitted" when not finished, platform frozen, random logout, camera error after granting permissions). Full ticket details available.
-- **Vague**: General failure report with no specific error described ("I couldn't access my interview", "it didn't work", "I had a problem completing it"). Create the ticket with what's available — the acknowledgment email will ask the customer for more details.
+Two tiers:
+- **Detailed**: Specific error message or clear platform behavior described (e.g., "Status failed 400", "Failed to load the interview set", "already submitted" when not finished, platform frozen, random logout, camera error after granting permissions). → create_bug_ticket immediately.
+- **Vague**: General failure report with no specific error, no specific action, no platform output ("it's not working", "I had a problem", "I couldn't complete it", "something went wrong", "I couldn't access it"). → **Do NOT create a ticket.** Write an FM/review draft that asks the customer: (1) device and browser, (2) what they were trying to do, (3) what they saw or didn't see, (4) any error message or code. Reason: `[REVIEW NEEDED: Insufficient detail for bug ticket — draft asks customer for technical context]`. Create the bug ticket after they reply with details.
 
-**Screenshots or image attachments present:** If the `attachments` field contains any image file (MIME type `image/*`, or filename ending in `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`) — or if the body mentions a screenshot — classify as FM/bug and create the ticket immediately. Do NOT downgrade to FM/review. Do NOT ask for device/browser details first. Note `confidence: No` only if the image content itself would change the ticket classification. The test is whether a technical issue is being reported, not the level of detail visible in the body.
+**Image attachments: context determines classification — not MIME type.**
+
+Ask yourself: what is this person communicating with this image?
+
+- **Image is proof of something requested** (Trustpilot screenshot in reply to "You did great", signed consent form, receipt, document confirmation) → classify by D1 sender intent, NOT as FM/bug. The image is a confirmation, not a bug report.
+- **Image shows a platform error or broken UI** (error dialog, blank page, frozen interface, unexpected state) → FM/bug (detailed). The image IS the bug report.
+- **Image is a document** (resume, certificate, ID, job spec) → not a bug; classify by D1.
+- **Ambiguous** (can't determine from context what the image shows) → FM/review R7, note the attachment.
+
+**Decision test**: Does the email's intent make sense without the image? If yes and the image appears to be a proof/confirmation, don't let it trigger FM/bug. Only trigger FM/bug from images when the image is evidence of a platform failure.
 
 ---
 
@@ -168,10 +177,12 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | Specific 4xx/5xx error code from the platform during interview | FM/bug (detailed) |
 | Interview link fails to load after person already tried multiple browsers / incognito | FM/bug (detailed) |
 | "My link doesn't work" with no error message, hasn't tried troubleshooting yet | FM/ready (S8) — no failure reported, user-side issue |
-| "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/bug (vague) — ticket created with what's available |
-| "I couldn't access my interview" with no error | FM/bug (vague) — ticket created, ack email asks for details |
-| Clear issue described + screenshots attached | FM/bug (detailed), confidence: No |
-| Vague issue + image attachment present in `attachments` field | FM/bug (vague) — ticket created immediately, do not ask for details |
+| "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
+| "I couldn't access my interview" / "something went wrong" with no specifics | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
+| Clear issue described + screenshot showing platform error | FM/bug (detailed) — image confirms the error |
+| Reply to "You did great" with any image attachment | FM/ready (S15) — Trustpilot/feedback screenshot, not a bug |
+| Vague complaint + image (unclear what it shows) | FM/review R7 — note attachment, ask for context; create ticket after reply |
+| Resume or document attached to application inquiry | Not a bug — classify by D1 sender intent |
 | Prospective or current BP asking about commission, payout, tracking, employment type, or formal agreement | FM/ready (S11) — answer from Section 10 + PAYOUT_SCHEME_DOC; company ops/partner experience questions → WHATSAPP |
 | "As we discussed on WhatsApp, can I still interview?" | FM/review R2 |
 | "What is the salary for this role?" | FM/review R4/R5 — compensation not in KB |
@@ -181,10 +192,19 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I consent and confirm that I have read the A2 and A5 forms." | FM/ready — share AI_PROGRAM_GIFT_DASHBOARD immediately |
 | Website frozen / nothing clickable | FM/bug (clear) |
 | Random logout mid-session | FM/bug (clear) |
+| "Any update" / "any news" / "what's the status" in reply to AI Assessment Report email | FM/ready (S18) — application status question, NOT S26 |
+| "Link doesn't work" / "I can't access the report" / "where is the report?" | FM/ready (S26) — access problem, send dashboard link |
+| "I scored X.X in the report, was I selected?" | FM/review R4/R5 — hiring decision is not ours to give |
+| "What does my report score mean?" | FM/review R3 — no SOP covers interpreting scores |
+| Application status question in "You did great" reply thread — Type B confirmed (outreach says "the hiring company") | FM/ready (S21) — direct to hiring company |
+| Application status question in "You did great" reply thread — Type A confirmed (Flowmingo-internal role, no external company) | FM/ready (S18 variant) — do NOT use S21; Flowmingo IS the employer; say "we will follow up directly" |
+| Application status question in "You did great" reply thread — Type unclear | FM/review R7 — cannot determine if Type A or B from thread |
+| Vendor/outreach pitch with clear, extractable product description | FM/ready (S27) — draft MUST name their specific product AND link it to Flowmingo's hiring/HR context |
+| Vendor/outreach pitch with vague or unclear product/service | FM/review R3 — cannot write a sincere S27 without knowing what they offer |
 
 ### 4b — Write the draft reply for each FM/ready and FM/review email
 
-Follow the SOP exactly:
+**Format rules (SOP):**
 - `Dear <Name>,` — extract from sign-off/signature; infer from email address if no name
 - Acknowledge briefly
 - Address the exact issue
@@ -195,6 +215,37 @@ Follow the SOP exactly:
 
 For FM/review: prepend `[REVIEW NEEDED: <specific reason>]` as the very first line,
 then a blank line, then the draft body.
+
+**Sincerity (applies to every draft — FM/ready, FM/review, all scenarios):**
+
+1. **Reference the specific thing the person said.** If they say "I really need this job", acknowledge it. If they've been waiting weeks, name it. If they're anxious or frustrated, validate it in one sentence before answering. A generic reply that ignores what they wrote is not a reply.
+2. **Never write something that would be identical regardless of what they wrote.** Find the one thing unique to their email and reference it. If your draft would work for 100 other people without changing a word, rewrite it.
+3. **For threads with 4+ prior messages:** show you've read the history. Reference the timeline: "I see you've been following up since April 3rd — I want to give you a proper update." Don't repeat the message-1 template on message 6.
+4. **FM/review drafts must be warm.** The `[REVIEW NEEDED]` tag is for the human reviewer. The draft body is for the customer — write it as if it will be sent. The reviewer should edit details, not rewrite from scratch.
+5. **Uncertainty is not a reason to be cold.** "I want to make sure I give you an accurate answer — let me look into this and come back to you" is human. "Your request has been received and will be reviewed" is not.
+
+**Reply length (scales with the conversation, not the template):**
+
+- Customer message ≤ 30 words → reply ≤ 60 words
+- Customer message 30–100 words → reply 60–150 words
+- Customer message > 100 words → match depth, no strict cap
+- Thread with 4+ prior messages → invest in a fuller, more contextual reply
+- Short message ≠ low care: keep the reply SHORT but make it WARM. "Any update here." after 5 days of waiting communicates anxiety — acknowledge it in 1 sentence even in a 3-sentence reply.
+
+**S27 personalization (vendor/outreach pitches — mandatory):**
+
+S27 draft MUST include:
+1. A sentence naming what their product/service specifically does ("The Global Step Challenge — employees walk 10k steps daily, a meal donated per 10k steps via UNICEF")
+2. A sentence connecting it to Flowmingo's context (hiring pipeline, candidate experience, team culture, HR workflow) — specifically, not generically
+3. The standard Jessica acknowledgment close
+
+If you cannot extract what their product does from the email → FM/review R3 instead of S27.
+
+**S26 gate (AI Assessment Report — do not send dashboard for status questions):**
+
+S26 = candidate cannot access the report (link issue, link expired, link not received). Only trigger when they say: "how do I view it?", "the link isn't working", "link expired", "where do I find the report?", "I didn't receive it."
+
+Anything else ("any update", "any news", "have I been selected", "what's next", "I've completed the interview") = S18 (timeline/status), not S26.
 
 ### 4c — Build draft objects
 
@@ -256,14 +307,7 @@ Call `create_bug_ticket` with:
   - **Company/Recruiter (Type D):** Try logging out and back into your Flowmingo dashboard. | Clear browser cache and try in an incognito window. | Check if the issue affects all campaigns or just one. | If candidates are affected: ask them for their interview link, device type, and browser.
 - original_message: customer's message body, trimmed to ~300 chars
 
-For **vague** bugs (no specific error described — "it didn't work", "I couldn't access", etc.):
-
-Call `create_bug_ticket` with the same fields, but:
-- issue_summary: "Customer reports [describe what they tried to do] but was unable to complete it — no specific error message provided. Details needed to reproduce." (1–2 sentences max)
-- issue_summary_vi: Vietnamese translation of the above (full sentence)
-- main_issue_vi: Single Vietnamese sentence <10 words. Example: "Người dùng không thể hoàn thành phỏng vấn, không rõ lỗi."
-- issue_type: "Feature Not Working"
-- troubleshooting_steps: ["Ask customer for device type and operating system.", "Ask customer for browser name and version.", "Ask customer for exact error message or what they saw on screen."]
+**Vague bugs do NOT get a ticket in Step 6.** They were already classified as FM/review in Step 4 with a draft asking the customer for details. Only process them through Step 6 if they reply with enough detail in a subsequent email.
 
 Then call `mark_as_read` with the message_id.
 
@@ -287,10 +331,17 @@ After all groups and bug tickets:
 4. Never add extra information the customer did not ask for.
 5. FM/review reason must be specific — never vague like "unclear email".
 6. Process oldest-first within each group.
-7. One draft per thread (has_support_reply=true → FM/no-reply, do not draft).
+7. One draft per thread — if `has_support_reply: true`, default to FM/no-reply. Exception: "You did great" thread replies where S15 (Trustpilot nudge) is still appropriate even after a prior support reply. See Rule 12.
 8. Always submit after each group of 8 — do not accumulate more than 8 unsent drafts.
 9. Pass auto_skipped to no_reply_items only in the first submit_drafts call.
 10. FM/ready is the goal — only escalate to FM/review when genuinely needed.
+
+**Sanity checks before finalizing any classification:**
+
+11. **Short or ambiguous summary → fetch full body.** If `latest_message` is < 80 characters, OR the subject line does not clearly match the scenario you are considering, call `get_email` to read the full message body before finalizing the classification. Do not pattern-match on subject line alone for ambiguous cases.
+12. **"You did great" threads + has_support_reply.** If the thread is a "You did great" follow-up and `has_support_reply: true`, do NOT auto-classify as FM/no-reply. Check whether the candidate's reply is sharing Trustpilot feedback, confirming a review, or asking an application status question. If yes → S15 or S18 still applies.
+13. **S15 subject mismatch check.** If your classification is S15 (Trustpilot nudge) but the email subject does NOT contain "feedback", "review", "you did great", or a Trustpilot-related term → re-examine. You may be pattern-matching on the subject instead of reading what the person actually wrote.
+14. **S16 + "offer letter" subject conflict.** If your classification is S16 (withdrawal) but the subject contains "offer letter" → re-examine. A withdrawal scenario applied to an offer letter recipient is a critical misclassification.
 
 # Done condition
 
