@@ -27016,6 +27016,138 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8f743a90f3d6c": {
+      "thread_id": "19d8f743a90f3d6c",
+      "from": "Juliet from AlternateDoors Consulting <juliet@alternatedoors.co.ke>",
+      "subject": "When High Performance Backfires\u2026 The Leadership Blind Spots Destroying Teams",
+      "date": "Wed, 15 Apr 2026 04:43:35 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4821898071236213936",
+      "draft_message_id": "19d8fb7c11016be3",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:57:58.641653+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8f9fa3c454a37": {
+      "thread_id": "19d8f9fa3c454a37",
+      "from": "Sebbie Chanzu <sebbievilar2@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 08:31:20 +0300",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6518660579080554914",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:58:02.631481+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8f7554e0b0f1e": {
+      "thread_id": "19d8ba790d705a2a",
+      "from": "Maxonic Recruitment Partners <careers@maxonic.in>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Wed, 15 Apr 2026 10:15:12 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r8422752995832798766",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:58:03.983621+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8f459606a53c6": {
+      "thread_id": "19d8f459606a53c6",
+      "from": "Vincy Dhanak <vincydhanak@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 09:23:01 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-386848555440600864",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:58:05.337152+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-004",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8f16be73a6eec": {
+      "thread_id": "19d8f16be73a6eec",
+      "from": "John Paulo Reodique <jp.reodique@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 11:01:51 +0800",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6830189877512335251",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:58:06.618989+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-005",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8edf540bcb2f9": {
+      "thread_id": "19d8edf540bcb2f9",
+      "from": "Digital Marketing Courses <hello@experience-effect.com>",
+      "subject": "8 AI Courses Marketers Are Taking Now",
+      "date": "Wed, 15 Apr 2026 02:01:30 +0000",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6007425878953484324",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T05:58:07.889079+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-006",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
