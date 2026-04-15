@@ -28050,6 +28050,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d9297069f5b41f": {
+      "thread_id": "19d9297069f5b41f",
+      "from": "Brevo <contact@t.brevo.com>",
+      "subject": "You\u2019re almost out of email sending credits! \ud83d\ude31",
+      "date": "Wed, 15 Apr 2026 19:21:00 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-9127889960761580035",
+      "draft_message_id": "19d92e15cda9d824",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T20:42:16.933722+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d92571461fec65": {
+      "thread_id": "19d92571461fec65",
+      "from": "Alejandro F <gf2025@gmail.com>",
+      "subject": "Re: You\u2019re in \u2014 here\u2019s your Flowmingo Partner Starter Kit",
+      "date": "Wed, 15 Apr 2026 15:10:58 -0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8028789670528935553",
+      "draft_message_id": "19d92e169fbe10f5",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T20:42:19.917264+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d92552be171551": {
+      "thread_id": "19d92552be171551",
+      "from": "Rae-J P <raej.paris@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 14:08:53 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5119877115020251343",
+      "draft_message_id": "19d92e16e42c5fdb",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T20:42:21.495801+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d92296e07eacc2": {
+      "thread_id": "19d9225073b1e8a3",
+      "from": "Aida Cecilia Gurdian <aidacecilia94@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 11:21:06 -0600",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r3000514656932267038",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T20:42:23.431945+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-023",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d90b1a92964e72": {
+      "thread_id": "19d8fbd6bdab33c3",
+      "from": "\"'Nishita D'Souza' via Contact\" <contact@flowmingo.ai>",
+      "subject": "GulfTalent",
+      "date": "Wed, 15 Apr 2026 10:30:51 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-3716970892004304955",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T20:42:24.536214+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-024",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
