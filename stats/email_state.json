@@ -27148,6 +27148,226 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d9062b9e7b1530": {
+      "thread_id": "19d9062b9e7b1530",
+      "from": "Bether Njiru <bether.njiru@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 12:05:23 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6004463525971901764",
+      "draft_message_id": "19d906b2f8bb62eb",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:13:57.398121+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d9055d853669eb": {
+      "thread_id": "19d9055d853669eb",
+      "from": "Team Aimfox <team@m.aimfox.com>",
+      "subject": "\u00a0\u00a0AMA - Aimfox Avatars - scale LinkedIn outreach by renting profiles\u00a0",
+      "date": "Wed, 15 Apr 2026 08:50:35 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3890831714212429592",
+      "draft_message_id": "19d906b5979246b7",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:14:08.524427+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d903efb1910937": {
+      "thread_id": "19d903efb1910937",
+      "from": "Anthonia Arkorful <anthoniaarkorful@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 08:25:24 +0000",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5267720788584811604",
+      "draft_message_id": "19d906b83a85411b",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:14:19.152163+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d902a157d4cc6e": {
+      "thread_id": "19d902a157d4cc6e",
+      "from": "Echelon Singapore 2026 by e27 <ecosystem@e27.co>",
+      "subject": "We pulled the registration list. Here is who is coming to Echelon.",
+      "date": "Wed, 15 Apr 2026 08:02:27 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8912957547429357361",
+      "draft_message_id": "19d906bbe236fddc",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:14:34.442625+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": true,
+      "review_reason_code": null
+    },
+    "19d901041a213052": {
+      "thread_id": "19d900dfa12e4178",
+      "from": "\"Keryee Pang at d&i Leaders\" <info@sircula.com>",
+      "subject": "Making disability inclusion a business priority - Join 150+ employers on 23 September",
+      "date": "Wed, 15 Apr 2026 08:34:31 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7202653625267070436",
+      "draft_message_id": "19d906be00fb9ef1",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:14:42.843386+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8ff6817cc347d": {
+      "thread_id": "19d8ff6817cc347d",
+      "from": "\"'Talento IT Sectorea' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Tardas demasiado en cubrir vacantes IT (y los datos lo confirman)",
+      "date": "Wed, 15 Apr 2026 07:06:23 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7004336352322716278",
+      "draft_message_id": "19d906c21be8a298",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:14:59.305067+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8fdb0ef66710c": {
+      "thread_id": "19d8b5596e227908",
+      "from": "Chukwuebuka Godwin Anagboso <anagbosochukwuebuka@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 07:36:18 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-762809719568301918",
+      "draft_message_id": "19d906c654573536",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:15:16.968491+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d902b47d9ae96e": {
+      "thread_id": "19d902b47d9ae96e",
+      "from": "\"'Victor Campher' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Corporate Business Security is inviting you to take an AI interview for the position of Senior Electronic Security Technician",
+      "date": "Wed, 15 Apr 2026 08:04:00 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r2980482816272350608",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:15:19.688045+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-007",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d902069f778f7e": {
+      "thread_id": "19d902069f778f7e",
+      "from": "Sohail Ahmed <sohailahmed0x111@gmail.com>",
+      "subject": "Security Matter Regarding https://flowmingo.ai/",
+      "date": "Wed, 15 Apr 2026 00:52:12 -0700 (PDT)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-6565906970103601798",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:15:21.002346+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-008",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8feda60ef1aca": {
+      "thread_id": "19d8feda60ef1aca",
+      "from": "SATYA BONDALAPU <satyabondalapu@gmail.com>",
+      "subject": "Re: Talent Join: Interview invitation for Jr. Domestic IT Recruiter - Satya B",
+      "date": "Wed, 15 Apr 2026 12:26:30 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-7244645461923920714",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T09:15:22.451325+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-009",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
