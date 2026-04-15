@@ -26840,6 +26840,182 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d8ed87d523ddc0": {
+      "thread_id": "19d8ed87d523ddc0",
+      "from": "patilra2 <patilra2@gmail.com>",
+      "subject": "Flowmingo: Interview invitation for Talent Acquisition Specialist",
+      "date": "Wed, 15 Apr 2026 07:23:52 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4392259477858452219",
+      "draft_message_id": "19d8edeb9b94b5bc",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:00:55.228675+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8eced3e0efd04": {
+      "thread_id": "19d8eced3e0efd04",
+      "from": "camila rojas <vrojaslinan@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Tue, 14 Apr 2026 18:43:30 -0700",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7296618553368984539",
+      "draft_message_id": "19d8edee9d9b17ee",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:07.246164+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8ea7905300935": {
+      "thread_id": "19d1e9d62b42a748",
+      "from": "\"Giang Tr\u1ea7n\" <giangtranlh.work@gmail.com>",
+      "subject": "Re: New job opportunites at Flowmingo for Giang",
+      "date": "Wed, 15 Apr 2026 08:00:00 +0700",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:19.079804+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8e4e249af8c3c": {
+      "thread_id": "19d8e4e249af8c3c",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Agoda\u2019s Growth Lesson for B2B Teams",
+      "date": "Tue, 14 Apr 2026 23:22:56 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8162917393726377468",
+      "draft_message_id": "19d8edf350a2d749",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:26.560872+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d8e282153332ab": {
+      "thread_id": "19d8e282153332ab",
+      "from": "Wijden Wejden <wijdenwejden989@gmail.com>",
+      "subject": "Hello",
+      "date": "Tue, 14 Apr 2026 23:41:13 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5426378710498099485",
+      "draft_message_id": "19d8edf4bd81155e",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:32.521333+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE"
+    },
+    "19d8dccc6ca35792": {
+      "thread_id": "19d8dccc6ca35792",
+      "from": "The Frontier by Product Hunt <hi@deeperlearning.producthunt.com>",
+      "subject": "Meta's new model",
+      "date": "Tue, 14 Apr 2026 21:01:17 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r2540730476730518749",
+      "draft_message_id": "19d8edf64c816a59",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:38.919165+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.2,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d8dcc8090a4dab": {
+      "thread_id": "19d8dcc8090a4dab",
+      "from": "\"'The Frontier by Product Hunt' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Meta's new model",
+      "date": "Tue, 14 Apr 2026 21:01:18 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r4172738241195112697",
+      "draft_message_id": "19d8edf86f48b45f",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:47.526536+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.2,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d8def25bdc7edf": {
+      "thread_id": "19d7b9027b3cdaa3",
+      "from": "Stephen Maseko <stephenmaseko98@gmail.com>",
+      "subject": "Re: APPLIYING FOR THE POST OF WAITER",
+      "date": "Tue, 14 Apr 2026 23:38:59 +0200",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6943397758512065239",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-15T02:01:49.652663+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260415-001",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
