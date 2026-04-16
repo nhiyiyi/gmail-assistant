@@ -46,19 +46,23 @@ _FLOWMINGO_ROLES = [
     "marketing and operations intern",
     "sales growth business partner",
     "talent acquisition business partner",
+    "talent acquisition specialist",
     "flowmingo partner program",
     "flowmingo global management trainee",
 ]
 
 # ── Bug heuristics ────────────────────────────────────────────────────────────
 
-# Strong bug signals in message text
+# Strong bug signals in message text (specific multi-word patterns only — generic
+# words like "error", "failed", "can't" are too common and cause false positives,
+# especially when quoted outgoing templates are included in reply bodies).
 _BUG_TEXT_SIGNALS = [
-    r'\b(error|failed|failure|crash|bug|broken|not working|doesn\'t work|cannot|can\'t)\b',
+    r'\b(fail(?:ed|s|ing)?\s+to\s+(?:load|submit|record|upload|start|connect|play|open))\b',
     r'\b(status\s*(failed|error)\s*\d{3})\b',          # "Status failed 400"
-    r'\b(failed to load|failed to submit|failed to record)\b',
-    r'\b(black screen|blank screen|infinite loop|stuck|frozen)\b',
+    r'\b(black\s+screen|blank\s+screen|infinite\s+loop|frozen\s+screen)\b',
     r'\b(\d{3,})\s*(error|status)\b',                  # "400 error", "500 status"
+    r'\b(system\s+(?:crash|error|down|offline))\b',
+    r'\b(keeps?\s+(?:crashing|freezing|loading|buffering))\b',
 ]
 _BUG_TEXT_REGEX = re.compile("|".join(_BUG_TEXT_SIGNALS), re.IGNORECASE)
 
@@ -66,6 +70,8 @@ _BUG_TEXT_REGEX = re.compile("|".join(_BUG_TEXT_SIGNALS), re.IGNORECASE)
 _BUG_SOFT_SIGNALS = [
     r'\b(issue|problem|trouble|difficulty|glitch)\b',
     r'\b(not\s+(?:working|loading|showing|displaying|recording))\b',
+    r'\b(doesn\'t\s+work|not\s+working|can\'t\s+(?:load|access|open|start|submit|upload|record|complete))\b',
+    r'\b(stuck\s+(?:on|at)|keeps?\s+(?:failing|stopping|timing\s+out))\b',
 ]
 _BUG_SOFT_REGEX = re.compile("|".join(_BUG_SOFT_SIGNALS), re.IGNORECASE)
 
@@ -105,6 +111,26 @@ _EXTERNAL_COMPANY_SIGNALS = [
 _EXTERNAL_COMPANY_REGEX = re.compile("|".join(_EXTERNAL_COMPANY_SIGNALS), re.IGNORECASE)
 
 
+def _strip_quoted_lines(text: str) -> str:
+    """
+    Remove quoted reply lines from an email body before bug detection.
+
+    Strips lines starting with '>' (standard email quoting) and the
+    attribution line ("On [date] ... wrote:") to prevent Flowmingo's own
+    outgoing templates from triggering false-positive bug signals.
+    """
+    clean = []
+    for line in text.splitlines():
+        stripped = line.lstrip()
+        if stripped.startswith(">"):
+            continue
+        # "On Mon, Apr 13 ... wrote:" attribution line
+        if re.match(r"^on .{5,120}wrote:\s*$", stripped, re.IGNORECASE):
+            continue
+        clean.append(line)
+    return "\n".join(clean)
+
+
 def route(email: dict) -> dict:
     """
     Deterministic pre-routing. Returns route dict consumed by orchestrator + validators.
@@ -116,6 +142,9 @@ def route(email: dict) -> dict:
     from_addr    = email.get("from", "").lower()
     subject      = email.get("subject", "").lower()
     message      = email.get("latest_message", "").lower()
+    # Strip quoted reply lines before bug detection so Flowmingo's own outgoing
+    # templates (e.g. "we can't promise...") don't trigger false-positive bugs.
+    message_new  = _strip_quoted_lines(message)
     attachments  = email.get("attachments", [])
     has_attachments = bool(attachments)
 
@@ -137,14 +166,16 @@ def route(email: dict) -> dict:
         risk_triggers.append("attachment_present")
 
     # ── BUG DETECTION ─────────────────────────────────────────────────────────
+    # Use message_new (quoted lines stripped) so Flowmingo's own outgoing
+    # templates quoted in replies don't fire false-positive bug signals.
     is_bug = False
-    if has_image_attachment:
-        # Image attachment = strong bug signal (screenshot)
+    if has_image_attachment and _BUG_SOFT_REGEX.search(message_new):
+        # Image attachment + soft bug language = likely screenshot of an issue
         is_bug = True
-    elif _BUG_TEXT_REGEX.search(message) or _BUG_TEXT_REGEX.search(subject):
-        # Hard bug keywords in text or subject
+    elif _BUG_TEXT_REGEX.search(message_new) or _BUG_TEXT_REGEX.search(subject):
+        # Hard bug keywords in new-text or subject
         is_bug = True
-    elif has_attachments and _BUG_SOFT_REGEX.search(message):
+    elif has_attachments and _BUG_SOFT_REGEX.search(message_new):
         # Non-image attachment + soft bug language
         is_bug = True
 
