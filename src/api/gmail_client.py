@@ -385,6 +385,41 @@ def delete_draft(draft_id: str) -> dict:
         return {"error": f"Gmail API error: {e}"}
 
 
+def find_sent_reply(thread_id: str, after_epoch_ms: int) -> dict | None:
+    """
+    Return the first SENT (non-DRAFT) message in the thread whose internalDate
+    is after after_epoch_ms, or None if no such message exists.
+
+    Used by the feedback loop to match a sent email back to the original draft.
+    When a Gmail draft is sent, it transitions from DRAFT to SENT in the same thread.
+
+    Args:
+        thread_id:      Gmail thread ID of the original customer email.
+        after_epoch_ms: Draft creation time in epoch milliseconds (inclusive lower bound).
+
+    Returns:
+        Parsed message dict (same shape as get_email) with an extra 'internalDate' key,
+        or None if no sent reply found yet, or an error dict if the API call fails.
+    """
+    try:
+        service = get_service()
+        thread = service.users().threads().get(
+            userId="me", id=thread_id, format="full"
+        ).execute()
+
+        for msg in thread.get("messages", []):
+            label_ids = msg.get("labelIds", [])
+            internal_date = int(msg.get("internalDate", 0))
+            if "SENT" in label_ids and "DRAFT" not in label_ids and internal_date > after_epoch_ms:
+                parsed = _parse_message(msg)
+                parsed["internalDate"] = str(internal_date)
+                return parsed
+
+        return None
+    except HttpError as e:
+        return {"error": f"Gmail API error: {e}"}
+
+
 def _parse_message(msg: dict) -> dict:
     """Extract headers and body from a Gmail message resource."""
     payload = msg.get("payload", {})

@@ -3,6 +3,17 @@
     "gmail": {
       "command": "python",
       "args": ["src/api/server.py"]
+    },
+    "n8n-mcp": {
+      "command": "npx",
+      "args": ["-y", "n8n-mcp"],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true",
+        "N8N_API_URL": "https://featurii-hiring.app.n8n.cloud",
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0NGNkMzE2ZS02ZGUyLTRhMzctYTQzOC02ODcyMjY3MTFiZTIiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiYjRmODMzMzItYzNjNS00MGY2LWIwMjItNjhlNzExNGYzMTc0IiwiaWF0IjoxNzc2MjcwODUyfQ.zAcmPmHqajXtPTmBjQjceEtBFUbE0fi3e80sZ7tpW0U"
+      }
     }
   }
 }

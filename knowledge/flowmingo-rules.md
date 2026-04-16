@@ -192,6 +192,12 @@ The following email types must be classified as FM/no-reply and skipped entirely
 - Emails with subjects like "[Request received]", "Thanks for your email — your ticket has been created", "Your request is being processed", or any other auto-generated acknowledgment from a 3rd-party ticketing system.
 - Emails from no-reply addresses (noreply@, donotreply@, notifications@, auto-reply@) with no actionable support content.
 
+**Misdirected job applications (email not addressed to Flowmingo):**
+- If the email's primary To: address is a non-Flowmingo address (not support@flowmingo.ai, contact@flowmingo.ai, or any @flowmingo.ai address) AND the email reads as a job application, cover letter, or CV submission clearly intended for a third-party employer, classify as FM/no-reply immediately. The sender did not intend to contact Flowmingo; they accidentally CC'd or forwarded to us. Do NOT create a bug ticket. Do NOT draft a reply.
+
+**Bare acknowledgments with no actionable content:**
+- If the latest message contains only a brief social acknowledgment — such as "Thank you and I will", "Thank you", "Got it", "Understood", "Will do", "Okay", "Sounds good", or any equivalent — with no question, no new issue, and no actionable request, classify as FM/no-reply. This applies even if the thread was previously classified as FM/bug or FM/review; the acknowledgment itself does not require a reply and must not inherit the prior classification.
+
 **Rule:** If any of the above signals are present, label FM/no-reply and do not draft. Only draft a reply when the email is clearly from a real person with a genuine question or action directed at Flowmingo support.
 
 **PART 4 – SENDER TYPE CLASSIFICATION**
@@ -215,6 +221,7 @@ Classify each sender into one of these:
   - Marketing & Operations Intern/Fresher
   - Sales Growth Business Partner
   - Talent Acquisition Business Partner
+  - Talent Acquisition Specialist
   - Flowmingo Partner Program (any variant)
 - Type B – External Client Candidate (interviewing for another company using Flowmingo).
 - Type C – Business Partner / Talent Acquisition Partner / Content Partner (already in or onboarding).

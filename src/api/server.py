@@ -389,6 +389,54 @@ async def list_tools() -> list[types.Tool]:
                 "required": ["date", "user_id"],
             },
         ),
+        # ── Feedback loop tools ───────────────────────────────────────────────
+        types.Tool(
+            name="get_feedback_report",
+            description=(
+                "Get the daily feedback report comparing AI drafts vs human-sent emails. "
+                "Shows edit patterns, learnability scores, prompt improvement suggestions, "
+                "and policy risks. All suggestions require human approval before any changes. "
+                "date defaults to yesterday if omitted."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "description": "Report date YYYY-MM-DD (default: yesterday UTC)",
+                    },
+                },
+                "required": [],
+            },
+        ),
+        types.Tool(
+            name="get_edit_taxonomy",
+            description=(
+                "Get all edit records for a specific email or scenario. "
+                "Shows every edit the human made to the AI draft: category, root cause, "
+                "learnability score, and the before/after text spans. "
+                "All edits are stored — learnability_class controls where they surface in reports, "
+                "not whether they are visible here."
+            ),
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "email_id": {
+                        "type": "string",
+                        "description": "Gmail message ID — returns full per-draft debug report",
+                    },
+                    "scenario": {
+                        "type": "string",
+                        "description": "Filter by scenario ID (e.g. 'S4') — returns all edits for that scenario",
+                    },
+                    "learnability_class": {
+                        "type": "string",
+                        "description": "Filter by class: propagate | investigate | one-off | normalize | policy-risk | data-gap",
+                    },
+                },
+                "required": [],
+            },
+        ),
         # ── Batch processing tools ────────────────────────────────────────────
         types.Tool(
             name="get_email_batch",
@@ -522,6 +570,10 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             return _handle_set_report_config(arguments)
         elif name == "send_report_dm":
             return _handle_send_report_dm(arguments)
+        elif name == "get_feedback_report":
+            return _handle_get_feedback_report(arguments)
+        elif name == "get_edit_taxonomy":
+            return _handle_get_edit_taxonomy(arguments)
         else:
             return [types.TextContent(type="text", text=f"Unknown tool: {name}")]
     except FileNotFoundError as e:
@@ -1085,6 +1137,65 @@ def _handle_send_report_dm(args: dict) -> list[types.TextContent]:
         "dm_text": dm_text,
         "dm_sent_at": now_iso,
         "note": "Call slack_send_message with channel=user_id and the dm_text to deliver the DM.",
+    }, indent=2))]
+
+
+def _handle_get_feedback_report(args: dict) -> list[types.TextContent]:
+    """
+    Return the daily feedback report for a given date.
+    If no report exists yet for that date, generates it on-demand.
+    """
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).parent.parent))  # src/
+    from feedback.weekly_reporter import generate_daily_report, get_prompt_suggestions
+    from feedback.db import setup_schema
+
+    setup_schema()
+    date_str = args.get("date")  # None → yesterday
+
+    report = generate_daily_report(date_str)
+    return [types.TextContent(type="text", text=json.dumps(report, indent=2))]
+
+
+def _handle_get_edit_taxonomy(args: dict) -> list[types.TextContent]:
+    """
+    Return edit records filtered by email_id, scenario, or learnability_class.
+    Returns the per-draft report if email_id is given, otherwise raw edit records.
+    """
+    import sys as _sys
+    from pathlib import Path as _Path
+    _sys.path.insert(0, str(_Path(__file__).parent.parent))  # src/
+    from feedback.weekly_reporter import generate_per_draft_report
+    from feedback.db import get_connection, setup_schema
+
+    setup_schema()
+    email_id = args.get("email_id")
+    scenario = args.get("scenario")
+    learnability_class = args.get("learnability_class")
+
+    if email_id:
+        result = generate_per_draft_report(email_id)
+        return [types.TextContent(type="text", text=json.dumps(result, indent=2))]
+
+    # Filtered query
+    with get_connection() as conn:
+        query = "SELECT * FROM edit_records WHERE 1=1"
+        params = []
+        if scenario:
+            query += " AND scenario=?"
+            params.append(scenario)
+        if learnability_class:
+            query += " AND learnability_class=?"
+            params.append(learnability_class)
+        query += " ORDER BY created_at DESC LIMIT 200"
+        rows = conn.execute(query, params).fetchall()
+
+    records = [dict(r) for r in rows]
+    return [types.TextContent(type="text", text=json.dumps({
+        "filters": {"scenario": scenario, "learnability_class": learnability_class},
+        "count": len(records),
+        "edit_records": records,
     }, indent=2))]
 
 

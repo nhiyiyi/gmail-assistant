@@ -44,6 +44,14 @@ def save_email(
     validator_score: float = None,
     repair_attempted: bool = False,
     review_reason_code: str = None,
+    # Feedback loop fields (optional, for future correlation)
+    draft_body_hash: str = None,
+    draft_char_count: int = None,
+    scenario_confidence: float = None,
+    validator_severity: str = None,
+    validator_issues: list = None,
+    kb_section_ids: list = None,
+    contract_id: str = None,
 ) -> dict:
     """Save state for a processed email. Returns the saved entry."""
     data = load_state()
@@ -66,6 +74,14 @@ def save_email(
         "validator_score": validator_score,
         "repair_attempted": repair_attempted,
         "review_reason_code": review_reason_code,
+        # Feedback loop fields
+        "draft_body_hash": draft_body_hash,
+        "draft_char_count": draft_char_count,
+        "scenario_confidence": scenario_confidence,
+        "validator_severity": validator_severity,
+        "validator_issues": validator_issues,
+        "kb_section_ids": kb_section_ids,
+        "contract_id": contract_id,
     }
     data["emails"][email_id] = entry
     save_state(data)

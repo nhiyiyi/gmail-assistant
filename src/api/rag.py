@@ -79,10 +79,24 @@ def get_relevant_context(rules_text: str, scenarios_text: str, email_text: str, 
 
     Typical output: ~1,200 tokens vs ~2,500 for the full combined SOP.
     """
+    kb_text, _ = get_relevant_context_with_ids(rules_text, scenarios_text, email_text, top_k)
+    return kb_text
+
+
+def get_relevant_context_with_ids(
+    rules_text: str, scenarios_text: str, email_text: str, top_k: int = 5
+) -> tuple:
+    """
+    Same as get_relevant_context but also returns the list of retrieved chunk labels.
+
+    Returns: (kb_text: str, chunk_labels: list[str])
+    chunk_labels are the section headers of the top_k retrieved chunks — used by the
+    feedback loop to detect retrieval gaps (which sections were NOT retrieved).
+    """
     chunks = chunk_scenarios(scenarios_text)
 
     if not chunks:
-        return rules_text  # fallback: rules only
+        return rules_text, []
 
     query_tokens = _tokenize(email_text)
     doc_tokens = [_tokenize(label + ' ' + text) for label, text in chunks]
@@ -90,6 +104,8 @@ def get_relevant_context(rules_text: str, scenarios_text: str, email_text: str, 
 
     ranked = sorted(zip(scores, chunks), key=lambda x: x[0], reverse=True)
     top = [chunk for _, chunk in ranked[:top_k]]
+    top_labels = [label for label, _ in top]
 
     retrieved = '\n\n'.join(f'=== {label} ===\n{text}' for label, text in top)
-    return rules_text + '\n\n## RETRIEVED RELEVANT SCENARIOS\n\n' + retrieved
+    kb_text = rules_text + '\n\n## RETRIEVED RELEVANT SCENARIOS\n\n' + retrieved
+    return kb_text, top_labels
