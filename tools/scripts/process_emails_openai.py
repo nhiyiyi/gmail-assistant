@@ -31,6 +31,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT / "src" / "api"))
 sys.path.insert(0, str(PROJECT_ROOT / "src" / "persistence"))
+sys.path.insert(0, str(PROJECT_ROOT / "src"))  # for feedback package
 
 import requests
 import gmail_client
@@ -692,7 +693,7 @@ def main():
             continue
 
         # ── 3. Per-email RAG ──────────────────────────────────────────────────
-        kb_text = rag.get_relevant_context(
+        kb_text, kb_section_ids = rag.get_relevant_context_with_ids(
             rules_text=rules_text,
             scenarios_text=scenarios_text,
             email_text=email.get("latest_message", "") or email.get("subject", ""),
@@ -722,16 +723,9 @@ def main():
         scenario_confidence = float(node1.get("scenario_confidence", 0.5))
         intent_direction    = node1.get("intent_direction", "inbound_support")
 
-        # ── Node 1 bug detection ──────────────────────────────────────────────
-        if node1.get("classification_hint") == "FM/bug" or node1.get("is_bug"):
-            print("FM/bug [Node1]")
-            gmail_client.apply_labels(eid, ["FM/bug"])
-            tid = email.get("thread_id", eid)
-            if tid not in seen_bug_thread_ids:
-                seen_bug_thread_ids.add(tid)
-                all_bug_emails.append({"email": email, "bug": {}})
-            bug_count += 1
-            continue
+        # Node 1 bug detection removed — Node 1 has no KB context and produces
+        # false positives (e.g. pitch emails classified as bugs). Bug detection
+        # is handled by: (1) rules_engine early-exit above, (2) Node 2 below.
 
         # ── 5. Contract selection (using Node 1 scenario) ─────────────────────
         contract, extra_triggers = sc_module.select(contracts, pre_hint, model_scenario_id)
@@ -923,7 +917,49 @@ def main():
                 validator_score=validator_score,
                 repair_attempted=repair_attempted,
                 review_reason_code=review_reason_code,
+                validator_severity=v1.get("severity"),
+                validator_issues=v1.get("issues", []),
+                kb_section_ids=kb_section_ids,
+                contract_id=contract.get("scenario_id"),
+                scenario_confidence=scenario_confidence,
             )
+
+            # ── Feedback loop: log draft snapshot (non-fatal) ─────────────────
+            try:
+                import hashlib as _hl
+                from feedback import draft_logger
+                draft_logger.log_draft(
+                    email_id=eid,
+                    draft_body=final_draft,
+                    pipeline_metadata={
+                        "thread_id": email.get("thread_id", ""),
+                        "draft_id": dr.get("draft_id", ""),
+                        "draft_message_id": dr.get("message_id", ""),
+                        "from_addr": email.get("from", ""),
+                        "scenario": model_scenario_id,
+                        "scenario_confidence": scenario_confidence,
+                        "sender_type": node1.get("sender_type", route_info.get("sender_type", "E")),
+                        "topic": node1.get("topic", "other"),
+                        "urgency": node1.get("urgency", "normal"),
+                        "review_status": "ready" if label == "FM/ready" else "review",
+                        "validator_score": validator_score,
+                        "validator_severity": v1.get("severity"),
+                        "validator_issues": v1.get("issues", []),
+                        "repair_attempted": repair_attempted,
+                        "review_reason_code": review_reason_code,
+                        "node1_result": node1,
+                        "kb_version": kb_version,
+                        "kb_section_ids": kb_section_ids,
+                        "contract_id": contract.get("scenario_id"),
+                        "prompt_version": "node2_v1",
+                        "model_name": MODEL,
+                        "input_tokens": total_input_tokens,
+                        "output_tokens": total_output_tokens,
+                    },
+                )
+            except Exception as _fb_ex:
+                print(f"  WARN: draft_logger.log_draft failed (non-fatal): {_fb_ex}")
+
             stats_module.log_processing(
                 email_id=eid,
                 input_tokens=total_input_tokens,
@@ -1111,6 +1147,42 @@ def _save_review(
             repair_attempted=repair_attempted,
             review_reason_code=review_reason_code,
         )
+
+        # Feedback loop: log review draft (non-fatal)
+        try:
+            from feedback import draft_logger
+            draft_logger.log_draft(
+                email_id=eid,
+                draft_body=draft_body,
+                pipeline_metadata={
+                    "thread_id": email.get("thread_id", ""),
+                    "draft_id": dr.get("draft_id", ""),
+                    "draft_message_id": dr.get("message_id", ""),
+                    "from_addr": email.get("from", ""),
+                    "scenario": scenario,
+                    "scenario_confidence": None,
+                    "sender_type": sender_type,
+                    "topic": topic,
+                    "urgency": urgency,
+                    "review_status": "review",
+                    "validator_score": validator_score,
+                    "validator_severity": None,
+                    "validator_issues": [],
+                    "repair_attempted": repair_attempted,
+                    "review_reason_code": review_reason_code,
+                    "node1_result": {},
+                    "kb_version": kb_version,
+                    "kb_section_ids": [],
+                    "contract_id": None,
+                    "prompt_version": "node2_v1",
+                    "model_name": "gpt-4o-mini",
+                    "input_tokens": input_tokens,
+                    "output_tokens": 0,
+                },
+            )
+        except Exception as _fb_ex:
+            pass  # non-fatal, no print noise in _save_review
+
         stats_module.log_processing(
             email_id=eid,
             input_tokens=input_tokens,
