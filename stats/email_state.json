@@ -28160,6 +28160,116 @@
       "validator_score": null,
       "repair_attempted": false,
       "review_reason_code": null
+    },
+    "19d9376528979254": {
+      "thread_id": "19d9376528979254",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Smarter Outbound Starts With Better Systems",
+      "date": "Wed, 15 Apr 2026 23:24:55 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8704463689878187061",
+      "draft_message_id": "19d940c0097e90c8",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-16T02:08:29.150289+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d93363a44a867b": {
+      "thread_id": "19d93363a44a867b",
+      "from": "Imtiaz Ali <imtiazalibhatti@gmail.com>",
+      "subject": "Re: Flowmingo Offer Letter for Imtiaz Ali",
+      "date": "Thu, 16 Apr 2026 01:16:14 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1075532911632457133",
+      "draft_message_id": "19d940c0fb2c47e4",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-16T02:08:32.657870+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d92e4c5672b5a8": {
+      "thread_id": "19d92e4c5672b5a8",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\ud83d\ude80 Maximize Your Job Exposure with AI-Powered Premium Packages",
+      "date": "15 Apr 2026 16:45:56 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1924569382618859369",
+      "draft_message_id": "19d940c1bc44cc27",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-16T02:08:35.381115+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR"
+    },
+    "19d930975ea7b43d": {
+      "thread_id": "19d9225073b1e8a3",
+      "from": "Aida Cecilia Gurdian <aidacecilia94@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Wed, 15 Apr 2026 15:25:48 -0600",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r4063805638400998069",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-16T02:08:38.053472+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260416-001",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
+    },
+    "19d90b16ea69d693": {
+      "thread_id": "19d8fbd6bdab33c3",
+      "from": "\"'Nishita D'Souza' via Contact\" <contact@flowmingo.ai>",
+      "subject": "GulfTalent",
+      "date": "Wed, 15 Apr 2026 10:30:36 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-7779722819291630335",
+      "draft_message_id": "",
+      "kb_version": "7158cbe0b0a3",
+      "processed_at": "2026-04-16T02:08:39.843014+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260416-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null
     }
   }
 }
