@@ -11,7 +11,14 @@
     "we will evaluate",
     "we will consider your proposal",
     "we are not interested",
-    "we do not need"
+    "we do not need",
+    "we'd like to start",
+    "we would like to start",
+    "we want to order",
+    "we'd be happy to purchase",
+    "please confirm that you will",
+    "we will proceed",
+    "let's proceed"
   ],
   "ownership_patterns": [],
   "force_review": false

@@ -158,6 +158,30 @@ def get_email_batch(max_results: int = 500) -> dict:
     }
 
 
+def _has_unreplied_support_reply(messages: list) -> bool:
+    """Return True only if support sent the most recent reply and the customer
+    has NOT responded since.  Fixes two false-positive classes:
+    - Contact-form emails whose FROM contains a support domain but have no SENT label
+    - Threads where the customer's original email is still UNREAD but a prior support
+      reply is messages[-1], making the naive last_msg check fire incorrectly.
+    """
+    last_support_idx = -1
+    for i, msg in enumerate(messages):
+        is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
+        labels = msg.get("labels", [])
+        if is_support and "SENT" in labels and "DRAFT" not in labels:
+            last_support_idx = i
+    if last_support_idx == -1:
+        return False  # No sent support reply in thread
+    # If any non-support message came AFTER the support reply, customer already
+    # responded — do not flag as already_replied.
+    for msg in messages[last_support_idx + 1:]:
+        is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
+        if not is_support:
+            return False
+    return True
+
+
 def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     """Build a normalized email dict from a raw Gmail thread + list metadata."""
     messages = thread_data.get("messages", [])
@@ -167,12 +191,7 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
                 "has_attachments": False}
 
     last_msg = messages[-1]
-    last_labels = last_msg.get("labels", [])
-    has_support_reply = (
-        any(d in last_msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
-        and "SENT" in last_labels
-        and "DRAFT" not in last_labels
-    )
+    has_support_reply = _has_unreplied_support_reply(messages)
     latest_body = (last_msg.get("body") or last_msg.get("snippet", ""))[:1000]
     attachments = last_msg.get("attachments", [])
 
@@ -261,12 +280,30 @@ After setting intent_direction:
 - inbound_prospect + company/recruiter → scenario = "S22", sender_type = "D"
 - inbound_support → apply S1–S34 matching based on email content
 
+S17 TRIGGER — classify as S17 when an INDIVIDUAL is asking to WORK at Flowmingo:
+- Signals: "looking for a job", "interested in joining your team", "I'd like to apply",
+  "career opportunities at Flowmingo", "open positions", submitting a CV or resume to
+  Flowmingo support, asking how to apply to Flowmingo.
+→ scenario = "S17", sender_type = "E", scenario_confidence = 0.90
+CRITICAL S17 vs S22 distinction:
+  S17 = an INDIVIDUAL who wants to WORK for Flowmingo (job seeker applying to Flowmingo)
+  S22 = a COMPANY or recruiter that wants to USE Flowmingo for their own hiring
+  Do NOT route individual job seekers to S22, S27, or the S22/S27 dual-option format.
+
 S13 TRIGGER — classify as S13 for ANY of these (regardless of exact phrasing):
 - Reference letter, reference check, employment certificate, work certificate,
   letter of employment, certificate of engagement, confirmation of role,
   proof of employment, work verification, any document confirming role/relationship.
 → classification_hint = FM/ready, scenario = "S13", scenario_confidence = 0.95.
   Never ask clarifying questions for S13. The answer is always a decline.
+
+REVIEW VENDOR RULE — vendors selling reviews, reputation management, or review packages:
+- Signals: "Trustpilot reviews", "Google reviews", "review package", "review service",
+  "reputation management", "5-star reviews for your business", "review pricing"
+→ intent_direction = "inbound_pitch", scenario = "S27"
+CRITICAL: NEVER classify review vendor emails as S15. S15 is ONLY for real Flowmingo
+users sharing their own authentic positive experience. A company offering to sell or
+manage reviews is a vendor pitch (S27).
 
 FM/bug signals: specific platform error, "it didn't work", image attachment with error context.
 
@@ -362,7 +399,10 @@ bug: populate only when classification_hint is FM/bug.
    - Never contradict a prior Flowmingo reply.
 
 5. FORMAT: Plain text only. No markdown, no bold, no asterisks, no headers.
-   Hyphen bullets ONLY for troubleshooting step lists.
+   Hyphen bullets for troubleshooting step lists (MANDATORY for 2+ sequential steps).
+   Also use hyphen bullets when listing 3+ parallel items of equal weight
+   (e.g., multiple options, multiple requirements, multiple steps in a process) —
+   do not write these as prose sentences run together.
 
 6. ENDING: End with exactly once: "Let us know if you have any questions,"
    Then: "Best regards,"
@@ -370,29 +410,14 @@ bug: populate only when classification_hint is FM/bug.
 7. FM/review drafts MUST still contain a full draft body (not just the review tag).
    A reviewer must be able to send it with minor edits, not start from scratch.
 
-=== S27 TEMPLATE (intent_direction = inbound_pitch) ===
-
-This is a reversed outreach — write a sales pitch FOR Flowmingo.
-Use this exact structure:
-
-Dear [Name],
-
-My name is Jessica — Customer Support Representative at Flowmingo.
-
-[One sentence acknowledging their specific offering or proposal from their email.]
-
-If you find boosting hiring efficiency by 3x for free as something you would like,
-please register here: https://flowmingo.ai?utm_source=email-support
-
-Let us know if you do register, so that I can give you dedicated 1:1 support
-as a token of appreciation for reaching out.
-
-Let us know if you have any questions,
-
-Best regards,
-
-Constraints: 80–120 words. The acknowledgment sentence must reference their specific email.
-Do not add a second "Let us know if you have any questions," — it is already in the template.
+=== S27 (inbound_pitch) ===
+The full S27 template and instructions are loaded from the SOP above (see "S27 – Vendor/Service Pitch Email" section).
+Follow those instructions exactly. Key reminders:
+- Do NOT open with "My name is Jessica — Customer Support Representative at Flowmingo."
+- DO acknowledge their specific pitch in the first sentence.
+- ALWAYS include https://flowmingo.ai?utm_source=email-support
+- Do NOT agree to purchase, subscribe to, or commission anything.
+- 80–120 words total.
 
 === S13 TEMPLATE (reference/cert request) ===
 
@@ -421,18 +446,50 @@ Set bug.main_issue_vi to a single Vietnamese sentence under 10 words starting wi
 """
 
 
+def _extract_sop_section(text: str, scenario_id: str) -> str:
+    """Extract a scenario section from the SOP text by its heading marker.
+    Returns the section text or empty string if not found.
+    """
+    import re as _re
+    pattern = _re.compile(
+        rf"(###\s+\*\*{_re.escape(scenario_id)}\s*[–—-].*?)(?=\n###\s+\*\*S\d|\Z)",
+        _re.DOTALL,
+    )
+    m = pattern.search(text)
+    return m.group(1).strip() if m else ""
+
+
+def _s27_fallback_draft(email: dict) -> str:
+    """Minimal S27 draft for AI_ERROR fallback — reviewer can edit before sending."""
+    name = email.get("from", "").split("<")[0].strip().split()[0] or "there"
+    return (
+        f"Dear {name},\n\n"
+        "Thank you for reaching out.\n\n"
+        "Flowmingo is a hiring platform — we help companies run faster, fairer interviews "
+        "and assessments. If that's relevant to your work, you're welcome to explore here: "
+        "https://flowmingo.ai?utm_source=email-support\n\n"
+        "Let us know if you have any questions,\n\n"
+        "Best regards,"
+    )
+
+
 def build_node2_prompt(
     email: dict,
     kb_text: str,
     node1: dict,
     validation_errors: list[str] | None = None,
+    scenarios_text: str = "",
 ) -> tuple[str, str]:
     """Build Node 2 (draft writer) prompt with full KB and Node 1 routing context."""
     has_attachments = bool(email.get("attachments"))
     attachment_note = ""
     if has_attachments:
         att_list = [a.get("filename", a.get("mimeType", "unknown")) for a in email["attachments"]]
-        attachment_note = f"\nAttachments: {', '.join(att_list)}"
+        attachment_note = (
+            f"\nAttachments: {', '.join(att_list)}"
+            "\nIMPORTANT: The sender has provided attachment(s). Do NOT ask them to share "
+            "information that may already be contained in the attachment."
+        )
 
     intent_dir      = node1.get("intent_direction", "inbound_support")
     scenario        = node1.get("scenario", "unclear")
@@ -453,10 +510,18 @@ def build_node2_prompt(
         routing_block += f"reviewer_briefing (from Node 1): {reviewer_brief}\n"
     routing_block += "=== END ROUTING ===\n"
 
+    # For vendor pitch emails, inject the S27 SOP section directly — BM25 may not
+    # retrieve it if the vendor email content doesn't match S27 keywords well.
+    effective_kb = kb_text
+    if intent_dir == "inbound_pitch" and scenarios_text:
+        s27_section = _extract_sop_section(scenarios_text, "S27")
+        if s27_section and s27_section not in effective_kb:
+            effective_kb = s27_section + "\n\n" + effective_kb
+
     system_prompt = (
         "You are a Flowmingo support email writer.\n\n"
         "=== FLOWMINGO SOP ===\n"
-        f"{kb_text}\n"
+        f"{effective_kb}\n"
         "=== END SOP ===\n\n"
         + routing_block + "\n"
         + NODE2_DRAFT_RULES
@@ -735,15 +800,25 @@ def main():
             reason_codes.append("UNKNOWN_SCENARIO")
 
         # ── 6. Node 2: Draft Writer (full KB) ────────────────────────────────
-        n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1)
+        n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1, scenarios_text=scenarios_text)
         try:
             resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=2000)
             cls    = resp2["result"]
         except (json.JSONDecodeError, KeyError, Exception) as ex:
             print(f"FM/review [AI_ERROR node2: {ex}]")
+            # For S27 vendor pitch emails, provide a fallback draft so the reviewer
+            # has something to edit rather than a blank shell.
+            if model_scenario_id == "S27":
+                fallback = _s27_fallback_draft(email)
+                ai_error_body = (
+                    f"[REVIEW NEEDED: AI_ERROR — draft generated from fallback template, verify before sending]\n\n"
+                    + fallback
+                )
+            else:
+                ai_error_body = f"[REVIEW NEEDED: AI draft error — {ex}]\n\n"
             _save_review(
                 email=email,
-                draft_body=f"[REVIEW NEEDED: AI draft error — {ex}]\n\n",
+                draft_body=ai_error_body,
                 review_reason_code="AI_ERROR",
                 kb_version=kb_version,
                 validator_score=None,
@@ -821,7 +896,7 @@ def main():
 
         elif severity == "MEDIUM":
             # repair_v2: re-run Node 2 with validation errors injected
-            n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"])
+            n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"], scenarios_text=scenarios_text)
             try:
                 resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=2000)
                 draft_v2 = resp_r["result"].get("draft_body") or ""
@@ -853,10 +928,16 @@ def main():
         # For FM/review: prepend REVIEWER BRIEFING block
         if label == "FM/review":
             reviewer_briefing = node1.get("reviewer_briefing") or cls.get("reviewer_briefing") or ""
-            review_reason = (
-                f"[REVIEW NEEDED: {review_reason_code}]" if review_reason_code
-                else (cls.get("review_reason") or "[REVIEW NEEDED]")
-            )
+            # Include specific issues in the review tag so the reviewer knows what to fix
+            if review_reason_code:
+                issues_list = v1.get("issues") or []
+                if issues_list:
+                    issues_summary = "; ".join(issues_list[:2])
+                    review_reason = f"[REVIEW NEEDED: {review_reason_code} — {issues_summary}]"
+                else:
+                    review_reason = f"[REVIEW NEEDED: {review_reason_code}]"
+            else:
+                review_reason = cls.get("review_reason") or "[REVIEW NEEDED]"
             if not final_draft.startswith("--- REVIEWER BRIEFING"):
                 final_draft = _prepend_reviewer_block(final_draft, reviewer_briefing, review_reason)
 

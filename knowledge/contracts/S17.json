@@ -1,0 +1,17 @@
+{
+  "scenario_id": "S17",
+  "description": "Job Inquiry / CV to Join Flowmingo. Individual asking to work at Flowmingo or submitting their CV. Direct to careers URL for new inquiries. For already-applied candidates asking for status: acknowledge warmly, explain hiring team handles it. Do NOT make timeline promises or offer to review/send interview links.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "will contact you",
+    "we will review your",
+    "will be in touch",
+    "interview link",
+    "within 1",
+    "within 2",
+    "within a week",
+    "within two weeks"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}
