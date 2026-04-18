@@ -35284,6 +35284,185 @@
         "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
       ],
       "contract_id": "S27"
+    },
+    "19da148ae6b3e844": {
+      "thread_id": "19da148ae6b3e844",
+      "from": "Samson Adeleye <timilehinq99@gmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Sat, 18 Apr 2026 16:49:32 +0100",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-8860135956158487578",
+      "draft_message_id": "19da17167eff0981",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-18T16:34:17.458939+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19da12a9ab399e39": {
+      "thread_id": "19da12a9ab399e39",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\ude80 Small teams, big results\u2014start here",
+      "date": "Sat, 18 Apr 2026 11:16:51 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1492026104555486706",
+      "draft_message_id": "19da17197f33fdcc",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-18T16:34:30.011464+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S9 \u2013 Mic / Cannot Submit First Question",
+        "### S16 \u2013 Withdraw from a Process",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "S27"
+    },
+    "19da12659dc36b0b": {
+      "thread_id": "19da12659dc36b0b",
+      "from": "cloudHQ <marketing.emails@cloudhq.net>",
+      "subject": "Emails are tracking you. Learn how to stop them.",
+      "date": "Sat, 18 Apr 2026 15:12:15 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2425229745409488256",
+      "draft_message_id": "19da171d1ae9ebc1",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-18T16:34:44.639955+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S6 \u2013 CV/Resume Upload Issues",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "S27"
+    },
+    "19da121e3c70664d": {
+      "thread_id": "19da121e3c70664d",
+      "from": "Kanak Raval <kanakrvl@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Sales Growth Business Partner - Kanak Raval",
+      "date": "Sat, 18 Apr 2026 20:37:09 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2388294957540435814",
+      "draft_message_id": "19da171f8ba9fc14",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-18T16:34:54.906321+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S17"
+    },
+    "19da10122b673de0": {
+      "thread_id": "19d99c454ccb8ae9",
+      "from": "Anjali Malhotra <anjali7784@gmail.com>",
+      "subject": "Re: Next round invitation \u2014 Talent Acquisition Specialist at Flowmingo",
+      "date": "Sat, 18 Apr 2026 19:59:53 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r7505597251725361458",
+      "draft_message_id": "19da17224293c99e",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-18T16:35:06.383846+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9286,
+      "repair_attempted": false,
+      "review_reason_code": "FORBIDDEN_PROMISE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "HIGH",
+      "validator_issues": [
+        "FORBIDDEN_PROMISE: Draft contains forbidden promise: 'interview link'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "S17"
     }
   }
 }
