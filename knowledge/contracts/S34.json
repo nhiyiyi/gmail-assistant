@@ -5,7 +5,12 @@
   "forbidden_promises": [
     "onboarding team will be in touch",
     "onboarding details to follow",
-    "someone will contact you shortly with onboarding"
+    "someone will contact you shortly with onboarding",
+    "confirmation email",
+    "you'll receive a confirmation",
+    "you will receive a confirmation",
+    "a confirmation will be sent",
+    "we will send you a confirmation"
   ],
   "ownership_patterns": [],
   "force_review": false

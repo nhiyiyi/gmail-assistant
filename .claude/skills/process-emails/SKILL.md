@@ -42,20 +42,31 @@ If `to_process` and `auto_skipped` are both empty: report the summary and stop.
 
 ## Step 3 — Prepare groups
 
-Divide `to_process` into groups of 8 (oldest first). KB retrieval happens per group in Step 4.
+Divide `to_process` into groups of 8 (oldest first). KB retrieval happens **per email** in Step 4.
 
 ## Step 4 — Classify and draft all emails (in groups of 8)
 
 Work through `to_process` in groups of 8 emails (oldest first).
 
-At the start of each group, call `get_kb_for_email` with:
-- email_text: concatenated subjects + latest_message snippets for the 8 emails in this group
-  (format: `"<subject>: <latest_message[:200]>"` per email, newline-separated)
+**KB retrieval is per email — NOT per group.** Before drafting each email, call `get_kb_for_email`
+with only that email's own subject and snippet. This ensures each email gets the KB chunks most
+relevant to its specific scenario, not a blend of all 8 emails in the batch.
+
+For **each email** in the group, before classifying it:
+
+Call `get_kb_for_email` with:
+- email_text: `"<subject>: <latest_message[:300]>"` — this email only, not the whole group
 - top_k: 5
 
-Use the returned KB text for all drafts in this group only.
+Use the returned KB text only for that email's classification and draft.
 
-Then, for this group, do ALL classification and drafting in a single response with NO tool calls:
+Then classify and draft that email (steps 4a–4c below) before moving to the next.
+
+**Why per-email:** A blended query over 8 emails returns chunks relevant to the average of the
+batch. Any individual email whose scenario doesn't dominate the blend may not get its specific
+guidance retrieved — causing the model to fill gaps with wrong content from adjacent scenarios or
+fabricate from the scenario index alone. Per-email retrieval costs nothing extra (BM25 is local,
+no LLM call) and fixes this class of drafting error at the source.
 
 ### 4a — Classify each email
 
@@ -180,7 +191,8 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
 | "I couldn't access my interview" / "something went wrong" with no specifics | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
 | Clear issue described + screenshot showing platform error | FM/bug (detailed) — image confirms the error |
-| Reply to "You did great" with any image attachment | FM/ready (S15) — Trustpilot/feedback screenshot, not a bug |
+| Reply to "You did great" with image only + has_support_reply | FM/no-reply — image is proof of completed Trustpilot action; no new draft needed |
+| Reply to "You did great" with image + written question or new content | Check D1 — S15/S18 may still apply |
 | Vague complaint + image (unclear what it shows) | FM/review R7 — note attachment, ask for context; create ticket after reply |
 | Resume or document attached to application inquiry | Not a bug — classify by D1 sender intent |
 | Prospective or current BP asking about commission, payout, tracking, employment type, or formal agreement | FM/ready (S11) — answer from Section 10 + PAYOUT_SCHEME_DOC; company ops/partner experience questions → WHATSAPP |
@@ -201,6 +213,8 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | Application status question in "You did great" reply thread — Type unclear | FM/review R7 — cannot determine if Type A or B from thread |
 | Vendor/outreach pitch with clear, extractable product description | FM/ready (S27) — draft MUST name their specific product AND link it to Flowmingo's hiring/HR context |
 | Vendor/outreach pitch with vague or unclear product/service | FM/review R3 — cannot write a sincere S27 without knowing what they offer |
+| BP/TAP: "where is the form" / "can't find the form" / "reshare the form" / "I cannot see the form" | FM/ready (S34 Type C) — direct to original offer email link; on that page tick the checkbox to reveal and submit the form. NOT FM/review. |
+| Someone asks about API keys / API integration / how to get API key | FM/ready (S28) — Flowmingo DOES provide API keys: User Settings in dashboard (self-serve) OR text API_BETA_WHATSAPP_CONTACT. Never say "we cannot provide". |
 
 ### 4b — Write the draft reply for each FM/ready and FM/review email
 
@@ -339,7 +353,11 @@ After all groups and bug tickets:
 **Sanity checks before finalizing any classification:**
 
 11. **Short or ambiguous summary → fetch full body.** If `latest_message` is < 80 characters, OR the subject line does not clearly match the scenario you are considering, call `get_email` to read the full message body before finalizing the classification. Do not pattern-match on subject line alone for ambiguous cases.
-12. **"You did great" threads + has_support_reply.** If the thread is a "You did great" follow-up and `has_support_reply: true`, do NOT auto-classify as FM/no-reply. Check whether the candidate's reply is sharing Trustpilot feedback, confirming a review, or asking an application status question. If yes → S15 or S18 still applies.
+12. **"You did great" threads + has_support_reply.** If the thread is a "You did great" follow-up and `has_support_reply: true`, do NOT auto-classify as FM/no-reply — BUT apply this test first:
+    - **Is the customer's latest message ONLY an image (Trustpilot review screenshot, photo of a completed step) with no question or new actionable content?** → FM/no-reply. The customer completed the action we invited; they are showing proof, not starting a new inquiry. No draft needed.
+    - **Is the customer asking a NEW question** (application status, timeline, "was I selected", etc.)? → S18 or S21 still applies — draft the reply.
+    - **Is the customer sharing written positive feedback** (not just an image)? → S15 still applies — Trustpilot nudge.
+    - Rule 12 exists to catch genuine follow-up questions, not to force a draft for every image sent as proof of a completed action.
 13. **S15 subject mismatch check.** If your classification is S15 (Trustpilot nudge) but the email subject does NOT contain "feedback", "review", "you did great", or a Trustpilot-related term → re-examine. You may be pattern-matching on the subject instead of reading what the person actually wrote.
 14. **S16 + "offer letter" subject conflict.** If your classification is S16 (withdrawal) but the subject contains "offer letter" → re-examine. A withdrawal scenario applied to an offer letter recipient is a critical misclassification.
 

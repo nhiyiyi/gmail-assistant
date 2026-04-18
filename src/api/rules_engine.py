@@ -169,15 +169,23 @@ def route(email: dict) -> dict:
     # Use message_new (quoted lines stripped) so Flowmingo's own outgoing
     # templates quoted in replies don't fire false-positive bug signals.
     is_bug = False
+    already_replied = email.get("has_support_reply", False)
+
     if has_image_attachment and _BUG_SOFT_REGEX.search(message_new):
-        # Image attachment + soft bug language = likely screenshot of an issue
-        is_bug = True
+        # Image attachment + soft bug language = likely screenshot of an issue.
+        # Exception: if support has already replied, the image is almost certainly
+        # a follow-up confirmation (e.g. Trustpilot review screenshot, completed
+        # form photo) — not a new bug report. Don't flag as bug.
+        if not already_replied:
+            is_bug = True
     elif _BUG_TEXT_REGEX.search(message_new) or _BUG_TEXT_REGEX.search(subject):
-        # Hard bug keywords in new-text or subject
+        # Hard bug keywords in new-text or subject — fire regardless of reply status
+        # (hard signals like "Status failed 400" are always real bugs)
         is_bug = True
     elif has_attachments and _BUG_SOFT_REGEX.search(message_new):
         # Non-image attachment + soft bug language
-        is_bug = True
+        if not already_replied:
+            is_bug = True
 
     # ── SENDER TYPE DETECTION ─────────────────────────────────────────────────
     sender_type = _detect_sender_type(from_addr, subject, message)
