@@ -35875,6 +35875,76 @@
         "### S32 \u2013 Meeting / Session Schedule Inquiry"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19da4d1ea9ec98ab": {
+      "thread_id": "19da4d1ea9ec98ab",
+      "from": "\"K. Avinaash\" <k.avinaash@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Avinash Kumbhargaonkar",
+      "date": "Sun, 19 Apr 2026 09:18:18 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6797242188383289402",
+      "draft_message_id": "19da4eca2cdfc93a",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-19T08:47:45.513091+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19da4b0c5d5022e9": {
+      "thread_id": "19da4b0c5d5022e9",
+      "from": "Apex Digital <apexdigital25@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Talent Acquisition Specialist - Samuel Obiremi",
+      "date": "Sun, 19 Apr 2026 08:42:06 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8381543018170157579",
+      "draft_message_id": "19da4ecd8b78cee0",
+      "kb_version": "0a31c7bcb404",
+      "processed_at": "2026-04-19T08:47:59.642952+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
