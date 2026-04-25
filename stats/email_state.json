@@ -54043,6 +54043,143 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19dc4f3afeb7b95e": {
+      "thread_id": "19dc4f3afeb7b95e",
+      "from": "Ahmed Emam <ahmed.emam.mahdy@gmail.com>",
+      "subject": "Application: Part-time Marketing Growth \u2014 Senior Marketing Manager with 9+ Years Experience",
+      "date": "Sat, 25 Apr 2026 17:03:00 +0300",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6114731016922319474",
+      "draft_message_id": "19dc57fc97b1700a",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-25T16:36:19.684577+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8571,
+      "repair_attempted": false,
+      "review_reason_code": "FORBIDDEN_PROMISE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "HIGH",
+      "validator_issues": [
+        "FORBIDDEN_PROMISE: Draft contains forbidden promise: 'we will review your'.",
+        "FORBIDDEN_PROMISE: Draft contains forbidden promise: 'will be in touch'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S17"
+    },
+    "19dc4c6171c15bda": {
+      "thread_id": "19dc4c6171c15bda",
+      "from": "Bhavana soni <bs.sonibhavana21@gmail.com>",
+      "subject": "HR Batch Topper | Former MOFSL | Exploring HR Opportunities",
+      "date": "Sat, 25 Apr 2026 18:43:14 +0530",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4783710741980389663",
+      "draft_message_id": "19dc580017a36b68",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-25T16:36:34.007011+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S31 \u2013 Employment Type Inquiry"
+      ],
+      "contract_id": "S17"
+    },
+    "19dc497056b84707": {
+      "thread_id": "19dc497056b84707",
+      "from": "\"EL\u0130F ALKAN\" <elo.nazalkan@gmail.com>",
+      "subject": "Sales Growth Business Partner",
+      "date": "Sat, 25 Apr 2026 15:21:47 +0300",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "",
+      "draft_message_id": "",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-25T16:36:48.695227+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S30 \u2013 Established Partner/Member: New Flowmingo Role or Mistaken Outreach",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions"
+      ],
+      "contract_id": "S17"
+    },
+    "19dc506fcf6043a4": {
+      "thread_id": "19dc506fcf6043a4",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udc40 Take another look at your software picks",
+      "date": "Sat, 25 Apr 2026 10:24:18 -0400",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-4726716800544017950",
+      "draft_message_id": "",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-25T16:36:50.095938+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260425-003",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
