@@ -54820,6 +54820,208 @@
         "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19dca8f2f4163b9c": {
+      "thread_id": "19dca8f2f4163b9c",
+      "from": "Nadapriya Tirumalai <nadapriyatirumalai97@gmail.com>",
+      "subject": "Re: [Flowmingo] Your AI Assessment Report is now available",
+      "date": "Sun, 26 Apr 2026 21:40:59 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7868310064706202067",
+      "draft_message_id": "19dcaa6e2e2505a2",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:08.745069+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S16 \u2013 Withdraw from a Process"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dca81eff873a45": {
+      "thread_id": "19dca81eff873a45",
+      "from": "\"Vasil W. Bourak\" <vwb@avoltacanada.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 26 Apr 2026 11:56:45 -0400 (EDT)",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5899858994985870865",
+      "draft_message_id": "19dcaa6fab875e4b",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:14.814665+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dca45216b3b9ac": {
+      "thread_id": "19dca45216b3b9ac",
+      "from": "\"'Product Hunt Weekly' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\ud83d\ude38 Can DeepSeek compete?",
+      "date": "Sun, 26 Apr 2026 14:50:17 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "FM/review",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-3291711799166143677",
+      "draft_message_id": "19dcaa717e906257",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:22.204749+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19dca44c3441fab9": {
+      "thread_id": "19dca44c3441fab9",
+      "from": "Product Hunt Weekly <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 Can DeepSeek compete?",
+      "date": "Sun, 26 Apr 2026 14:49:53 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "FM/review",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6540238825485862666",
+      "draft_message_id": "19dcaa73832a08b9",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:30.842861+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19dca2de2fa97e21": {
+      "thread_id": "19dca2de2fa97e21",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udea8 Just launched: New tools you need to know",
+      "date": "Sun, 26 Apr 2026 10:24:54 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8213454175908627131",
+      "draft_message_id": "19dcaa769760c424",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:43.216528+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19dc8ec9e2b6941e": {
+      "thread_id": "19dc8ce2abefd2c2",
+      "from": "Kamogelo Tladi <kamogelotladi636@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 26 Apr 2026 10:33:50 +0200",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3019369198326589302",
+      "draft_message_id": "19dcaa782bbe220d",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T16:37:49.487964+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
