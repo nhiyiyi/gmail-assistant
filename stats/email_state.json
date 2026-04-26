@@ -54429,6 +54429,150 @@
         "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
       ],
       "contract_id": "S17"
+    },
+    "19dc8f010743960c": {
+      "thread_id": "19dc8ce2b56f07da",
+      "from": "Kamogelo Tladi <kamogelotladi636@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 26 Apr 2026 10:37:35 +0200",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1774465548909481419",
+      "draft_message_id": "19dc8ffa6fcc27f2",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T08:54:51.641256+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dc8edbf66349fb": {
+      "thread_id": "19dc8ce2abefd2c2",
+      "from": "Kamogelo Tladi <kamogelotladi636@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 26 Apr 2026 10:35:02 +0200",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r996601665558841227",
+      "draft_message_id": "19dc8ffbf9541a43",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T08:54:57.932885+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dc8d861dd77f10": {
+      "thread_id": "19dc8d861dd77f10",
+      "from": "Ramya Sree K V <rkvenkata94@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Kota V Ramya Sree",
+      "date": "Sun, 26 Apr 2026 13:41:42 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-918349174582637045",
+      "draft_message_id": "19dc8ffd3ae8e1e1",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T08:55:02.830353+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dc893aec44c6f4": {
+      "thread_id": "19dc63add4924d16",
+      "from": "Babar Amin <babaramin720@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 26 Apr 2026 11:56:41 +0500",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S34",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5454674434921921173",
+      "draft_message_id": "19dc8ffeac03932d",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T08:55:08.954855+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S34"
     }
   }
 }
