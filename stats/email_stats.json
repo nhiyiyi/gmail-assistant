@@ -3256,10 +3256,21 @@
         "19dc610cbcb7c9a5",
         "19dc59d79ad4cff6"
       ]
+    },
+    "2026-04-26": {
+      "emails_processed": 2,
+      "total_input_tokens": 10370,
+      "total_output_tokens": 483,
+      "total_cost_usd": 0.038355,
+      "drafts_created": 2,
+      "email_ids": [
+        "19dc71654c895507",
+        "19dc65b08d8a0e6e"
+      ]
     }
   },
   "total": {
-    "emails_processed": 2924,
-    "total_cost_usd": 55.796925
+    "emails_processed": 2926,
+    "total_cost_usd": 55.83528
   }
 }

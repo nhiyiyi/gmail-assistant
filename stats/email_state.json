@@ -54252,6 +54252,43 @@
         "### S3 \u2013 Extensions/Rescheduling/Retakes (Flowmingo Program Candidates \u2013 Type A)"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19dc65b08d8a0e6e": {
+      "thread_id": "19dc65b08d8a0e6e",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "25 Apr 2026 16:35:45 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3879177067253705998",
+      "draft_message_id": "19dc78e6f6950bda",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-26T02:11:34.316341+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S4 \u2013 Extensions/Rescheduling/Retakes (External Company Roles \u2013 Type B)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "S27"
     }
   }
 }
