@@ -58484,6 +58484,222 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19dd2bcd344e4187": {
+      "thread_id": "19dd2bcd344e4187",
+      "from": "Shreya Thorat <shreyathorat2000@gmail.com>",
+      "subject": "Results of the interview",
+      "date": "Tue, 28 Apr 2026 11:47:50 +0530",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4727792242919613202",
+      "draft_message_id": "19dd2c4aaa51a0f4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:26:37.885650+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "## 15. SCENARIOS",
+        "### S1 \u2013 Language Not in English"
+      ],
+      "contract_id": "S17"
+    },
+    "19dd2bc2fb95e1de": {
+      "thread_id": "19dd2bbe24e6064d",
+      "from": "Shreya Thorat <shreyathorat2000@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Marketing Growth Business Partner - Shreya Thorat Thorat",
+      "date": "Tue, 28 Apr 2026 11:47:07 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7297922600017373604",
+      "draft_message_id": "19dd2c4f479c9757",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:26:56.947851+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dd2a9a65e32cd8": {
+      "thread_id": "19dd2a9a65e32cd8",
+      "from": "Anthony Ryan Pantoni <anthony@naluri.life>",
+      "subject": "Turunkan Biaya & Naikkan Produktivitas Flowmingo AI dengan Naluri",
+      "date": "Mon, 27 Apr 2026 22:57:02 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4830937449598406324",
+      "draft_message_id": "19dd2c5203c8cf9f",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:27:08.517573+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S26 \u2013 AI Development Project Program Emails",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19dd297295569d05": {
+      "thread_id": "19dae967081cd275",
+      "from": "Ilakkiya Preethi <ilakkiyapreethi90@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Tue, 28 Apr 2026 11:06:43 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4892619310940433586",
+      "draft_message_id": "19dd2c53a3e1aa2a",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:27:14.708600+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S17"
+    },
+    "19dd249d0596f813": {
+      "thread_id": "19dd249d0596f813",
+      "from": "\"'Naukri' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Hire Smarter in Your City with Naukri",
+      "date": "Tue, 28 Apr 2026 09:42:21 +0530 (IST)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6803574791250974880",
+      "draft_message_id": "19dd2c55d2ad9012",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:27:23.823842+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.8,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S6 \u2013 CV/Resume Upload Issues",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S15 \u2013 Positive Feedback / Product Suggestions"
+      ],
+      "contract_id": "S27"
+    },
+    "19dd0bcba2e1ccb4": {
+      "thread_id": "19dd0bcba2e1ccb4",
+      "from": "Ashwini R <ashwinichavan9398@gmail.com>",
+      "subject": "Fwd: Flowmingo: Interview invitation for Talent Acquisition Specialist - Ashwini R",
+      "date": "Tue, 28 Apr 2026 02:28:29 +0530",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3006341870503018120",
+      "draft_message_id": "19dd2c5770933ff3",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-28T06:27:30.404005+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.95,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
