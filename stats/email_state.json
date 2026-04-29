@@ -62090,6 +62090,212 @@
         "### S6 \u2013 CV/Resume Upload Issues"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19dd86e8dee7187d": {
+      "thread_id": "19dd86e8dee7187d",
+      "from": "Kanika Agarwal <hello@mindpeers.co>",
+      "subject": "May themes: GenZ vibes, peer support and more",
+      "date": "Wed, 29 Apr 2026 14:20:14 +0530",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6555385463059487726",
+      "draft_message_id": "19dd8afb6ef5e965",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:01:28.193249+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "S27"
+    },
+    "19dd8685d34781e1": {
+      "thread_id": "19db3914e1152fcf",
+      "from": "\"'Camille Morel' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\u00c9valuation en langues des candidats",
+      "date": "Wed, 29 Apr 2026 08:43:24 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "unclear",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-9136527352003797907",
+      "draft_message_id": "19dd8afbae6bf048",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:01:29.321861+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "ALREADY_REPLIED",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19dd855298e8e78b": {
+      "thread_id": "19dd855298e8e78b",
+      "from": "PowerPersona Leadership <powerpersonaleadership@gmail.com>",
+      "subject": "Re: Fantastiqo Education Private Limited: Interview invitation for Public Speaking / English Teacher - priya verma",
+      "date": "Wed, 29 Apr 2026 13:52:17 +0530",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7445429527933938084",
+      "draft_message_id": "19dd8afdac4e12e9",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:01:37.674353+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dd83168f878246": {
+      "thread_id": "19dd83018e7d1fcb",
+      "from": "\"Keryee Pang at d&i Leaders\" <info@sircula.com>",
+      "subject": "Attract, recruit and retain disabled talent - Join IKEA; HSBC; Siemens; Nestl\u00e9; Vodafone; Shell",
+      "date": "Wed, 29 Apr 2026 08:38:47 +0100",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-228816691253041186",
+      "draft_message_id": "19dd8b00e29c7eb4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:01:50.903117+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19dd82352bc5839f": {
+      "thread_id": "19c2c7ab0fddd58d",
+      "from": "Ayotunde Reuben <ayotundereuben@gmail.com>",
+      "subject": "Re: Flowmingo Partner Checking in \u2014 we\u2019re with you every step \ud83d\udcaa",
+      "date": "Wed, 29 Apr 2026 08:27:53 +0100",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7076716892458098812",
+      "draft_message_id": "19dd8b039d889567",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:02:01.455754+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dd816b1d053ad8": {
+      "thread_id": "19dd816b1d053ad8",
+      "from": "Business Ethiopia <busethiopia@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Wed, 29 Apr 2026 10:14:03 +0300",
+      "sender_type": "B",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5826025226571764216",
+      "draft_message_id": "19dd8b051980f3dd",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-29T10:02:07.580329+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
