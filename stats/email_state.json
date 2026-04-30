@@ -64354,6 +64354,152 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19dde77fa417d207": {
+      "thread_id": "19daf0434900223b",
+      "from": "Mahine Misselbrook <mahine.misselbrook@me.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Thu, 30 Apr 2026 14:22:39 +0200",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2348705935335140832",
+      "draft_message_id": "19ddea20b4d44b2c",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T13:44:15.455746+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S17"
+    },
+    "19dde6f3abc7bb71": {
+      "thread_id": "19dde6f3abc7bb71",
+      "from": "\"'Stefan Weitz' via Contact\" <contact@flowmingo.ai>",
+      "subject": "max jaderberg",
+      "date": "Thu, 30 Apr 2026 08:48:39 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8529187543298693689",
+      "draft_message_id": "19ddea24463683ae",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T13:44:30.168633+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S16 \u2013 Withdraw from a Process",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S27"
+    },
+    "19dde28b37d3bf11": {
+      "thread_id": "19dde28b37d3bf11",
+      "from": "maarten@ebee.africa",
+      "subject": "Enhancing Mobility for Flowmingo AI",
+      "date": "Thu, 30 Apr 2026 07:31:19 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1504913997617529169",
+      "draft_message_id": "19ddea26c0a9633a",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T13:44:40.434616+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S14 \u2013 Requests for 1:1 Call/Support/Demo (Non-Recruiters)",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S27"
+    },
+    "19ddd7496629c380": {
+      "thread_id": "19ddd746864024d9",
+      "from": "\"'Nishita D'Souza' via Contact\" <contact@flowmingo.ai>",
+      "subject": "GulfTalent",
+      "date": "Thu, 30 Apr 2026 08:14:55 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-688686702997111047",
+      "draft_message_id": "19ddea2992fb785a",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T13:44:52.000013+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S27"
     }
   }
 }
