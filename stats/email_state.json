@@ -63516,6 +63516,142 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19ddc230a79b47e0": {
+      "thread_id": "19ddc230a79b47e0",
+      "from": "\"AI In Digital Marketing Course (19-20 May)\" <hello@experience-effect.com>",
+      "subject": "AI for Campaign Planning, SEO, Analytics",
+      "date": "Thu, 30 Apr 2026 02:06:13 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7336476610414897468",
+      "draft_message_id": "19ddc398f8483ca0",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T02:30:53.945826+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
+      ],
+      "contract_id": "S27"
+    },
+    "19ddbdbab1679c34": {
+      "thread_id": "19ddbdbab1679c34",
+      "from": "Mj Salmorin <mj.salmorin@talentview.com>",
+      "subject": "3 Quick Wins to Sharpen Your Hiring Decisions This Quarter",
+      "date": "Thu, 30 Apr 2026 00:48:15 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1169648900296872681",
+      "draft_message_id": "19ddc39caf14ef08",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T02:31:09.372364+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19ddb8cb65e44e8d": {
+      "thread_id": "19ddb8cb65e44e8d",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Better Positioning Builds Buyer Confidence",
+      "date": "Wed, 29 Apr 2026 23:22:03 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7424978882901997612",
+      "draft_message_id": "19ddc3a21f5c0c71",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T02:31:31.080013+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S27"
+    },
+    "19ddc042a291c270": {
+      "thread_id": "19ddc042a291c270",
+      "from": "Echelon Singapore 2026 by e27 <ecosystem@e27.co>",
+      "subject": "Echelon Singapore 2026: 20 more speakers, new sessions, and your free pass",
+      "date": "Thu, 30 Apr 2026 01:32:27 +0000 (GMT)",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r-7818852865536707504",
+      "draft_message_id": "",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T02:31:34.016194+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260430-001",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
