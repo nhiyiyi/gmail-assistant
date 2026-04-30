@@ -64500,6 +64500,113 @@
         "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
       ],
       "contract_id": "S27"
+    },
+    "19ddf5ce574bcf45": {
+      "thread_id": "19ddf5ce574bcf45",
+      "from": "Product Hunt <hello@producthunt.com>",
+      "subject": "A new launch from OpenAI!",
+      "date": "Thu, 30 Apr 2026 17:08:13 +0000",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1756273670216975627",
+      "draft_message_id": "19ddf632b76b307d",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T17:15:13.293630+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.8,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S31 \u2013 Employment Type Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S3 \u2013 Extensions/Rescheduling/Retakes (Flowmingo Program Candidates \u2013 Type A)",
+        "### S15 \u2013 Positive Feedback / Product Suggestions"
+      ],
+      "contract_id": "S27"
+    },
+    "19ddf3a3c0c9e6bb": {
+      "thread_id": "19db4758d2eed527",
+      "from": "Naphtali Ngaira <naphtalingaira@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Thu, 30 Apr 2026 19:30:17 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-9175294429205963735",
+      "draft_message_id": "19ddf6349b71297a",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T17:15:20.744634+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S17"
+    },
+    "19ddecad79b79180": {
+      "thread_id": "19daeb2b3022ab2d",
+      "from": "AAyushi GUPTA <aayushi3507@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Thu, 30 Apr 2026 19:58:35 +0530",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2357804033691281174",
+      "draft_message_id": "19ddf636bd3c438e",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-04-30T17:15:29.337085+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
