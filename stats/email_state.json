@@ -65970,6 +65970,294 @@
         "### S25 \u2013 Interview Already Completed / Email Already Entered"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19de2c0ba684aefb": {
+      "thread_id": "19de2c0ba684aefb",
+      "from": "The Positivty Team <hello@positivty.com>",
+      "subject": "Upcoming Live Mental Health Webinars You Can\u2019t Miss",
+      "date": "Fri, 01 May 2026 08:56:11 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1110944235410714247",
+      "draft_message_id": "19de2def093b9240",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:29:15.520971+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S10 \u2013 Partner Dashboard Empty (Referrals)"
+      ],
+      "contract_id": "S27"
+    },
+    "19de29df2ebada6d": {
+      "thread_id": "19dde512494dc063",
+      "from": "Victor Martyns <v.martyns@asbvaliant.com>",
+      "subject": "RE: Request for Support",
+      "date": "Fri, 1 May 2026 08:18:09 +0000",
+      "sender_type": "D",
+      "topic": "technical",
+      "scenario": "S9",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-4864753545970410075",
+      "draft_message_id": "19de2df184f9707e",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:29:25.694975+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de296d2b027607": {
+      "thread_id": "19da694219f084c8",
+      "from": "Rumaisa Imam <syedarumaisaimam@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 1 May 2026 13:10:13 +0500",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-6386833704666727593",
+      "draft_message_id": "19de2df35fa6f867",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:29:32.740150+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de28c1e27a6358": {
+      "thread_id": "19de28c1e27a6358",
+      "from": "Belay Abdissa <diboabene331@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 1 May 2026 10:58:28 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r4529371482501878840",
+      "draft_message_id": "19de2df4a3aeccd2",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:29:38.471628+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S17"
+    },
+    "19de28207a4e7cfa": {
+      "thread_id": "19de281bbb0f6746",
+      "from": "\"Mark Baker at d&i Leaders\" <info@sircula.com>",
+      "subject": "Essential workplace inclusion related news, content, events and jobs",
+      "date": "Fri, 1 May 2026 08:47:41 +0100",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2154740066537287443",
+      "draft_message_id": "19de2df7caf455d0",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:29:51.232530+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19de281afc543f78": {
+      "thread_id": "19ddd6d4874ffebc",
+      "from": "Adam Wheeler <A.Wheeler@igpp.org.uk>",
+      "subject": "Re: Did my last email come through okay?",
+      "date": "Fri, 1 May 2026 07:47:18 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-4789247763768729625",
+      "draft_message_id": "19de2dfb640b474c",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:30:06.350262+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S16 \u2013 Withdraw from a Process"
+      ],
+      "contract_id": "S27"
+    },
+    "19de278c1a2a8646": {
+      "thread_id": "19dddb8bebdad032",
+      "from": "Maarten Fonteijn <maarten@ebee.africa>",
+      "subject": "Re: Electric Bicycles for Flowmingo AI",
+      "date": "Fri, 1 May 2026 10:37:25 +0300",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1407938883938622595",
+      "draft_message_id": "19de2e0041c9c2c7",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:30:26.043250+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": true,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions"
+      ],
+      "contract_id": "S27"
+    },
+    "19de2558296e0136": {
+      "thread_id": "19de2558296e0136",
+      "from": "unyime itanga <unyimeitanga@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 1 May 2026 07:58:50 +0100",
+      "sender_type": "B",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6465152074406956968",
+      "draft_message_id": "19de2e02cc4e224d",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T09:30:36.271993+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S31 \u2013 Employment Type Inquiry",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
