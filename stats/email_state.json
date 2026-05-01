@@ -66437,6 +66437,576 @@
         "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
       ],
       "contract_id": "S27"
+    },
+    "19de46daac98eb90": {
+      "thread_id": "19de3d72bd4e727a",
+      "from": "Atiyio Elyon <elyonatiyio@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Fri, 1 May 2026 17:44:33 +0100",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3148425748608259152",
+      "draft_message_id": "19de47520c368474",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:52:55.089967+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de4593fb2b5ac8": {
+      "thread_id": "19de4593fb2b5ac8",
+      "from": "Fuad Ali <fuadali.content@gmail.com>",
+      "subject": "Problem with interview link",
+      "date": "Fri, 1 May 2026 19:22:13 +0300",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6001995819059846587",
+      "draft_message_id": "19de4755b2046639",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:10.344987+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de44f7db87e8bf": {
+      "thread_id": "19de3aaae62b9eac",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Fri, 01 May 2026 16:11:48 GMT",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8555949453496154852",
+      "draft_message_id": "19de4758f2e7c2f6",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:23.760587+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S17"
+    },
+    "19de441c851c94e3": {
+      "thread_id": "19de441c851c94e3",
+      "from": "marketing.resurgirconsulting@gmail.com",
+      "subject": "Exploring What Really Slows Down Hiring",
+      "date": "Fri, 1 May 2026 08:56:45 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7943199189971053869",
+      "draft_message_id": "19de475c0206a8cf",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:36.246204+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "S27"
+    },
+    "19de42d485410a0a": {
+      "thread_id": "19de42d485410a0a",
+      "from": "Hunter Woodworth from Flawless Holdings Limited <support@flawless.app>",
+      "subject": "Re: voice training data for Flawless?",
+      "date": "Fri, 1 May 2026 08:34:21 -0700",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r6503128209775495468",
+      "draft_message_id": "19de475e09063c6e",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:44.502659+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S29 \u2013 Do-Not-Contact / Remove from Mailing List / Stop Processing Data",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S27"
+    },
+    "19de42b5b066a4d1": {
+      "thread_id": "19de42b5b066a4d1",
+      "from": "Gabriel <ggvendas22@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Marketing Growth Business Partner - Gabriel Mode Mode",
+      "date": "Fri, 1 May 2026 12:30:51 -0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1131108823935406497",
+      "draft_message_id": "19de475f8a0dcab6",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:50.852580+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de4292f279d269": {
+      "thread_id": "19de4292f279d269",
+      "from": "Rashika Chauhan <rashika13chauhan@gmail.com>",
+      "subject": "Update on Human Resource Executive application",
+      "date": "Fri, 1 May 2026 20:53:53 +0530",
+      "sender_type": "E",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-89617243574457614",
+      "draft_message_id": "19de476112acc155",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:53:56.672034+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9286,
+      "repair_attempted": false,
+      "review_reason_code": "FORBIDDEN_PROMISE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "HIGH",
+      "validator_issues": [
+        "FORBIDDEN_PROMISE: Draft contains forbidden promise: 'within 1'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S17"
+    },
+    "19de41d8b27d4bc1": {
+      "thread_id": "19de41d8b27d4bc1",
+      "from": "\"'Maxime Ripert' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Flexibilit\u00e9 de l'ATS",
+      "date": "Fri, 1 May 2026 08:11:14 -0700",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-2406911519826841402",
+      "draft_message_id": "19de4766eea225fa",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:20.909913+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S16 \u2013 Withdraw from a Process",
+        "### S12 \u2013 Partner Requests for Templates/Content",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S15 \u2013 Positive Feedback / Product Suggestions",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19de3f81ef4c6fe2": {
+      "thread_id": "19de3f81ef4c6fe2",
+      "from": "Elvis Evans <www.elvisevans031089@gmail.com>",
+      "subject": "",
+      "date": "Fri, 1 May 2026 08:36:03 -0600",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8695626023496657071",
+      "draft_message_id": "19de476893bd4850",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:27.596058+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de3f7a96f6a8d8": {
+      "thread_id": "19de3f7a96f6a8d8",
+      "from": "Saquib Ansari <justforusstaffing@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Fri, 1 May 2026 20:05:35 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-571576494174561182",
+      "draft_message_id": "19de476a089ae923",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:33.802071+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
+      ],
+      "contract_id": "S17"
+    },
+    "19de3ea7c3b15946": {
+      "thread_id": "19de3ea7c3b15946",
+      "from": "Humza Butt <humzabutt1711@hotmail.com>",
+      "subject": "Re: [Flowmingo] You did great \u2014 could we ask for your feedback?",
+      "date": "Fri, 1 May 2026 14:21:20 +0000",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1035550077091993987",
+      "draft_message_id": "19de476bb24de02c",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:40.420261+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S3 \u2013 Extensions/Rescheduling/Retakes (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de3ea61fd836aa": {
+      "thread_id": "19de3ea61fd836aa",
+      "from": "Blen Admasu <admasublen046@gmail.com>",
+      "subject": "",
+      "date": "Fri, 1 May 2026 17:21:09 +0300",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S3",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-1312058973317193664",
+      "draft_message_id": "19de476d3d379ba3",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:46.673967+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S3"
+    },
+    "19de3e96ebee2724": {
+      "thread_id": "19de3e96ebee2724",
+      "from": "\"'Stefan Weitz' via Contact\" <contact@flowmingo.ai>",
+      "subject": "probably a long shot",
+      "date": "Fri, 1 May 2026 10:10:40 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5229243806346574942",
+      "draft_message_id": "19de476fa36ac8d0",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:54:56.447763+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S27"
+    },
+    "19de37df54c6b9c9": {
+      "thread_id": "19de37df54c6b9c9",
+      "from": "\"'Rosie' via Contact\" <contact@flowmingo.ai>",
+      "subject": "What sets our candidates apart \u2014 ",
+      "date": "Fri, 1 May 2026 12:22:51 +0000",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9192850337685003888",
+      "draft_message_id": "19de477671ab75e4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:55:24.342590+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19de37d17c178157": {
+      "thread_id": "19de2f37da1721cf",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Fri, 01 May 2026 12:22:01 GMT",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8148200744263882819",
+      "draft_message_id": "19de4778c4290610",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:55:33.785420+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S17"
+    },
+    "19de3bb1297d7602": {
+      "thread_id": "19de3bb1297d7602",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83e\udde9 The missing piece in your team\u2019s workflow",
+      "date": "Fri, 01 May 2026 09:29:37 -0400",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r4974140062782741328",
+      "draft_message_id": "",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-01T16:55:35.276370+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260501-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
