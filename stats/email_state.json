@@ -67668,6 +67668,80 @@
         "### S34 \u2013 Acceptance / Confirmation"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19de8a31eff86768": {
+      "thread_id": "19de859e3b1a80ca",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Sat, 02 May 2026 12:21:40 GMT",
+      "sender_type": "D",
+      "topic": "candidate",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3778391801758813649",
+      "draft_message_id": "19de8c51c62dd4ec",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-02T12:58:46.286576+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19de868f6b5c307a": {
+      "thread_id": "19de868f6b5c307a",
+      "from": "Seema Seshamurthy <seemagopi@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Human Resources Executive - Seema Seshamurthy",
+      "date": "Sat, 2 May 2026 16:47:52 +0530",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-1038088775931408743",
+      "draft_message_id": "19de8c533f40c49b",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-02T12:58:51.831910+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9286,
+      "repair_attempted": false,
+      "review_reason_code": "FORBIDDEN_PROMISE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "HIGH",
+      "validator_issues": [
+        "FORBIDDEN_PROMISE: Draft contains forbidden promise: 'within 1'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S17"
     }
   }
 }
