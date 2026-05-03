@@ -68481,6 +68481,150 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19dec6fecd1bd4c3": {
+      "thread_id": "19dec6fecd1bd4c3",
+      "from": "Darius Kitela <dkitela2@gmail.com>",
+      "subject": "Re: [Flowmingo] Thank you for your feedback",
+      "date": "Sun, 3 May 2026 09:03:55 +0300",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r9039600844733133242",
+      "draft_message_id": "19dec8188833d84c",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T06:23:26.183227+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S6 \u2013 CV/Resume Upload Issues"
+      ],
+      "contract_id": "S17"
+    },
+    "19dec427e7ec68ed": {
+      "thread_id": "19dec427e7ec68ed",
+      "from": "Kazi Siam Zaman <siam.zaman@aamrapro.com>",
+      "subject": "aamra PRO | Your Partner for Manpower Outsourcing, Headhunting & EOR Services",
+      "date": "Sun, 3 May 2026 11:13:22 +0600 (BDT)",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r2968556299309386629",
+      "draft_message_id": "19dec81aead4abf6",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T06:23:36.099230+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S27"
+    },
+    "19debc8bac3e859a": {
+      "thread_id": "19debc8bac3e859a",
+      "from": "Picovoice Inc <hello+canned.response@picovoice.ai>",
+      "subject": "Re: Picovoice x Flowmingo",
+      "date": "Sat, 2 May 2026 20:01:32 -0700",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5451330738905194552",
+      "draft_message_id": "19dec81d4f9fb0a6",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T06:23:45.604189+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S27"
+    },
+    "19dea75f808c66c2": {
+      "thread_id": "19dea75f808c66c2",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Sat, 02 May 2026 20:51:29 GMT",
+      "sender_type": "A",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8004726713055756885",
+      "draft_message_id": "19dec81ec3204128",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T06:23:51.663373+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S17"
     }
   }
 }
