@@ -68697,6 +68697,171 @@
         "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19deeaef25211cd6": {
+      "thread_id": "19ded9badf79ecaf",
+      "from": "Ace Healthcare Recruitment Team <recruitment@acehealthcarehr.com>",
+      "subject": "Invitation to Complete Your Interview \u2013 Ace Healthcare Recruitment Limited",
+      "date": "Sun, 03 May 2026 16:32:13 GMT",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r1137007867006757923",
+      "draft_message_id": "19deeb98c13f97e2",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T16:43:51.832931+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
+      ],
+      "contract_id": "S17"
+    },
+    "19dee93b5eff1211": {
+      "thread_id": "19dab662ee1b357c",
+      "from": "Elisabeth Lux <deluxleadership@gmail.com>",
+      "subject": "Re: Flowmingo \u2013 Your Offer Letter",
+      "date": "Sun, 3 May 2026 18:02:18 +0200",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S17",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r6311709144357851490",
+      "draft_message_id": "19deeb9ef50a23b4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T16:44:16.736085+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->"
+      ],
+      "contract_id": "S17"
+    },
+    "19dee51163e517a2": {
+      "thread_id": "19dee51163e517a2",
+      "from": "Product Hunt Weekly <hello@digest.producthunt.com>",
+      "subject": "\ud83d\ude38 Vine is back\u2026and it\u2019s Divine",
+      "date": "Sun, 3 May 2026 14:49:41 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-6025251402437328486",
+      "draft_message_id": "19deeba3151215f4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T16:44:33.927365+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19dee50f6a20854e": {
+      "thread_id": "19dee50f6a20854e",
+      "from": "\"'Product Hunt Weekly' via Contact\" <contact@flowmingo.ai>",
+      "subject": "\ud83d\ude38 Vine is back\u2026and it\u2019s Divine",
+      "date": "Sun, 3 May 2026 14:49:32 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "FM/review",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r8481552034088438079",
+      "draft_message_id": "19deeba6153a17d0",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T16:44:45.715106+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19dee4b66fb1d580": {
+      "thread_id": "19dee4b66fb1d580",
+      "from": "Team Capterra <teamcapterra@e.capterra.com>",
+      "subject": "\ud83d\udee0\ufe0f Unlock your project toolkit: Essential resources inside",
+      "date": "Sun, 03 May 2026 10:43:27 -0400",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-22648867868867464",
+      "draft_message_id": "19deeba7c0bc1dba",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T16:44:53.039916+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S9 \u2013 Mic / Cannot Submit First Question",
+        "### S13 \u2013 Reference Requests and Employment Verification",
+        "### S26 \u2013 AI Development Project Program Emails"
+      ],
+      "contract_id": "S27"
     }
   }
 }
