@@ -68625,6 +68625,43 @@
         "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)"
       ],
       "contract_id": "S17"
+    },
+    "19decec411240d29": {
+      "thread_id": "19decec411240d29",
+      "from": "Mohini Chauhan <mohiniiichauhan029@gmail.com>",
+      "subject": "Issue with interview process on flowmingo",
+      "date": "Sun, 3 May 2026 13:49:43 +0530",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S21",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r795250037519438202",
+      "draft_message_id": "19ded221fc447922",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T09:18:50.650784+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9412,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "S21"
     }
   }
 }
