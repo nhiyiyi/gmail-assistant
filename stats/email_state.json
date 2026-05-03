@@ -68662,6 +68662,41 @@
         "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
       ],
       "contract_id": "S21"
+    },
+    "19dede97e0143c90": {
+      "thread_id": "19dede97e0143c90",
+      "from": "afsanaafsana <afsanaaf2305@gmail.com>",
+      "subject": "Re: Flowmingo: Interview invitation for Sales Growth Business Partner - Afsana Sheikh Sheikh",
+      "date": "Sun, 3 May 2026 18:56:22 +0600",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r400643667434658928",
+      "draft_message_id": "19dedec05a9b0011",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-03T12:59:21.820293+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
