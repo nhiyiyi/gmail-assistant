@@ -208,8 +208,20 @@ def refresh_draft(draft: dict, dry_run: bool = False) -> dict:
         result["status"] = "error"
         result["error"]  = upd["error"]
     else:
-        result["status"]          = "refreshed"
-        result["new_draft_id"]    = upd.get("draft_id", draft_id)
+        result["status"]       = "refreshed"
+        new_draft_id           = upd.get("draft_id", draft_id)
+        result["new_draft_id"] = new_draft_id
+
+        # Apply FM/urgent label when Node1 flagged urgency=urgent|critical
+        urgency = node1.get("urgency", "normal")
+        if urgency in ("urgent", "critical"):
+            new_msg_id = upd.get("message_id", "")
+            if new_msg_id:
+                try:
+                    gmail_client.apply_labels(new_msg_id, ["FM/urgent"])
+                    result["urgent"] = True
+                except Exception:
+                    pass  # non-fatal
 
     return result
 

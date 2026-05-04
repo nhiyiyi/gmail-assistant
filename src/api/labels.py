@@ -6,6 +6,7 @@ LABELS = [
     "FM/review",    # Needs human review before sending (reason in draft body)
     "FM/no-reply",  # No reply needed — automated, newsletter, vendor pitch, etc.
     "FM/bug",       # Bug report — ticket created, tracked in Google Sheet
+    "FM/urgent",    # Node1 classified urgency=urgent|critical — prioritize review
 ]
 
 # Colors applied when labels are created (Gmail allowed palette).
@@ -14,4 +15,5 @@ LABEL_COLORS = {
     "FM/review":   {"backgroundColor": "#f2c960", "textColor": "#594c05"},  # amber
     "FM/no-reply": {"backgroundColor": "#999999", "textColor": "#ffffff"},  # gray
     "FM/bug":      {"backgroundColor": "#cc3a21", "textColor": "#ffffff"},  # red
+    "FM/urgent":   {"backgroundColor": "#fb4c2f", "textColor": "#ffffff"},  # bright red
 }

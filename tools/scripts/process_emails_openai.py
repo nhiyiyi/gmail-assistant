@@ -188,7 +188,9 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     if not messages:
         return {**email_meta, "latest_message": "", "has_support_reply": False,
                 "message_count": 0, "thread_context": "", "attachments": [],
-                "has_attachments": False}
+                "has_attachments": False,
+                "has_prior_t1_steps": False, "prior_t2_escalation": False,
+                "is_repeat_contact": False, "has_frustration": False}
 
     last_msg = messages[-1]
     has_support_reply = _has_unreplied_support_reply(messages)
@@ -196,9 +198,9 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     attachments = last_msg.get("attachments", [])
 
     prior_context = ""
-    if len(messages) > 1:
+    prior_msgs = messages[:-1]
+    if prior_msgs:
         parts = []
-        prior_msgs = messages[:-1]
         for i, msg in enumerate(prior_msgs):
             is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
             sender = "Support" if is_support else msg.get("from", "").split("<")[0].strip()[:15]
@@ -212,6 +214,36 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
             parts.append(f"[{msg.get('date', '')[:10]}] {sender}: {snippet}")
         prior_context = " | ".join(parts)[:2000]
 
+    # ── Context signals: extracted from prior support messages ───────────────
+    # These tell Node2 what's already been attempted so it doesn't repeat advice.
+
+    T1_PHRASES = [
+        "clear browser cache", "incognito", "private mode", "different browser",
+        "clear cache", "try chrome", "try safari", "try edge",
+    ]
+    FRUSTRATION_PHRASES = [
+        "still not working", "still having", "still unable", "still can't",
+        "tried everything", "doesn't work", "not working still", "still the same",
+        "again", "again and again",
+    ]
+
+    support_prior_bodies = [
+        (msg.get("body") or "").lower()
+        for msg in prior_msgs
+        if any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
+    ]
+
+    has_prior_t1_steps = any(
+        any(p in body for p in T1_PHRASES)
+        for body in support_prior_bodies
+    )
+    prior_t2_escalation = any(
+        "989 877 953" in body or "whatsapp" in body
+        for body in support_prior_bodies
+    )
+    is_repeat_contact = len(messages) > 3
+    has_frustration = any(p in latest_body.lower() for p in FRUSTRATION_PHRASES)
+
     return {
         "id": email_meta["id"],
         "thread_id": email_meta["thread_id"],
@@ -224,6 +256,11 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
         "attachments": attachments,
         "has_attachments": bool(attachments),
         "thread_context": prior_context,
+        # Context signals for Node2 context-aware drafting
+        "has_prior_t1_steps": has_prior_t1_steps,
+        "prior_t2_escalation": prior_t2_escalation,
+        "is_repeat_contact": is_repeat_contact,
+        "has_frustration": has_frustration,
     }
 
 
@@ -521,6 +558,46 @@ Dear [Name],
 
 === FOR FM/BUG ===
 Set bug.main_issue_vi to a single Vietnamese sentence under 10 words starting with the affected subject.
+
+=== CONTEXT-AWARE BEHAVIOR — READ THESE BEFORE DRAFTING ===
+
+These signals come from the thread history. They change what you should write.
+
+has_prior_t1_steps=True:
+  T1 troubleshooting (clear cache, incognito mode, try a different browser) was ALREADY
+  given in a prior support message in this thread.
+  DO NOT repeat T1 steps — the person already tried them and they didn't solve the problem.
+  Acknowledge that they've already tried troubleshooting, then go directly to T2 WhatsApp
+  escalation. Example opening:
+  "I'm sorry to hear the troubleshooting steps didn't resolve the issue."
+
+prior_t2_escalation=True:
+  This person was ALREADY directed to WhatsApp in a prior support message.
+  This is an S20 unresolved issue. Do NOT give any troubleshooting steps.
+  Acknowledge the ongoing difficulty, apologise for the continued inconvenience,
+  and re-provide the WhatsApp number. Example opening:
+  "I'm sorry you're still experiencing this issue — I can see this has been ongoing."
+
+is_repeat_contact=True (message_count > 3):
+  This person has sent 3+ messages. They have been waiting or dealing with this for a while.
+  MANDATORY: acknowledge this explicitly in your opening sentence. Never open with a
+  generic "Thank you for your message." Use something like:
+  "Thank you for your continued patience — I can see this has taken a while to resolve."
+  or "I appreciate you following up with us again."
+
+has_frustration=True:
+  The latest message signals frustration ("still not working", "tried everything", "again").
+  Acknowledge the frustration BEFORE presenting the solution. Example:
+  "I completely understand how frustrating this must be, especially after already trying
+  those steps." — then move to action.
+
+urgency=urgent or urgency=critical (from Node 1):
+  Be direct. Lead with the action or answer immediately. Skip extended pleasantries.
+  For Type D (recruiter/company user): treat this as priority — still respond warmly,
+  include RECRUITER_CALENDAR_URL if the situation calls for it.
+
+IMPORTANT: If none of these signals are True, write normally following the SOP.
+These signals only activate when the context genuinely warrants a different approach.
 """
 
 
@@ -618,7 +695,11 @@ def build_node2_prompt(
         f"Subject: {email['subject']}\n"
         f"Date: {email.get('date', '')}\n"
         f"Has support reply already: {email.get('has_support_reply', False)}\n"
-        f"Message count in thread: {email.get('message_count', 1)}"
+        f"Message count in thread: {email.get('message_count', 1)}\n"
+        f"has_prior_t1_steps: {email.get('has_prior_t1_steps', False)}\n"
+        f"prior_t2_escalation: {email.get('prior_t2_escalation', False)}\n"
+        f"is_repeat_contact: {email.get('is_repeat_contact', False)}\n"
+        f"has_frustration: {email.get('has_frustration', False)}"
         f"{attachment_note}\n\n"
         f"Customer message:\n{email.get('latest_message', '')}\n\n"
     )

@@ -164,6 +164,26 @@ TRIGGER: camera not working, device check failed, video check issue, camera perm
 - Restart the browser and retry; apply T1 if needed.
 - If unresolved: ask for details and apply T2.
 
+### EXAMPLE REPLY — S7 (camera/mic device check issue, first contact)
+
+[CONTEXT: Candidate says camera is not being detected on the device check page. First message.]
+
+Dear [Name],
+
+I'm sorry to hear you're having trouble with the device check — that's frustrating when you're ready to get started.
+
+A few things that usually resolve this:
+- Click the padlock icon in your browser's address bar and set both camera and microphone to "Allow"
+- Close any other apps that might be using your camera — Zoom, Teams, Google Meet, or any video call software
+- Try opening the interview link in Chrome or Safari if you're using a different browser
+- Restart your browser and try the device check again
+
+If the issue continues, please send us your device type, operating system, and browser — along with a screenshot or description of what you see — and we'll escalate from there.
+
+Let us know if you have any questions,
+
+Best regards,
+
 ### **S8 – Interview Link Not Working/Expired/404**
 
 TRIGGER: cannot access interview link, unable to open interview, interview link not working, link expired, 404 error, page not found, interview URL broken, link doesn't work, cannot open interview, interview page error, interview not loading
@@ -184,6 +204,26 @@ TRIGGER: microphone not working, cannot submit first question, mic issue, audio 
 - Ensure no other app is using the microphone.
 - Try a different browser or device.
 - If unresolved: ask for details and apply T2.
+
+### EXAMPLE REPLY — S9 (mic issue, first contact)
+
+[CONTEXT: Candidate says their microphone isn't working and they cannot submit the first question. First message.]
+
+Dear [Name],
+
+I'm sorry you're running into a mic issue right at the start — let's get this sorted for you.
+
+A few things to try:
+- Click the padlock icon in your browser's address bar and make sure Flowmingo has microphone access set to "Allow"
+- Close any other apps that might be using your microphone — Zoom, Teams, Google Meet, and voice assistants can block mic access silently
+- Try a different browser if possible — Chrome and Safari work best
+- If you're on mobile, try switching to a laptop or desktop
+
+If the issue persists after trying the above, please send us your device type, operating system, browser, and a description of what you see when you try to record (error message, or just silence) — and we'll look into it further.
+
+Let us know if you have any questions,
+
+Best regards,
 
 ### **S10 – Partner Dashboard Empty (Referrals)**
 
@@ -256,6 +296,22 @@ TRIGGER: positive feedback about Flowmingo, love the platform, great experience,
 - **Exception — completed review proof:** If the sender attached an image or screenshot that clearly shows a completed Trustpilot review (star rating visible, their review text visible, review already published), they have already done it. Thank them specifically for their review. Do NOT include the standard Trustpilot invite — they already completed the action. Asking them to do something they just proved they did is a failure of basic reading comprehension.
 - Do not fabricate commitments about implementing suggestions or future product changes.
 
+### EXAMPLE REPLY — S15 (positive feedback, Trustpilot invite)
+
+[CONTEXT: Candidate writes to say they loved the AI interview experience.]
+
+Dear [Name],
+
+Thank you for sharing this — it genuinely means a lot to hear that the experience was a positive one.
+
+If you have a moment, we'd love for you to share your thoughts on Trustpilot: TRUSTPILOT_URL
+
+It helps more candidates and companies discover Flowmingo and know what to expect.
+
+Let us know if you have any questions,
+
+Best regards,
+
 ### **S16 – Withdraw from a Process**
 
 TRIGGER: withdraw from process, want to withdraw application, no longer interested, decline the opportunity, withdrawing candidacy, want to cancel application, not interested in proceeding, opting out
@@ -263,6 +319,22 @@ TRIGGER: withdraw from process, want to withdraw application, no longer interest
 - Acknowledge their decision warmly. Confirm you fully respect their choice and thank them for their time and engagement with Flowmingo.
 - Leave the door open: let them know they are always welcome to explore future opportunities and direct them to JOBS_URL.
 - Keep the reply brief — do not over-explain or make them feel they need to justify their decision.
+
+### EXAMPLE REPLY — S16 (withdrawal, warm door-open close)
+
+[CONTEXT: Candidate says they've accepted another offer and want to withdraw their application.]
+
+Dear [Name],
+
+Congratulations on your new opportunity — that's exciting news, and we completely respect your decision.
+
+You're always welcome to explore future roles at Flowmingo whenever the time is right: JOBS_URL
+
+We wish you all the best in your next step.
+
+Let us know if you have any questions,
+
+Best regards,
 
 ### **S17 – Job Inquiry / CV to Join Flowmingo**
 
@@ -287,6 +359,20 @@ TRIGGER: Type A candidate asking about results timeline, Flowmingo program candi
 - If they will do the interview (no shortlist-only clause in thread): thank them and explain that after completion, results and next steps are typically within 1–2 weeks. Same rule: no anchor qualifier.
 - Do NOT mention "onboarding details" — this is not authorised language for candidate replies.
 
+### EXAMPLE REPLY — S18 (Type A candidate, completed interview, asking about timeline)
+
+[CONTEXT: Flowmingo program candidate who has submitted their interview asks when they'll hear back.]
+
+Dear [Name],
+
+Thank you for completing your interview — we appreciate you taking the time, and your submission has been received.
+
+Results and next steps are typically shared within 1-2 weeks. We'll be in touch directly if we'd like to move forward.
+
+Let us know if you have any questions,
+
+Best regards,
+
 ### **S19 – WhatsApp Link Wrong/Full/Error**
 
 TRIGGER: WhatsApp link not working, WhatsApp group full, WhatsApp link expired, cannot join WhatsApp group, WhatsApp link error, partner WhatsApp link broken, WhatsApp invitation link invalid
@@ -302,6 +388,26 @@ TRIGGER: technical issue still not resolved, tried troubleshooting but problem p
 - Ask for email address, interview link, issue description, screenshots, and device/browser info.
 - Apply T2.
 
+### EXAMPLE REPLY — S20 (unresolved technical issue, T1 already given in prior message)
+
+[CONTEXT: has_prior_t1_steps=True. Candidate already tried the browser troubleshooting steps given in a previous reply. Issue still not resolved.]
+
+Dear [Name],
+
+I'm sorry to hear those steps didn't fix the problem — I know it's frustrating when you've already put in the effort to try.
+
+Since standard troubleshooting hasn't resolved it, let's get our technical team to look into this directly. Please reach out to us on WhatsApp at WHATSAPP_SUPPORT_HOTLINE and share:
+- Your full email address
+- The interview link you're trying to use
+- A description of what's happening (and a screenshot if possible)
+- Your device type and browser
+
+Our team will be able to investigate and get you unblocked.
+
+Let us know if you have any questions,
+
+Best regards,
+
 ### **S21 – External Client Candidates: Results Timeline / Reminder Emails (Type B)**
 
 TRIGGER: external company candidate asking about results, hired by company using Flowmingo, waiting for company feedback after interview, when will the hiring company contact me, Type B candidate timeline, company results update, external employer interview result
@@ -311,6 +417,20 @@ TRIGGER: external company candidate asking about results, hired by company using
 - Advise them to contact the hiring company directly; do not provide a 1–2 week estimate.
 
 **Follow-up sub-case — candidate asks HOW to contact the hiring company:** If the candidate has already received the "contact the hiring company" guidance and is now following up asking for that company's direct contact information (phone number, email address, contact name): acknowledge warmly that Flowmingo does not hold the hiring company's internal contact details. Direct them to check the original invitation email they received from that company — contact information is typically included there. Do NOT repeat the generic "contact the hiring company" deflection a second time — this is an escalation of the same request and deserves a more specific, helpful answer. If the invitation email contained no company contact info at all, log a manual action item to escalate internally.
+
+### EXAMPLE REPLY — S21 (Type B candidate, completed interview, asking about results)
+
+[CONTEXT: External company candidate who completed their Flowmingo interview asks when they'll hear back from the hiring company.]
+
+Dear [Name],
+
+Thank you for completing your interview and for following up with us.
+
+Flowmingo provides the interview platform — once you've recorded your answers, they become available to the hiring company in their dashboard. The decision on next steps and timing is entirely theirs. We'd recommend reaching out to them directly if you haven't heard back within the timeline they originally indicated.
+
+Let us know if you have any questions,
+
+Best regards,
 
 ### **S22 – Recruiter/Company User Exploring Flowmingo (Type D)**
 
@@ -322,6 +442,22 @@ TRIGGER: company wants to use Flowmingo, recruiter interested in platform, HR ma
 - Also invite them to share requirements by email and confirm you will assist promptly.
 - **NEVER include VENDOR_REGISTRATION_URL (flowmingo.ai?utm_source=email-support) in an S22 reply** — that URL is for vendor/pitch replies (S27) only. S22 uses RECRUITER_CALENDAR_URL.
 - **NEVER mention commission, partnership details, or payout in S22** — those are S11 language.
+
+### EXAMPLE REPLY — S22 (recruiter or company exploring Flowmingo, first contact)
+
+[CONTEXT: HR manager from a company emails asking how Flowmingo works and whether it's right for their hiring process.]
+
+Dear [Name],
+
+Thank you for reaching out — it sounds like Flowmingo could be a great fit for what you're looking for.
+
+The easiest next step is a quick conversation with our team: RECRUITER_CALENDAR_URL
+
+Alternatively, feel free to share your requirements by email and we'll follow up promptly.
+
+Let us know if you have any questions,
+
+Best regards,
 
 ### **S23 – Recruiter/Company User Missing Candidate Report (Type D)**
 
@@ -560,3 +696,17 @@ This is a brand moment. Reply warmly and confirm what happens next based on send
 Do NOT fabricate next steps. Only confirm what the SOP authorises for that sender type.
 Do NOT use 1–2 week timelines or mention "onboarding details" unless the sender type is clearly Type A or Type D respectively.
 Keep the reply brief — this is a closing moment, not a new thread opener.
+
+### EXAMPLE REPLY — S34 (acceptance, Type C Business Partner confirming offer)
+
+[CONTEXT: Business partner candidate replies to their offer letter saying they accept and are ready to proceed.]
+
+Dear [Name],
+
+Welcome to the Flowmingo partner team — we're really glad to have you on board.
+
+To get started, please complete the confirmation form using the link in your offer email. Once you've submitted it, your training materials and welcome video will be sent to you automatically.
+
+Let us know if you have any questions,
+
+Best regards,
