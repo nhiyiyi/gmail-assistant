@@ -93,7 +93,9 @@ _MARKDOWN_PATTERNS = [
     r'_[^_]+_',                 # _italic_
     r'^#{1,6}\s',               # # Heading
     r'`[^`]+`',                 # `code`
-    r'^\s*[-*+]\s',             # - bullet list
+    # NOTE: hyphen bullets ("- item") are intentional plain-text formatting,
+    # not markdown. Do NOT include them here — they are added by check 0b and
+    # must NOT be stripped by check 1.
     r'^\s*\d+\.\s',             # 1. numbered list
     r'\[.+?\]\(.+?\)',          # [link](url)
 ]
@@ -102,7 +104,8 @@ _MARKDOWN_REGEX = re.compile(
     re.MULTILINE | re.IGNORECASE,
 )
 
-# Strip markdown: bold/italic markers, inline code backticks, heading hashes
+# Strip markdown: bold/italic markers, inline code backticks, heading hashes.
+# Do NOT strip hyphen bullets ("- item") — they are valid plain-text formatting.
 _MARKDOWN_STRIP_PATTERNS = [
     (re.compile(r'\*\*([^*]+)\*\*'), r'\1'),   # **bold** → bold
     (re.compile(r'\*([^*]+)\*'),     r'\1'),   # *italic* → italic
@@ -110,7 +113,6 @@ _MARKDOWN_STRIP_PATTERNS = [
     (re.compile(r'_([^_]+)_'),       r'\1'),   # _italic_ → italic
     (re.compile(r'`([^`]+)`'),       r'\1'),   # `code` → code
     (re.compile(r'^#{1,6}\s+', re.MULTILINE), ''),  # ## Heading → Heading
-    (re.compile(r'^\s*[-*+]\s+', re.MULTILINE), ''),  # - item → item
 ]
 
 
@@ -163,31 +165,40 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario
         working_draft = re.sub(r'\n{3,}', '\n\n', working_draft).strip()
         issues.append("FORMAT_VIOLATION: Duplicate [REVIEW NEEDED] in body stripped.")
 
-    # 0b. Unhyphenated troubleshooting steps — detect 2+ consecutive lines that look
-    #     like step instructions (start with capital letter, no leading "- " or digit)
-    #     appearing after a trigger phrase. Auto-prefix each with "- ".
+    # 0b. Unhyphenated list items — detect 2+ consecutive bare lines appearing
+    #     after a trigger phrase that introduces a list. Auto-prefix each with "- ".
+    #     Covers: troubleshooting steps AND noun-phrase lists (e.g. "include the following details:").
     _step_trigger = re.compile(
-        r'(please try[^:\n]*:?\s*\n|steps? below[^:\n]*:?\s*\n|following steps?[^:\n]*:?\s*\n)',
+        r'('
+        r'please try[^:\n]*:?\s*\n'               # "please try the following steps:"
+        r'|steps? below[^:\n]*:?\s*\n'            # "steps below:"
+        r'|following \w+\s+steps?[^:\n]*:?\s*\n'  # "following troubleshooting steps:"
+        r'|following steps?[^:\n]*:?\s*\n'        # "following steps:"
+        r'|include the following[^:\n]*:?\s*\n'   # "include the following details:"
+        r'|following (?:details?|information|items?|points?)[^:\n]*:?\s*\n'  # "following information:"
+        r'|please (?:provide|share|send)[^:\n]*following[^:\n]*:?\s*\n'  # "please provide the following:"
+        r')',
         re.IGNORECASE,
     )
     if _step_trigger.search(working_draft):
         def _add_hyphen_if_missing(m):
             line = m.group(0)
-            # Only add hyphen to lines that are non-empty, start with a capital,
-            # and don't already have "- " or a number bullet or [REVIEW
-            if re.match(r'^[A-Z][^-\n]', line) and not re.match(r'^\d+\.', line):
-                return "- " + line
+            # Add hyphen to lines that don't already have "- ", a digit bullet, or [REVIEW
+            if not re.match(r'^\s*-\s', line) and not re.match(r'^\s*\d+\.', line) and not re.match(r'^\s*\[', line):
+                stripped = line.rstrip('\n')
+                if stripped:
+                    return "- " + stripped + ('\n' if line.endswith('\n') else '')
             return line
         # Find the trigger and fix bare lines in the block that follows
         parts = _step_trigger.split(working_draft, maxsplit=1)
         if len(parts) == 3:
             before, trigger, after = parts[0], parts[1], parts[2]
-            # Fix lines in 'after' until a blank line (end of the step block)
+            # Fix lines in 'after' until a blank line (end of the list block)
             step_block, rest = (after.split('\n\n', 1) + [''])[:2]
-            fixed_block = re.sub(r'^[A-Z][^\n]+$', _add_hyphen_if_missing, step_block, flags=re.MULTILINE)
+            fixed_block = re.sub(r'^.+$', _add_hyphen_if_missing, step_block, flags=re.MULTILINE)
             if fixed_block != step_block:
                 working_draft = before + trigger + fixed_block + ('\n\n' + rest if rest else '')
-                issues.append("FORMAT_VIOLATION: Troubleshooting steps lacked hyphen bullets — auto-fixed.")
+                issues.append("FORMAT_VIOLATION: List items lacked hyphen bullets — auto-fixed.")
 
     # 0c. LIST_IN_PROSE — detect 3+ parallel action sentences written as prose
     #     instead of hyphen bullet points. Auto-fixable: LOW severity.
