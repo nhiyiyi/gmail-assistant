@@ -520,38 +520,67 @@ reading or saving in any manner. Thank you.
 
 
 def _markdown_to_html(text: str) -> str:
-    """Convert a plain-text draft body to HTML with light markdown support.
+    """Convert a plain-text draft body to HTML.
 
     Supported syntax:
-    - [REVIEW NEEDED: reason]  →  styled amber banner (reviewer-visible warning)
+    - [REVIEW NEEDED: reason]  →  styled amber banner
     - **bold text**            →  <strong>bold text</strong>
-    - Emoji characters         →  pass through unchanged
-    - \\n line breaks           →  <br> tags
+    - Lines starting with "- " →  grouped into <ul><li> lists
+    - Blank lines              →  paragraph breaks
+    - Other newlines           →  <br> tags
     """
-    # Escape HTML entities first so user content cannot inject tags
-    out = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+    # Normalise line endings
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
 
-    # [REVIEW NEEDED: ...] → amber banner
-    def _review_banner(m: re.Match) -> str:
-        reason = m.group(1).strip()
-        return (
-            '<div style="background:#fff8e1;border-left:4px solid #f59e0b;'
-            'padding:10px 16px;margin:0 0 20px 0;border-radius:3px;'
-            'font-size:13px;line-height:1.5;color:#7c4f00;">'
-            '<strong>&#9888;&#65039; REVIEW NEEDED</strong> &mdash; '
-            + reason +
-            '</div>'
-        )
-    out = re.sub(r'\[REVIEW NEEDED: (.*?)\]', _review_banner, out, flags=re.DOTALL)
+    # Split into lines for processing
+    lines = text.split("\n")
+    html_parts = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
 
-    # **bold** → <strong>bold</strong>
-    out = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', out)
+        # Collect consecutive bullet lines into a single <ul>
+        if line.startswith("- "):
+            items = []
+            while i < len(lines) and lines[i].startswith("- "):
+                items.append(lines[i][2:].strip())
+                i += 1
+            # Escape HTML entities in each item, then render **bold**
+            escaped_items = []
+            for item in items:
+                item = item.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                item = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', item)
+                escaped_items.append(f"<li>{item}</li>")
+            html_parts.append('<ul style="margin:8px 0;padding-left:20px;">' + "".join(escaped_items) + "</ul>")
+            continue
 
-    # Normalise and convert newlines
-    out = out.replace("\r\n", "\n").replace("\r", "\n")
-    out = "<br>\n".join(out.split("\n"))
+        # Escape HTML entities
+        line = line.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
-    return out
+        # [REVIEW NEEDED: ...] → amber banner
+        def _review_banner(m: re.Match) -> str:
+            reason = m.group(1).strip()
+            return (
+                '<div style="background:#fff8e1;border-left:4px solid #f59e0b;'
+                'padding:10px 16px;margin:0 0 16px 0;border-radius:3px;'
+                'font-size:13px;line-height:1.5;color:#7c4f00;">'
+                '<strong>&#9888; REVIEW NEEDED</strong> &mdash; '
+                + reason +
+                '</div>'
+            )
+        line = re.sub(r'\[REVIEW NEEDED: (.*?)\]', _review_banner, line, flags=re.DOTALL)
+
+        # **bold** → <strong>bold</strong>
+        line = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', line)
+
+        if line.strip() == "":
+            html_parts.append("<br>")
+        else:
+            html_parts.append(line + "<br>")
+
+        i += 1
+
+    return "\n".join(html_parts)
 
 
 def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str = None) -> str:
@@ -574,8 +603,8 @@ def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str =
     # HTML part — render with markdown support, clean container, styled signature
     html_content = _markdown_to_html(body)
     html = (
-        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;'
-        'line-height:1.7;color:#1a1a1a;max-width:640px;">\n'
+        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;'
+        'line-height:1.6;color:#1a1a1a;max-width:640px;">\n'
         + html_content
         + "\n</div>\n<br>\n"
         + _HTML_SIGNATURE

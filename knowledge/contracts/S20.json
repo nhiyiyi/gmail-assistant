@@ -1,8 +1,22 @@
 {
   "scenario_id": "S20",
-  "description": "Unresolved technical issue after troubleshooting. Must ask for device info, browser, and relevant details to escalate (T2). Acknowledge their troubleshooting effort.",
-  "required_facts": ["device", "browser"],
-  "forbidden_promises": [],
-  "ownership_patterns": [],
+  "description": "Unresolved technical issue after troubleshooting. Must direct to WhatsApp T2 with device/browser/link/screenshot request. Never offer rescheduling — Flowmingo does not own the candidate's interview schedule.",
+  "required_facts": ["WhatsApp", "device", "browser"],
+  "forbidden_promises": [
+    "reschedule",
+    "rescheduling",
+    "let us know your availability",
+    "your availability",
+    "accommodate your schedule",
+    "we will contact you",
+    "we will follow up",
+    "our team will reach out"
+  ],
+  "ownership_patterns": [
+    "reschedule your interview",
+    "schedule a new interview",
+    "book a new session",
+    "please let us know your availability"
+  ],
   "force_review": false
 }
