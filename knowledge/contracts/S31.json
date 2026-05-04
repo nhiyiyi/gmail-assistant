@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S31",
+  "description": "Employment type inquiry. Must NEVER include vendor registration URL (utm_source=email-support) — that link is for S27 vendor pitches only. Direct to JOBS_URL for general case.",
+  "required_facts": [],
+  "forbidden_promises": ["utm_source=email-support"],
+  "ownership_patterns": [],
+  "force_review": false
+}

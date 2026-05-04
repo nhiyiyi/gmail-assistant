@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S22",
+  "description": "Recruiter/company user exploring Flowmingo (Type D). Must include RECRUITER_CALENDAR_URL (calendar.app.google). Must NOT include vendor registration URL or commission/partnership info.",
+  "required_facts": ["calendar.app.google"],
+  "forbidden_promises": ["utm_source=email-support", "commission structure", "50% revenue", "payout scheme", "revenue share", "commission rate"],
+  "ownership_patterns": [],
+  "force_review": false
+}

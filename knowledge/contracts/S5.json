@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S5",
+  "description": "Exceeded number of attempts. Must instruct sender to use a new email address. Must NOT promise to reset or clear attempts.",
+  "required_facts": ["new email"],
+  "forbidden_promises": ["reset your attempts", "additional attempts", "remove your attempt", "clear your previous attempt", "we can give you another attempt", "restore access to your original email"],
+  "ownership_patterns": ["we will reset", "we will add more attempts", "we can give you another attempt"],
+  "force_review": false
+}

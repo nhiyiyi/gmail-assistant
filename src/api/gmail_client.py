@@ -2,6 +2,7 @@
 
 import base64
 import json
+import re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -518,6 +519,41 @@ reading or saving in any manner. Thank you.
 </span></i></div>"""
 
 
+def _markdown_to_html(text: str) -> str:
+    """Convert a plain-text draft body to HTML with light markdown support.
+
+    Supported syntax:
+    - [REVIEW NEEDED: reason]  →  styled amber banner (reviewer-visible warning)
+    - **bold text**            →  <strong>bold text</strong>
+    - Emoji characters         →  pass through unchanged
+    - \\n line breaks           →  <br> tags
+    """
+    # Escape HTML entities first so user content cannot inject tags
+    out = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    # [REVIEW NEEDED: ...] → amber banner
+    def _review_banner(m: re.Match) -> str:
+        reason = m.group(1).strip()
+        return (
+            '<div style="background:#fff8e1;border-left:4px solid #f59e0b;'
+            'padding:10px 16px;margin:0 0 20px 0;border-radius:3px;'
+            'font-size:13px;line-height:1.5;color:#7c4f00;">'
+            '<strong>&#9888;&#65039; REVIEW NEEDED</strong> &mdash; '
+            + reason +
+            '</div>'
+        )
+    out = re.sub(r'\[REVIEW NEEDED: (.*?)\]', _review_banner, out, flags=re.DOTALL)
+
+    # **bold** → <strong>bold</strong>
+    out = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', out)
+
+    # Normalise and convert newlines
+    out = out.replace("\r\n", "\n").replace("\r", "\n")
+    out = "<br>\n".join(out.split("\n"))
+
+    return out
+
+
 def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str = None) -> str:
     """Build and base64url-encode a multipart RFC 2822 email with signature."""
     if not subject.startswith("Re: "):
@@ -531,15 +567,19 @@ def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str =
         msg["In-Reply-To"] = reply_message_id
         msg["References"] = reply_message_id
 
-    # Plain text part
+    # Plain text part (unchanged — keeps raw body + plain signature)
     plain = body + _PLAIN_SIGNATURE
     msg.attach(MIMEText(plain, "plain", "utf-8"))
 
-    # HTML part — convert line breaks, then append HTML signature
-    html_body = body.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    html_body = html_body.replace("\r\n", "\n").replace("\r", "\n")
-    html_body = "<br>\n".join(html_body.split("\n"))
-    html = f"<div>{html_body}</div>\n<br>\n{_HTML_SIGNATURE}"
+    # HTML part — render with markdown support, clean container, styled signature
+    html_content = _markdown_to_html(body)
+    html = (
+        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;'
+        'line-height:1.7;color:#1a1a1a;max-width:640px;">\n'
+        + html_content
+        + "\n</div>\n<br>\n"
+        + _HTML_SIGNATURE
+    )
     msg.attach(MIMEText(html, "html", "utf-8"))
 
     raw_bytes = msg.as_bytes()

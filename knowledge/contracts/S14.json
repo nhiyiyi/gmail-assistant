@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S14",
+  "description": "Request for 1:1 call/support/demo from non-recruiter. Must NOT offer a call, schedule a meeting, or share a calendar link. Support is email-only for candidates/partners.",
+  "required_facts": [],
+  "forbidden_promises": ["calendar.app.google", "schedule a call", "book a call", "set up a call", "arrange a call", "1:1 call", "one-on-one call", "set up a meeting", "schedule a meeting", "a demo is available"],
+  "ownership_patterns": [],
+  "force_review": false
+}

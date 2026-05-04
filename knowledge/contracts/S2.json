@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S2",
+  "description": "Interview Payment Confusion — candidate thinks they must pay to submit. Must clearly state interview is completely free. Must NOT imply payment is required.",
+  "required_facts": ["free"],
+  "forbidden_promises": ["you must pay", "payment is required", "pay to submit", "payment needed"],
+  "ownership_patterns": [],
+  "force_review": false
+}

@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S6",
+  "description": "CV/Resume upload issues. Must ask sender to use PDF format. Apply browser troubleshooting (T1); escalate with details (T2) if unresolved.",
+  "required_facts": ["pdf"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

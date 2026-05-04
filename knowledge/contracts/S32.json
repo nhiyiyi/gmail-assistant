@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S32",
+  "description": "Meeting/session schedule inquiry. Must always include [REVIEW NEEDED] marker with three draft options. Force FM/review — human must select which option applies and delete the others.",
+  "required_facts": ["REVIEW NEEDED"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": true
+}

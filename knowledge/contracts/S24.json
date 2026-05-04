@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S24",
+  "description": "Recruiter/company user reporting candidates facing tech issues. Provide troubleshooting steps (S6–S9) to share with candidates. Escalate to WhatsApp if recurring or affecting multiple candidates.",
+  "required_facts": [],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

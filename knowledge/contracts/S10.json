@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S10",
+  "description": "Partner dashboard empty — no referrals showing. Must explain dashboard updates after first valid company sign-up through referral link. Reassure data will appear.",
+  "required_facts": ["dashboard"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

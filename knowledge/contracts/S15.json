@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S15",
+  "description": "Positive feedback / product suggestions. MANDATORY: Trustpilot invite in every reply (exception: sender proves they already reviewed). Must NOT fabricate feature commitments.",
+  "required_facts": ["trustpilot"],
+  "forbidden_promises": ["will implement this", "plan to add this", "we are planning to", "will be adding this feature", "will release this", "working on adding this", "will build this"],
+  "ownership_patterns": [],
+  "force_review": false
+}

@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S7",
+  "description": "Camera/microphone device check issues. Must ask sender to allow camera/mic permissions in browser and OS settings. Close competing apps; restart browser.",
+  "required_facts": ["permission"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

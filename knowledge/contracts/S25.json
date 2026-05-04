@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S25",
+  "description": "Interview already completed or email already entered. Must NOT instruct sender to redo/retake the interview. Type A: wait 1-2 weeks; Type B: contact hiring company.",
+  "required_facts": [],
+  "forbidden_promises": ["re-do the interview", "redo the interview", "take the interview again", "retake the interview", "complete the interview again", "submit a new interview", "start a new interview"],
+  "ownership_patterns": [],
+  "force_review": false
+}

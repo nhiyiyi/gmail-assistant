@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S13",
+  "description": "Reference / employment verification request. Must decline clearly and immediately — no clarifying questions before declining. Must NOT offer to prepare, issue, or send any documentation.",
+  "required_facts": [],
+  "forbidden_promises": ["will provide a reference", "will issue a certificate", "will prepare the letter", "will send the letter", "happy to write a reference", "be happy to issue", "will provide documentation confirming", "certificate attached", "please find the letter"],
+  "ownership_patterns": ["we will write a reference", "we will issue an employment certificate", "we will send the documentation"],
+  "force_review": false
+}

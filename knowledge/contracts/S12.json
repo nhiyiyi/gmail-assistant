@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S12",
+  "description": "Partner requests for ready-made templates or content. Flowmingo does not provide post templates. Direct to training deck and quick start guide; escalate to WhatsApp if further help needed.",
+  "required_facts": [],
+  "forbidden_promises": ["ready-made template", "will create a template", "will design a post for you", "will provide a template", "will send you a template"],
+  "ownership_patterns": ["we will create", "we will design a post"],
+  "force_review": false
+}

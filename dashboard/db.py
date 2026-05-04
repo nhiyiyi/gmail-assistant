@@ -23,7 +23,7 @@ DR_COLUMNS = [
     "submission_id", "browser", "os", "device",
     "assessment", "confidence", "assessment_notes",
     "human_verdict", "human_notes", "include_in_report", "report_bucket",
-    "approval_status", "reviewed_by", "reviewed_at",
+    "approval_status", "reviewed_by", "reviewed_at", "component", "thread_link",
 ]
 
 
@@ -66,9 +66,21 @@ def init_db() -> None:
                 report_bucket      TEXT DEFAULT '',
                 approval_status    TEXT DEFAULT 'new',
                 reviewed_by        TEXT DEFAULT '',
-                reviewed_at        TEXT DEFAULT ''
+                reviewed_at        TEXT DEFAULT '',
+                component          TEXT DEFAULT '',
+                thread_link        TEXT DEFAULT ''
             )
         """)
+        # Migrate: add new columns if they don't exist (existing DBs)
+        for col_def in [
+            "component TEXT DEFAULT ''",
+            "thread_link TEXT DEFAULT ''",
+        ]:
+            try:
+                con.execute(f"ALTER TABLE daily_entries ADD COLUMN {col_def}")
+            except Exception:
+                pass  # Column already exists
+
         con.execute("""
             CREATE TABLE IF NOT EXISTS report_config (
                 date               TEXT PRIMARY KEY,

@@ -24,6 +24,66 @@ Contract schema (from scenario_contracts.py):
 
 import re
 
+# ── LIST_IN_PROSE detection ───────────────────────────────────────────────────
+
+# Imperative / action-opener patterns: 3+ such sentences in a row without bullet
+# formatting = list written as prose.
+_LIST_IMPERATIVE_STARTERS = re.compile(
+    r'^(?:please\s+|kindly\s+|you\s+(?:can|may|should|need\s+to|must)\s+|make\s+sure\s+|ensure\s+|'
+    r'check\s+|try\s+|click\s+|open\s+|go\s+to\s+|navigate\s+|select\s+|enter\s+|type\s+|fill\s+|'
+    r'log\s+(?:in|out)|clear\s+|refresh\s+|restart\s+|download\s+|install\s+|update\s+|'
+    r'contact\s+|send\s+|share\s+|provide\s+|attach\s+|submit\s+|complete\s+)',
+    re.IGNORECASE,
+)
+
+
+def _detect_list_in_prose(text: str) -> list[str]:
+    """
+    Returns a list of paragraph snippets that are 3+ action sentences written
+    as prose (no bullet prefix). Returns empty list if none found.
+
+    Conservative to avoid false positives:
+    - Only fires on paragraphs where ALL sentences look like action items
+    - Excludes [REVIEW NEEDED] prefixes
+    - Only fires when EVERY sentence in the paragraph is short (< 100 chars)
+      and starts with an imperative verb — multi-sentence explanatory paragraphs
+      are not flagged.
+    """
+    findings = []
+    text_clean = re.sub(r'^\[REVIEW NEEDED:[^\]]*\]\s*', '', text, flags=re.IGNORECASE).strip()
+
+    # Split into paragraphs (blank line separated)
+    paragraphs = re.split(r'\n{2,}', text_clean)
+
+    for para in paragraphs:
+        para = para.strip()
+        if not para:
+            continue
+        # Skip if paragraph already has bullet formatting
+        if re.search(r'^\s*[-*•]\s', para, re.MULTILINE):
+            continue
+        # Split into sentences by period followed by space+capital
+        sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', para)
+        if len(sentences) < 3:
+            continue
+        # Check: ALL sentences are short AND start with imperative verb
+        action_count = 0
+        for s in sentences:
+            s = s.strip()
+            if not s:
+                continue
+            if len(s) > 120:
+                break  # long sentence → probably an explanation, not a step
+            if _LIST_IMPERATIVE_STARTERS.match(s):
+                action_count += 1
+        else:
+            # All sentences short — check ratio
+            if action_count >= 3 and action_count == len([s for s in sentences if s.strip()]):
+                findings.append(para[:80] + ("…" if len(para) > 80 else ""))
+
+    return findings
+
+
 # ── Markdown detection ────────────────────────────────────────────────────────
 
 _MARKDOWN_PATTERNS = [
@@ -67,7 +127,7 @@ _LUK_CLOSING      = "\n\nLet us know if you have any questions,"
 _BR_CLOSING       = "\n\nBest regards,"
 
 
-def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
+def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario: str = "") -> dict:
     """
     Validate draft_body against contract rules and risk_triggers.
 
@@ -76,6 +136,8 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
     draft_body    : Raw draft string produced by the LLM.
     contract      : Scenario contract dict (see module docstring for schema).
     risk_triggers : List of trigger codes from rules_engine.route().
+    scenario      : Scenario ID (e.g. "S27"). S27 drafts may contain **bold** markdown
+                    and emoji headers — the markdown check is skipped for that scenario.
 
     Returns
     -------
@@ -127,9 +189,27 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
                 working_draft = before + trigger + fixed_block + ('\n\n' + rest if rest else '')
                 issues.append("FORMAT_VIOLATION: Troubleshooting steps lacked hyphen bullets — auto-fixed.")
 
-    # 1. Markdown in body
+    # 0c. LIST_IN_PROSE — detect 3+ parallel action sentences written as prose
+    #     instead of hyphen bullet points. Auto-fixable: LOW severity.
     total_checks += 1
-    if _MARKDOWN_REGEX.search(working_draft):
+    _lip_findings = _detect_list_in_prose(working_draft)
+    if _lip_findings:
+        # Auto-fix: convert the offending paragraph's sentences to bullet list
+        for _lip_para in _lip_findings:
+            # Find the actual paragraph in working_draft and convert
+            _para_key = _lip_para.rstrip('…').strip()
+            if _para_key in working_draft:
+                sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', _para_key)
+                bulleted = "\n".join(f"- {s.strip()}" for s in sentences if s.strip())
+                working_draft = working_draft.replace(_para_key, bulleted)
+        issues.append("FORMAT_VIOLATION: Action steps written as prose sentences — converted to bullet list.")
+    else:
+        passed_checks += 1
+
+    # 1. Markdown in body
+    # S27 intentionally uses **bold** and emoji headers — skip the check for that scenario.
+    total_checks += 1
+    if scenario != "S27" and _MARKDOWN_REGEX.search(working_draft):
         issues.append("MARKDOWN: Draft contains markdown formatting — stripped.")
         working_draft = _strip_markdown(working_draft)
     else:
@@ -314,7 +394,7 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _is_low(issue: str) -> bool:
-    return issue.startswith(("MARKDOWN:", "MISSING_SALUTATION:", "MISSING_LUK_CLOSING:", "MISSING_BR_CLOSING:"))
+    return issue.startswith(("MARKDOWN:", "MISSING_SALUTATION:", "MISSING_LUK_CLOSING:", "MISSING_BR_CLOSING:", "FORMAT_VIOLATION:"))
 
 
 def _is_medium(issue: str) -> bool:

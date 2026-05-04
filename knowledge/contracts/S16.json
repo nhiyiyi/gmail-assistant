@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S16",
+  "description": "Withdrawal from a process. Acknowledge warmly and respect their decision. Do NOT ask them to reconsider or question their choice. Leave door open to future opportunities.",
+  "required_facts": [],
+  "forbidden_promises": ["please reconsider", "hope you'll change your mind", "encourage you to stay", "would love for you to stay", "urge you to reconsider", "hope to change your mind"],
+  "ownership_patterns": [],
+  "force_review": false
+}

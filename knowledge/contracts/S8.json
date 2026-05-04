@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S8",
+  "description": "Interview link not working, expired, or 404 (user-side access problem only). Must recommend opening in Chrome/Safari/Edge and copy-pasting the full URL. NOT for platform error codes — those are FM/bug.",
+  "required_facts": ["chrome"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

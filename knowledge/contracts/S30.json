@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S30",
+  "description": "Established partner/member asking about a new Flowmingo role or received mistaken outreach. Welcome them to apply for new openings; clarify they do not need to re-apply for same role.",
+  "required_facts": [],
+  "forbidden_promises": ["re-apply for your current role", "your current position has expired", "you need to re-apply for the same role"],
+  "ownership_patterns": [],
+  "force_review": false
+}

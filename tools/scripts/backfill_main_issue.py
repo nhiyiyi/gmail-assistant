@@ -6,7 +6,7 @@ col D (Main Issue), calls GPT-5-mini to produce a single Vietnamese sentence
 of <10 words that captures the core issue, then writes it to col D.
 
 Usage:
-    cd "d:/Cursor test/gmail-assistant"
+    cd "d:/FLOWMINGO-WORKSPACE/ops/support/gmail-assistant"
     python tools/scripts/backfill_main_issue.py
 
 Requires:

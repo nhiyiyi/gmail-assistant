@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S19",
+  "description": "WhatsApp partner group link wrong/full/error. Must share the correct WHATSAPP_PARTNER_GROUP_LINK. Apologize for inconvenience.",
+  "required_facts": ["whatsapp"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S28",
+  "description": "API integration request (Beta). Must mention User Settings self-serve path. Must NOT claim API is unavailable or cannot be provided.",
+  "required_facts": ["user settings"],
+  "forbidden_promises": ["we cannot provide api", "no api available", "api is not available", "we do not provide api keys", "cannot share an api", "we are unable to provide api", "api access is not supported"],
+  "ownership_patterns": [],
+  "force_review": false
+}

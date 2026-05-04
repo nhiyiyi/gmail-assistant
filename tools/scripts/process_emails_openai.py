@@ -273,12 +273,48 @@ Route: full scenario routing (S1–S34).
 "unclear": Cannot determine direction from email content alone.
 Route: FM/review with reviewer_briefing explaining the ambiguity.
 
+FLOWMINGO SUBJECT OVERRIDE:
+If the email subject contains "[Flowmingo]" — that prefix is added by Flowmingo to its own
+automated outbound emails (assessment reports, feedback requests, offer letters, etc.).
+A reply to a [Flowmingo] email is NEVER an inbound_pitch. Do NOT classify as S27.
+- "Re: [Flowmingo] You did great" → reply to a feedback/review request → treat as inbound_support.
+  Read the actual latest_message content carefully: could be S15 (only if explicit positive sentiment),
+  S16 (if withdrawing or disappointed), S34 (if explicitly confirming/accepting), or S21/S18 (if asking
+  about timeline). Do NOT default to S15 or S34 — read what the email actually says.
+- "Re: [Flowmingo] Your AI Assessment Report is now available" → S18 (Type A) or S21 (Type B) candidate
+  asking about results/timeline. NEVER S26 (S26 is AI training data collection, not assessment results).
+- Any reply to a [Flowmingo] email → inbound_support (never inbound_pitch, never S27)
+
 === STEP 2: SCENARIO ROUTING ===
 
 After setting intent_direction:
 - inbound_pitch → scenario = "S27", sender_type = "E" (unless clearly partner/known type)
 - inbound_prospect + company/recruiter → scenario = "S22", sender_type = "D"
 - inbound_support → apply S1–S34 matching based on email content
+
+S3/S4 TRIGGER — LINK RESEND / EXTENSION: When a candidate says the interview email was deleted,
+cannot find the interview link, link was not received, or requests a deadline extension for their
+interview — classify as S3 (Type A Flowmingo program candidate) or S4 (Type B external company
+candidate). Subject line or thread context reveals which type.
+→ Signals: "share the link again", "resend the link", "email got deleted", "didn't receive the link",
+"extend the deadline", "can I get more time", "I haven't done the interview yet".
+NEVER classify link-resend requests as S21 (S21 is for post-interview results timeline).
+
+S8 vs S9 vs S20 DISCRIMINATION:
+S8 = Candidate CANNOT ACCESS the interview link — 404 error, page not found, link expired, broken URL.
+S9 = Interview link opens but MICROPHONE or VOICE is not working — mic not detected, voice not recognized,
+     cannot record answers, stuck on first question due to audio failure.
+S20 = Ongoing unresolved technical issue after previous troubleshooting — OTP not received, has already
+     been directed to WhatsApp but issue persists, following up on an unresolved bug ticket.
+CRITICAL: "system is unable to detect my voice", "microphone not detected", "audio not recording" = S9.
+"link doesn't work", "404 error", "page not found" = S8.
+"I'm not able to get the OTP", "not receiving verification code", "code not arriving", "followed up on
+WhatsApp but still having the issue" = S20 (not S8 — OTP failure is a login/auth issue, not link access).
+
+INBOUND_PITCH TALENT OFFER: When any sender offers to PROVIDE human talent, candidates, IT professionals,
+employees, or staff TO Flowmingo (e.g., "we have 400+ pre-vetted IT professionals"), this is ALWAYS
+inbound_pitch → S27. Flowmingo is a hiring PLATFORM, not an employer — they do not recruit talent
+through support emails. Never classify these as S21, S22, or any inbound_support scenario.
 
 S17 TRIGGER — classify as S17 when an INDIVIDUAL is asking to WORK at Flowmingo:
 - Signals: "looking for a job", "interested in joining your team", "I'd like to apply",
@@ -327,6 +363,43 @@ B = External company candidate (using Flowmingo as platform)
 C = Business Partner / TA Partner / Content Partner
 D = Recruiter / Company user
 E = Vendor / third-party / unclear
+
+=== SCENARIO SELECTION GUARDS ===
+
+S15 GUARD — POSITIVE FEEDBACK: ONLY classify as S15 if the customer's latest message contains
+EXPLICIT positive sentiment about the Flowmingo AI INTERVIEW EXPERIENCE or PLATFORM TECHNOLOGY:
+"loved the interview", "great interview process", "best interview I've ever had", "enjoyed the process",
+"wonderful interview experience", "really impressive platform", "fantastic tool", "so helpful".
+DOES NOT qualify as S15:
+- A bare "Thank you", "Thankyou.", "OK", "Best of luck to you as well"
+- "Thank you, looking forward to our meeting/this/it" — that is S34 CONFIRMATION
+- Expressing disappointment, frustration, or complaint about outcome (S16)
+- Asking about timeline or results (S18/S21)
+- Any message where the main content is NOT about the quality of the AI interview experience
+
+S34 GUARD — ACCEPTANCE/CONFIRMATION: ONLY classify as S34 when the candidate or company EXPLICITLY
+accepts, confirms, or expresses enthusiasm about proceeding: "I accept", "I'll do it",
+"I will complete the interview", "Yes I'm still interested", "Thank you, looking forward to it/our
+meeting/our call", "Confirmed", "I'm excited to proceed", "Yes, I'd love to meet/discuss/connect".
+NEVER S34 for: asking about OTP issues, asking about results timeline, reporting ongoing tech problems,
+or saying "I've accepted another offer" (that is S16 WITHDRAWAL, not S34 acceptance).
+When someone responds to a meeting invitation with "Thank you, looking forward to it" → S34.
+
+S26 GUARD — AI TRAINING DATA: ONLY classify as S26 when the sender EXPLICITLY wants to contribute
+to AI training, be a test user for AI model development, or provide voice/video samples for AI research.
+NEVER S26 for candidates having technical issues DURING a Flowmingo AI interview (mic not working,
+OTP failure, voice not detected, link not loading) — use S7, S8, S9, or S20 instead.
+
+S16 GUARD — WITHDRAWAL: Classify as S16 when a candidate says they've accepted another offer,
+cannot proceed, want to withdraw their application, or are declining the opportunity.
+"I have accepted another offer" = S16 WITHDRAWAL, not S34 ACCEPTANCE.
+"Best of luck to you as well" after previously indicating withdrawal = S16.
+
+S1 GUARD — NON-ENGLISH: ONLY classify as S1 when the email body is ENTIRELY or PREDOMINANTLY written
+in a non-English language (Arabic, French, Spanish, Vietnamese, Hindi, etc.). An email that contains
+even a few English sentences about technical issues, job openings, interviews, or appointments is NOT
+S1. Do NOT classify as S1 when: the subject line is in English, the message is a brief technical report
+in English ("No current openings are showing"), or the sender is clearly responding to an English email.
 """
 
 
@@ -403,6 +476,8 @@ bug: populate only when classification_hint is FM/bug.
    Also use hyphen bullets when listing 3+ parallel items of equal weight
    (e.g., multiple options, multiple requirements, multiple steps in a process) —
    do not write these as prose sentences run together.
+   EXCEPTION — S27 only: use **double asterisks** for bold key phrases and emoji
+   section headers (🌱 🎯 🚀). These render in HTML. All other scenarios: plain text only.
 
 6. ENDING: End with exactly once: "Let us know if you have any questions,"
    Then: "Best regards,"
@@ -417,7 +492,10 @@ Follow those instructions exactly. Key reminders:
 - DO acknowledge their specific pitch in the first sentence.
 - ALWAYS include https://flowmingo.ai?utm_source=email-support
 - Do NOT agree to purchase, subscribe to, or commission anything.
-- 80–120 words total.
+- No word count limit. Counter-pitch format: YC credibility line + value prop + three sections
+  (🌱 Simple to start / 🎯 See what you get / 🚀 Scale your hiring) + free tier callout + CTA.
+- Use **double asterisks** around bold phrases and emoji section headers — these render in HTML.
+  See SOP for full structure, formatting rules, and reference draft.
 
 === S13 TEMPLATE (reference/cert request) ===
 
@@ -800,9 +878,14 @@ def main():
             reason_codes.append("UNKNOWN_SCENARIO")
 
         # ── 6. Node 2: Draft Writer (full KB) ────────────────────────────────
+        # Dynamic max_tokens: scale with email body length to avoid truncation
+        # on complex or long threads. Formula closes the 2 observed AI_ERROR
+        # truncation incidents (P1 TODO in TODOS.md).
+        _email_body   = email.get("latest_message", "") or ""
+        _max_tokens_2 = min(max(2000, len(_email_body) // 3 + 600), 4000)
         n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1, scenarios_text=scenarios_text)
         try:
-            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=2000)
+            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=_max_tokens_2)
             cls    = resp2["result"]
         except (json.JSONDecodeError, KeyError, Exception) as ex:
             print(f"FM/review [AI_ERROR node2: {ex}]")
@@ -883,7 +966,8 @@ def main():
 
         # ── 8. Validate + repair ──────────────────────────────────────────────
         draft_body_v1    = cls.get("draft_body") or ""
-        v1               = validators.validate(draft_body_v1, contract, risk_triggers)
+        _scenario_id     = node1.get("scenario", "")
+        v1               = validators.validate(draft_body_v1, contract, risk_triggers, scenario=_scenario_id)
         severity         = v1["severity"]
         validator_score  = v1["validator_score"]
         final_draft      = v1["fixed_draft"]
@@ -898,9 +982,9 @@ def main():
             # repair_v2: re-run Node 2 with validation errors injected
             n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"], scenarios_text=scenarios_text)
             try:
-                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=2000)
+                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=_max_tokens_2)
                 draft_v2 = resp_r["result"].get("draft_body") or ""
-                v2 = validators.validate(draft_v2, contract, risk_triggers)
+                v2 = validators.validate(draft_v2, contract, risk_triggers, scenario=_scenario_id)
                 repair_attempted = True
                 total_input_tokens  += resp_r.get("input_tokens", 0)
                 total_output_tokens += resp_r.get("output_tokens", 0)

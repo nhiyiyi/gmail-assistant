@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S9",
+  "description": "Mic issue / cannot submit first question. Must check microphone permissions. Try different browser or device. Escalate with details (T2) if unresolved.",
+  "required_facts": ["microphone"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

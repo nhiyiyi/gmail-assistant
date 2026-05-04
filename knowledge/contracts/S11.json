@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S11",
+  "description": "Partner onboarding, training, and program mechanics questions. Commission window is 180 days only — must NOT state or imply commission is perpetual/unlimited.",
+  "required_facts": [],
+  "forbidden_promises": ["earn commission forever", "lifetime commission", "commission never expires", "no expiry on commission", "always earn commission", "commission on all future purchases indefinitely", "earn indefinitely"],
+  "ownership_patterns": [],
+  "force_review": false
+}

@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S23",
+  "description": "Recruiter/company user missing candidate report. Must direct them to log in using company email and check dashboard. Escalate to WhatsApp with details if still missing.",
+  "required_facts": ["dashboard"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

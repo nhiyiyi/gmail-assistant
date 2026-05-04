@@ -14,3 +14,9 @@ tmp_*.json
 .claude/scheduled_tasks.lock
 dashboard/__pycache__/
 dashboard/daily_review.db
+prompt-tester/samples/
+prompt-tester/*.bak.md
+stats/feedback.db
+stats/sales_sheets_config.json
+stats/sales_state.json
+stats/slack_config.json

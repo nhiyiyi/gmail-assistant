@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S1",
+  "description": "Email not in English. Reply in English only. Politely ask sender to continue in English going forward.",
+  "required_facts": ["english"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

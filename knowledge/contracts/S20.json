@@ -1,0 +1,8 @@
+{
+  "scenario_id": "S20",
+  "description": "Unresolved technical issue after troubleshooting. Must ask for device info, browser, and relevant details to escalate (T2). Acknowledge their troubleshooting effort.",
+  "required_facts": ["device", "browser"],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}
