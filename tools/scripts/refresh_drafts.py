@@ -246,7 +246,7 @@ def main():
     refreshed = failed = skipped = 0
 
     for i, draft in enumerate(drafts, 1):
-        subj = draft.get("subject", "(no subject)")[:50]
+        subj = draft.get("subject", "(no subject)")[:50].encode("ascii", "replace").decode("ascii")
         to   = _extract_to_addr(draft)[:30]
         print(f"[{i:2d}/{len(drafts)}] {subj}")
         print(f"        to: {to}")
