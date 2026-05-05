@@ -188,9 +188,7 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     if not messages:
         return {**email_meta, "latest_message": "", "has_support_reply": False,
                 "message_count": 0, "thread_context": "", "attachments": [],
-                "has_attachments": False,
-                "has_prior_t1_steps": False, "prior_t2_escalation": False,
-                "is_repeat_contact": False, "has_frustration": False}
+                "has_attachments": False}
 
     last_msg = messages[-1]
     has_support_reply = _has_unreplied_support_reply(messages)
@@ -198,9 +196,9 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
     attachments = last_msg.get("attachments", [])
 
     prior_context = ""
-    prior_msgs = messages[:-1]
-    if prior_msgs:
+    if len(messages) > 1:
         parts = []
+        prior_msgs = messages[:-1]
         for i, msg in enumerate(prior_msgs):
             is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
             sender = "Support" if is_support else msg.get("from", "").split("<")[0].strip()[:15]
@@ -214,36 +212,6 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
             parts.append(f"[{msg.get('date', '')[:10]}] {sender}: {snippet}")
         prior_context = " | ".join(parts)[:2000]
 
-    # ── Context signals: extracted from prior support messages ───────────────
-    # These tell Node2 what's already been attempted so it doesn't repeat advice.
-
-    T1_PHRASES = [
-        "clear browser cache", "incognito", "private mode", "different browser",
-        "clear cache", "try chrome", "try safari", "try edge",
-    ]
-    FRUSTRATION_PHRASES = [
-        "still not working", "still having", "still unable", "still can't",
-        "tried everything", "doesn't work", "not working still", "still the same",
-        "again", "again and again",
-    ]
-
-    support_prior_bodies = [
-        (msg.get("body") or "").lower()
-        for msg in prior_msgs
-        if any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
-    ]
-
-    has_prior_t1_steps = any(
-        any(p in body for p in T1_PHRASES)
-        for body in support_prior_bodies
-    )
-    prior_t2_escalation = any(
-        "989 877 953" in body or "whatsapp" in body
-        for body in support_prior_bodies
-    )
-    is_repeat_contact = len(messages) > 3
-    has_frustration = any(p in latest_body.lower() for p in FRUSTRATION_PHRASES)
-
     return {
         "id": email_meta["id"],
         "thread_id": email_meta["thread_id"],
@@ -256,11 +224,6 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
         "attachments": attachments,
         "has_attachments": bool(attachments),
         "thread_context": prior_context,
-        # Context signals for Node2 context-aware drafting
-        "has_prior_t1_steps": has_prior_t1_steps,
-        "prior_t2_escalation": prior_t2_escalation,
-        "is_repeat_contact": is_repeat_contact,
-        "has_frustration": has_frustration,
     }
 
 
@@ -310,48 +273,12 @@ Route: full scenario routing (S1–S34).
 "unclear": Cannot determine direction from email content alone.
 Route: FM/review with reviewer_briefing explaining the ambiguity.
 
-FLOWMINGO SUBJECT OVERRIDE:
-If the email subject contains "[Flowmingo]" — that prefix is added by Flowmingo to its own
-automated outbound emails (assessment reports, feedback requests, offer letters, etc.).
-A reply to a [Flowmingo] email is NEVER an inbound_pitch. Do NOT classify as S27.
-- "Re: [Flowmingo] You did great" → reply to a feedback/review request → treat as inbound_support.
-  Read the actual latest_message content carefully: could be S15 (only if explicit positive sentiment),
-  S16 (if withdrawing or disappointed), S34 (if explicitly confirming/accepting), or S21/S18 (if asking
-  about timeline). Do NOT default to S15 or S34 — read what the email actually says.
-- "Re: [Flowmingo] Your AI Assessment Report is now available" → S18 (Type A) or S21 (Type B) candidate
-  asking about results/timeline. NEVER S26 (S26 is AI training data collection, not assessment results).
-- Any reply to a [Flowmingo] email → inbound_support (never inbound_pitch, never S27)
-
 === STEP 2: SCENARIO ROUTING ===
 
 After setting intent_direction:
 - inbound_pitch → scenario = "S27", sender_type = "E" (unless clearly partner/known type)
 - inbound_prospect + company/recruiter → scenario = "S22", sender_type = "D"
 - inbound_support → apply S1–S34 matching based on email content
-
-S3/S4 TRIGGER — LINK RESEND / EXTENSION: When a candidate says the interview email was deleted,
-cannot find the interview link, link was not received, or requests a deadline extension for their
-interview — classify as S3 (Type A Flowmingo program candidate) or S4 (Type B external company
-candidate). Subject line or thread context reveals which type.
-→ Signals: "share the link again", "resend the link", "email got deleted", "didn't receive the link",
-"extend the deadline", "can I get more time", "I haven't done the interview yet".
-NEVER classify link-resend requests as S21 (S21 is for post-interview results timeline).
-
-S8 vs S9 vs S20 DISCRIMINATION:
-S8 = Candidate CANNOT ACCESS the interview link — 404 error, page not found, link expired, broken URL.
-S9 = Interview link opens but MICROPHONE or VOICE is not working — mic not detected, voice not recognized,
-     cannot record answers, stuck on first question due to audio failure.
-S20 = Ongoing unresolved technical issue after previous troubleshooting — OTP not received, has already
-     been directed to WhatsApp but issue persists, following up on an unresolved bug ticket.
-CRITICAL: "system is unable to detect my voice", "microphone not detected", "audio not recording" = S9.
-"link doesn't work", "404 error", "page not found" = S8.
-"I'm not able to get the OTP", "not receiving verification code", "code not arriving", "followed up on
-WhatsApp but still having the issue" = S20 (not S8 — OTP failure is a login/auth issue, not link access).
-
-INBOUND_PITCH TALENT OFFER: When any sender offers to PROVIDE human talent, candidates, IT professionals,
-employees, or staff TO Flowmingo (e.g., "we have 400+ pre-vetted IT professionals"), this is ALWAYS
-inbound_pitch → S27. Flowmingo is a hiring PLATFORM, not an employer — they do not recruit talent
-through support emails. Never classify these as S21, S22, or any inbound_support scenario.
 
 S17 TRIGGER — classify as S17 when an INDIVIDUAL is asking to WORK at Flowmingo:
 - Signals: "looking for a job", "interested in joining your team", "I'd like to apply",
@@ -400,43 +327,6 @@ B = External company candidate (using Flowmingo as platform)
 C = Business Partner / TA Partner / Content Partner
 D = Recruiter / Company user
 E = Vendor / third-party / unclear
-
-=== SCENARIO SELECTION GUARDS ===
-
-S15 GUARD — POSITIVE FEEDBACK: ONLY classify as S15 if the customer's latest message contains
-EXPLICIT positive sentiment about the Flowmingo AI INTERVIEW EXPERIENCE or PLATFORM TECHNOLOGY:
-"loved the interview", "great interview process", "best interview I've ever had", "enjoyed the process",
-"wonderful interview experience", "really impressive platform", "fantastic tool", "so helpful".
-DOES NOT qualify as S15:
-- A bare "Thank you", "Thankyou.", "OK", "Best of luck to you as well"
-- "Thank you, looking forward to our meeting/this/it" — that is S34 CONFIRMATION
-- Expressing disappointment, frustration, or complaint about outcome (S16)
-- Asking about timeline or results (S18/S21)
-- Any message where the main content is NOT about the quality of the AI interview experience
-
-S34 GUARD — ACCEPTANCE/CONFIRMATION: ONLY classify as S34 when the candidate or company EXPLICITLY
-accepts, confirms, or expresses enthusiasm about proceeding: "I accept", "I'll do it",
-"I will complete the interview", "Yes I'm still interested", "Thank you, looking forward to it/our
-meeting/our call", "Confirmed", "I'm excited to proceed", "Yes, I'd love to meet/discuss/connect".
-NEVER S34 for: asking about OTP issues, asking about results timeline, reporting ongoing tech problems,
-or saying "I've accepted another offer" (that is S16 WITHDRAWAL, not S34 acceptance).
-When someone responds to a meeting invitation with "Thank you, looking forward to it" → S34.
-
-S26 GUARD — AI TRAINING DATA: ONLY classify as S26 when the sender EXPLICITLY wants to contribute
-to AI training, be a test user for AI model development, or provide voice/video samples for AI research.
-NEVER S26 for candidates having technical issues DURING a Flowmingo AI interview (mic not working,
-OTP failure, voice not detected, link not loading) — use S7, S8, S9, or S20 instead.
-
-S16 GUARD — WITHDRAWAL: Classify as S16 when a candidate says they've accepted another offer,
-cannot proceed, want to withdraw their application, or are declining the opportunity.
-"I have accepted another offer" = S16 WITHDRAWAL, not S34 ACCEPTANCE.
-"Best of luck to you as well" after previously indicating withdrawal = S16.
-
-S1 GUARD — NON-ENGLISH: ONLY classify as S1 when the email body is ENTIRELY or PREDOMINANTLY written
-in a non-English language (Arabic, French, Spanish, Vietnamese, Hindi, etc.). An email that contains
-even a few English sentences about technical issues, job openings, interviews, or appointments is NOT
-S1. Do NOT classify as S1 when: the subject line is in English, the message is a brief technical report
-in English ("No current openings are showing"), or the sender is clearly responding to an English email.
 """
 
 
@@ -513,8 +403,6 @@ bug: populate only when classification_hint is FM/bug.
    Also use hyphen bullets when listing 3+ parallel items of equal weight
    (e.g., multiple options, multiple requirements, multiple steps in a process) —
    do not write these as prose sentences run together.
-   EXCEPTION — S27 only: use **double asterisks** for bold key phrases and emoji
-   section headers (🌱 🎯 🚀). These render in HTML. All other scenarios: plain text only.
 
 6. ENDING: End with exactly once: "Let us know if you have any questions,"
    Then: "Best regards,"
@@ -529,10 +417,7 @@ Follow those instructions exactly. Key reminders:
 - DO acknowledge their specific pitch in the first sentence.
 - ALWAYS include https://flowmingo.ai?utm_source=email-support
 - Do NOT agree to purchase, subscribe to, or commission anything.
-- No word count limit. Counter-pitch format: YC credibility line + value prop + three sections
-  (🌱 Simple to start / 🎯 See what you get / 🚀 Scale your hiring) + free tier callout + CTA.
-- Use **double asterisks** around bold phrases and emoji section headers — these render in HTML.
-  See SOP for full structure, formatting rules, and reference draft.
+- 80–120 words total.
 
 === S13 TEMPLATE (reference/cert request) ===
 
@@ -558,46 +443,6 @@ Dear [Name],
 
 === FOR FM/BUG ===
 Set bug.main_issue_vi to a single Vietnamese sentence under 10 words starting with the affected subject.
-
-=== CONTEXT-AWARE BEHAVIOR — READ THESE BEFORE DRAFTING ===
-
-These signals come from the thread history. They change what you should write.
-
-has_prior_t1_steps=True:
-  T1 troubleshooting (clear cache, incognito mode, try a different browser) was ALREADY
-  given in a prior support message in this thread.
-  DO NOT repeat T1 steps — the person already tried them and they didn't solve the problem.
-  Acknowledge that they've already tried troubleshooting, then go directly to T2 WhatsApp
-  escalation. Example opening:
-  "I'm sorry to hear the troubleshooting steps didn't resolve the issue."
-
-prior_t2_escalation=True:
-  This person was ALREADY directed to WhatsApp in a prior support message.
-  This is an S20 unresolved issue. Do NOT give any troubleshooting steps.
-  Acknowledge the ongoing difficulty, apologise for the continued inconvenience,
-  and re-provide the WhatsApp number. Example opening:
-  "I'm sorry you're still experiencing this issue — I can see this has been ongoing."
-
-is_repeat_contact=True (message_count > 3):
-  This person has sent 3+ messages. They have been waiting or dealing with this for a while.
-  MANDATORY: acknowledge this explicitly in your opening sentence. Never open with a
-  generic "Thank you for your message." Use something like:
-  "Thank you for your continued patience — I can see this has taken a while to resolve."
-  or "I appreciate you following up with us again."
-
-has_frustration=True:
-  The latest message signals frustration ("still not working", "tried everything", "again").
-  Acknowledge the frustration BEFORE presenting the solution. Example:
-  "I completely understand how frustrating this must be, especially after already trying
-  those steps." — then move to action.
-
-urgency=urgent or urgency=critical (from Node 1):
-  Be direct. Lead with the action or answer immediately. Skip extended pleasantries.
-  For Type D (recruiter/company user): treat this as priority — still respond warmly,
-  include RECRUITER_CALENDAR_URL if the situation calls for it.
-
-IMPORTANT: If none of these signals are True, write normally following the SOP.
-These signals only activate when the context genuinely warrants a different approach.
 """
 
 
@@ -695,11 +540,7 @@ def build_node2_prompt(
         f"Subject: {email['subject']}\n"
         f"Date: {email.get('date', '')}\n"
         f"Has support reply already: {email.get('has_support_reply', False)}\n"
-        f"Message count in thread: {email.get('message_count', 1)}\n"
-        f"has_prior_t1_steps: {email.get('has_prior_t1_steps', False)}\n"
-        f"prior_t2_escalation: {email.get('prior_t2_escalation', False)}\n"
-        f"is_repeat_contact: {email.get('is_repeat_contact', False)}\n"
-        f"has_frustration: {email.get('has_frustration', False)}"
+        f"Message count in thread: {email.get('message_count', 1)}"
         f"{attachment_note}\n\n"
         f"Customer message:\n{email.get('latest_message', '')}\n\n"
     )
@@ -959,14 +800,9 @@ def main():
             reason_codes.append("UNKNOWN_SCENARIO")
 
         # ── 6. Node 2: Draft Writer (full KB) ────────────────────────────────
-        # Dynamic max_tokens: scale with email body length to avoid truncation
-        # on complex or long threads. Formula closes the 2 observed AI_ERROR
-        # truncation incidents (P1 TODO in TODOS.md).
-        _email_body   = email.get("latest_message", "") or ""
-        _max_tokens_2 = min(max(2000, len(_email_body) // 3 + 600), 4000)
         n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1, scenarios_text=scenarios_text)
         try:
-            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=_max_tokens_2)
+            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=2000)
             cls    = resp2["result"]
         except (json.JSONDecodeError, KeyError, Exception) as ex:
             print(f"FM/review [AI_ERROR node2: {ex}]")
@@ -1047,8 +883,7 @@ def main():
 
         # ── 8. Validate + repair ──────────────────────────────────────────────
         draft_body_v1    = cls.get("draft_body") or ""
-        _scenario_id     = node1.get("scenario", "")
-        v1               = validators.validate(draft_body_v1, contract, risk_triggers, scenario=_scenario_id)
+        v1               = validators.validate(draft_body_v1, contract, risk_triggers)
         severity         = v1["severity"]
         validator_score  = v1["validator_score"]
         final_draft      = v1["fixed_draft"]
@@ -1063,9 +898,9 @@ def main():
             # repair_v2: re-run Node 2 with validation errors injected
             n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"], scenarios_text=scenarios_text)
             try:
-                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=_max_tokens_2)
+                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=2000)
                 draft_v2 = resp_r["result"].get("draft_body") or ""
-                v2 = validators.validate(draft_v2, contract, risk_triggers, scenario=_scenario_id)
+                v2 = validators.validate(draft_v2, contract, risk_triggers)
                 repair_attempted = True
                 total_input_tokens  += resp_r.get("input_tokens", 0)
                 total_output_tokens += resp_r.get("output_tokens", 0)

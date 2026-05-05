@@ -24,66 +24,6 @@ Contract schema (from scenario_contracts.py):
 
 import re
 
-# ── LIST_IN_PROSE detection ───────────────────────────────────────────────────
-
-# Imperative / action-opener patterns: 3+ such sentences in a row without bullet
-# formatting = list written as prose.
-_LIST_IMPERATIVE_STARTERS = re.compile(
-    r'^(?:please\s+|kindly\s+|you\s+(?:can|may|should|need\s+to|must)\s+|make\s+sure\s+|ensure\s+|'
-    r'check\s+|try\s+|click\s+|open\s+|go\s+to\s+|navigate\s+|select\s+|enter\s+|type\s+|fill\s+|'
-    r'log\s+(?:in|out)|clear\s+|refresh\s+|restart\s+|download\s+|install\s+|update\s+|'
-    r'contact\s+|send\s+|share\s+|provide\s+|attach\s+|submit\s+|complete\s+)',
-    re.IGNORECASE,
-)
-
-
-def _detect_list_in_prose(text: str) -> list[str]:
-    """
-    Returns a list of paragraph snippets that are 3+ action sentences written
-    as prose (no bullet prefix). Returns empty list if none found.
-
-    Conservative to avoid false positives:
-    - Only fires on paragraphs where ALL sentences look like action items
-    - Excludes [REVIEW NEEDED] prefixes
-    - Only fires when EVERY sentence in the paragraph is short (< 100 chars)
-      and starts with an imperative verb — multi-sentence explanatory paragraphs
-      are not flagged.
-    """
-    findings = []
-    text_clean = re.sub(r'^\[REVIEW NEEDED:[^\]]*\]\s*', '', text, flags=re.IGNORECASE).strip()
-
-    # Split into paragraphs (blank line separated)
-    paragraphs = re.split(r'\n{2,}', text_clean)
-
-    for para in paragraphs:
-        para = para.strip()
-        if not para:
-            continue
-        # Skip if paragraph already has bullet formatting
-        if re.search(r'^\s*[-*•]\s', para, re.MULTILINE):
-            continue
-        # Split into sentences by period followed by space+capital
-        sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', para)
-        if len(sentences) < 3:
-            continue
-        # Check: ALL sentences are short AND start with imperative verb
-        action_count = 0
-        for s in sentences:
-            s = s.strip()
-            if not s:
-                continue
-            if len(s) > 120:
-                break  # long sentence → probably an explanation, not a step
-            if _LIST_IMPERATIVE_STARTERS.match(s):
-                action_count += 1
-        else:
-            # All sentences short — check ratio
-            if action_count >= 3 and action_count == len([s for s in sentences if s.strip()]):
-                findings.append(para[:80] + ("…" if len(para) > 80 else ""))
-
-    return findings
-
-
 # ── Markdown detection ────────────────────────────────────────────────────────
 
 _MARKDOWN_PATTERNS = [
@@ -93,9 +33,7 @@ _MARKDOWN_PATTERNS = [
     r'_[^_]+_',                 # _italic_
     r'^#{1,6}\s',               # # Heading
     r'`[^`]+`',                 # `code`
-    # NOTE: hyphen bullets ("- item") are intentional plain-text formatting,
-    # not markdown. Do NOT include them here — they are added by check 0b and
-    # must NOT be stripped by check 1.
+    r'^\s*[-*+]\s',             # - bullet list
     r'^\s*\d+\.\s',             # 1. numbered list
     r'\[.+?\]\(.+?\)',          # [link](url)
 ]
@@ -104,8 +42,7 @@ _MARKDOWN_REGEX = re.compile(
     re.MULTILINE | re.IGNORECASE,
 )
 
-# Strip markdown: bold/italic markers, inline code backticks, heading hashes.
-# Do NOT strip hyphen bullets ("- item") — they are valid plain-text formatting.
+# Strip markdown: bold/italic markers, inline code backticks, heading hashes
 _MARKDOWN_STRIP_PATTERNS = [
     (re.compile(r'\*\*([^*]+)\*\*'), r'\1'),   # **bold** → bold
     (re.compile(r'\*([^*]+)\*'),     r'\1'),   # *italic* → italic
@@ -113,6 +50,7 @@ _MARKDOWN_STRIP_PATTERNS = [
     (re.compile(r'_([^_]+)_'),       r'\1'),   # _italic_ → italic
     (re.compile(r'`([^`]+)`'),       r'\1'),   # `code` → code
     (re.compile(r'^#{1,6}\s+', re.MULTILINE), ''),  # ## Heading → Heading
+    (re.compile(r'^\s*[-*+]\s+', re.MULTILINE), ''),  # - item → item
 ]
 
 
@@ -129,7 +67,7 @@ _LUK_CLOSING      = "\n\nLet us know if you have any questions,"
 _BR_CLOSING       = "\n\nBest regards,"
 
 
-def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario: str = "") -> dict:
+def validate(draft_body: str, contract: dict, risk_triggers: list[str]) -> dict:
     """
     Validate draft_body against contract rules and risk_triggers.
 
@@ -138,8 +76,6 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario
     draft_body    : Raw draft string produced by the LLM.
     contract      : Scenario contract dict (see module docstring for schema).
     risk_triggers : List of trigger codes from rules_engine.route().
-    scenario      : Scenario ID (e.g. "S27"). S27 drafts may contain **bold** markdown
-                    and emoji headers — the markdown check is skipped for that scenario.
 
     Returns
     -------
@@ -165,62 +101,35 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario
         working_draft = re.sub(r'\n{3,}', '\n\n', working_draft).strip()
         issues.append("FORMAT_VIOLATION: Duplicate [REVIEW NEEDED] in body stripped.")
 
-    # 0b. Unhyphenated list items — detect 2+ consecutive bare lines appearing
-    #     after a trigger phrase that introduces a list. Auto-prefix each with "- ".
-    #     Covers: troubleshooting steps AND noun-phrase lists (e.g. "include the following details:").
+    # 0b. Unhyphenated troubleshooting steps — detect 2+ consecutive lines that look
+    #     like step instructions (start with capital letter, no leading "- " or digit)
+    #     appearing after a trigger phrase. Auto-prefix each with "- ".
     _step_trigger = re.compile(
-        r'('
-        r'please try[^:\n]*:?\s*\n'               # "please try the following steps:"
-        r'|steps? below[^:\n]*:?\s*\n'            # "steps below:"
-        r'|following \w+\s+steps?[^:\n]*:?\s*\n'  # "following troubleshooting steps:"
-        r'|following steps?[^:\n]*:?\s*\n'        # "following steps:"
-        r'|include the following[^:\n]*:?\s*\n'   # "include the following details:"
-        r'|following (?:details?|information|items?|points?)[^:\n]*:?\s*\n'  # "following information:"
-        r'|please (?:provide|share|send)[^:\n]*following[^:\n]*:?\s*\n'  # "please provide the following:"
-        r')',
+        r'(please try[^:\n]*:?\s*\n|steps? below[^:\n]*:?\s*\n|following steps?[^:\n]*:?\s*\n)',
         re.IGNORECASE,
     )
     if _step_trigger.search(working_draft):
         def _add_hyphen_if_missing(m):
             line = m.group(0)
-            # Add hyphen to lines that don't already have "- ", a digit bullet, or [REVIEW
-            if not re.match(r'^\s*-\s', line) and not re.match(r'^\s*\d+\.', line) and not re.match(r'^\s*\[', line):
-                stripped = line.rstrip('\n')
-                if stripped:
-                    return "- " + stripped + ('\n' if line.endswith('\n') else '')
+            # Only add hyphen to lines that are non-empty, start with a capital,
+            # and don't already have "- " or a number bullet or [REVIEW
+            if re.match(r'^[A-Z][^-\n]', line) and not re.match(r'^\d+\.', line):
+                return "- " + line
             return line
         # Find the trigger and fix bare lines in the block that follows
         parts = _step_trigger.split(working_draft, maxsplit=1)
         if len(parts) == 3:
             before, trigger, after = parts[0], parts[1], parts[2]
-            # Fix lines in 'after' until a blank line (end of the list block)
+            # Fix lines in 'after' until a blank line (end of the step block)
             step_block, rest = (after.split('\n\n', 1) + [''])[:2]
-            fixed_block = re.sub(r'^.+$', _add_hyphen_if_missing, step_block, flags=re.MULTILINE)
+            fixed_block = re.sub(r'^[A-Z][^\n]+$', _add_hyphen_if_missing, step_block, flags=re.MULTILINE)
             if fixed_block != step_block:
                 working_draft = before + trigger + fixed_block + ('\n\n' + rest if rest else '')
-                issues.append("FORMAT_VIOLATION: List items lacked hyphen bullets — auto-fixed.")
-
-    # 0c. LIST_IN_PROSE — detect 3+ parallel action sentences written as prose
-    #     instead of hyphen bullet points. Auto-fixable: LOW severity.
-    total_checks += 1
-    _lip_findings = _detect_list_in_prose(working_draft)
-    if _lip_findings:
-        # Auto-fix: convert the offending paragraph's sentences to bullet list
-        for _lip_para in _lip_findings:
-            # Find the actual paragraph in working_draft and convert
-            _para_key = _lip_para.rstrip('…').strip()
-            if _para_key in working_draft:
-                sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', _para_key)
-                bulleted = "\n".join(f"- {s.strip()}" for s in sentences if s.strip())
-                working_draft = working_draft.replace(_para_key, bulleted)
-        issues.append("FORMAT_VIOLATION: Action steps written as prose sentences — converted to bullet list.")
-    else:
-        passed_checks += 1
+                issues.append("FORMAT_VIOLATION: Troubleshooting steps lacked hyphen bullets — auto-fixed.")
 
     # 1. Markdown in body
-    # S27 intentionally uses **bold** and emoji headers — skip the check for that scenario.
     total_checks += 1
-    if scenario != "S27" and _MARKDOWN_REGEX.search(working_draft):
+    if _MARKDOWN_REGEX.search(working_draft):
         issues.append("MARKDOWN: Draft contains markdown formatting — stripped.")
         working_draft = _strip_markdown(working_draft)
     else:
@@ -405,7 +314,7 @@ def validate(draft_body: str, contract: dict, risk_triggers: list[str], scenario
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _is_low(issue: str) -> bool:
-    return issue.startswith(("MARKDOWN:", "MISSING_SALUTATION:", "MISSING_LUK_CLOSING:", "MISSING_BR_CLOSING:", "FORMAT_VIOLATION:"))
+    return issue.startswith(("MARKDOWN:", "MISSING_SALUTATION:", "MISSING_LUK_CLOSING:", "MISSING_BR_CLOSING:"))
 
 
 def _is_medium(issue: str) -> bool:
