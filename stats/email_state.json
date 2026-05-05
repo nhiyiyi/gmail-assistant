@@ -68128,6 +68128,214 @@
         "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)"
       ],
       "contract_id": "S21"
+    },
+    "19df5c34b6b9d9e9": {
+      "thread_id": "19df5c34b6b9d9e9",
+      "from": "Emily Jones <emily@prohanceintelligence.com>",
+      "subject": "Re: Mel, quick question about Flowmingo AI",
+      "date": "Tue, 05 May 2026 01:31:38 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r5631857890020557342",
+      "draft_message_id": "19df5eab820ddb63",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:14:54.716271+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S15 \u2013 Positive Feedback / Product Suggestions",
+        "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)"
+      ],
+      "contract_id": "S27"
+    },
+    "19df5c2a5939b7e4": {
+      "thread_id": "19df5c2a5939b7e4",
+      "from": "\"LinkedIn Marketing Crash Course (12 May)\" <hello@experience-effect.com>",
+      "subject": "Get Leads & Build Authority on LinkedIn",
+      "date": "Tue, 05 May 2026 01:31:03 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r52404246514484425",
+      "draft_message_id": "19df5eadc7f4531b",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:15:03.915218+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S12 \u2013 Partner Requests for Templates/Content",
+        "### S11 \u2013 Partner Onboarding, Training & Program Questions",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)"
+      ],
+      "contract_id": "S27"
+    },
+    "19df5566a0ebd068": {
+      "thread_id": "19df5566a0ebd068",
+      "from": "\"'LiNa Recommendations' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Pizza Chef + 11 new jobs - Job Alert from Jobstreet.com",
+      "date": "Mon, 04 May 2026 23:32:51 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5188657781572361639",
+      "draft_message_id": "19df5eb0a9e3259a",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:15:15.660665+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.875,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'chrome'."
+      ],
+      "kb_section_ids": [
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S16 \u2013 Withdraw from a Process",
+        "### S22 \u2013 Recruiter/Company User Exploring Flowmingo (Type D)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "S8"
+    },
+    "19df53fd67cf7a72": {
+      "thread_id": "19df53fd67cf7a72",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "AEO Helps Buyers Find You",
+      "date": "Mon, 4 May 2026 23:08:12 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-3684073117871257317",
+      "draft_message_id": "19df5eb50380c17a",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:15:33.422625+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S15 \u2013 Positive Feedback / Product Suggestions",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19df501f8bff26c8": {
+      "thread_id": "19df501f8bff26c8",
+      "from": "Hubstaff Talent <talent@hubstaff.com>",
+      "subject": "The Talent Acquisition Specialist Report: 2026-04-27 - 2026-05-03",
+      "date": "Mon, 4 May 2026 22:00:27 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-849216884833171259",
+      "draft_message_id": "19df5ebba7ff81e1",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:16:00.707537+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": true,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19df5a852c035da6": {
+      "thread_id": "19de3f81ef4c6fe2",
+      "from": "Elvis Evans <www.elvisevans031089@gmail.com>",
+      "subject": "Re:",
+      "date": "Mon, 4 May 2026 19:02:07 -0600",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r7341435893816342422",
+      "draft_message_id": "",
+      "kb_version": "169444579103",
+      "processed_at": "2026-05-05T02:16:02.607930+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260505-001",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
