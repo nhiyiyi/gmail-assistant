@@ -1,0 +1,15 @@
+{
+  "name": "sample-130-unclear-hubstaff-support-ticket-44166116884-has",
+  "expected_scenario": "unclear",
+  "id": "19d6267faf457438",
+  "thread_id": "19d6267faf457438",
+  "from": "Hubstaff Support <support@hubstaff.com>",
+  "subject": "Hubstaff Support Ticket '44166116884' has been received",
+  "date": "Mon, 6 Apr 2026 06:47:54 -0400",
+  "message_count": 2,
+  "has_support_reply": true,
+  "latest_message": "Dear Hubstaff Support,\n\nThank you for the update regarding my support request. I appreciate your team's efforts in reviewing it. Please let me know if you need any further information from my side.\n\nLet us know if you have any questions,\n\nBest regards,\n\n--\nJessica from Flowmingo Customer Support Team\nMobile / WhatsApp (Support Hotline): (+84) 989 877 953\n\nCONFIDENTIALITY NOTICE: The information contained herein, and any documents, files or email messages provided with it, may contain confidential, proprietary and/or trade secret information that is legally privileged. If you are not the intended recipient, or the person responsible for delivering these materials to the intended recipient, you are hereby on notice of its status. Any disclosure, copying, distribution or use of any information contained in or attached to this transmission is STRICTLY PROHIBITED. If you have received this transmission in error, please destroy all records of the transmission and any attachments thereto with",
+  "attachments": [],
+  "has_attachments": false,
+  "thread_context": "[Mon, 6 Apr] Hubstaff Suppor: Hi there,\r \r Your support request has been received and is being reviewed by our team. We'll get back to you as soon as we can.\r \r Request details\r \r Contact email: support@flowmingo.ai\r \r Date submit"
+}

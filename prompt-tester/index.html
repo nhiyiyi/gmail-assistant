@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Flowmingo Prompt Tester</title>
+<style>
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; font-size: 13px; color: #222; margin: 0; background: #f5f5f5; }
+header { background: #1a1a2e; color: white; padding: 12px 20px; display: flex; align-items: center; gap: 16px; }
+header h1 { margin: 0; font-size: 16px; }
+header span { font-size: 12px; color: #aaa; }
+
+.layout { display: grid; grid-template-columns: 320px 1fr; height: calc(100vh - 46px); }
+
+/* Left panel */
+.left { background: #fff; border-right: 1px solid #ddd; display: flex; flex-direction: column; overflow: hidden; }
+.left-tabs { display: flex; border-bottom: 1px solid #ddd; }
+.left-tab { flex: 1; padding: 8px; text-align: center; cursor: pointer; font-size: 12px; background: #f9f9f9; border: none; border-bottom: 3px solid transparent; }
+.left-tab.active { background: #fff; border-bottom-color: #1a1a2e; font-weight: bold; }
+.left-panel { flex: 1; overflow: hidden; display: flex; flex-direction: column; padding: 8px; gap: 6px; }
+.left-panel.hidden { display: none; }
+.left-panel textarea { flex: 1; border: 1px solid #ccc; border-radius: 4px; font-family: monospace; font-size: 11px; padding: 8px; resize: none; }
+.save-btn { padding: 7px; background: #1a1a2e; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.save-btn:hover { background: #16213e; }
+.save-btn.dirty::after { content: " •"; color: #ff9800; }
+.saved-msg { font-size: 11px; color: #28a745; text-align: center; height: 16px; }
+
+/* Sample panel */
+.sample-panel { padding: 8px; border-bottom: 1px solid #eee; }
+.sample-panel select { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; margin-bottom: 6px; }
+.btn-row { display: flex; gap: 6px; }
+.run-btn { flex: 1; padding: 7px; background: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: bold; }
+.run-btn:disabled { background: #aaa; cursor: not-allowed; }
+.both-btn { flex: 1; padding: 7px; background: #17a2b8; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.both-btn:disabled { background: #aaa; cursor: not-allowed; }
+
+/* Right panel */
+.right { display: flex; flex-direction: column; overflow: hidden; }
+.right-tabs { display: flex; border-bottom: 1px solid #ddd; background: #fff; }
+.right-tab { padding: 8px 16px; cursor: pointer; font-size: 12px; background: #f9f9f9; border: none; border-bottom: 3px solid transparent; }
+.right-tab.active { background: #fff; border-bottom-color: #28a745; font-weight: bold; }
+.right-content { flex: 1; overflow: auto; padding: 12px; }
+.right-content.hidden { display: none; }
+
+/* Result cards */
+.card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 12px; margin-bottom: 10px; }
+.card h3 { margin: 0 0 8px 0; font-size: 13px; color: #1a1a2e; }
+.meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 8px; }
+.meta-item { background: #f8f9fa; border-radius: 4px; padding: 6px 8px; }
+.meta-label { font-size: 10px; color: #888; text-transform: uppercase; }
+.meta-value { font-size: 13px; font-weight: bold; margin-top: 2px; }
+.sev-PASS { color: #28a745; } .sev-LOW { color: #17a2b8; }
+.sev-MEDIUM { color: #fd7e14; } .sev-HIGH { color: #dc3545; }
+
+.email-frame { width: 100%; min-height: 300px; border: 1px solid #ddd; border-radius: 4px; background: #fff; padding: 16px; overflow: auto; }
+.draft-raw { font-family: monospace; font-size: 11px; white-space: pre-wrap; background: #f8f9fa; border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-height: 300px; overflow: auto; }
+
+.issues-list { margin: 4px 0; padding: 0; list-style: none; }
+.issues-list li { background: #fff3cd; border-left: 3px solid #ffc107; padding: 4px 8px; margin-bottom: 4px; font-size: 11px; border-radius: 0 4px 4px 0; }
+.issues-list li.issue-HIGH { background: #f8d7da; border-left-color: #dc3545; }
+.issues-list li.issue-MEDIUM { background: #fff3cd; border-left-color: #fd7e14; }
+
+.side-by-side { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.side-label { font-size: 11px; font-weight: bold; padding: 4px 8px; border-radius: 4px; margin-bottom: 6px; display: inline-block; }
+.side-old { background: #f8d7da; color: #721c24; }
+.side-new { background: #d4edda; color: #155724; }
+
+.spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #fff; border-top-color: transparent; border-radius: 50%; animation: spin 0.6s linear infinite; vertical-align: middle; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.stat-bar { font-size: 11px; color: #666; padding: 4px 0; border-top: 1px solid #eee; margin-top: 6px; }
+
+.error-box { background: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; padding: 12px; color: #721c24; }
+
+.badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: bold; }
+.badge-ready { background: #d4edda; color: #155724; }
+.badge-review { background: #fff3cd; color: #856404; }
+.badge-bug { background: #f8d7da; color: #721c24; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Flowmingo Prompt Tester</h1>
+  <span id="model-label">model: gpt-4.1-mini</span>
+</header>
+
+<div class="layout">
+
+  <!-- Left: editors + sample picker -->
+  <div class="left">
+    <div class="left-tabs">
+      <button class="left-tab active" onclick="showLeftTab('rules')">Rules SOP</button>
+      <button class="left-tab" onclick="showLeftTab('scenarios')">Scenarios SOP</button>
+    </div>
+
+    <div id="tab-rules" class="left-panel">
+      <textarea id="rules-editor" placeholder="Loading..."></textarea>
+      <button class="save-btn" id="rules-save-btn" onclick="savePrompt('rules')">Save Rules SOP</button>
+      <div class="saved-msg" id="rules-saved-msg"></div>
+    </div>
+
+    <div id="tab-scenarios" class="left-panel hidden">
+      <textarea id="scenarios-editor" placeholder="Loading..."></textarea>
+      <button class="save-btn" id="scenarios-save-btn" onclick="savePrompt('scenarios')">Save Scenarios SOP</button>
+      <div class="saved-msg" id="scenarios-saved-msg"></div>
+    </div>
+
+    <div class="sample-panel">
+      <select id="sample-select">
+        <option value="">— select sample —</option>
+      </select>
+      <div class="btn-row">
+        <button class="run-btn" id="run-btn" onclick="runSample()">Run</button>
+        <button class="both-btn" id="both-btn" onclick="runBoth()">Run Both</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: results -->
+  <div class="right">
+    <div class="right-tabs">
+      <button class="right-tab active" onclick="showRightTab('preview')">Email Preview</button>
+      <button class="right-tab" onclick="showRightTab('pipeline')">Pipeline</button>
+      <button class="right-tab" onclick="showRightTab('raw')">Raw Draft</button>
+      <button class="right-tab" onclick="showRightTab('both')">Side-by-Side</button>
+    </div>
+
+    <div id="tab-preview" class="right-content">
+      <div id="preview-area" style="color:#888;padding:20px">Select a sample and click Run.</div>
+    </div>
+
+    <div id="tab-pipeline" class="right-content hidden">
+      <div id="pipeline-area" style="color:#888;padding:20px">Run a sample to see pipeline details.</div>
+    </div>
+
+    <div id="tab-raw" class="right-content hidden">
+      <div id="raw-area" style="color:#888;padding:20px">Run a sample to see raw draft.</div>
+    </div>
+
+    <div id="tab-both" class="right-content hidden">
+      <div id="both-area" style="color:#888;padding:20px">Click "Run Both" to compare old vs new SOP.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let lastResult = null;
+let rulesOriginal = '';
+let scenariosOriginal = '';
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init() {
+  await Promise.all([loadEditor('rules'), loadEditor('scenarios'), loadSamples()]);
+}
+
+async function loadEditor(type) {
+  const url = type === 'rules' ? '/prompt' : '/prompt2';
+  const r = await fetch(url);
+  const d = await r.json();
+  const content = d.content || '';
+  if (type === 'rules') {
+    document.getElementById('rules-editor').value = content;
+    rulesOriginal = content;
+  } else {
+    document.getElementById('scenarios-editor').value = content;
+    scenariosOriginal = content;
+  }
+}
+
+async function loadSamples() {
+  const r = await fetch('/samples');
+  const names = await r.json();
+  const sel = document.getElementById('sample-select');
+  names.forEach(n => {
+    const opt = document.createElement('option');
+    opt.value = n;
+    opt.textContent = n;
+    sel.appendChild(opt);
+  });
+}
+
+// ── Tab switching ─────────────────────────────────────────────────────────────
+function showLeftTab(name) {
+  document.querySelectorAll('.left-tab').forEach((t, i) => {
+    t.classList.toggle('active', (i === 0 && name === 'rules') || (i === 1 && name === 'scenarios'));
+  });
+  document.getElementById('tab-rules').classList.toggle('hidden', name !== 'rules');
+  document.getElementById('tab-scenarios').classList.toggle('hidden', name !== 'scenarios');
+}
+
+function showRightTab(name) {
+  const tabs = ['preview', 'pipeline', 'raw', 'both'];
+  document.querySelectorAll('.right-tab').forEach((t, i) => {
+    t.classList.toggle('active', tabs[i] === name);
+  });
+  tabs.forEach(t => {
+    document.getElementById('tab-' + t).classList.toggle('hidden', t !== name);
+  });
+}
+
+// ── Save prompts ──────────────────────────────────────────────────────────────
+async function savePrompt(type) {
+  const url = type === 'rules' ? '/prompt' : '/prompt2';
+  const content = document.getElementById(type === 'rules' ? 'rules-editor' : 'scenarios-editor').value;
+  const msgId = type === 'rules' ? 'rules-saved-msg' : 'scenarios-saved-msg';
+  const btnId = type === 'rules' ? 'rules-save-btn' : 'scenarios-save-btn';
+  try {
+    await fetch(url, { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({content}) });
+    if (type === 'rules') rulesOriginal = content;
+    else scenariosOriginal = content;
+    document.getElementById(btnId).classList.remove('dirty');
+    document.getElementById(msgId).textContent = 'Saved!';
+    setTimeout(() => document.getElementById(msgId).textContent = '', 2000);
+  } catch (e) {
+    document.getElementById(msgId).textContent = 'Error: ' + e.message;
+  }
+}
+
+// Track unsaved changes
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('rules-editor').addEventListener('input', function() {
+    const dirty = this.value !== rulesOriginal;
+    document.getElementById('rules-save-btn').classList.toggle('dirty', dirty);
+  });
+  document.getElementById('scenarios-editor').addEventListener('input', function() {
+    const dirty = this.value !== scenariosOriginal;
+    document.getElementById('scenarios-save-btn').classList.toggle('dirty', dirty);
+  });
+});
+
+// ── Run single ────────────────────────────────────────────────────────────────
+let running = false;
+async function runSample() {
+  if (running) return;
+  const sampleName = document.getElementById('sample-select').value;
+  if (!sampleName) return alert('Select a sample first');
+  running = true;
+  setLoading(true);
+  try {
+    const r = await fetch('/run', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({sample_name: sampleName}),
+    });
+    const result = await r.json();
+    lastResult = result;
+    renderResult(result);
+    showRightTab('preview');
+  } catch(e) {
+    renderError(e.message);
+  } finally {
+    running = false;
+    setLoading(false);
+  }
+}
+
+// ── Run both ──────────────────────────────────────────────────────────────────
+async function runBoth() {
+  if (running) return;
+  const sampleName = document.getElementById('sample-select').value;
+  if (!sampleName) return alert('Select a sample first');
+  running = true;
+  setLoading(true, true);
+  try {
+    const r = await fetch('/run-both', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({sample_name: sampleName}),
+    });
+    const result = await r.json();
+    renderBothResult(result);
+    showRightTab('both');
+  } catch(e) {
+    document.getElementById('both-area').innerHTML = `<div class="error-box">Error: ${e.message}</div>`;
+  } finally {
+    running = false;
+    setLoading(false);
+  }
+}
+
+function setLoading(on, both = false) {
+  const runBtn = document.getElementById('run-btn');
+  const bothBtn = document.getElementById('both-btn');
+  runBtn.disabled = on;
+  bothBtn.disabled = on;
+  if (on) {
+    runBtn.innerHTML = both ? 'Run' : '<span class="spinner"></span> Running...';
+    bothBtn.innerHTML = both ? '<span class="spinner"></span> Running...' : 'Run Both';
+  } else {
+    runBtn.innerHTML = 'Run';
+    bothBtn.innerHTML = 'Run Both';
+  }
+}
+
+// ── Render result ─────────────────────────────────────────────────────────────
+function renderResult(r) {
+  if (r.error || r.apiError) {
+    renderError(JSON.stringify(r.error || r.apiError));
+    return;
+  }
+
+  const node1 = r.node1 || {};
+  const val   = r.validation || {};
+  const sev   = val.severity || '?';
+  const issues = val.issues || [];
+  const label = r.node1 && r.node1.classification_hint || '?';
+
+  // Preview tab
+  document.getElementById('preview-area').innerHTML = `
+    <div class="meta-grid">
+      <div class="meta-item"><div class="meta-label">Scenario</div><div class="meta-value">${node1.scenario || '?'} <small style="color:#888">(${Math.round((node1.scenario_confidence||0)*100)}%)</small></div></div>
+      <div class="meta-item"><div class="meta-label">Severity</div><div class="meta-value sev-${sev}">${sev}</div></div>
+      <div class="meta-item"><div class="meta-label">Label</div><div class="meta-value"><span class="badge badge-${label.replace('FM/','').toLowerCase()}">${label}</span></div></div>
+      <div class="meta-item"><div class="meta-label">Sender Type</div><div class="meta-value">${node1.sender_type || '?'}</div></div>
+      <div class="meta-item"><div class="meta-label">Is Bug</div><div class="meta-value">${r.rules_engine && r.rules_engine.is_bug ? 'YES' : 'no'}</div></div>
+      <div class="meta-item"><div class="meta-label">Duration</div><div class="meta-value">${r.duration_ms || 0}ms</div></div>
+    </div>
+    ${issues.length ? `<ul class="issues-list">${issues.map(i => `<li class="issue-${sev}">${i}</li>`).join('')}</ul>` : ''}
+    <div class="email-frame">${r.draft_html || '<em style="color:#888">No draft</em>'}</div>
+    <div class="stat-bar">Tokens: in=${(r.n1_tokens?.in||0)+(r.n2_tokens?.in||0)} out=${(r.n1_tokens?.out||0)+(r.n2_tokens?.out||0)}</div>
+  `;
+
+  // Pipeline tab
+  const re = r.rules_engine || {};
+  document.getElementById('pipeline-area').innerHTML = `
+    <div class="card">
+      <h3>rules_engine.route()</h3>
+      <div class="meta-grid">
+        <div class="meta-item"><div class="meta-label">sender_type</div><div class="meta-value">${re.sender_type||'?'}</div></div>
+        <div class="meta-item"><div class="meta-label">is_bug</div><div class="meta-value">${re.is_bug?'YES':'no'}</div></div>
+        <div class="meta-item"><div class="meta-label">pre_route_hint</div><div class="meta-value">${re.pre_route_hint||'unclear'}</div></div>
+      </div>
+      ${re.risk_triggers?.length ? `<div style="font-size:11px;color:#888">risk_triggers: ${re.risk_triggers.join(', ')}</div>` : ''}
+    </div>
+    <div class="card">
+      <h3>Node 1 — Intent Classifier</h3>
+      <div class="meta-grid">
+        <div class="meta-item"><div class="meta-label">scenario</div><div class="meta-value">${node1.scenario||'?'}</div></div>
+        <div class="meta-item"><div class="meta-label">confidence</div><div class="meta-value">${Math.round((node1.scenario_confidence||0)*100)}%</div></div>
+        <div class="meta-item"><div class="meta-label">intent_direction</div><div class="meta-value">${node1.intent_direction||'?'}</div></div>
+        <div class="meta-item"><div class="meta-label">urgency</div><div class="meta-value">${node1.urgency||'?'}</div></div>
+        <div class="meta-item"><div class="meta-label">is_bug</div><div class="meta-value">${node1.is_bug?'YES':'no'}</div></div>
+        <div class="meta-item"><div class="meta-label">contract</div><div class="meta-value">${r.contract_used||'FALLBACK'}</div></div>
+      </div>
+      ${node1.route_reasoning ? `<div style="font-size:11px;color:#555;margin-top:6px;background:#f9f9f9;padding:6px;border-radius:4px">${node1.route_reasoning}</div>` : ''}
+      ${node1.reviewer_briefing ? `<div style="font-size:11px;color:#856404;margin-top:6px;background:#fff3cd;padding:6px;border-radius:4px">${node1.reviewer_briefing}</div>` : ''}
+    </div>
+    <div class="card">
+      <h3>Validator</h3>
+      <div class="meta-grid">
+        <div class="meta-item"><div class="meta-label">severity</div><div class="meta-value sev-${sev}">${sev}</div></div>
+      </div>
+      ${issues.length ? `<ul class="issues-list">${issues.map(i => `<li class="issue-${sev}">${i}</li>`).join('')}</ul>` : '<div style="color:#28a745;font-size:12px">No issues</div>'}
+    </div>
+  `;
+
+  // Raw tab
+  document.getElementById('raw-area').innerHTML = `
+    <div class="card"><h3>Raw Draft (markdown)</h3><div class="draft-raw">${escHtml(r.draft_raw||'')}</div></div>
+    <div class="card"><h3>Fixed Draft</h3><div class="draft-raw">${escHtml(r.draft_fixed||'')}</div></div>
+  `;
+}
+
+function renderBothResult(r) {
+  const old = r.old || {};
+  const nw  = r.new  || {};
+  document.getElementById('both-area').innerHTML = `
+    <div class="side-by-side">
+      <div>
+        <span class="side-label side-old">ORIGINAL SOP</span>
+        ${renderSidePanel(old)}
+      </div>
+      <div>
+        <span class="side-label side-new">CURRENT SOP</span>
+        ${renderSidePanel(nw)}
+      </div>
+    </div>
+  `;
+}
+
+function renderSidePanel(r) {
+  if (!r || r.apiError) return `<div class="error-box">${r?.apiError || 'No result'}</div>`;
+  const node1 = r.node1 || {};
+  const val   = r.validation || {};
+  const sev   = val.severity || '?';
+  return `
+    <div class="meta-grid">
+      <div class="meta-item"><div class="meta-label">Scenario</div><div class="meta-value">${node1.scenario||'?'} (${Math.round((node1.scenario_confidence||0)*100)}%)</div></div>
+      <div class="meta-item"><div class="meta-label">Severity</div><div class="meta-value sev-${sev}">${sev}</div></div>
+      <div class="meta-item"><div class="meta-label">${r.duration_ms||0}ms</div><div class="meta-value" style="font-size:10px;color:#888">tokens: ${(r.n1_tokens?.in||0)+(r.n2_tokens?.in||0)}</div></div>
+    </div>
+    <div class="email-frame">${r.draft_html || '<em style="color:#888">No draft</em>'}</div>
+  `;
+}
+
+function renderError(msg) {
+  document.getElementById('preview-area').innerHTML = `<div class="error-box">Error: ${escHtml(msg)}</div>`;
+}
+
+function escHtml(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "scenario_id": "S20",
+  "description": "Technical issue STILL UNRESOLVED after T1 troubleshooting was already given. Do NOT repeat T1 steps (clear cache, incognito, different browser). Escalate directly to WhatsApp: WHATSAPP_SUPPORT_HOTLINE (+84 989 877 953). Acknowledge the frustration.",
+  "required_facts": [
+    "989 877 953"
+  ],
+  "forbidden_promises": [
+    "clear browser cache",
+    "clear cache",
+    "try incognito",
+    "private mode",
+    "try a different browser",
+    "try chrome",
+    "try safari",
+    "24 hours",
+    "will be resolved within"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "S16",
+  "description": "Candidate withdrawing from the interview process. Acknowledge the withdrawal, wish them well, close the loop warmly. Do NOT promise to hold their spot, keep their application, or guarantee they can reapply.",
+  "required_facts": [],
+  "forbidden_promises": [
+    "we will keep your application",
+    "we will hold your application",
+    "your application will be kept",
+    "you can reapply",
+    "we will reach out again",
+    "we will contact you again",
+    "keep your spot"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

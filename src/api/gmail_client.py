@@ -2,6 +2,7 @@
 
 import base64
 import json
+import re as _re
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
@@ -518,6 +519,189 @@ reading or saving in any manner. Thank you.
 </span></i></div>"""
 
 
+_STEP_START = '\x00STEPS\x00'
+_STEP_END   = '\x00ENDSTEPS\x00'
+
+_AUTO_BOLD_PATTERNS = [
+    (_re.compile(r'\b(within \d[–\-]\d+ (?:business )?(?:days?|weeks?|hours?))\b', _re.I), r'**\1**'),
+    (_re.compile(r'\b(\d[–\-]\d+ (?:business )?(?:days?|weeks?|hours?))\b', _re.I), r'**\1**'),
+    (_re.compile(r'(\+\d[\d\s\(\)\-]{6,})', _re.I), r'**\1**'),
+    (_re.compile(r'\b(WhatsApp)\b'), r'**\1**'),
+    (_re.compile(r'\b(Trustpilot)\b'), r'**\1**'),
+]
+
+
+def _auto_bold_key_info(text: str) -> str:
+    """Add **bold** to key info patterns only when the draft has no bold at all."""
+    if '**' in text:
+        return text
+    for pattern, replacement in _AUTO_BOLD_PATTERNS:
+        new_text = pattern.sub(replacement, text, count=1)
+        if new_text != text:
+            return new_text
+    return text
+
+
+_ABBREV_PROTECT = _re.compile(
+    r'\b(Mr|Mrs|Ms|Dr|Prof|Sr|Jr|vs|etc|e\.g|i\.e|No|Vol)\.',
+    _re.IGNORECASE,
+)
+_SENT_BOUNDARY = _re.compile(r'(?<=[.!?])\s+(?=[A-Z])')
+
+
+def _split_sentences(text: str) -> list:
+    """Split text into sentences, protecting common abbreviations."""
+    protected = _ABBREV_PROTECT.sub(lambda m: m.group(0).replace('.', '\x01'), text)
+    parts = _SENT_BOUNDARY.split(protected)
+    return [p.replace('\x01', '.') for p in parts]
+
+
+def _split_long_paragraphs(text: str, max_sentences: int = 2) -> str:
+    """Break paragraphs that contain more than max_sentences sentences."""
+    paragraphs = text.split('\n\n')
+    out = []
+    for para in paragraphs:
+        stripped = para.strip()
+        if (not stripped
+                or stripped.startswith('- ')
+                or '\x00' in stripped
+                or stripped.startswith('[REVIEW')
+                or '\n' in stripped):
+            out.append(para)
+            continue
+        sentences = _split_sentences(stripped)
+        if len(sentences) <= max_sentences:
+            out.append(para)
+        else:
+            chunks = []
+            for i in range(0, len(sentences), max_sentences):
+                chunks.append(' '.join(sentences[i:i + max_sentences]))
+            out.append('\n\n'.join(chunks))
+    return '\n\n'.join(out)
+
+
+def _auto_bulletize_steps(text: str) -> str:
+    """Detect LLM step patterns and wrap in step-block markers for styled callout rendering."""
+    lines = text.split('\n')
+    result = []
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.rstrip()
+        if stripped.endswith(':') and not stripped.startswith('-'):
+            j = i + 1
+            candidates = []
+            while j < len(lines) and lines[j].strip():
+                candidates.append(lines[j])
+                j += 1
+            if len(candidates) >= 2 and not any(c.startswith('- ') for c in candidates):
+                result.append(line)
+                result.append(_STEP_START)
+                for c in candidates:
+                    m = _re.match(r'^([A-Z][^:]{2,40}):\s+(.+)$', c)
+                    if m:
+                        result.append(f'- **{m.group(1)}:** {m.group(2)}')
+                    else:
+                        result.append(f'- {c}')
+                result.append(_STEP_END)
+                i = j
+                continue
+        result.append(line)
+        i += 1
+    return '\n'.join(result)
+
+
+def _step_blocks_to_callout(text: str) -> str:
+    """Convert step-block markers into a styled blue callout box for Gmail."""
+    def _make_callout(m):
+        inner = m.group(1)
+        items_html = ''
+        for line in inner.split('\n'):
+            line = line.strip()
+            if line.startswith('- '):
+                items_html += f'<li style="margin:5px 0">{line[2:]}</li>'
+        return (
+            '<div style="background:#EBF5FB;border-left:4px solid #2E86C1;'
+            'border-radius:0 4px 4px 0;padding:12px 16px;margin:12px 0">'
+            '<div style="font-weight:700;color:#1A5276;margin-bottom:8px;font-size:13px">'
+            '&#128736; Try these steps</div>'
+            f'<ul style="margin:0;padding-left:20px;color:#1a1a1a">{items_html}</ul>'
+            '</div>'
+        )
+    return _re.sub(
+        _re.escape(_STEP_START) + r'(.*?)' + _re.escape(_STEP_END),
+        _make_callout,
+        text,
+        flags=_re.DOTALL,
+    )
+
+
+def _markdown_to_html(text: str) -> str:
+    """Convert LLM markdown output to HTML for Gmail rendering.
+
+    Handles:
+    - Auto-detection of unlabelled step lists → styled blue callout box
+    - HTML entity escaping (& < >)
+    - **bold** → <strong>bold</strong>
+    - Consecutive hyphen-bullet lines → <ul><li>...</li></ul>
+    - [REVIEW NEEDED: msg] → amber banner <div>
+    - Paragraph breaks (blank line) → <br><br>
+    - Remaining newlines → <br>
+    """
+    # 0a. Break paragraphs longer than 2 sentences
+    text = _split_long_paragraphs(text, max_sentences=2)
+    # 0b. Auto-bold key info if LLM produced no bold
+    text = _auto_bold_key_info(text)
+    # 0c. Auto-detect step patterns and wrap in step-block markers
+    text = _auto_bulletize_steps(text)
+
+    # 1. Normalize line endings
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+
+    # 2. HTML-escape entities (step markers use \x00 so they survive unescaped)
+    text = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    # 3. [REVIEW NEEDED: msg] → amber banner
+    text = _re.sub(
+        r'\[REVIEW NEEDED:\s*([^\]]*)\]',
+        r'<div style="background:#FFF3CD;padding:8px 12px;border-left:4px solid #FFC107;'
+        r'margin:8px 0;font-family:sans-serif">'
+        r'&#9888; \1</div>',
+        text,
+        flags=_re.IGNORECASE,
+    )
+
+    # 4. **bold** → <strong>bold</strong> (runs inside step blocks too)
+    text = _re.sub(r'\*\*([^*\n]+)\*\*', r'<strong>\1</strong>', text)
+
+    # 5. Step blocks → styled blue callout (before generic bullet conversion)
+    text = _step_blocks_to_callout(text)
+
+    # 6. Remaining "- item" lines → plain <ul>
+    def _bullets_to_ul(m):
+        lines = m.group(0).split("\n")
+        items = "".join(
+            f"<li>{line.lstrip('- ').strip()}</li>"
+            for line in lines if line.strip()
+        )
+        return f"<ul style='margin:6px 0;padding-left:20px'>{items}</ul>"
+
+    text = _re.sub(
+        r'(?:^[ \t]*-[ \t]+.+\n?)+',
+        _bullets_to_ul,
+        text,
+        flags=_re.MULTILINE,
+    )
+
+    # 7. Blank lines → paragraph break
+    text = _re.sub(r'\n{2,}', "<br><br>\n", text)
+
+    # 8. Remaining single newlines → <br>
+    text = text.replace("\n", "<br>\n")
+
+    return text
+
+
 def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str = None) -> str:
     """Build and base64url-encode a multipart RFC 2822 email with signature."""
     if not subject.startswith("Re: "):
@@ -531,15 +715,13 @@ def _build_raw_message(to: str, subject: str, body: str, reply_message_id: str =
         msg["In-Reply-To"] = reply_message_id
         msg["References"] = reply_message_id
 
-    # Plain text part
+    # Plain text part (keep raw body as-is for text/plain)
     plain = body + _PLAIN_SIGNATURE
     msg.attach(MIMEText(plain, "plain", "utf-8"))
 
-    # HTML part — convert line breaks, then append HTML signature
-    html_body = body.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    html_body = html_body.replace("\r\n", "\n").replace("\r", "\n")
-    html_body = "<br>\n".join(html_body.split("\n"))
-    html = f"<div>{html_body}</div>\n<br>\n{_HTML_SIGNATURE}"
+    # HTML part — convert markdown → HTML, then append HTML signature
+    html_body = _markdown_to_html(body)
+    html = f'<div style="font-family:Arial,sans-serif;font-size:14px;color:#222">{html_body}</div>\n<br>\n{_HTML_SIGNATURE}'
     msg.attach(MIMEText(html, "html", "utf-8"))
 
     raw_bytes = msg.as_bytes()

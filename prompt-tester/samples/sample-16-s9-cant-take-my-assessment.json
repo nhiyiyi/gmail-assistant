@@ -1,0 +1,15 @@
+{
+  "name": "sample-16-s9-cant-take-my-assessment",
+  "expected_scenario": "S9",
+  "id": "19d500da80b46e1c",
+  "thread_id": "19d500da80b46e1c",
+  "from": "Kalilou DIABY <dika3584@gmail.com>",
+  "subject": "Can't take my assessment",
+  "date": "Thu, 2 Apr 2026 21:15:48 +0000",
+  "message_count": 2,
+  "has_support_reply": true,
+  "latest_message": "Dear Kalilou,\r\n\r\nThank you for reaching out. It sounds like there might be an issue with how \r\nFlowmingo interacts with your microphone settings. Here are some steps to \r\ntroubleshoot the problem:\r\n\r\n1. Check that your microphone permissions are enabled for the Flowmingo \r\nplatform in your browser settings.\r\n2. Ensure that your microphone settings in the Flowmingo interface are \r\ncorrectly configured.\r\n3. Try using a different browser or device to see if the issue persists.\r\n4. You may also want to check for any background noise or interference that \r\ncould be affecting the microphone.\r\n\r\nCan you help us to book a meeting via here so that we can debug faster? \r\nhttps://calendar.app.google/9umr3qnDfdEiNb3s7.\r\n\r\nLet us know if you have any questions,\r\n\r\nBest regards,\r\n\r\n*Jessica from Flowmingo Customer Support Team*\r\n*Mobile / WhatsApp (Support Hotline)*: (+84) 989 877 953\r\n\r\n* CONFIDENTIALITY NOTICE: The information contained herein, and any \r\ndocuments, files or email messages provided",
+  "attachments": [],
+  "has_attachments": false,
+  "thread_context": "[Thu, 2 Apr] Kalilou DIABY: Hello\r \r When I want to take my assessment my microphone make noise. However when I\r try my microphone without Flowmingo is good.\r What's happen?\r \r \r \r Please help me\r \r \r \r Best regards,\r "
+}

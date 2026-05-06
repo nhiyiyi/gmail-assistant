@@ -1,0 +1,16 @@
+{
+  "name": "sample-118-s32-re-appointment-booked-flowmingo-15-min-w",
+  "expected_scenario": "S32",
+  "id": "19d517a906c209a6",
+  "thread_id": "19d517a906c209a6",
+  "from": "My Ky Tran <ky.tran@featurii.com>",
+  "subject": "Re: Appointment booked: [Flowmingo] 15 min with us (Anjali C G) @ Thu Apr 2, 2026 4:30pm - 4:45pm (GMT+7) (ky.tran@featurii.com)",
+  "date": "Fri, 3 Apr 2026 10:54:26 +0700",
+  "latest_message": "",
+  "has_support_reply": false,
+  "message_count": 0,
+  "thread_context": "",
+  "attachments": [],
+  "has_attachments": false,
+  "skip": true
+}

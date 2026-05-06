@@ -1,0 +1,16 @@
+{
+  "name": "sample-85-s15-flowmingo-check-in",
+  "expected_scenario": "S15",
+  "id": "19d44846c2f71eaa",
+  "thread_id": "19d448467031f942",
+  "from": "Mark Studebaker <mark@flowmingo.com>",
+  "subject": "Flowmingo check in",
+  "date": "Tue, 31 Mar 2026 15:30:17 +0000 (UTC)",
+  "latest_message": "",
+  "has_support_reply": false,
+  "message_count": 0,
+  "thread_context": "",
+  "attachments": [],
+  "has_attachments": false,
+  "skip": true
+}

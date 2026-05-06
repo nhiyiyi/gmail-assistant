@@ -1,0 +1,19 @@
+{
+  "scenario_id": "S8",
+  "description": "Interview link not working: 404, expired, broken, or opens in in-app browser. Tell candidate to check their original invitation email. Do NOT promise to resend or share a new link.",
+  "required_facts": [
+    "original invitation email"
+  ],
+  "forbidden_promises": [
+    "we will resend",
+    "we will send a new link",
+    "we will share your interview link",
+    "i will share your interview link",
+    "i will resend",
+    "a new link will be sent",
+    "resend the link",
+    "send another link"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

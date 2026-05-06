@@ -1,0 +1,10 @@
+{
+  "scenario_id": "S15",
+  "description": "Positive feedback / testimonial from a real Flowmingo user. Acknowledge warmly, invite them to share on Trustpilot. Must include TRUSTPILOT_URL (trustpilot.com/review/flowmingo.ai).",
+  "required_facts": [
+    "trustpilot"
+  ],
+  "forbidden_promises": [],
+  "ownership_patterns": [],
+  "force_review": false
+}

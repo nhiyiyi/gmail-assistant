@@ -219,6 +219,13 @@ def _detect_sender_type(from_addr: str, subject: str, message: str) -> str:
     The LLM will refine this — this is just a pre-routing hint.
     """
     combined = f"{from_addr} {subject} {message}"
+    combined_lower = combined.lower()
+
+    # Type A FIRST: Flowmingo's own role names are specific enough to be definitive.
+    # Must check before Type D — roles like "Talent Acquisition Business Partner" contain
+    # the word "talent" which would otherwise trigger the Type D recruiter heuristic.
+    if any(role in combined_lower for role in _FLOWMINGO_ROLES):
+        return "A"
 
     # Type D: corporate/recruiter signals
     if any(k in combined for k in _RECRUITER_KEYWORDS):
@@ -228,11 +235,6 @@ def _detect_sender_type(from_addr: str, subject: str, message: str) -> str:
     if any(k in combined for k in _PARTNER_KEYWORDS) or \
        any(k in subject for k in _PARTNER_SUBJECTS):
         return "C"
-
-    # Type A: confirmed if subject or body mentions one of Flowmingo's own role names
-    combined_lower = combined.lower()
-    if any(role in combined_lower for role in _FLOWMINGO_ROLES):
-        return "A"
 
     # Type B: external company role signals
     if _EXTERNAL_COMPANY_REGEX.search(message):

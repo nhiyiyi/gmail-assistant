@@ -1,0 +1,22 @@
+{
+  "name": "sample-73-s10-re-new-job-opportunites-at-flowmingo-for",
+  "expected_scenario": "unclear",
+  "id": "19d62f40d092a337",
+  "thread_id": "19d1047e3e344821",
+  "from": "Zaarra Ahmed <ahmedzaarra@gmail.com>",
+  "subject": "Re: New job opportunites at Flowmingo for Zara",
+  "date": "Mon, 6 Apr 2026 14:20:43 +0100",
+  "message_count": 9,
+  "has_support_reply": false,
+  "latest_message": "No current openings are showing. Sharing a screenshot below: Regards\r\n\r\n\r\n[image: image.png]\r\n\r\nOn Tue, Apr 7, 2026 at 1:09 PM <support@flowmingo.ai> wrote:\r\n\r\n> Dear Zaarra,\r\n>\r\n> Thank you for your message. I apologize for the inconvenience you're\r\n> experiencing with the openings section. If it's showing as empty, it might\r\n> be a temporary issue. I recommend refreshing your browser or checking back\r\n> shortly. Meanwhile, you can explore current job openings directly at the\r\n> careers link: https://flowmingo.ai/careers.\r\n>\r\n> Let us know if you have any questions,\r\n>\r\n> Best regards,\r\n>\r\n> *Jessica from Flowmingo Customer Support Team*\r\n> *Mobile / WhatsApp (Support Hotline)*: (+84) 989 877 953\r\n>\r\n> * CONFIDENTIALITY NOTICE: The information contained herein, and any\r\n> documents, files or email messages provided with it, may contain\r\n> confidential, proprietary and/or trade secret information that is legally\r\n> privileged. If you are not the intended recipient, or the person\r\n> res",
+  "attachments": [
+    {
+      "filename": "image.png",
+      "mime_type": "image/png"
+    }
+  ],
+  "has_attachments": true,
+  "thread_context": "[Sat, 21 Ma] Zaarra Ahmed: Thanks. I have applied. I also gave an AI interview last time for an HR\r role. Do I need to give it everytime? BR, Zara\r \r On Fri, Mar 20, 2026 at 11:18 AM Charles Young <charles.young@flowmingo.ai>\r  | [Sun, 22 Ma] Support: Dear Zara,  Thank you for reaching out and for applying.  Each role application requires you to complete the AI interview for that specific position. The interview you completed for the HR role is sep | [Thu, 2 Apr] Zaarra Ahmed: Hi, but I am unable to access the interview invite. Can you please send me\r the link? Also, I applied for a full-time HR role but haven't heard back.\r Can you confirm if I need to give an interview ev | [Fri, 3 Apr] Support: Dear Zaarra,  I understand you are having trouble accessing the interview invite. I will resend the link to ensure you can complete the interview for your full-time HR role.  Regarding your applicatio | [Fri, 3 Apr] Zaarra Ahmed: Ok - also send for the product growth intern role.\r \r On Fri, Apr 3, 2026 at 8:10 AM <support@flowmingo.ai> wrote:\r \r > Dear Zaarra,\r >\r > I understand you are having trouble accessing the interview i | [Mon, 6 Apr] Support: Dear Zaarra,  Thank you for your interest in the product growth intern role at Flowmingo. I appreciate your eagerness in applying for multiple positions. You can find all current job openings, includi | [Mon, 6 Apr] Zaarra Ahmed: The openings section does not show any openings. Can you please confirm?\r \r On Mon, Apr 6, 2026 at 12:04 PM <support@flowmingo.ai> wrote:\r \r > Dear Zaarra,\r >\r > Thank you for your interest in the pro | [Tue, 7 Apr] Support: Dear Zaarra,  Thank you for your message. I apologize for the inconvenience you're experiencing with the openings section. If it's showing as empty, it might be a temporary issue. I recommend refreshing your browser or checking back shortly. Meanwhile, you can explore current job openings directly at the careers link: https://flowmingo.ai/careers.  Let us know if you have any ques",
+  "skip": true,
+  "skip_reason": "Ultra-sparse content (one sentence + screenshot attachment) causes persistent S1 false positive — not representative of typical support emails"
+}

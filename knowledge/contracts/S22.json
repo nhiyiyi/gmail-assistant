@@ -1,0 +1,17 @@
+{
+  "scenario_id": "S22",
+  "description": "Recruiter or company user exploring/enquiring about using Flowmingo for their hiring. Must include RECRUITER_CALENDAR_URL (calendar.app.google/VMFJfxUDQwEmisQv8). Do not agree to any custom pricing or SLA commitments.",
+  "required_facts": [
+    "calendar.app.google"
+  ],
+  "forbidden_promises": [
+    "custom pricing",
+    "we will match",
+    "we can guarantee",
+    "sla",
+    "service level agreement",
+    "we will contact you with pricing"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

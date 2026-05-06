@@ -48,7 +48,7 @@ import bug_template
 # ── Config ───────────────────────────────────────────────────────────────────
 
 OPENAI_API_URL       = "https://api.openai.com/v1/chat/completions"
-MODEL                = "gpt-4o-mini"
+MODEL                = "gpt-4.1-mini"
 SUPPORT_DOMAINS      = ["flowmingo.ai"]
 CONFIDENCE_THRESHOLD = 0.7
 
@@ -192,7 +192,7 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
 
     last_msg = messages[-1]
     has_support_reply = _has_unreplied_support_reply(messages)
-    latest_body = (last_msg.get("body") or last_msg.get("snippet", ""))[:1000]
+    latest_body = (last_msg.get("body") or last_msg.get("snippet", ""))[:2000]
     attachments = last_msg.get("attachments", [])
 
     prior_context = ""
@@ -202,12 +202,12 @@ def normalize_thread(thread_data: dict, email_meta: dict) -> dict:
         for i, msg in enumerate(prior_msgs):
             is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
             sender = "Support" if is_support else msg.get("from", "").split("<")[0].strip()[:15]
-            # Give the most recent Flowmingo SENT reply up to 800 chars so the next
+            # Give the most recent Flowmingo SENT reply up to 1200 chars so the next
             # model call can see what was already promised — prevents repetition and
-            # contradictory multi-turn replies. Other prior messages capped at 200 chars.
+            # contradictory multi-turn replies. Other prior messages capped at 400 chars.
             is_last_prior = (i == len(prior_msgs) - 1)
             is_sent_support = is_support and "SENT" in msg.get("labels", [])
-            body_limit = 800 if (is_last_prior and is_sent_support) else 200
+            body_limit = 1200 if (is_last_prior and is_sent_support) else 400
             snippet = (msg.get("body") or msg.get("snippet", ""))[:body_limit].replace("\n", " ")
             parts.append(f"[{msg.get('date', '')[:10]}] {sender}: {snippet}")
         prior_context = " | ".join(parts)[:2000]
@@ -279,6 +279,53 @@ After setting intent_direction:
 - inbound_pitch → scenario = "S27", sender_type = "E" (unless clearly partner/known type)
 - inbound_prospect + company/recruiter → scenario = "S22", sender_type = "D"
 - inbound_support → apply S1–S34 matching based on email content
+
+=== SCENARIO QUICK REFERENCE (S1–S34) ===
+Read this list before matching. Do NOT default to S8 when uncertain — use the most specific match.
+
+S1  – Email body is NOT in English (write reply in English, politely note we use English)
+S2  – Candidate thinks they must PAY to submit their interview
+S3  – Flowmingo OWN candidate (Type A) requests extension, reschedule, or retake
+S4  – External COMPANY candidate (Type B) requests extension, reschedule, or retake
+S5  – Candidate exceeded the allowed number of interview attempts
+S6  – CV/resume FILE UPLOAD problem during application (file not attaching, upload fails)
+S7  – Camera or microphone DEVICE CHECK fails BEFORE the interview (permissions denied, hardware not detected)
+S8  – Interview LINK does not open: 404, expired, broken link, opens in in-app browser that blocks mic
+S9  – Mic or audio FAILS DURING RECORDING after link opens; cannot record or submit first question
+S10 – Partner DASHBOARD is empty; referrals not showing or not being tracked
+S11 – Partner program: onboarding, training materials, commission mechanics, payout, employment type, formal agreement
+S12 – Partner requests social media templates or marketing content
+S13 – Reference letter, employment certificate, proof of work request → always decline
+S14 – Request for 1:1 call, demo, or meeting (from non-recruiter individuals)
+S15 – Positive feedback / testimonial / appreciation from a real user about Flowmingo
+S16 – Candidate wants to WITHDRAW from the interview process
+S17 – Individual asks to JOIN FLOWMINGO as an employee (sends CV, asks about Flowmingo jobs)
+S18 – Flowmingo OWN candidate (Type A) asks about their results, timeline, or interview status
+S19 – WhatsApp link is wrong, full, expired, or gives an error when clicked
+S20 – Technical issue STILL unresolved after T1 troubleshooting was already given in a prior reply
+S21 – External COMPANY candidate (Type B) asks about results, timeline, or reminder about their interview
+S22 – Recruiter or company wants to USE FLOWMINGO for their own hiring (prospect, pricing, demo)
+S23 – Recruiter/company cannot access or find a candidate's report/results
+S24 – Recruiter/company reports that multiple candidates face recurring tech issues
+S25 – Candidate says interview already completed OR email already entered into another application
+S26 – AI Development Project: gifts, consent form (A2/A5), dashboard, data contribution program
+S27 – Vendor/service PITCHING to Flowmingo (marketing, lead gen, PR, media features, awards, talent sourcing)
+S28 – API integration request (beta access)
+S29 – Do-not-contact / unsubscribe / stop processing data / GDPR opt-out → FM/review required
+S30 – Established partner/member asking about new Flowmingo roles, or received outreach by mistake
+S31 – Employment type inquiry (freelance vs full-time vs contract)
+S32 – Scheduling/meeting inquiry with no SOP data → multi-option draft
+S33 – GDPR data DELETION request (delete profile, candidacy, or interview data)
+S34 – Acceptance/offer confirmation (candidate confirms they accept, or asks about next steps after acceptance)
+
+KEY DISAMBIGUATION:
+S7 vs S9: S7 = device check BEFORE interview starts (permissions blocked). S9 = interview loaded but mic fails DURING recording.
+S8 vs S9: S8 = link doesn't OPEN (404, expired). S9 = link opens, interview loads, but mic/recording fails.
+S18 vs S21: S18 = Flowmingo own program candidate (Type A). S21 = external company's candidate (Type B).
+S22 vs S27: S22 = they want to BUY/USE Flowmingo. S27 = they want to SELL something TO Flowmingo.
+S3 vs S4: S3 = Flowmingo internal role candidate (Type A). S4 = external company's candidate (Type B).
+S17 vs S22: S17 = individual wants to work AT Flowmingo. S22 = company wants to USE Flowmingo for hiring.
+S15 vs S27: S15 = real user sharing authentic positive experience. S27 = company offering to sell/manage reviews.
 
 S17 TRIGGER — classify as S17 when an INDIVIDUAL is asking to WORK at Flowmingo:
 - Signals: "looking for a job", "interested in joining your team", "I'd like to apply",
@@ -398,11 +445,28 @@ bug: populate only when classification_hint is FM/bug.
    - Never repeat information already given in a prior Flowmingo reply.
    - Never contradict a prior Flowmingo reply.
 
-5. FORMAT: Plain text only. No markdown, no bold, no asterisks, no headers.
-   Hyphen bullets for troubleshooting step lists (MANDATORY for 2+ sequential steps).
-   Also use hyphen bullets when listing 3+ parallel items of equal weight
-   (e.g., multiple options, multiple requirements, multiple steps in a process) —
-   do not write these as prose sentences run together.
+5. FORMAT: The draft_body string MUST use markdown. It is converted to HTML before sending.
+
+   BULLET LISTS ARE MANDATORY whenever you list 2 or more actions, steps, or options.
+   The draft_body is a JSON string — use literal \n and "- " for bullets:
+
+   WRONG JSON (steps as plain lines — NEVER do this):
+     "draft_body": "...\n\nPlease try:\nCheck browser permissions.\nClose other apps."
+
+   RIGHT JSON (hyphen bullets — ALWAYS required for steps):
+     "draft_body": "...\n\nPlease try:\n- Check browser permissions.\n- Close other apps."
+
+   The "- " (hyphen space) prefix is REQUIRED at the start of every list item line.
+   Use **bold** for labels: "- **Browser:** Check the lock icon in the address bar."
+   NEVER use # headers, * italic, backtick code blocks, or "* item" bullets.
+
+   BOLD IS REQUIRED in every reply that contains an action or key information:
+   - Contact method: "reach us via **WhatsApp at +84 989 877 953**"
+   - Key link or platform: "leave a review on **Trustpilot**" or "book via **our calendar link**"
+   - Key date, deadline, or status: "your results will be ready **within 1–2 weeks**"
+   - Key technical term: "- **Browser permission:** check the lock icon in the address bar"
+   Only purely informational replies (e.g., acknowledging withdrawal, thanking for feedback
+   with no follow-up action) may omit bold if there is genuinely no key term to highlight.
 
 6. ENDING: End with exactly once: "Let us know if you have any questions,"
    Then: "Best regards,"
@@ -801,8 +865,10 @@ def main():
 
         # ── 6. Node 2: Draft Writer (full KB) ────────────────────────────────
         n2_sys, n2_usr = build_node2_prompt(email, kb_text, node1, scenarios_text=scenarios_text)
+        email_body_len = len(email.get("latest_message", "") or "")
+        n2_max_tokens = min(max(2000, email_body_len // 3 + 600), 4000)
         try:
-            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=2000)
+            resp2  = call_openai(api_key, n2_sys, n2_usr, max_tokens=n2_max_tokens)
             cls    = resp2["result"]
         except (json.JSONDecodeError, KeyError, Exception) as ex:
             print(f"FM/review [AI_ERROR node2: {ex}]")
@@ -898,7 +964,7 @@ def main():
             # repair_v2: re-run Node 2 with validation errors injected
             n2_sys_repair, _ = build_node2_prompt(email, kb_text, node1, validation_errors=v1["issues"], scenarios_text=scenarios_text)
             try:
-                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=2000)
+                resp_r   = call_openai(api_key, n2_sys_repair, n2_usr, max_tokens=n2_max_tokens)
                 draft_v2 = resp_r["result"].get("draft_body") or ""
                 v2 = validators.validate(draft_v2, contract, risk_triggers)
                 repair_attempted = True

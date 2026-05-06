@@ -1,0 +1,28 @@
+{
+  "name": "sample-78-s12-urgent-applications-not-appearing-from-s",
+  "expected_scenario": "S12",
+  "id": "19d971e484b9a4e4",
+  "thread_id": "19d971e484b9a4e4",
+  "from": "Filip Roskot <filip@unitesync.com>",
+  "subject": "Urgent: Applications not appearing from shared interview link",
+  "date": "Thu, 16 Apr 2026 18:27:12 +0200",
+  "message_count": 8,
+  "has_support_reply": true,
+  "latest_message": "Hi Filip,\r\n\r\n*Thank you for following up and for sharing that feedback with us.*\r\n\r\nRegarding the two links you mentioned, I would like to clarify their\r\ndifferent functions to help you choose the best one for your workflow:\r\n\r\n1. The job post link is intended for the initial application stage. To\r\nensure candidates can begin the interview immediately after applying,\r\nplease verify in your job post configuration that the screening AI\r\ninterview is enabled.\r\n\r\n[image: image.png]\r\nOtherwise, you need to manually invite them after they submit their CV.\r\n[image: image.png]\r\n\r\n2. The direct AI interview link (the one including the project ID)* is\r\nspecifically designed for candidates you have already shortlisted and wish\r\nto invite directly to the interview stage.* You may send this link for\r\nevery candidate as well (if you don't want to screen their CV first)\r\n\r\n3. Regarding the permissions issue you encountered with your team\r\nmember, *could\r\nyou please provide that individual's email add",
+  "attachments": [
+    {
+      "filename": "1.png",
+      "mime_type": "image/png"
+    },
+    {
+      "filename": "image.png",
+      "mime_type": "image/png"
+    },
+    {
+      "filename": "image.png",
+      "mime_type": "image/png"
+    }
+  ],
+  "has_attachments": true,
+  "thread_context": "[Thu, 16 Ap] Filip Roskot: Hi,\r \r \r We’ve been using a shared link from about half a year ago for an existing project:\r \r https://talent.flowmingo.ai/interview/40a0bc13-5700-425a-bf7a-0c716942b3e4#step1 \r \r \r We shared it yeste | [Fri, 17 Ap] Support: Hi Filip,\r \r Please accept my sincere apologies for the confusion regarding the shared\r interview links.\r \r It is likely that your candidates have successfully completed their\r interviews, but the app | [Thu, 16 Ap] Filip Roskot: Hi Jessica,\r \r Thanks a lot for the fast response and the clarification—we really appreciate it.\r \r Understood, we’ll stop sharing the old link. I was mainly concerned whether we should immediately st | [Fri, 17 Ap] Support: Hi Filip,\r \r Thank you for your patience.\r \r I have an update regarding the shared interview link. To ensure that all\r future applications are automatically added to your project, please use the\r foll | [Fri, 17 Ap] Filip Roskot: Hi Jessica,\r \r Thank you for the update and the explanation—I really appreciate it.\r \r Got it, that makes sense. We can also see the submissions there, so that helps a lot. Thanks for arranging to hav | [Fri, 17 Ap] Support: Hi Filip,\r \r No problem at all.\r \r I am writing to let you know that we have finished adding the candidates\r into your hiring project. You should be able to see all of them in your\r dashboard now.\r \r  | [Mon, 20 Ap] Filip Roskot: Hi Jessica,\r \r Thank you, appreciate the update.\r \r \r I was following your instructions and I copied the link to invite candidates, which is this one:\r \r https://talent.flowmingo.ai/jobs/backend-devel"
+}

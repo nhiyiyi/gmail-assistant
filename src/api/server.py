@@ -819,18 +819,23 @@ def _compact_thread_summary(thread_data: dict, email_meta: dict) -> dict:
     )
 
     latest = messages[-1]
-    latest_body = (latest.get("body") or latest.get("snippet", ""))[:1000]
+    latest_body = (latest.get("body") or latest.get("snippet", ""))[:2000]
     attachments = latest.get("attachments", [])
 
     prior_context = ""
     if len(messages) > 1:
         parts = []
-        for msg in messages[:-1]:
+        prior_msgs = messages[:-1]
+        for i, msg in enumerate(prior_msgs):
             is_support = any(d in msg.get("from", "").lower() for d in SUPPORT_DOMAINS)
             sender = "Support" if is_support else msg.get("from", "").split("<")[0].strip()[:15]
-            snippet = (msg.get("body") or msg.get("snippet", ""))[:100].replace("\n", " ")
+            # Match process_emails_openai.py: last support reply gets 1200 chars, others 400
+            is_last_prior  = (i == len(prior_msgs) - 1)
+            is_sent_support = is_support and "SENT" in msg.get("labels", [])
+            body_limit = 1200 if (is_last_prior and is_sent_support) else 400
+            snippet = (msg.get("body") or msg.get("snippet", ""))[:body_limit].replace("\n", " ")
             parts.append(f"[{msg.get('date', '')[:10]}] {sender}: {snippet}")
-        prior_context = " | ".join(parts)[:500]
+        prior_context = " | ".join(parts)[:2000]
 
     return {
         "id": email_meta["id"],

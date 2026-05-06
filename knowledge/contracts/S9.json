@@ -1,0 +1,16 @@
+{
+  "scenario_id": "S9",
+  "description": "Mic or audio fails DURING RECORDING after interview link opens. Give T1 troubleshooting: browser permission, incognito/private mode, different browser (Chrome/Safari), different device. Escalate to WhatsApp if steps don't help.",
+  "required_facts": [
+    "browser"
+  ],
+  "forbidden_promises": [
+    "we will resend",
+    "we will send a new link",
+    "we will share your interview link",
+    "24 hours",
+    "will be resolved within"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}

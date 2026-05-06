@@ -1,0 +1,37 @@
+{
+  "name": "sample-119-s32-your-organization-now-has-goals-projects",
+  "expected_scenario": "S32",
+  "id": "19d8ae4c33fbcad7",
+  "thread_id": "19d8ae4c33fbcad7",
+  "from": "Atlassian Home <atlas@flowmingo-45440389.atlassian.net>",
+  "subject": "Your organization now has Goals, Projects, and more",
+  "date": "Tue, 14 Apr 2026 07:28:55 +0000",
+  "message_count": 1,
+  "has_support_reply": false,
+  "latest_message": "Give users access to these platform apps\r\n\r\nGoals and Projects are now available in your organization. These platform apps help users share regular status updates and track progress toward objectives. They're free for all customers.\r\n\r\nYou manage access to Goals and Projects the same way you manage access to other Atlassian apps in Atlassian Administration. How to give users access to apps ( https://support.atlassian.com/user-management/docs/give-users-access-to-products/ )\r\n\r\nWhat's a goal? ( https://support.atlassian.com/platform-experiences/docs/what-is-a-goal/ )\r\n\r\nWhat's a project? ( https://support.atlassian.com/platform-experiences/docs/what-is-a-project/ )\r\n\r\nYou'll also find bonus new features, like topics and kudos, in Atlassian Home as part of this release. About Atlassian Home ( https://support.atlassian.com/platform-experiences/docs/what-is-atlassian-home/ )\r\n\r\nManage access ( https://admin.atlassian.com/o/0c0b8af7-9e3a-4b74-a6a1-e906260f80ad/products?cloudId=cfc4c321-f799",
+  "attachments": [
+    {
+      "filename": "atlassian-home-logo.png",
+      "mime_type": "image/png"
+    },
+    {
+      "filename": "admin-global-exp-eap-provisioned.jpg",
+      "mime_type": "image/jpeg"
+    },
+    {
+      "filename": "goal-green.png",
+      "mime_type": "image/png"
+    },
+    {
+      "filename": "project-blue.png",
+      "mime_type": "image/png"
+    },
+    {
+      "filename": "atlassian-logo.png",
+      "mime_type": "image/png"
+    }
+  ],
+  "has_attachments": true,
+  "thread_context": "",
+  "skip": true
+}

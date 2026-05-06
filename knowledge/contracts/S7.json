@@ -1,0 +1,18 @@
+{
+  "scenario_id": "S7",
+  "description": "Camera/microphone device check fails BEFORE interview starts. Browser or OS blocks mic/camera at permission level. Give T1 steps (browser permission, different browser, try Chrome/Safari). Do NOT promise a fix.",
+  "required_facts": [
+    "browser"
+  ],
+  "forbidden_promises": [
+    "we will fix",
+    "will be resolved",
+    "will work after",
+    "guarantee",
+    "24 hours",
+    "we will resend",
+    "we will send a new link"
+  ],
+  "ownership_patterns": [],
+  "force_review": false
+}
