@@ -70378,6 +70378,251 @@
         "### S31 \u2013 Employment Type Inquiry"
       ],
       "contract_id": "S27"
+    },
+    "19dfa7cc54c31791": {
+      "thread_id": "19dfa7cc54c31791",
+      "from": "\"'LiNa Recommendations' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Chef De Partie + 11 new jobs - Job Alert from Jobstreet.com",
+      "date": "Tue, 05 May 2026 23:32:51 +0000 (UTC)",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S22",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-892146382092492405",
+      "draft_message_id": "19dfb1a5f2177e36",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:03.723117+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S31 \u2013 Employment Type Inquiry",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S4 \u2013 Extensions/Rescheduling/Retakes (External Company Roles \u2013 Type B)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dfa6bed6a98853": {
+      "thread_id": "19dfa6bed6a98853",
+      "from": "\"'Caitlin at B2B Sales Digest' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Technical Voices Build Buyer Trust",
+      "date": "Tue, 5 May 2026 23:14:27 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r7022867832221659246",
+      "draft_message_id": "19dfb1a8a391eabf",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:14.897720+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->"
+      ],
+      "contract_id": "S27"
+    },
+    "19dfa64e3d991f65": {
+      "thread_id": "19dfa5ef6adf3ca2",
+      "from": "Chinenye Gbaruko <chinenyegbaruko@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Wed, 6 May 2026 00:06:36 +0100",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7698138643131899742",
+      "draft_message_id": "19dfb1aa2c2f0cd6",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:20.934836+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19dfa61a74e1e731": {
+      "thread_id": "19dfa61a74e1e731",
+      "from": "\"'Senja' via Contact\" <contact@flowmingo.ai>",
+      "subject": "Classic forms are now merged with forms 2.0",
+      "date": "Tue, 05 May 2026 23:03:12 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-7045524997874101543",
+      "draft_message_id": "19dfb1ab8625c072",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:26.398232+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S12 \u2013 Partner Requests for Templates/Content",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S30 \u2013 Established Partner/Member: New Flowmingo Role or Mistaken Outreach"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19df9f22691a2d07": {
+      "thread_id": "19df9f22691a2d07",
+      "from": "\"'The Frontier by Product Hunt' via Contact\" <contact@flowmingo.ai>",
+      "subject": "$130 billion grudge match",
+      "date": "Tue, 05 May 2026 21:01:23 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "FM/review",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r3631937028892391030",
+      "draft_message_id": "19dfb1ad29c1d274",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:33.295054+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
+    },
+    "19df9f21615c48e3": {
+      "thread_id": "19df9f21615c48e3",
+      "from": "The Frontier by Product Hunt <hi@deeperlearning.producthunt.com>",
+      "subject": "$130 billion grudge match",
+      "date": "Tue, 05 May 2026 21:01:21 +0000 (UTC)",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-5379343856756160",
+      "draft_message_id": "19dfb1afec2b9698",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:44.371769+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S31 \u2013 Employment Type Inquiry",
+        "### S15 \u2013 Positive Feedback / Product Suggestions",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry"
+      ],
+      "contract_id": "S27"
+    },
+    "19df83bc0cc64087": {
+      "thread_id": "19df83bc0cc64087",
+      "from": "GratuityAdviser <info@gratuityadviser.com>",
+      "subject": "New Alternative EOSB system: Should Employers make the switch? And if so, when? And how?",
+      "date": "Tue, 05 May 2026 13:02:33 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-182178433632013751",
+      "draft_message_id": "19dfb1b249b4352e",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-06T02:25:54.102053+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "## 10. BUSINESS PARTNER PROGRAM <!-- S11 -->",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S27"
     }
   }
 }
