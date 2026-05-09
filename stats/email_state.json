@@ -80253,6 +80253,35 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19e0aaf7ba8af0a8": {
+      "thread_id": "19e0aaf7ba8af0a8",
+      "from": "Catchall DDD <catchall@digitaldividedata.com>",
+      "subject": "Your e-mail was not delivered Re: Digital Divide Data x Flowmingo data",
+      "date": "Fri, 8 May 2026 20:02:10 -0700",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S8",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r-2942537033612989542",
+      "draft_message_id": "19e0b5d019a98d30",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-09T06:11:45.806377+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": "LOW_CONFIDENCE",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
