@@ -81180,6 +81180,153 @@
         "### S31 \u2013 Employment Type Inquiry"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19e0e64c2ba39ca5": {
+      "thread_id": "19e0e64c2ba39ca5",
+      "from": "Mustakbil <support@mustakbil.com>",
+      "subject": "\u26a1 Find Perfect Candidates in Minutes with Resume Database",
+      "date": "9 May 2026 16:19:02 -0400",
+      "sender_type": "E",
+      "topic": "vendor_pitch",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-922911524241121457",
+      "draft_message_id": "19e0e7756b75abb2",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-09T20:39:23.418624+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S4 \u2013 Extensions/Rescheduling/Retakes (External Company Roles \u2013 Type B)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo"
+      ],
+      "contract_id": "S27"
+    },
+    "19e0e373f0a18c80": {
+      "thread_id": "19e0e373f0a18c80",
+      "from": "Ayotech <ayomidelawal16@gmail.com>",
+      "subject": "Interview Session Issue \u2013 Hugo Technical Support Engineer Application \u2013 Ayomide Lawal",
+      "date": "Sat, 9 May 2026 20:29:07 +0100",
+      "sender_type": "B",
+      "topic": "candidate",
+      "scenario": "S12",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r3304118717041776049",
+      "draft_message_id": "19e0e7773b464a93",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-09T20:39:30.824776+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.9,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S17 \u2013 Job Inquiry / CV to Join Flowmingo",
+        "## 11. PLATFORM & TECHNICAL FAQ <!-- S28, S33 -->",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19e0db50f5e5b729": {
+      "thread_id": "19e0db50f5e5b729",
+      "from": "Product Hunt <hello@producthunt.com>",
+      "subject": "A new launch from OpenAI!",
+      "date": "Sat, 9 May 2026 17:07:07 +0000",
+      "sender_type": "E",
+      "topic": "partner",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5816050673168949427",
+      "draft_message_id": "19e0e778b1ea6613",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-09T20:39:36.732617+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.2,
+      "repair_attempted": false,
+      "review_reason_code": "AI_ERROR",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "HIGH",
+      "validator_issues": [
+        "MISSING_SALUTATION: Draft does not start with 'Dear ...'.",
+        "MISSING_LUK_CLOSING: Missing 'Let us know if you have any questions'.",
+        "MISSING_BR_CLOSING: Missing 'Best regards,'.",
+        "AI_ERROR: Salutation uses generic placeholder \u2014 sender name was not extracted."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S31 \u2013 Employment Type Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S3 \u2013 Extensions/Rescheduling/Retakes (Flowmingo Program Candidates \u2013 Type A)",
+        "### S34 \u2013 Acceptance / Confirmation"
+      ],
+      "contract_id": "S27"
+    },
+    "19e0db05ef878df1": {
+      "thread_id": "19e0db05ef878df1",
+      "from": "Linked Helper <info@linkedhelper.com>",
+      "subject": "[Re: Welcome to Linked Helper: what's next?] Share your feedback with us",
+      "date": "Sat, 09 May 2026 17:02:02 +0000",
+      "sender_type": "E",
+      "topic": "other",
+      "scenario": "S27",
+      "urgency": "normal",
+      "review_status": "review",
+      "draft_id": "r5221805490156419241",
+      "draft_message_id": "19e0e77b3676ebe5",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-09T20:39:47.139965+00:00",
+      "labels_applied": [
+        "FM/review"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.9643,
+      "repair_attempted": true,
+      "review_reason_code": "MISSING_REQUIRED_FACT",
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "MEDIUM",
+      "validator_issues": [
+        "MISSING_REQUIRED_FACT: Required fact not addressed: 'https://flowmingo.ai?utm_source=email-support'."
+      ],
+      "kb_section_ids": [
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S13 \u2013 Reference Requests and Employment Verification"
+      ],
+      "contract_id": "S27"
     }
   }
 }
