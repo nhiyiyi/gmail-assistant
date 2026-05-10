@@ -81439,6 +81439,80 @@
         "### S13 \u2013 Reference Requests and Employment Verification"
       ],
       "contract_id": "FALLBACK"
+    },
+    "19e107bfb4391152": {
+      "thread_id": "19e107bfb4391152",
+      "from": "Selamawit Kinfe <selamawitkinfe67@gmail.com>",
+      "subject": "",
+      "date": "Sun, 10 May 2026 03:02:46 +0300",
+      "sender_type": "B",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r-8157547815458048242",
+      "draft_message_id": "19e10945f6dda4d4",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-10T06:30:20.152874+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "### S33 \u2013 GDPR Data Deletion Request (Profile / Candidacy / Interview Data)",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19e0fd4e5d641562": {
+      "thread_id": "19e0fd4e5d641562",
+      "from": "\"'Thyffany Barboza' via Contact\" <contact@flowmingo.ai>",
+      "subject": "interview not loading",
+      "date": "Sun, 10 May 2026 03:01:03 +0000 (UTC)",
+      "sender_type": "A",
+      "topic": "technical",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8987002737623450551",
+      "draft_message_id": "19e10947880b8b6c",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-10T06:30:27.042770+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 0.8333,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "LOW",
+      "validator_issues": [
+        "MARKDOWN: Draft contains markdown formatting \u2014 stripped."
+      ],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S8 \u2013 Interview Link Not Working/Expired/404",
+        "### S21 \u2013 External Client Candidates: Results Timeline / Reminder Emails (Type B)"
+      ],
+      "contract_id": "FALLBACK"
     }
   }
 }
