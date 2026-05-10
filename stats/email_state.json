@@ -81719,6 +81719,70 @@
       "validator_issues": null,
       "kb_section_ids": null,
       "contract_id": null
+    },
+    "19e1197aa79803e2": {
+      "thread_id": "19e1197aa79803e2",
+      "from": "yesenia garcia <yesisires2019@gmail.com>",
+      "subject": "AI interview",
+      "date": "Sun, 10 May 2026 07:13:19 -0400",
+      "sender_type": "A",
+      "topic": "other",
+      "scenario": "S1",
+      "urgency": "normal",
+      "review_status": "ready",
+      "draft_id": "r8541093458847669420",
+      "draft_message_id": "19e11fef6f99590d",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-10T13:06:23.453053+00:00",
+      "labels_applied": [
+        "FM/ready"
+      ],
+      "ticket_id": null,
+      "validator_score": 1.0,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": 0.85,
+      "validator_severity": "PASS",
+      "validator_issues": [],
+      "kb_section_ids": [
+        "## 9. THE AI DEVELOPMENT PROJECT PROGRAM (CANDIDATE DATA CONTRIBUTION) <!-- S26 -->",
+        "### S32 \u2013 Meeting / Session Schedule Inquiry",
+        "### S27 \u2013 Vendor/Service Pitch Email (Lead Gen, Prospecting, Infrastructure, Media/PR, Awards, Talent Sourcing, etc.)",
+        "### S34 \u2013 Acceptance / Confirmation",
+        "### S18 \u2013 Timeline Expectations (Flowmingo Program Candidates \u2013 Type A)"
+      ],
+      "contract_id": "FALLBACK"
+    },
+    "19e11c8cea46448c": {
+      "thread_id": "19e118c1764c5dc5",
+      "from": "Jaineel Purani <co43.jaineelpurani@gmail.com>",
+      "subject": "Re: [Flowmingo Response] Response from Technical Issue query",
+      "date": "Sun, 10 May 2026 17:36:57 +0530",
+      "sender_type": "E",
+      "topic": "technical",
+      "scenario": "bug",
+      "urgency": "normal",
+      "review_status": "bug",
+      "draft_id": "r6812732384428525636",
+      "draft_message_id": "",
+      "kb_version": "a1d335e852c6",
+      "processed_at": "2026-05-10T13:06:25.783442+00:00",
+      "labels_applied": [
+        "FM/bug"
+      ],
+      "ticket_id": "BUG-260510-002",
+      "validator_score": null,
+      "repair_attempted": false,
+      "review_reason_code": null,
+      "draft_body_hash": null,
+      "draft_char_count": null,
+      "scenario_confidence": null,
+      "validator_severity": null,
+      "validator_issues": null,
+      "kb_section_ids": null,
+      "contract_id": null
     }
   }
 }
