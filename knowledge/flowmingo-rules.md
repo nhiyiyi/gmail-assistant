@@ -136,6 +136,7 @@ Keep all frequently used URLs and contact info centralized here. Update this sec
 - YOUTUBE_URL (Flowmingo channel): [https://www.youtube.com/@official-flowmingo-ai](https://www.youtube.com/@official-flowmingo-ai)
 - JOBS_URL (joining Flowmingo): [https://flowmingo.ai/careers](https://flowmingo.ai/careers)
 - RECRUITER_CALENDAR_URL (recruiters/company users only): [https://calendar.app.google/VMFJfxUDQwEmisQv8](https://calendar.app.google/VMFJfxUDQwEmisQv8)
+- LINKEDIN_OTP_VIEWER_URL: [https://flowmingo-otp-viewer.netlify.app/](https://flowmingo-otp-viewer.netlify.app/)
 
 ### **7.1 Business Partner Payout Scheme (reference)**
 
