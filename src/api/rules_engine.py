@@ -174,7 +174,7 @@ def route(email: dict) -> dict:
     if has_image_attachment and _BUG_SOFT_REGEX.search(message_new):
         # Image attachment + soft bug language = likely screenshot of an issue.
         # Exception: if support has already replied, the image is almost certainly
-        # a follow-up confirmation (e.g. Trustpilot review screenshot, completed
+        # a follow-up confirmation (e.g. G2/Capterra review screenshot, completed
         # form photo) — not a new bug report. Don't flag as bug.
         if not already_replied:
             is_bug = True

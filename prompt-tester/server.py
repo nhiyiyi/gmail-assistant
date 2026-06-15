@@ -120,8 +120,15 @@ _AUTO_BOLD_PATTERNS = [
     # WhatsApp contact
     (_re.compile(r'(\+\d[\d\s\(\)\-]{6,})', _re.I), r'**\1**'),
     (_re.compile(r'\b(WhatsApp)\b'), r'**\1**'),
-    # Platform names used as actions
-    (_re.compile(r'\b(Trustpilot)\b'), r'**\1**'),
+    # Key platforms/actions
+    (_re.compile(r'\b(G2|Capterra)\b'), r'**\1**'),
+    # Confirmation form action (offer letter replies)
+    (_re.compile(r'(the confirmation link in your offer email)', _re.I), r'**\1**'),
+    (_re.compile(r'(confirmation form)', _re.I), r'**\1**'),
+    # Calendar booking
+    (_re.compile(r'(https://calendar\.app\.google/\S+)'), r'**\1**'),
+    # Training resources
+    (_re.compile(r'(Training [Dd]eck|Quickstart [Gg]uide|training materials)', _re.I), r'**\1**'),
 ]
 
 

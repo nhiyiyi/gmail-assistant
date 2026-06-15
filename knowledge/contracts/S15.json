@@ -1,8 +1,9 @@
 {
   "scenario_id": "S15",
-  "description": "Positive feedback / testimonial from a real Flowmingo user. Acknowledge warmly, invite them to share on Trustpilot. Must include TRUSTPILOT_URL (trustpilot.com/review/flowmingo.ai).",
+  "description": "Positive feedback / testimonial from a real Flowmingo user. Acknowledge warmly, invite them to leave a review on G2 or Capterra. Must include G2_REVIEW_URL and CAPTERRA_REVIEW_URL.",
   "required_facts": [
-    "trustpilot"
+    "g2",
+    "capterra"
   ],
   "forbidden_promises": [],
   "ownership_patterns": [],

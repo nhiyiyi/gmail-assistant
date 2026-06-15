@@ -130,7 +130,7 @@ Two tiers:
 
 Ask yourself: what is this person communicating with this image?
 
-- **Image is proof of something requested** (Trustpilot screenshot in reply to "You did great", signed consent form, receipt, document confirmation) → classify by D1 sender intent, NOT as FM/bug. The image is a confirmation, not a bug report.
+- **Image is proof of something requested** (G2/Capterra review screenshot in reply to "You did great", signed consent form, receipt, document confirmation) → classify by D1 sender intent, NOT as FM/bug. The image is a confirmation, not a bug report.
 - **Image shows a platform error or broken UI** (error dialog, blank page, frozen interface, unexpected state) → FM/bug (detailed). The image IS the bug report.
 - **Image is a document** (resume, certificate, ID, job spec) → not a bug; classify by D1.
 - **Ambiguous** (can't determine from context what the image shows) → FM/review R7, note the attachment.
@@ -179,7 +179,7 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I'm not interested" / "I already have a job" | FM/no-reply — disengaged, no request |
 | "I don't find any suitable role. Keep me in mind." | FM/ready (S17) — has a request |
 | "Remove me from your list" | FM/review R1 — critical, DNC demand |
-| "I loved the experience, thank you!" | FM/ready (S15) — brand moment, Trustpilot invite |
+| "I loved the experience, thank you!" | FM/ready (S15) — brand moment, G2/Capterra review invite |
 | "I accept the offer / I'm ready to proceed" | FM/ready (S34) — brand moment, warm acceptance close |
 | "I've submitted / completed my interview" | FM/ready (S18) — milestone, timeline acknowledgment |
 | "I'm withdrawing my application, thanks" | FM/ready (S16) — brand moment, warm close + JOBS_URL |
@@ -191,7 +191,7 @@ Apply ONLY when ALL of the following are true: D1 = Question/request OR Statemen
 | "I couldn't do the interview" / "it didn't work" / "I had a problem" | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
 | "I couldn't access my interview" / "something went wrong" with no specifics | FM/review — draft asks for device/browser/error details; create bug ticket after reply |
 | Clear issue described + screenshot showing platform error | FM/bug (detailed) — image confirms the error |
-| Reply to "You did great" with image only + has_support_reply | FM/no-reply — image is proof of completed Trustpilot action; no new draft needed |
+| Reply to "You did great" with image only + has_support_reply | FM/no-reply — image is proof of completed review action; no new draft needed |
 | Reply to "You did great" with image + written question or new content | Check D1 — S15/S18 may still apply |
 | Vague complaint + image (unclear what it shows) | FM/review R7 — note attachment, ask for context; create ticket after reply |
 | Resume or document attached to application inquiry | Not a bug — classify by D1 sender intent |
@@ -345,7 +345,7 @@ After all groups and bug tickets:
 4. Never add extra information the customer did not ask for.
 5. FM/review reason must be specific — never vague like "unclear email".
 6. Process oldest-first within each group.
-7. One draft per thread — if `has_support_reply: true`, default to FM/no-reply. Exception: "You did great" thread replies where S15 (Trustpilot nudge) is still appropriate even after a prior support reply. See Rule 12.
+7. One draft per thread — if `has_support_reply: true`, default to FM/no-reply. Exception: "You did great" thread replies where S15 (review invite) is still appropriate even after a prior support reply. See Rule 12.
 8. Always submit after each group of 8 — do not accumulate more than 8 unsent drafts.
 9. Pass auto_skipped to no_reply_items only in the first submit_drafts call.
 10. FM/ready is the goal — only escalate to FM/review when genuinely needed.
@@ -354,11 +354,11 @@ After all groups and bug tickets:
 
 11. **Short or ambiguous summary → fetch full body.** If `latest_message` is < 80 characters, OR the subject line does not clearly match the scenario you are considering, call `get_email` to read the full message body before finalizing the classification. Do not pattern-match on subject line alone for ambiguous cases.
 12. **"You did great" threads + has_support_reply.** If the thread is a "You did great" follow-up and `has_support_reply: true`, do NOT auto-classify as FM/no-reply — BUT apply this test first:
-    - **Is the customer's latest message ONLY an image (Trustpilot review screenshot, photo of a completed step) with no question or new actionable content?** → FM/no-reply. The customer completed the action we invited; they are showing proof, not starting a new inquiry. No draft needed.
+    - **Is the customer's latest message ONLY an image (G2/Capterra review screenshot, photo of a completed step) with no question or new actionable content?** → FM/no-reply. The customer completed the action we invited; they are showing proof, not starting a new inquiry. No draft needed.
     - **Is the customer asking a NEW question** (application status, timeline, "was I selected", etc.)? → S18 or S21 still applies — draft the reply.
-    - **Is the customer sharing written positive feedback** (not just an image)? → S15 still applies — Trustpilot nudge.
+    - **Is the customer sharing written positive feedback** (not just an image)? → S15 still applies — review invite.
     - Rule 12 exists to catch genuine follow-up questions, not to force a draft for every image sent as proof of a completed action.
-13. **S15 subject mismatch check.** If your classification is S15 (Trustpilot nudge) but the email subject does NOT contain "feedback", "review", "you did great", or a Trustpilot-related term → re-examine. You may be pattern-matching on the subject instead of reading what the person actually wrote.
+13. **S15 subject mismatch check.** If your classification is S15 (review invite) but the email subject does NOT contain "feedback", "review", "you did great", or a review-related term → re-examine. You may be pattern-matching on the subject instead of reading what the person actually wrote.
 14. **S16 + "offer letter" subject conflict.** If your classification is S16 (withdrawal) but the subject contains "offer letter" → re-examine. A withdrawal scenario applied to an offer letter recipient is a critical misclassification.
 
 # Done condition

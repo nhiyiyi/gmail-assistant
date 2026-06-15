@@ -85,7 +85,7 @@ Do not include any name, title, or signature after "Best regards,".
 Only share official links/resources in these situations:
 
 - Business Partner onboarding or training questions.
-- Positive feedback (invite to Trustpilot).
+- Positive feedback (invite to leave a G2 or Capterra review).
 - Referral code missing/invalid (share referral form if configured).
 - Unresolved technical issue after basic troubleshooting (WhatsApp escalation).
 - Business Partner payout/program details (defined resources).
@@ -112,7 +112,8 @@ Keep all frequently used URLs and contact info centralized here. Update this sec
 
 - WHATSAPP_SUPPORT_HOTLINE: (+84) 989 877 953
 - WHATSAPP_PARTNER_GROUP_LINK: [https://www.whatsapp.com/channel/0029VbCDfXFHVvTdpUcaPJ1d](https://www.whatsapp.com/channel/0029VbCDfXFHVvTdpUcaPJ1d)
-- TRUSTPILOT_URL: [https://www.trustpilot.com/review/flowmingo.ai](https://www.trustpilot.com/review/flowmingo.ai)
+- G2_REVIEW_URL (voice review, takes 3–5 min): [https://www.g2.com/products/flowmingo-flowmingo/review_modalities/new](https://www.g2.com/products/flowmingo-flowmingo/review_modalities/new)
+- CAPTERRA_REVIEW_URL (takes 4 min, or 1 min with an AI extension): [https://reviews.capterra.com/products/new/7dccefd5-9396-49d0-8faa-e8bbda00fc2a/](https://reviews.capterra.com/products/new/7dccefd5-9396-49d0-8faa-e8bbda00fc2a/)
 - TRAINING_DECK_URL (Business Partner): [https://docs.google.com/presentation/d/1mV7quAk9bVlVg6QKtkkjQelL5SIFDSPKX28oFiffaCU/edit?usp=sharing](https://docs.google.com/presentation/d/1mV7quAk9bVlVg6QKtkkjQelL5SIFDSPKX28oFiffaCU/edit?usp=sharing)
 - QUICKSTART_GUIDE_URL (Business Partner): [https://docs.google.com/document/d/1OcHWU8TxFe87pIzxmKx2mgDyNAM_uKiB3TVInBiCOLQ/edit?usp=sharing](https://docs.google.com/document/d/1OcHWU8TxFe87pIzxmKx2mgDyNAM_uKiB3TVInBiCOLQ/edit?usp=sharing)
 - YOUTUBE_URL (Flowmingo channel): https://www.youtube.com/@official-flowmingo-ai
@@ -399,7 +400,7 @@ Applies to any partner, recruiter, or collaborator asking for materials, guides,
 ### **S15 – Positive Feedback**
 
 - Thank them warmly.
-- If appropriate, invite them to leave a review on TRUSTPILOT_URL.
+- If appropriate, invite them to leave a review on G2_REVIEW_URL or CAPTERRA_REVIEW_URL.
 
 ### **S16 – Withdraw from a Process**
 
