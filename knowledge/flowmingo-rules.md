@@ -135,7 +135,8 @@ Keep all frequently used URLs and contact info centralized here. Update this sec
 - QUICKSTART_GUIDE_URL (Business Partner): [https://docs.google.com/document/d/1OcHWU8TxFe87pIzxmKx2mgDyNAM_uKiB3TVInBiCOLQ/edit?usp=sharing](https://docs.google.com/document/d/1OcHWU8TxFe87pIzxmKx2mgDyNAM_uKiB3TVInBiCOLQ/edit?usp=sharing)
 - YOUTUBE_URL (Flowmingo channel): [https://www.youtube.com/@official-flowmingo-ai](https://www.youtube.com/@official-flowmingo-ai)
 - JOBS_URL (joining Flowmingo): [https://flowmingo.ai/careers](https://flowmingo.ai/careers)
-- RECRUITER_CALENDAR_URL (recruiters/company users only): [https://calendar.app.google/VMFJfxUDQwEmisQv8](https://calendar.app.google/VMFJfxUDQwEmisQv8)
+- RECRUITER_CALENDAR_URL (recruiters/company users exploring Flowmingo — S22): [https://calendar.app.google/VMFJfxUDQwEmisQv8](https://calendar.app.google/VMFJfxUDQwEmisQv8)
+- DEMO_CALENDAR_URL (potential recruiters from Slack feedback/contact form — when JY flags): [https://calendar.app.google/JiEpSSDU8RYLtHYVA](https://calendar.app.google/JiEpSSDU8RYLtHYVA)
 - LINKEDIN_OTP_VIEWER_URL: [https://flowmingo-otp-viewer.netlify.app/](https://flowmingo-otp-viewer.netlify.app/)
 
 ### **7.1 Business Partner Payout Scheme (reference)**
