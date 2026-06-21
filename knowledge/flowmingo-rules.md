@@ -163,7 +163,7 @@ Keep all frequently used URLs and contact info centralized here. Update this sec
 
 - Flowmingo is an AI-powered interview platform helping teams identify top talent faster and more fairly.
 - Backed by Y Combinator under our parent company, Princep.
-- Operations based in Ho Chi Minh City, Vietnam.
+- Headquartered in Singapore.
 - Mission: Democratize opportunity and make hiring fairer and more efficient.
 
 ### **8.2 Pricing Model (Freemium)**
